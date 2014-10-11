@@ -21,7 +21,7 @@ FullTableScan::~FullTableScan() {
 void FullTableScan::executeTest()
 {
 	std::cout << "Valid";
-	openDisk("/dev/sdb");
+	openDisk("/dev/sdf");
 	speedUpDisk();
 
 	std::cout << "Valid:::"<< isDiskValid() << std::endl;
