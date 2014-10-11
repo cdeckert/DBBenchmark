@@ -6,6 +6,7 @@
  */
 
 #include "ATest.h"
+#include <stdio.h>
 
 namespace DBTest {
 
@@ -32,6 +33,13 @@ void ATest::openDisk(std::string diskPath)
 	{
 		std::cout << "Error: Disk permissions";
 	}
+}
+
+
+void ATest::setLayout(std::vector<struct HDDTest::extent>* relation)
+{
+	this->relation = relation;
+	perror("Assign relationship");
 }
 
 bool ATest::isDiskValid()
@@ -73,7 +81,17 @@ void ATest::speedUpDisk()
 void ATest::writeExtent(unsigned long long int start)
 {
 	lseek64(disk, start, SEEK_SET);
+	//perror("seek");
 	write(disk, &extentBuffer, extentSize*1024);
+	//perror("write");
+}
+
+void ATest::readExtent(unsigned long long int start)
+{
+	lseek64(disk, start, SEEK_SET);
+	//perror("seek");
+	read(disk, extentBuffer, extentSize*1024);
+	//perror("read");
 }
 
 void ATest::startAsThread()

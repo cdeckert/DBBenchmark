@@ -9,6 +9,7 @@
 #define DBTESTING_SRC_EXECUTIONMANAGER_H_
 
 #include <thread>
+#include "Layout/ConfigGenerator.h"
 
 namespace DBBenchmark {
 
@@ -19,6 +20,7 @@ public:
 	virtual ~ExecutionManager();
 
 	void start();
+	HDDTest::ConfigGenerator initalizeLayout();
 };
 
 } /* namespace DBBenchmark */

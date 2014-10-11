@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
+#include "../Layout/ConfigGenerator.h"
 
 namespace DBTest {
 
@@ -34,8 +35,10 @@ public:
 	bool isDiskValid();
 	void setExtentSize(int);
 	void speedUpDisk();
+	void setLayout(std::vector<struct HDDTest::extent>*);
 
 	bool isEndless;
+	std::vector<struct HDDTest::extent>* relation;
 
 
 private:
@@ -45,6 +48,7 @@ private:
 	int pageSize;
 	char* pageBuffer;
 	char* extentBuffer;
+
 };
 
 } /* namespace DBTest */

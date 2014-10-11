@@ -4,23 +4,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/ConfigReader.cpp \
-../src/DBBenchmark.cpp \
-../src/ExecutionManager.cpp 
+../src/Tests/ATest.cpp \
+../src/Tests/FullTableScan.cpp \
+../src/Tests/LogWriter.cpp 
 
 OBJS += \
-./src/ConfigReader.o \
-./src/DBBenchmark.o \
-./src/ExecutionManager.o 
+./src/Tests/ATest.o \
+./src/Tests/FullTableScan.o \
+./src/Tests/LogWriter.o 
 
 CPP_DEPS += \
-./src/ConfigReader.d \
-./src/DBBenchmark.d \
-./src/ExecutionManager.d 
+./src/Tests/ATest.d \
+./src/Tests/FullTableScan.d \
+./src/Tests/LogWriter.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.cpp
+src/Tests/%.o: ../src/Tests/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
 	g++ -O0 -g3 -Wall -c -fmessage-length=0  -std=c++11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
