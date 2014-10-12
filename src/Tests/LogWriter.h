@@ -15,7 +15,7 @@ class LogWriter : public ATest {
 public:
 	LogWriter();
 	virtual ~LogWriter();
-	void executeTest() override;
+	void testAlgorithm() override;
 };
 
 } /* namespace DBTest */

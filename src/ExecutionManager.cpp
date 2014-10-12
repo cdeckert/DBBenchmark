@@ -8,6 +8,7 @@
 #include "ExecutionManager.h"
 #include "Tests/LogWriter.h"
 #include "Tests/FullTableScan.h"
+#include "Tests/IndexScan.h"
 #include "ConfigReader.h"
 
 namespace DBBenchmark {
@@ -26,7 +27,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 	// hdd starts at 0
 		unsigned long long int size_start = 0;
 		// spreading of relationship table
-		unsigned long long int size_spread = 1024 * 1024 * 3;
+		unsigned long long int size_spread = 1024 * 1024 * 1;
 		// size of a single extent
 		unsigned long long int size_extent = 64;
 		// size of a single page
@@ -41,7 +42,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 		// distribution: EQUALLY or ED_RANDOM
 		extentDistribution = HDDTest::EQUALLY;
 		char no_of_relations = 3;
-		char relation_distribution[] = {4,1,3,1,1,1,1,1}; // standard distribution of the relations
+		char relation_distribution[] = {10,5}; // standard distribution of the relations
 
 
 		/*if(argc <= 4) {
@@ -70,11 +71,17 @@ void ExecutionManager::start()
 {
 	HDDTest::ConfigGenerator config = initalizeLayout();
 
+
 	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
+	//tableScan.isEndless = true;
 	tableScan.setExtentSize(64);
 	tableScan.setLayout(config.getExtentLocationsOfRel(1));
-	//log.isEndless = true;
 	tableScan.start();
+	std::cout << "INDEX" << std::endl;
+	DBTest::IndexScan index = DBTest::IndexScan();
+	index.setExtentSize(64);
+	index.setLayout(config.getExtentLocationsOfRel(1));
+	index.start();
 }
 
 } /* namespace DBBenchmark */

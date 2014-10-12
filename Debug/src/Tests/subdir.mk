@@ -6,16 +6,19 @@
 CPP_SRCS += \
 ../src/Tests/ATest.cpp \
 ../src/Tests/FullTableScan.cpp \
+../src/Tests/IndexScan.cpp \
 ../src/Tests/LogWriter.cpp 
 
 OBJS += \
 ./src/Tests/ATest.o \
 ./src/Tests/FullTableScan.o \
+./src/Tests/IndexScan.o \
 ./src/Tests/LogWriter.o 
 
 CPP_DEPS += \
 ./src/Tests/ATest.d \
 ./src/Tests/FullTableScan.d \
+./src/Tests/IndexScan.d \
 ./src/Tests/LogWriter.d 
 
 

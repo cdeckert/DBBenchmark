@@ -20,7 +20,7 @@ LogWriter::~LogWriter() {
 	// TODO Auto-generated destructor stub
 }
 
-void LogWriter::executeTest()
+void LogWriter::testAlgorithm()
 {
 	std::cout << "Valid";
 	openDisk("/dev/sdb");

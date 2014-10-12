@@ -16,7 +16,7 @@ class FullTableScan : public ATest {
 public:
 	FullTableScan();
 	virtual ~FullTableScan();
-	void executeTest() override;
+	void testAlgorithm() override;
 };
 
 } /* namespace DBTest */

@@ -2,7 +2,7 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
  ../src/ExecutionManager.h ../src/Layout/ConfigGenerator.h \
  ../src/Tests/LogWriter.h ../src/Tests/ATest.h \
  ../src/Tests/../Layout/ConfigGenerator.h ../src/Tests/FullTableScan.h \
- ../src/ConfigReader.h
+ ../src/Tests/IndexScan.h ../src/ConfigReader.h
 
 ../src/ExecutionManager.h:
 
@@ -15,5 +15,7 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
 ../src/Tests/../Layout/ConfigGenerator.h:
 
 ../src/Tests/FullTableScan.h:
+
+../src/Tests/IndexScan.h:
 
 ../src/ConfigReader.h:

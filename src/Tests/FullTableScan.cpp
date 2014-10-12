@@ -6,6 +6,7 @@
  */
 
 #include "FullTableScan.h"
+#include <sys/time.h>
 
 namespace DBTest {
 
@@ -18,33 +19,15 @@ FullTableScan::~FullTableScan() {
 	// TODO Auto-generated destructor stub
 }
 
-void FullTableScan::executeTest()
+void FullTableScan::testAlgorithm()
 {
-	std::cout << "Valid";
-	openDisk("/dev/sdf");
-	speedUpDisk();
-
-	std::cout << "Valid:::"<< isDiskValid() << std::endl;
-	//std::cout << "relation"<< relation->size();
-
-
-	std::cout << relation;
-
-
-
-
-	for(std::vector<struct HDDTest::extent>::iterator it = relation->begin(); it != relation->end(); ++it)
+	for(std::vector<struct HDDTest::extent>::iterator it = relation->begin();
+			it != relation->end(); it++)
 	{
-		try
-		{
-			unsigned long long int start = (it->start);
-			readExtent(start);
-		}
-		catch(const std::exception &e){}
+		unsigned long long int start = (it->start);
+		readExtent(start);
 	}
-
-	std::cout << "DONE";
-
 }
+
 
 } /* namespace DBTest */
