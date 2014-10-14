@@ -27,7 +27,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 	// hdd starts at 0
 		unsigned long long int size_start = 0;
 		// spreading of relationship table
-		unsigned long long int size_spread = 1024 * 1024 * 1;
+		unsigned long long int size_spread = 1024 * 1024 * 3; // kb
 		// size of a single extent
 		unsigned long long int size_extent = 64;
 		// size of a single page
@@ -41,8 +41,8 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 		readMode = HDDTest::ORDERED;
 		// distribution: EQUALLY or ED_RANDOM
 		extentDistribution = HDDTest::EQUALLY;
-		char no_of_relations = 3;
-		char relation_distribution[] = {10,5}; // standard distribution of the relations
+		char no_of_relations = 2;
+		char relation_distribution[] = {1, 1}; // standard distribution of the relations
 
 
 		/*if(argc <= 4) {
@@ -77,11 +77,13 @@ void ExecutionManager::start()
 	tableScan.setExtentSize(64);
 	tableScan.setLayout(config.getExtentLocationsOfRel(1));
 	tableScan.start();
-	std::cout << "INDEX" << std::endl;
+	/*
+	std::cout << std::endl << "INDEX" << std::endl;
 	DBTest::IndexScan index = DBTest::IndexScan();
 	index.setExtentSize(64);
 	index.setLayout(config.getExtentLocationsOfRel(1));
 	index.start();
+	*/
 }
 
 } /* namespace DBBenchmark */

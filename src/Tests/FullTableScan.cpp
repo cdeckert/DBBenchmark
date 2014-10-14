@@ -21,12 +21,19 @@ FullTableScan::~FullTableScan() {
 
 void FullTableScan::testAlgorithm()
 {
-	for(std::vector<struct HDDTest::extent>::iterator it = relation->begin();
-			it != relation->end(); it++)
+	startTimer();
+	for(int iteration = 0; iteration< numberOfIterations; iteration++)
 	{
-		unsigned long long int start = (it->start);
-		readExtent(start);
+		for(std::vector<struct HDDTest::extent>::iterator it = relation->begin();
+				it != relation->end(); it++)
+		{
+			unsigned long long int start = (it->start);
+			readExtent(start);
+		}
 	}
+
+	std::cout << getTime() /1000000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
+
 }
 
 

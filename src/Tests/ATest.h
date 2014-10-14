@@ -19,7 +19,7 @@
 #include <cmath>
 #include <algorithm>
 #include "../Layout/ConfigGenerator.h"
-
+#include <fstream>
 
 using namespace std;
 namespace DBTest {
@@ -53,12 +53,14 @@ public:
 
 	unsigned long long int getRandomPage();
 
-	void writeLog(unsigned long long int);
+	//void writeLogFile(unsigned long long int);
 
 
 	bool isEndless;
 	std::vector<struct HDDTest::extent> *relation;
 	virtual void testAlgorithm();
+
+
 
 private:
 
@@ -71,7 +73,7 @@ private:
 	long long int executionSize;
 
 	void init_rand();
-	//std::ofstream log;
+
 };
 
 } /* namespace DBTest */

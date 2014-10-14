@@ -17,8 +17,6 @@ ATest::ATest() {
 	setPageSize(8);
 	setExtentSize(64);
 	init_rand();
-	/*log.open("log.json");
-	log << "test";*/
 }
 
 ATest::~ATest() {
@@ -50,7 +48,7 @@ unsigned long long int ATest::getNumberOfExtents()
 
 unsigned long long int ATest::getRandomPage()
 {
-	return this->relation->at(rand() % getNumberOfExtents()).start;
+	return this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize/pageSize))*pageSize;
 }
 
 void ATest::setPageSize(int size)
@@ -97,22 +95,21 @@ void ATest::testAlgorithm()
 	std::cout << this->isEndless << std::endl;
 }
 
-void ATest::writeLog(unsigned long long int iteration)
+/*void ATest::writeLogFile(unsigned long long int iteration)
 {
-	//log <<iteration << "," << getTime() /1000000000.;
-}
+	log <<iteration << "," << getTime() /1000000000.;
+}*/
 
 
 void ATest::execute()
 {
 	openDisk("/dev/sdb");
 	speedUpDisk();
-	startTimer();
-	for(int i = 0; i < numberOfIterations; i++)
-	{
-		testAlgorithm();
-	}
-	std::cout << getTime() /1000000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations;
+
+
+	testAlgorithm();
+
+
 }
 
 void ATest::start()
@@ -150,28 +147,28 @@ double ATest::getMbPerSec()
 void ATest::writeExtent(unsigned long long int start)
 {
 
-	lseek64(disk, start, SEEK_SET);
+	lseek64(disk, start*1024, SEEK_SET);
 	write(disk, &extentBuffer, extentSize*1024);
 	executionSize += extentSize;
 }
 
 void ATest::readExtent(unsigned long long int start)
 {
-	lseek64(disk, start, SEEK_SET);
+	lseek64(disk, start*1024, SEEK_SET);
 	read(disk, extentBuffer, extentSize*1024);
 	executionSize += extentSize;
 }
 
 void ATest::readPage(unsigned long long int start)
 {
-	lseek64(disk, start, SEEK_SET);
+	lseek64(disk, start*1024, SEEK_SET);
 	read(disk, pageBuffer, pageSize*1024);
 	executionSize += pageSize;
 }
 
 void ATest::writePage(unsigned long long int start)
 {
-	lseek64(disk, start, SEEK_SET);
+	lseek64(disk, start*1024, SEEK_SET);
 	write(disk, pageBuffer, pageSize*1024);
 	executionSize += pageSize;
 }

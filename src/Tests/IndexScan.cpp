@@ -20,17 +20,20 @@ IndexScan::~IndexScan() {
 
 void IndexScan::testAlgorithm()
 {
-	unsigned long long int i = 0;
+	unsigned long long int i = 1;
 	while(i < getNumberOfPages())
 	{
-		i = i+8;
+		i = i*2;
 		startTimer();
-		for(unsigned long long int j = 0; j < i; j++)
+		for(int iteration = 0; iteration< numberOfIterations; iteration++)
 		{
-			writePage(getRandomPage());
+			for(unsigned long long int j = 0; j < i; j++)
+			{
+				readPage(getRandomPage());
+			}
 		}
-		writeLog(i);
-		std::cout << getTime() << std::endl;
+		//writeLogFile(i);
+		std::cout << i << ":" << getTime() /1000000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 	}
 }
 
