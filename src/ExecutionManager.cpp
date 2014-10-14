@@ -11,6 +11,7 @@
 #include "Tests/IndexScan.h"
 #include "ConfigReader.h"
 
+
 namespace DBBenchmark {
 
 ExecutionManager::ExecutionManager() {
@@ -72,18 +73,20 @@ void ExecutionManager::start()
 	HDDTest::ConfigGenerator config = initalizeLayout();
 
 
-	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
+	DBTest::ConfigReader generalConfiguration = DBTest::ConfigReader();
+
+	/*DBTest::FullTableScan tableScan = DBTest::FullTableScan();
 	//tableScan.isEndless = true;
 	tableScan.setExtentSize(64);
 	tableScan.setLayout(config.getExtentLocationsOfRel(1));
-	tableScan.start();
-	/*
+	tableScan.start();*/
+
 	std::cout << std::endl << "INDEX" << std::endl;
 	DBTest::IndexScan index = DBTest::IndexScan();
 	index.setExtentSize(64);
 	index.setLayout(config.getExtentLocationsOfRel(1));
 	index.start();
-	*/
+
 }
 
 } /* namespace DBBenchmark */

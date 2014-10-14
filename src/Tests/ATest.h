@@ -70,7 +70,7 @@ private:
 	char* pageBuffer;
 	char* extentBuffer;
 	timespec startTime;
-	long long int executionSize;
+	unsigned long long int executionSize;
 
 	void init_rand();
 

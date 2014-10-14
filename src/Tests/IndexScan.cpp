@@ -36,5 +36,4 @@ void IndexScan::testAlgorithm()
 		std::cout << i << ":" << getTime() /1000000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 	}
 }
-
-} /* namespace HDDTest */
+}

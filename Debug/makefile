@@ -11,6 +11,23 @@ RM := rm -rf
 -include src/Tests/subdir.mk
 -include src/Layout/subdir.mk
 -include src/subdir.mk
+-include include/rapidjson1/thirdparty/yajl/src/subdir.mk
+-include include/rapidjson1/thirdparty/ultrajson/subdir.mk
+-include include/rapidjson1/thirdparty/jsoncpp/src/test_lib_json/subdir.mk
+-include include/rapidjson1/thirdparty/jsoncpp/src/lib_json/subdir.mk
+-include include/rapidjson1/thirdparty/jsoncpp/src/jsontestrunner/subdir.mk
+-include include/rapidjson1/test/unittest/subdir.mk
+-include include/rapidjson1/test/perftest/subdir.mk
+-include include/rapidjson1/example/tutorial/subdir.mk
+-include include/rapidjson1/example/simplewriter/subdir.mk
+-include include/rapidjson1/example/simplereader/subdir.mk
+-include include/rapidjson1/example/simpledom/subdir.mk
+-include include/rapidjson1/example/serialize/subdir.mk
+-include include/rapidjson1/example/prettyauto/subdir.mk
+-include include/rapidjson1/example/pretty/subdir.mk
+-include include/rapidjson1/example/messagereader/subdir.mk
+-include include/rapidjson1/example/condense/subdir.mk
+-include include/rapidjson1/example/capitalize/subdir.mk
 -include subdir.mk
 -include objects.mk
 

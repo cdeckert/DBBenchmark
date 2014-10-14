@@ -7,6 +7,15 @@
 
 #ifndef CONFIGREADER_H_
 #define CONFIGREADER_H_
+#include "rapidjson/document.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+#include <iostream>
+#include "rapidjson/filereadstream.h"
+#include <cstdio>
+#include <cmath>
+
+using namespace rapidjson;
 
 namespace DBTest {
 
@@ -20,6 +29,11 @@ public:
 		int extentSize;
 		int pageSize;
 	};
+
+private:
+	void readConfiguration(std::string);
+	std::string devicePath;
+	unsigned long long int size_spread;
 };
 
 } /* namespace DBTest */
