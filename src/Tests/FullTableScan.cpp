@@ -33,7 +33,7 @@ void FullTableScan::testAlgorithm()
 		}
 	}
 
-	std::cout << getTime() /1000000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
+	std::cout << getTime() /1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 
 }
 
