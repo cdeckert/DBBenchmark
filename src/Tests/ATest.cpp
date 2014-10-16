@@ -13,7 +13,7 @@ namespace DBTest {
 ATest::ATest() {
 	this->isEndless = false;
 	this->executionSize = 0;
-	this->numberOfIterations = 1;
+	this->numberOfIterations = 5;
 	setPageSize(8);
 	setExtentSize(64);
 	init_rand();
