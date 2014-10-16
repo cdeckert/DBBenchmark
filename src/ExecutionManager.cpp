@@ -75,11 +75,11 @@ void ExecutionManager::start()
 
 	DBTest::ConfigReader generalConfiguration = DBTest::ConfigReader();
 
-	/*DBTest::FullTableScan tableScan = DBTest::FullTableScan();
+	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
 	//tableScan.isEndless = true;
 	tableScan.setExtentSize(64);
 	tableScan.setLayout(config.getExtentLocationsOfRel(1));
-	tableScan.start();*/
+	tableScan.start();
 
 	std::cout << std::endl << "INDEX" << std::endl;
 	DBTest::IndexScan index = DBTest::IndexScan();
