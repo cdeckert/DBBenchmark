@@ -103,7 +103,10 @@ void ATest::testAlgorithm()
 
 void ATest::execute()
 {
-	openDisk("/dev/sde");
+	std::string device;
+	std::cout << "Enter device address:" << std::flush;
+	std::cin >> device;
+	openDisk(device);
 	speedUpDisk();
 
 
