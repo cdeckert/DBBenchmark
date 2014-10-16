@@ -6,7 +6,9 @@
  */
 
 #include "ConfigReader.h"
-
+#include <iostream>
+#include <sstream>
+#include <fstream>
 
 using namespace rapidjson;
 
@@ -24,21 +26,27 @@ ConfigReader::ConfigReader() {
 
 void ConfigReader::readConfiguration(std::string configFilePath)
 {
-	/*
-	FILE* fp = fopen(configFilePath.data(), "r");
-	char readBuffer[256];
-	FileReadStream is(fp, readBuffer, sizeof(readBuffer));
 
-	std::cout << readBuffer;
+	std::ifstream configFile;
+	configFile.open(configFilePath.c_str());
+	std::stringstream ss;
+
+	ss << configFile.rdbuf();
+
+
+	//std::cout << configFile;
 	Document d;
-	d.ParseStream(is);
-	fclose(fp);
+	d.Parse(ss.str().c_str());
 
-	*/
+	configFile.close();
+
+
+
+
 	//devicePath = d["devicePath"].GetString();
 	//size_spread = std::ceil(d["size_spread_gb"].GetDouble() * 1024 * 1024);
 
-	std::cout << devicePath;
+	//std::cout << devicePath;
 }
 
 ConfigReader::~ConfigReader() {
