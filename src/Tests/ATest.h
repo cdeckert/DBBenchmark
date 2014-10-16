@@ -45,6 +45,8 @@ public:
 	long long int getTime();
 	double getMbPerSec();
 
+	void cleanDBCache();
+
 	int numberOfIterations;
 	void execute();
 

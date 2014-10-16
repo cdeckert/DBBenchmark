@@ -37,6 +37,13 @@ void ATest::setExtentSize(int size)
 	this->extentBuffer = new char[extentSize*1024];
 }
 
+void ATest::cleanDBCache()
+{
+	char* buffer = new char[128*1024*1024];;
+	lseek64(disk, 128*1024*1024, SEEK_END);
+	read(disk, buffer, 128*1024*1024);
+}
+
 unsigned long long int ATest::getNumberOfPages()
 {
 	return getNumberOfExtents() * (extentSize/pageSize);

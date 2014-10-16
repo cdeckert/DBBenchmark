@@ -21,6 +21,7 @@ FullTableScan::~FullTableScan() {
 
 void FullTableScan::testAlgorithm()
 {
+	cleanDBCache();
 	startTimer();
 	for(int iteration = 0; iteration< numberOfIterations; iteration++)
 	{

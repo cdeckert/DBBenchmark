@@ -24,6 +24,7 @@ void IndexScan::testAlgorithm()
 	while(i < getNumberOfPages())
 	{
 		i = i*2;
+		cleanDBCache();
 		startTimer();
 		for(int iteration = 0; iteration< numberOfIterations; iteration++)
 		{
