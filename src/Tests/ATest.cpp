@@ -103,7 +103,7 @@ void ATest::testAlgorithm()
 
 void ATest::execute()
 {
-	openDisk("/dev/sdb");
+	openDisk("/dev/sdd");
 	speedUpDisk();
 
 
