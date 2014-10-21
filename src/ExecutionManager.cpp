@@ -9,7 +9,7 @@
 #include "Tests/LogWriter.h"
 #include "Tests/FullTableScan.h"
 #include "Tests/IndexScan.h"
-#include "ConfigReader.h"
+#include "Configurator.h"
 
 
 namespace DBBenchmark {
@@ -73,13 +73,22 @@ void ExecutionManager::start()
 	HDDTest::ConfigGenerator config = initalizeLayout();
 
 
-	DBTest::ConfigReader generalConfiguration = DBTest::ConfigReader();
+	HDDTest::Configurator configurator = HDDTest::Configurator();
+
+	//configurator.fetchConfigurations();
+
+	// for each configuration do
+
+	// for each thread within the configuration
+
+
+
 
 	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
 	//tableScan.isEndless = true;
 	tableScan.setExtentSize(64);
 	tableScan.setLayout(config.getExtentLocationsOfRel(1));
-	tableScan.start();
+	tableScan.startAsThread();
 
 	std::cout << std::endl << "INDEX" << std::endl;
 	DBTest::IndexScan index = DBTest::IndexScan();

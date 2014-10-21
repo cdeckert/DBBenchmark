@@ -275,9 +275,8 @@ void ATest::debug(std::string input)
 void ATest::startAsThread()
 {
 	//this->isEndless = true;
-	//std::thread t(&ATest::start, this);
-
-	//t.detach();
+	std::thread t(&ATest::start, this);
+	t.detach();
 	//t.join();
 }
 
