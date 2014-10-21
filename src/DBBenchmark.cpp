@@ -11,9 +11,9 @@
 using namespace std;
 
 int main() {
-	system("./update.sh");
+
 	DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
 	manager.start();
-
+	system("./update.sh");
 	return 0;
 }
