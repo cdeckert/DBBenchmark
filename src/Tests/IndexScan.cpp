@@ -33,8 +33,9 @@ void IndexScan::testAlgorithm()
 				readPage(getRandomPage());
 			}
 		}
-		//writeLogFile(i);
+		storeMeasurement();
 		std::cout << i << ":" << getTime() /1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 	}
+	writeTestLog();
 }
 }

@@ -67,7 +67,9 @@ public:
 
 	unsigned long long int getRandomPage();
 
-	void storeMeasurement(unsigned long long int);
+	void storeMeasurement();
+
+	void writeTestLog();
 
 
 	bool isEndless;

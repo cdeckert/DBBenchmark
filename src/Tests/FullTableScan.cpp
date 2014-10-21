@@ -32,6 +32,8 @@ void FullTableScan::testAlgorithm()
 			readExtent(start);
 		}
 	}
+	storeMeasurement();
+	writeTestLog();
 
 	std::cout << getTime() /1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 

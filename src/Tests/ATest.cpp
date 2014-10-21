@@ -7,7 +7,9 @@
 
 #include "ATest.h"
 #include <stdio.h>
-
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+using namespace rapidjson;
 namespace DBTest {
 
 ATest::ATest() {
@@ -91,16 +93,41 @@ long long int ATest::getTime()
 	return (endTime.tv_sec - startTime.tv_sec)*1000000000 + (endTime.tv_nsec - startTime.tv_nsec) ;
 }
 
-void ATest::storeMeasurement(unsigned long long int)
+void ATest::storeMeasurement()
 {
 	struct measurement tmp;
-	tmp.duration = this->getTime();
-	tmp.size = this->executionSize;
+	tmp.duration = this->getTime() / numberOfIterations;
+	tmp.size = this->executionSize / numberOfIterations;
 	tmp.mbPerSec = this->getMbPerSec();
 	measurements->push_back(tmp);
 	this->startTimer();
 }
 
+
+void ATest::writeTestLog()
+{
+	StringBuffer s;
+	Writer<StringBuffer> writer(s);
+	writer.StartObject();
+	writer.String("device");
+	writer.String(device.data());
+	writer.String("measurements");
+	writer.StartArray();
+	for (std::vector<struct measurement>::iterator it = this->measurements->begin() ; it != this->measurements->end(); ++it)
+	{
+		writer.StartObject();
+		writer.String("duration");
+		writer.Double(static_cast<double> (it->duration/1000000.));
+		writer.String("size");
+		writer.Double(static_cast<double> (it->size/(1024*1024)));
+		writer.String("mbPerSec");
+		writer.Double(static_cast<double> (it->mbPerSec));
+		writer.EndObject();
+	}
+	writer.EndArray();
+	writer.EndObject();
+	debug(s.GetString());
+}
 
 /**
  * Initalize random numbers
