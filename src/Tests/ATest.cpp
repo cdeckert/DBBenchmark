@@ -26,18 +26,6 @@ ATest::~ATest() {
 
 }
 
-void ATest::storeMeasurement(unsigned long long int)
-{
-	struct measurement tmp;
-	tmp.duration = this->getTime();
-	tmp.size = this->executionSize;
-	tmp.mbPerSec = this->getMbPerSec();
-	measurements->push_back(tmp);
-	this->startTimer();
-}
-
-
-
 void ATest::init_rand()
 {
 	time_t t;
@@ -46,32 +34,11 @@ void ATest::init_rand()
 	srand((unsigned int)t);
 }
 
+
 void ATest::setExtentSize(int size)
 {
 	this->extentSize = size;
 	this->extentBuffer = new char[extentSize*1024];
-}
-
-void ATest::cleanDBCache()
-{
-	char* buffer = new char[128*1024*1024];;
-	lseek64(disk, -128*1024*1024, SEEK_END);
-	read(disk, buffer, 128*1024*1024);
-}
-
-unsigned long long int ATest::getNumberOfPages()
-{
-	return getNumberOfExtents() * (extentSize/pageSize);
-}
-unsigned long long int ATest::getNumberOfExtents()
-{
-	return this->relation->size();
-}
-
-unsigned long long int ATest::getRandomPage()
-{
-	unsigned long long int outputPage = this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize/pageSize))*pageSize;
-	return outputPage;
 }
 
 void ATest::setPageSize(int size)
@@ -80,72 +47,19 @@ void ATest::setPageSize(int size)
 	this->pageBuffer = new char[pageSize*1024];
 }
 
-void ATest::openDisk(std::string diskPath)
-{
-	this->disk = open64(diskPath.data(), O_RDWR | O_SYNC); // | O_DIRECT | O_LARGEFILE);
-	perror("OPEN");
-	if(!isDiskValid())
-	{
-		std::cout << "Error: Disk permissions";
-	}
-}
-
-
 void ATest::setLayout(std::vector<struct HDDTest::extent>* relation)
 {
 	this->relation = relation;
 }
 
-bool ATest::isDiskValid()
+unsigned long long int ATest::getNumberOfExtents()
 {
-	return (this->disk != -1);
+	return this->relation->size();
 }
 
-void ATest::startTimer()
+unsigned long long int ATest::getNumberOfPages()
 {
-	clock_gettime(CLOCK_REALTIME, &startTime);
-}
-
-long long int ATest::getTime()
-{
-	timespec endTime;
-	clock_gettime(CLOCK_REALTIME, &endTime);
-	return (endTime.tv_sec - startTime.tv_sec)*1000000000 + (endTime.tv_nsec - startTime.tv_nsec) ;
-}
-
-void ATest::testAlgorithm()
-{
-	std::cout << this->isEndless << std::endl;
-}
-
-/*void ATest::writeLogFile(unsigned long long int iteration)
-{
-	log <<iteration << "," << getTime() /1000000000.;
-}*/
-
-
-void ATest::execute()
-{
-	openDisk(this->device);
-	speedUpDisk();
-	testAlgorithm();
-
-}
-
-void ATest::start()
-{
-	if(this->isEndless)
-	{
-		while(true)
-		{
-			execute();
-		}
-	}
-	else
-	{
-		execute();
-	}
-	close(disk);
+	return getNumberOfExtents() * (extentSize/pageSize);
 }
 
 void ATest::speedUpDisk()
@@ -165,6 +79,134 @@ double ATest::getMbPerSec()
 	return 0;
 }
 
+void ATest::startTimer()
+{
+	clock_gettime(CLOCK_REALTIME, &startTime);
+}
+
+long long int ATest::getTime()
+{
+	timespec endTime;
+	clock_gettime(CLOCK_REALTIME, &endTime);
+	return (endTime.tv_sec - startTime.tv_sec)*1000000000 + (endTime.tv_nsec - startTime.tv_nsec) ;
+}
+
+void ATest::storeMeasurement(unsigned long long int)
+{
+	struct measurement tmp;
+	tmp.duration = this->getTime();
+	tmp.size = this->executionSize;
+	tmp.mbPerSec = this->getMbPerSec();
+	measurements->push_back(tmp);
+	this->startTimer();
+}
+
+
+/**
+ * Initalize random numbers
+ */
+/**
+ * Sets size of a single extent
+ */
+/**
+ * Makes sure that there is no data in your database cache
+ */
+void ATest::cleanDBCache()
+{
+	char* buffer = new char[128*1024*1024];;
+	lseek64(disk, -128*1024*1024, SEEK_END);
+	read(disk, buffer, 128*1024*1024);
+}
+
+/**
+ * returns the number of pages for a given test
+ */
+/**
+ * returns the number of extents for a whole relation
+ */
+/**
+ * returns a random Page
+ */
+unsigned long long int ATest::getRandomPage()
+{
+	unsigned long long int outputPage = this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize/pageSize))*pageSize;
+	return outputPage;
+}
+
+/**
+ * sets the size of a single page
+ */
+/**
+ * opens a disk for a specific disk path
+ */
+void ATest::openDisk(std::string diskPath)
+{
+	this->disk = open64(diskPath.data(), O_RDWR | O_SYNC); // | O_DIRECT | O_LARGEFILE);
+	perror("OPEN");
+	if(!isDiskValid())
+	{
+		std::cout << "Error: Disk permissions";
+	}
+}
+
+/**
+ * injecting layout
+ */
+bool ATest::isDiskValid()
+{
+	return (this->disk != -1);
+}
+
+/**
+ * checks if a disk is valid
+ */
+/**
+ * starts a timer;
+ */
+/**
+ * returns the duration between now and the timer start time
+ */
+/**
+ * an abstract test algorithm
+ */
+void ATest::start()
+{
+	if(this->isEndless)
+	{
+		while(true)
+		{
+			execute();
+		}
+	}
+	else
+	{
+		execute();
+	}
+	close(disk);
+}
+
+void ATest::execute()
+{
+	openDisk(this->device);
+	speedUpDisk();
+	testAlgorithm();
+
+}
+
+void ATest::testAlgorithm()
+{
+	std::cout << this->isEndless << std::endl;
+}
+
+/*void ATest::writeLogFile(unsigned long long int iteration)
+{
+	log <<iteration << "," << getTime() /1000000000.;
+}*/
+
+
+/**
+ * seeks to the end and start of the a disk
+ */
 void ATest::writeExtent(unsigned long long int start)
 {
 
