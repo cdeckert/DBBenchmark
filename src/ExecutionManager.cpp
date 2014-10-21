@@ -28,7 +28,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 	// hdd starts at 0
 		unsigned long long int size_start = 0;
 		// spreading of relationship table
-		unsigned long long int size_spread = 1024 * 1024 * 3; // kb
+		unsigned long long int size_spread = 1024 * 1024 * 5; // kb
 		// size of a single extent
 		unsigned long long int size_extent = 64;
 		// size of a single page

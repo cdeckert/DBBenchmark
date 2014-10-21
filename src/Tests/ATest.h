@@ -22,9 +22,19 @@
 #include <fstream>
 
 using namespace std;
-namespace DBTest {
+namespace DBTest
+{
 
-class ATest {
+struct measurement
+{
+	unsigned long long int size;
+	unsigned long long int duration;
+	double mbPerSec;
+
+};
+
+class ATest
+{
 public:
 	ATest();
 	virtual ~ATest();
@@ -45,6 +55,8 @@ public:
 	long long int getTime();
 	double getMbPerSec();
 
+	//void
+
 	void cleanDBCache();
 
 	int numberOfIterations;
@@ -55,7 +67,7 @@ public:
 
 	unsigned long long int getRandomPage();
 
-	//void writeLogFile(unsigned long long int);
+	void storeMeasurement(unsigned long long int);
 
 
 	bool isEndless;
@@ -73,6 +85,12 @@ private:
 	char* extentBuffer;
 	timespec startTime;
 	unsigned long long int executionSize;
+	int sleepTime;
+	std::string device;
+
+	void debug(std::string);
+
+	std::vector<struct measurement>* measurements;
 
 	void init_rand();
 

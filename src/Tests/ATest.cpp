@@ -17,18 +17,33 @@ ATest::ATest() {
 	setPageSize(8);
 	setExtentSize(64);
 	init_rand();
+	sleepTime = 0;
+	measurements = new std::vector<measurement>();
+	this->device = "/dev/sdb";
 }
 
 ATest::~ATest() {
 
 }
 
+void ATest::storeMeasurement(unsigned long long int)
+{
+	struct measurement tmp;
+	tmp.duration = this->getTime();
+	tmp.size = this->executionSize;
+	tmp.mbPerSec = this->getMbPerSec();
+	measurements->push_back(tmp);
+	this->startTimer();
+}
+
+
+
 void ATest::init_rand()
 {
 	time_t t;
 
 	time(&t);
-	srand((unsigned int)t);              /* Zufallsgenerator initialisieren */
+	srand((unsigned int)t);
 }
 
 void ATest::setExtentSize(int size)
@@ -40,7 +55,7 @@ void ATest::setExtentSize(int size)
 void ATest::cleanDBCache()
 {
 	char* buffer = new char[128*1024*1024];;
-	lseek64(disk, 128*1024*1024, SEEK_END);
+	lseek64(disk, -128*1024*1024, SEEK_END);
 	read(disk, buffer, 128*1024*1024);
 }
 
@@ -55,7 +70,8 @@ unsigned long long int ATest::getNumberOfExtents()
 
 unsigned long long int ATest::getRandomPage()
 {
-	return this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize/pageSize))*pageSize;
+	unsigned long long int outputPage = this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize/pageSize))*pageSize;
+	return outputPage;
 }
 
 void ATest::setPageSize(int size)
@@ -110,15 +126,9 @@ void ATest::testAlgorithm()
 
 void ATest::execute()
 {
-	std::string device;
-	std::cout << "Enter device address:" << std::flush;
-	std::cin >> device;
-	openDisk(device);
+	openDisk(this->device);
 	speedUpDisk();
-
-
 	testAlgorithm();
-
 
 }
 
@@ -135,6 +145,7 @@ void ATest::start()
 	{
 		execute();
 	}
+	close(disk);
 }
 
 void ATest::speedUpDisk()
@@ -173,6 +184,7 @@ void ATest::readPage(unsigned long long int start)
 {
 	lseek64(disk, start*1024, SEEK_SET);
 	read(disk, pageBuffer, pageSize*1024);
+
 	executionSize += pageSize;
 }
 
@@ -182,6 +194,14 @@ void ATest::writePage(unsigned long long int start)
 	write(disk, pageBuffer, pageSize*1024);
 	executionSize += pageSize;
 }
+
+
+void ATest::debug(std::string input)
+{
+	std::cout << input;
+}
+
+
 
 void ATest::startAsThread()
 {
