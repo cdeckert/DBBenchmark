@@ -1,16 +1,16 @@
 {
-	"auriga": {
+	"ubuntu": {
 		"devices": ["dev/sdb"],
-		"layouts":[
+		"run":[
 			{
 				"layoutSettings":{},
 				"tests":[
 					{
 						"name": "abc",
-						"main": {
+						"mainThreads": {
 							"setting1": 1
 						},
-						"background":[
+						"backgroundThreads":[
 							{
 								"setting2": 2
 							}
