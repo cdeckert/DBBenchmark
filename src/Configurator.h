@@ -16,7 +16,6 @@ public:
 	virtual ~Configurator();
 
 	void fetchConfigurations();
-
 };
 
 } /* namespace HDDTest */

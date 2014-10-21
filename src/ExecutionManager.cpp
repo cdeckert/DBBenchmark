@@ -75,7 +75,7 @@ void ExecutionManager::start()
 
 	HDDTest::Configurator configurator = HDDTest::Configurator();
 
-	//configurator.fetchConfigurations();
+	configurator.fetchConfigurations();
 
 	// for each configuration do
 
@@ -95,6 +95,9 @@ void ExecutionManager::start()
 	index.setExtentSize(64);
 	index.setLayout(config.getExtentLocationsOfRel(1));
 	index.start();
+
+
+	std::terminate();
 
 }
 

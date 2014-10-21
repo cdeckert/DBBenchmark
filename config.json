@@ -1,1 +1,23 @@
-{"device":"/dev/sdb","size_spread_gb":5.0}
+{
+	"auriga": {
+		"devices": ["dev/sdb"],
+		"layouts":[
+			{
+				"layoutSettings":{},
+				"tests":[
+					{
+						"name": "abc",
+						"main": {
+							"setting1": 1
+						},
+						"background":[
+							{
+								"setting2": 2
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
