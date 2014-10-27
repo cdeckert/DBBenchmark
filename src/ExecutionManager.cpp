@@ -37,7 +37,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 		enum HDDTest::mode_readMode readMode;
 		enum HDDTest::mode_extentDistribution extentDistribution;
 
-		std::string device = "/dev/sdb";
+		std::string device = "/dev/sde";
 		// define read mode: ORDERED or UNORDERED
 		readMode = HDDTest::ORDERED;
 		// distribution: EQUALLY or ED_RANDOM

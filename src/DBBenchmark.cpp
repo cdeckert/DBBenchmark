@@ -15,6 +15,6 @@ int main() {
 
 	DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
 	manager.start();
-	system("./update.sh");
+	//system("./update.sh");
 	return 0;
 }
