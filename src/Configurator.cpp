@@ -44,7 +44,6 @@ void Configurator::fetchConfigurations()
 	Value& devices = hostSettings["devices"];
 	for(Value::ConstValueIterator itr = devices.Begin(); itr != devices.End(); ++itr)
 	{
-		cout << itr->GetString() << endl;
 		configuration.devices.push_back(itr->GetString());
 	}
 
@@ -76,6 +75,8 @@ void Configurator::fetchConfigurations()
 
 
 }
+
+
 
 
 } /* namespace HDDTest */

@@ -77,13 +77,16 @@ void ExecutionManager::start()
 
 	configurator.fetchConfigurations();
 
-	// for each configuration do
+	// execute tests for all specified devices
+	for(std::string  device : configurator.configuration.devices)
+	{
+		// execute all test runs
+		for(struct HDDTest::TestRun t : configurator.configuration.testRuns)
+		{
+			DBTest::ATest mainThread; // = initalizeMainThread();
 
-	// for each thread within the configuration
-
-
-
-
+		}
+	}
 	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
 	//tableScan.isEndless = true;
 	tableScan.setExtentSize(64);
