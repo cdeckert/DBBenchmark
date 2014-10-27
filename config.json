@@ -1,10 +1,10 @@
 {
 	"ubuntu": {
-		"devices": ["dev/sdb"],
+		"devices": ["/dev/sdb"],
 		"run":[
 			{
 				"layoutSettings":{},
-				"tests":[
+				"testRuns":[
 					{
 						"name": "abc",
 						"mainThreads": {

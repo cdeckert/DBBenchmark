@@ -15,14 +15,34 @@
 #include <vector>
 
 using namespace rapidjson;
+using namespace std;
 namespace HDDTest {
 
+struct Configuration
+{
+	vector<string> devices;
+	vector<struct TestRun> testRuns;
+};
+
+struct TestRun
+{
+	string name;
+	//struct TestThread mainThread;
+	vector<struct TestThread> backgroundThreads;
+};
+
+
+struct TestThread
+{
+
+};
 
 class Configurator {
 public:
 	Configurator();
 	virtual ~Configurator();
 	void fetchConfigurations();
+	struct Configuration configuration;
 
 
 };
