@@ -5,15 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Layout/ConfigGenerator.cpp \
-../src/Layout/HDDModePageReader.cpp 
+../src/Layout/HDDModePageReader.cpp \
+../src/Layout/Layout.cpp \
+../src/Layout/Relationship.cpp 
 
 OBJS += \
 ./src/Layout/ConfigGenerator.o \
-./src/Layout/HDDModePageReader.o 
+./src/Layout/HDDModePageReader.o \
+./src/Layout/Layout.o \
+./src/Layout/Relationship.o 
 
 CPP_DEPS += \
 ./src/Layout/ConfigGenerator.d \
-./src/Layout/HDDModePageReader.d 
+./src/Layout/HDDModePageReader.d \
+./src/Layout/Layout.d \
+./src/Layout/Relationship.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

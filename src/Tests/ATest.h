@@ -17,6 +17,7 @@
 #include <algorithm>
 #include "../Layout/ConfigGenerator.h"
 #include <fstream>
+#include <stdio.h>
 
 using namespace std;
 namespace DBTest
@@ -47,7 +48,7 @@ public:
 	void setExtentSize(int);
 	void setPageSize(int);
 	void speedUpDisk();
-	void setLayout(std::vector<struct HDDTest::extent> *);
+	void setLayout(vector<struct HDDTest::extent> *);
 	void startTimer();
 	long long int getTime();
 	double getMbPerSec();
@@ -95,14 +96,14 @@ private:
 	timespec startTime;
 	unsigned long long int executionSize;
 	int sleepTime;
-	std::string device;
+	string device;
 	bool terminateThread = false;
-	std::thread* theThread;
+	thread *theThread;
 
 
 	void debug(std::string);
 
-	std::vector<struct measurement> *measurements;
+	vector<struct measurement> *measurements;
 
 	void init_rand();
 

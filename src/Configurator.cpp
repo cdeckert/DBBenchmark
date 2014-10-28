@@ -36,37 +36,55 @@ void Configurator::fetchConfigurations()
 	char hostname[1024];
 	gethostname(hostname, 1024);
 
-	std::cout << hostname;
 	Value &hostSettings = d[hostname];
 
-	// to-do: check config.json ....
 	// read Configuration
 	// read devices
 	Value &devices = hostSettings["devices"];
 	for (Value::ConstValueIterator itr = devices.Begin(); itr != devices.End(); ++itr)
 	{
 		configuration.devices.push_back(itr->GetString());
+		cout << itr->GetString() << endl;
 	}
 
-	Value &testRuns = hostSettings["testRuns"];
-	for(Value::ConstMemberIterator itr = testRuns.MemberBegin(); itr != testRuns.MemberEnd(); ++itr)
+
+	Value &runs = hostSettings["runs"];
+
+	for(Value::ConstValueIterator run = runs.Begin(); run != runs.End(); ++run)
 	{
-	    TestRun aTestRun;
-	    aTestRun.name = itr->value["name"].GetString();
+		Value::ConstMemberIterator layoutSettings = run->FindMember("layoutSettings");
 
-	    // main Test
-	    //aTestRun.mainThread;
+		configuration.layout->mode = layoutSettings->value["mode"].GetString();
+		configuration.layout->pageSizeInKB = layoutSettings->value["pageSizeInKB"].GetUint();
+		configuration.layout->pagesPerExtent = layoutSettings->value["pagesPerExtent"].GetUint();
 
-	    // background Threads
-	    cout << itr->value["backgroundThreads"].IsArray();
-	    /*Value& backgroundThreads = itr->value["backgroundThreads"];
-	    for(Value::ConstMemberIterator titr = backgroundThreads.MemberBegin(); titr != backgroundThreads.MemberEnd(); ++titr)
-	    {
-	        TestThread testThread;
-	        aTestRun.backgroundThreads.push_back(testThread);
-	    }*/
-	    configuration.testRuns.push_back(aTestRun);
+		for(Value::ConstMemberIterator relationshipSetting = layoutSettings->value["relationshipAllocation"].MemberBegin(); relationshipSetting != layoutSettings->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
+		{
+			struct RelationshipConfig relConf;
+			relConf.name = relationshipSetting->name.GetString();
+			relConf.size = relationshipSetting->value.GetUint();
+			configuration.layout->relationships.push_back(relConf);
+		}
 	}
+
+
+
+
+
+
+	//cout << "is Object: " << layoutSettings.IsObject() << endl;
+	/*
+
+	for (Value::ConstValueIterator itr = layoutSettings["relationshipAllocation"].Begin(); itr != layoutSettings["relationshipAllocation"].End(); ++itr)
+	{
+
+	}*/
+
+	//configuration.layout = &layout;
+
+	//Value &testRuns = run["testRuns"];
+
+
 
 
 

@@ -1,32 +1,34 @@
-{
-	"ubuntu": {
-		"devices": ["/dev/sdb"],
-		"run":[
-			{
-				"layoutSettings":{
-					"mode" : "ordered",
-					"pageSizeInKB" : 8,
-					"pagesPerExtent" : 8,
-					"relationshipAllocation" : [
-						{"rel1": 6144},
-						{"rel2": 7680},
-						{"rel3": 2560}
-					]
-				},
-				"testRuns":[
-					{
-						"name": "abc",
-						"mainThreads": {
-							"setting1": 1
-						},
-						"backgroundThreads":[
-							{
-								"setting2": 2
-							}
-						]
-					}
-				]
-			}
-		]
-	}
+{  
+    "ubuntu":{  
+        "devices":[  
+            "/dev/sdb"
+        ],
+        "runs":[  
+            {  
+                "layoutSettings":{  
+                    "mode":"ordered",
+                    "pageSizeInKB":8,
+                    "pagesPerExtent":8,
+                    "relationshipAllocation":{  
+                        "rel1":6144,
+                        "rel2":7680,
+                        "rel3":2560
+                    }
+                },
+                "testRuns":[  
+                    {  
+                        "name":"abc",
+                        "mainThreads":{  
+                            "setting1":1
+                        },
+                        "backgroundThreads":[  
+                            {  
+                                "setting2":2
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }

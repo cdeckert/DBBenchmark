@@ -6,7 +6,7 @@
  */
 
 #include "ATest.h"
-#include <stdio.h>
+
 #include "rapidjson/writer.h"
 #include "rapidjson/stringbuffer.h"
 using namespace rapidjson;
@@ -282,8 +282,8 @@ void ATest::debug(std::string input)
 void ATest::startAsThread()
 {
 	this->isEndless = true;
-	theThread = std::thread(&ATest::start, this);
-	theThread->detach();
+	std::thread theThread(&ATest::start, this);
+	theThread.detach();
 }
 
 void ATest::stopThread()

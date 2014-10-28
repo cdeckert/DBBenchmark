@@ -21,6 +21,7 @@ struct Configuration
 {
 	vector<string> devices;
 	vector<struct TestRun> testRuns;
+	struct LayoutSettings *layout;
 };
 
 struct TestRun
@@ -34,6 +35,20 @@ struct TestRun
 struct TestThread
 {
 	int abc;
+};
+
+struct LayoutSettings
+{
+	string mode;
+	unsigned int pageSizeInKB;
+	unsigned int pagesPerExtent;
+	vector<struct RelationshipConfig> relationships;
+};
+
+struct RelationshipConfig
+{
+	unsigned int size;
+	string name;
 };
 
 class Configurator
