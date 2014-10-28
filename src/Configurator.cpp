@@ -38,7 +38,7 @@ void Configurator::fetchConfigurations()
 	std::cout << hostname;
 	Value& hostSettings = d[hostname];
 
-
+	// to-do: check config.json ....
 	// read Configuration
 	// read devices
 	Value& devices = hostSettings["devices"];

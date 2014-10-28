@@ -6,10 +6,8 @@
  */
 
 #include "ExecutionManager.h"
-#include "Tests/LogWriter.h"
-#include "Tests/FullTableScan.h"
-#include "Tests/IndexScan.h"
-#include "Configurator.h"
+
+
 
 
 namespace DBBenchmark {
@@ -67,6 +65,21 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 }
 
 
+DBTest::ATest ExecutionManager::initalizeThread(struct HDDTest::TestThread *threadSettings)
+{
+	return DBTest::FullTableScan();
+}
+
+
+void ExecutionManager::startBackgroundTest()
+{
+	for(DBTest::ATest bg : backgroundThreads)
+	{
+		bg.startAsThread();
+	}
+}
+
+
 
 void ExecutionManager::start()
 {
@@ -77,30 +90,43 @@ void ExecutionManager::start()
 
 	configurator.fetchConfigurations();
 
+
+
+
 	// execute tests for all specified devices
 	for(std::string  device : configurator.configuration.devices)
 	{
 		// execute all test runs
 		for(struct HDDTest::TestRun t : configurator.configuration.testRuns)
 		{
-			DBTest::ATest mainThread; // = initalizeMainThread();
+			this->backgroundThreads.clear();
+			mainThread = initalizeThread(t.mainThread);
 
+			for(struct HDDTest::TestThread *aThreadConfiguration : t.backgroundThreads)
+			{
+				this->backgroundThreads.push_back(this->initalizeThread(aThreadConfiguration));
+			}
+
+
+			startBackgroundTest();
+			mainThread.start();
+
+			//...
 		}
 	}
-	DBTest::FullTableScan tableScan = DBTest::FullTableScan();
-	//tableScan.isEndless = true;
-	tableScan.setExtentSize(64);
-	tableScan.setLayout(config.getExtentLocationsOfRel(1));
-	tableScan.startAsThread();
-
-	std::cout << std::endl << "INDEX" << std::endl;
-	DBTest::IndexScan index = DBTest::IndexScan();
-	index.setExtentSize(64);
-	index.setLayout(config.getExtentLocationsOfRel(1));
-	index.start();
 
 
-	std::terminate();
+
+
+
+
+
+	for(DBTest::ATest bg : backgroundThreads)
+	{
+		//bg.terminate();
+	}
+
+
 
 }
 

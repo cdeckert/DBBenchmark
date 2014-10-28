@@ -10,6 +10,11 @@
 
 #include <thread>
 #include "Layout/ConfigGenerator.h"
+#include "Configurator.h"
+#include "Tests/LogWriter.h"
+#include "Tests/FullTableScan.h"
+#include "Tests/IndexScan.h"
+#include "Tests/ATest.h"
 
 namespace DBBenchmark {
 
@@ -20,7 +25,13 @@ public:
 	virtual ~ExecutionManager();
 
 	void start();
+	DBTest::ATest initalizeThread(struct HDDTest::TestThread*);
 	HDDTest::ConfigGenerator initalizeLayout();
+
+private:
+	std::vector<DBTest::ATest> backgroundThreads;
+	DBTest::ATest mainThread;
+	void startBackgroundTest();
 };
 
 } /* namespace DBBenchmark */

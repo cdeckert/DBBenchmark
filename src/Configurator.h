@@ -27,14 +27,14 @@ struct Configuration
 struct TestRun
 {
 	string name;
-	//struct TestThread mainThread;
-	vector<struct TestThread> backgroundThreads;
+	struct TestThread *mainThread;
+	vector<struct TestThread *> backgroundThreads;
 };
 
 
 struct TestThread
 {
-
+	int abc;
 };
 
 class Configurator {
