@@ -64,6 +64,25 @@ void Configurator::fetchConfigurations()
 			relConf.name = relationshipSetting->name.GetString();
 			relConf.size = relationshipSetting->value.GetUint();
 			configuration.layout.relationships.push_back(relConf);
+
+
+			// test methods
+			//configuration.layout.testRuns.mainThread.
+		}
+
+
+		Value::ConstMemberIterator testRuns = run->FindMember("testRuns");
+		for(Value::ConstValueIterator testRunIt = testRuns->value.Begin(); testRunIt != testRuns->value.Begin(); ++testRunIt)
+		{
+			struct TestRun testRun;
+			testRun.mainThread.relationship = testRunIt->FindMember("mainThread")->value["relationship"].GetString();
+			testRun.mainThread.testName = testRunIt->FindMember("mainThread")->value["testName"].GetString();
+
+
+
+
+
+			configuration.layout.testRuns.push_back((testRun));
 		}
 	}
 

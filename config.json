@@ -16,15 +16,18 @@
                     }
                 },
                 "testRuns":[  
-                    {  
+                   		{  
                         "name":"abc",
-                        "mainThreads":{  
+                        "mainThread":{
+                        	"testName": "fullTableScan",
+                        	"relationship": "rel1",
                             "setting1":1
                         },
                         "backgroundThreads":[  
-                            {  
-                                "setting2":2
-                            }
+                        {
+                        	"relationship": "rel2",
+                            "setting2":2
+                        }
                         ]
                     }
                 ]

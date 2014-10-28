@@ -36,6 +36,8 @@ struct Configuration
 
 struct TestThread
 {
+	string relationship;
+	string testName;
 	int abc;
 };
 
