@@ -14,6 +14,7 @@ namespace DBBenchmark
 ExecutionManager::ExecutionManager()
 {
 	configurator = HDDTest::Configurator();
+	configurator.fetchConfigurations();
 
 }
 
@@ -66,7 +67,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 }
 
 
-DBTest::ATest ExecutionManager::initalizeThread(struct HDDTest::TestThread *threadSettings, std::string device)
+DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread *threadSettings, std::string device)
 {
 	DBTest::ATest aTestThread;
 
@@ -80,16 +81,16 @@ DBTest::ATest ExecutionManager::initalizeThread(struct HDDTest::TestThread *thre
 	return aTestThread;
 }
 
-void ExecutionManager::initalizeThreads(struct HDDTest::TestRun testRun, std::string device)
+void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std::string device)
 {
 	// initalize main Thread
-	mainThread = initalizeThread(testRun.mainThread, device);
+	mainThread = initalizeSingleThread(testRun.mainThread, device);
 
 	// initalize background Threads
 	this->backgroundThreads.clear();
 	for (struct HDDTest::TestThread *aThreadConfiguration : testRun.backgroundThreads)
 	{
-		this->backgroundThreads.push_back(this->initalizeThread(aThreadConfiguration, device));
+		this->backgroundThreads.push_back(this->initalizeSingleThread(aThreadConfiguration, device));
 	}
 }
 
@@ -106,7 +107,7 @@ void ExecutionManager::terminateBackgroundThreads()
 {
 	for (DBTest::ATest bg : backgroundThreads)
 	{
-		//bg.terminate();
+		bg.stopThread();
 	}
 }
 
@@ -116,12 +117,18 @@ void ExecutionManager::executeTestRuns(std::vector<struct HDDTest::TestRun> test
 	// for each test run
 	for (struct HDDTest::TestRun aTestRun : testRuns)
 	{
+
+		HDDTest::ConfigGenerator config = initalizeLayout();
+
 		// initalize all threads
-		this->initalizeThreads(aTestRun, device);
+		this->initalizeAllThreads(aTestRun, device);
+
 		// start all background threads
 		this->startBackgroundTest();
+
 		// start main thread and wait for them
 		this->mainThread.start();
+
 		// terminate all background threads
 		this->terminateBackgroundThreads();
 
@@ -130,12 +137,8 @@ void ExecutionManager::executeTestRuns(std::vector<struct HDDTest::TestRun> test
 
 
 
-void ExecutionManager::start()
+void ExecutionManager::executeAllTestWithAllConfigurations()
 {
-	configurator.fetchConfigurations();
-
-	HDDTest::ConfigGenerator config = initalizeLayout();
-
 	// execute tests for all specified devices
 	for (std::string  device : configurator.configuration.devices)
 	{

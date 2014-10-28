@@ -49,7 +49,7 @@ void Configurator::fetchConfigurations()
 	}
 
 	Value &testRuns = hostSettings["testRuns"];
-	/*for(Value::ConstMemberIterator itr = testRuns.MemberBegin(); itr != testRuns.MemberEnd(); ++itr)
+	for(Value::ConstMemberIterator itr = testRuns.MemberBegin(); itr != testRuns.MemberEnd(); ++itr)
 	{
 	    TestRun aTestRun;
 	    aTestRun.name = itr->value["name"].GetString();
@@ -59,14 +59,14 @@ void Configurator::fetchConfigurations()
 
 	    // background Threads
 	    cout << itr->value["backgroundThreads"].IsArray();
-	    Value& backgroundThreads = itr->value["backgroundThreads"];
+	    /*Value& backgroundThreads = itr->value["backgroundThreads"];
 	    for(Value::ConstMemberIterator titr = backgroundThreads.MemberBegin(); titr != backgroundThreads.MemberEnd(); ++titr)
 	    {
 	        TestThread testThread;
 	        aTestRun.backgroundThreads.push_back(testThread);
-	    }
+	    }*/
 	    configuration.testRuns.push_back(aTestRun);
-	}*/
+	}
 
 
 

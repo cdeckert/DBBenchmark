@@ -14,7 +14,7 @@ using namespace std;
 int main() {
 
 	DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
-	manager.start();
+	manager.executeAllTestWithAllConfigurations();
 	//system("./update.sh");
 	return 0;
 }

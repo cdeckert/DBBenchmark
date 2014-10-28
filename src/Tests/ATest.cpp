@@ -206,6 +206,10 @@ void ATest::start()
 		while (true)
 		{
 			execute();
+			if(this->terminateThread)
+			{
+				break;
+			}
 		}
 	}
 	else
@@ -277,10 +281,15 @@ void ATest::debug(std::string input)
 
 void ATest::startAsThread()
 {
-	//this->isEndless = true;
-	std::thread t(&ATest::start, this);
-	t.detach();
-	//t.join();
+	this->isEndless = true;
+	theThread = std::thread(&ATest::start, this);
+	theThread->detach();
+}
+
+void ATest::stopThread()
+{
+	terminateThread = true;
+	theThread->join();
 }
 
 

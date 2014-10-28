@@ -5,7 +5,6 @@
 
 #ifndef DBTESTING_SRC_ATEST_H_
 #define DBTESTING_SRC_ATEST_H_
-#define _LARGEFILE64_SOURCE
 #include <iostream>
 #include <thread>
 #include <sys/types.h>
@@ -84,6 +83,8 @@ public:
 		this->device = device;
 	}
 
+	void stopThread();
+
 private:
 
 	int disk;
@@ -95,6 +96,9 @@ private:
 	unsigned long long int executionSize;
 	int sleepTime;
 	std::string device;
+	bool terminateThread = false;
+	std::thread* theThread;
+
 
 	void debug(std::string);
 
