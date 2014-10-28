@@ -18,6 +18,7 @@
 #include "../Layout/ConfigGenerator.h"
 #include <fstream>
 #include <stdio.h>
+#include "../Layout/Layout.h"
 
 using namespace std;
 namespace DBTest
@@ -85,6 +86,9 @@ public:
 	}
 
 	void stopThread();
+
+
+	HDDTest::Layout* layout;
 
 private:
 

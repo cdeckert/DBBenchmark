@@ -26,12 +26,14 @@ ExecutionManager::~ExecutionManager()
 
 
 
-DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device)
+DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device, HDDTest::Layout* layout)
 {
 	DBTest::ATest aTestThread;
 
 	// switch based on thread setting
 	aTestThread = DBTest::FullTableScan();
+
+	aTestThread.layout = layout;
 
 
 
@@ -40,16 +42,16 @@ DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread
 	return aTestThread;
 }
 
-void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std::string device)
+void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std::string device, HDDTest::Layout* layout)
 {
 	// initalize main Thread
-	mainThread = initalizeSingleThread(testRun.mainThread, device);
+	mainThread = initalizeSingleThread(testRun.mainThread, device, layout);
 
 	// initalize background Threads
 	this->backgroundThreads.clear();
 	for (struct HDDTest::TestThread aThreadConfiguration : testRun.backgroundThreads)
 	{
-		this->backgroundThreads.push_back(this->initalizeSingleThread(aThreadConfiguration, device));
+		this->backgroundThreads.push_back(this->initalizeSingleThread(aThreadConfiguration, device, layout));
 	}
 }
 
@@ -87,7 +89,7 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 		//HDDTest::ConfigGenerator config = initalizeLayout();
 
 		// initalize all threads
-		this->initalizeAllThreads(aTestRun, device);
+		this->initalizeAllThreads(aTestRun, device, &layout);
 
 		// start all background threads
 		this->startBackgroundTest();

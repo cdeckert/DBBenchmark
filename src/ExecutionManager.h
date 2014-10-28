@@ -26,7 +26,7 @@ public:
 	virtual ~ExecutionManager();
 
 	void executeAllTestWithAllConfigurations();
-	DBTest::ATest initalizeSingleThread(struct HDDTest::TestThread, std::string);
+	DBTest::ATest initalizeSingleThread(struct HDDTest::TestThread, std::string, HDDTest::Layout*);
 	HDDTest::ConfigGenerator initalizeLayout();
 
 private:
@@ -34,7 +34,7 @@ private:
 	DBTest::ATest mainThread;
 	void startBackgroundTest();
 	HDDTest::Configurator configurator;
-	void initalizeAllThreads(struct HDDTest::TestRun, std::string);
+	void initalizeAllThreads(struct HDDTest::TestRun, std::string, HDDTest::Layout*);
 	void executeTestRuns(struct HDDTest::LayoutSettings, std::string);
 	void terminateBackgroundThreads();
 };
