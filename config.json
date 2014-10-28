@@ -3,7 +3,16 @@
 		"devices": ["/dev/sdb"],
 		"run":[
 			{
-				"layoutSettings":{},
+				"layoutSettings":{
+					"mode" : "ordered",
+					"pageSizeInKB" : 8,
+					"pagesPerExtent" : 8,
+					"relationshipAllocation" : [
+						{"rel1": 6144},
+						{"rel2": 7680},
+						{"rel3": 2560}
+					]
+				},
 				"testRuns":[
 					{
 						"name": "abc",
