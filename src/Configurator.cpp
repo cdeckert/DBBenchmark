@@ -54,16 +54,16 @@ void Configurator::fetchConfigurations()
 	{
 		Value::ConstMemberIterator layoutSettings = run->FindMember("layoutSettings");
 
-		configuration.layout->mode = layoutSettings->value["mode"].GetString();
-		configuration.layout->pageSizeInKB = layoutSettings->value["pageSizeInKB"].GetUint();
-		configuration.layout->pagesPerExtent = layoutSettings->value["pagesPerExtent"].GetUint();
+		configuration.layout.mode = layoutSettings->value["mode"].GetString();
+		configuration.layout.pageSizeInKB = layoutSettings->value["pageSizeInKB"].GetUint();
+		configuration.layout.pagesPerExtent = layoutSettings->value["pagesPerExtent"].GetUint();
 
 		for(Value::ConstMemberIterator relationshipSetting = layoutSettings->value["relationshipAllocation"].MemberBegin(); relationshipSetting != layoutSettings->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
 		{
 			struct RelationshipConfig relConf;
 			relConf.name = relationshipSetting->name.GetString();
 			relConf.size = relationshipSetting->value.GetUint();
-			configuration.layout->relationships.push_back(relConf);
+			configuration.layout.relationships.push_back(relConf);
 		}
 	}
 

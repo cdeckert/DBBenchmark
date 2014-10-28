@@ -17,25 +17,6 @@ using namespace std;
 namespace HDDTest
 {
 
-struct Configuration
-{
-	vector<string> devices;
-	vector<struct TestRun> testRuns;
-	struct LayoutSettings *layout;
-};
-
-struct TestRun
-{
-	string name;
-	struct TestThread *mainThread;
-	vector<struct TestThread *> backgroundThreads;
-};
-
-
-struct TestThread
-{
-	int abc;
-};
 
 struct LayoutSettings
 {
@@ -43,7 +24,32 @@ struct LayoutSettings
 	unsigned int pageSizeInKB;
 	unsigned int pagesPerExtent;
 	vector<struct RelationshipConfig> relationships;
+	vector<struct TestRun> testRuns;
 };
+
+struct Configuration
+{
+	vector<string> devices;
+
+	struct LayoutSettings layout;
+};
+
+struct TestThread
+{
+	int abc;
+};
+
+struct TestRun
+{
+	string name;
+	struct TestThread mainThread;
+	vector<struct TestThread> backgroundThreads;
+};
+
+
+
+
+
 
 struct RelationshipConfig
 {

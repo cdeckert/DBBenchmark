@@ -67,7 +67,7 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 }
 
 
-DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread *threadSettings, std::string device)
+DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device)
 {
 	DBTest::ATest aTestThread;
 
@@ -88,7 +88,7 @@ void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std:
 
 	// initalize background Threads
 	this->backgroundThreads.clear();
-	for (struct HDDTest::TestThread *aThreadConfiguration : testRun.backgroundThreads)
+	for (struct HDDTest::TestThread aThreadConfiguration : testRun.backgroundThreads)
 	{
 		this->backgroundThreads.push_back(this->initalizeSingleThread(aThreadConfiguration, device));
 	}
@@ -112,9 +112,11 @@ void ExecutionManager::terminateBackgroundThreads()
 }
 
 
-void ExecutionManager::executeTestRuns(std::vector<struct HDDTest::TestRun> testRuns, std::string device)
+void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSetting, std::string device)
 {
 	// for each test run
+	std::vector<struct HDDTest::TestRun> testRuns = layoutSetting.testRuns;
+	std::cout << layoutSetting.mode;
 	for (struct HDDTest::TestRun aTestRun : testRuns)
 	{
 
@@ -143,7 +145,7 @@ void ExecutionManager::executeAllTestWithAllConfigurations()
 	for (std::string  device : configurator.configuration.devices)
 	{
 		// execute all test runs
-		this->executeTestRuns(configurator.configuration.testRuns, device);
+		this->executeTestRuns(configurator.configuration.layout, device);
 	}
 }
 
