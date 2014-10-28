@@ -1,8 +1,6 @@
 /*
  * Configurator.h
  *
- *  Created on: Oct 21, 2014
- *      Author: root
  */
 
 #ifndef SRC_CONFIGURATOR_H_
@@ -16,7 +14,8 @@
 
 using namespace rapidjson;
 using namespace std;
-namespace HDDTest {
+namespace HDDTest
+{
 
 struct Configuration
 {
@@ -37,7 +36,8 @@ struct TestThread
 	int abc;
 };
 
-class Configurator {
+class Configurator
+{
 public:
 	Configurator();
 	virtual ~Configurator();

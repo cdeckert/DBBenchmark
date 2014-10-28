@@ -1,8 +1,6 @@
 /*
  * ExecutionManager.h
  *
- *  Created on: Oct 9, 2014
- *      Author: root
  */
 
 #ifndef DBTESTING_SRC_EXECUTIONMANAGER_H_
@@ -16,16 +14,18 @@
 #include "Tests/IndexScan.h"
 #include "Tests/ATest.h"
 
-namespace DBBenchmark {
+namespace DBBenchmark
+{
 
-class ExecutionManager {
+class ExecutionManager
+{
 public:
 
 	ExecutionManager();
 	virtual ~ExecutionManager();
 
 	void start();
-	DBTest::ATest initalizeThread(struct HDDTest::TestThread*, std::string);
+	DBTest::ATest initalizeThread(struct HDDTest::TestThread *, std::string);
 	HDDTest::ConfigGenerator initalizeLayout();
 
 private:

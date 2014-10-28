@@ -1,8 +1,6 @@
 /*
  * ATest.h
  *
- *  Created on: Oct 9, 2014
- *      Author: root
  */
 
 #ifndef DBTESTING_SRC_ATEST_H_
@@ -50,7 +48,7 @@ public:
 	void setExtentSize(int);
 	void setPageSize(int);
 	void speedUpDisk();
-	void setLayout(std::vector<struct HDDTest::extent>*);
+	void setLayout(std::vector<struct HDDTest::extent> *);
 	void startTimer();
 	long long int getTime();
 	double getMbPerSec();
@@ -76,11 +74,13 @@ public:
 	std::vector<struct HDDTest::extent> *relation;
 	virtual void testAlgorithm();
 
-	const std::string& getDevice() const {
+	const std::string &getDevice() const
+	{
 		return device;
 	}
 
-	void setDevice(const std::string& device) {
+	void setDevice(const std::string &device)
+	{
 		this->device = device;
 	}
 
@@ -89,8 +89,8 @@ private:
 	int disk;
 	int extentSize;
 	int pageSize;
-	char* pageBuffer;
-	char* extentBuffer;
+	char *pageBuffer;
+	char *extentBuffer;
 	timespec startTime;
 	unsigned long long int executionSize;
 	int sleepTime;
@@ -98,7 +98,7 @@ private:
 
 	void debug(std::string);
 
-	std::vector<struct measurement>* measurements;
+	std::vector<struct measurement> *measurements;
 
 	void init_rand();
 

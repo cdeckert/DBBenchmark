@@ -1,21 +1,22 @@
 /*
  * FullTableScan.cpp
  *
- *  Created on: Oct 11, 2014
- *      Author: root
  */
 
 #include "FullTableScan.h"
 #include <sys/time.h>
 
-namespace DBTest {
+namespace DBTest
+{
 
-FullTableScan::FullTableScan() {
+FullTableScan::FullTableScan()
+{
 	// TODO Auto-generated constructor stub
 
 }
 
-FullTableScan::~FullTableScan() {
+FullTableScan::~FullTableScan()
+{
 	// TODO Auto-generated destructor stub
 }
 
@@ -23,9 +24,9 @@ void FullTableScan::testAlgorithm()
 {
 	cleanDBCache();
 	startTimer();
-	for(int iteration = 0; iteration< numberOfIterations; iteration++)
+	for (int iteration = 0; iteration < numberOfIterations; iteration++)
 	{
-		for(std::vector<struct HDDTest::extent>::iterator it = relation->begin();
+		for (std::vector<struct HDDTest::extent>::iterator it = relation->begin();
 				it != relation->end(); it++)
 		{
 			unsigned long long int start = (it->start);
@@ -35,7 +36,7 @@ void FullTableScan::testAlgorithm()
 	storeMeasurement();
 	writeTestLog();
 
-	std::cout << getTime() /1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
+	std::cout << getTime() / 1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 
 }
 

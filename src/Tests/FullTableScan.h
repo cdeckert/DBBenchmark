@@ -1,8 +1,6 @@
 /*
  * FullTableScan.h
  *
- *  Created on: Oct 11, 2014
- *      Author: root
  */
 
 #ifndef SRC_FULLTABLESCAN_H_
@@ -10,9 +8,11 @@
 #include "ATest.h"
 
 
-namespace DBTest {
+namespace DBTest
+{
 
-class FullTableScan : public ATest {
+class FullTableScan : public ATest
+{
 public:
 	FullTableScan();
 	virtual ~FullTableScan();
