@@ -7,13 +7,45 @@
 
 #ifndef SRC_LAYOUT_RELATIONSHIP_H_
 #define SRC_LAYOUT_RELATIONSHIP_H_
+#include <iostream>
+#include <vector>
+namespace HDDTest
+{
 
-namespace HDDTest {
+struct Extent
+{
+	unsigned long long int number;
+	unsigned long long int startKb;
+};
 
-class Relationship {
+class Relationship
+{
 public:
-	Relationship();
+	Relationship(std::string, unsigned long long int, unsigned int, unsigned int);
 	virtual ~Relationship();
+	void addExtent(unsigned long long int);
+
+	int getProbability(unsigned long long int);
+
+	void setUnallocatedExtents(unsigned long long int unallocatedExtents) {
+		this->unallocatedExtents = unallocatedExtents;
+	}
+
+
+	unsigned long long int getRandomExtent();
+	unsigned long long int getRandomPage();
+
+	unsigned long long int getOrderedExtent();
+	unsigned long long int getOrderedPage();
+	std::vector<struct Extent> extents;
+	std::string name;
+
+	unsigned int pagesPerExtent;
+	unsigned int pageSizeInKB;
+
+private:
+	unsigned long long int unallocatedExtents;
+
 };
 
 } /* namespace HDDTest */

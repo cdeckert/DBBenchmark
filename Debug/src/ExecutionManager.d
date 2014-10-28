@@ -1,6 +1,5 @@
 src/ExecutionManager.d: ../src/ExecutionManager.cpp \
- ../src/ExecutionManager.h ../src/Layout/ConfigGenerator.h \
- ../src/Configurator.h \
+ ../src/ExecutionManager.h ../src/Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -14,11 +13,10 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h \
  ../src/Tests/LogWriter.h ../src/Tests/ATest.h \
  ../src/Tests/../Layout/ConfigGenerator.h ../src/Tests/FullTableScan.h \
- ../src/Tests/IndexScan.h ../src/Tests/ATest.h
+ ../src/Tests/IndexScan.h ../src/Tests/ATest.h ../src/Layout/Layout.h \
+ ../src/Layout/Relationship.h ../src/Layout/../Configurator.h
 
 ../src/ExecutionManager.h:
-
-../src/Layout/ConfigGenerator.h:
 
 ../src/Configurator.h:
 
@@ -55,3 +53,9 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
 ../src/Tests/IndexScan.h:
 
 ../src/Tests/ATest.h:
+
+../src/Layout/Layout.h:
+
+../src/Layout/Relationship.h:
+
+../src/Layout/../Configurator.h:

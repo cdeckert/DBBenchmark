@@ -5,14 +5,16 @@
 
 #include "Relationship.h"
 #include "../Configurator.h"
+#include <cmath>
+#include <algorithm>
 
 #ifndef SRC_LAYOUT_LAYOUT_H_
 #define SRC_LAYOUT_LAYOUT_H_
 
 namespace HDDTest
 {
-enum modeDistributionOrder {ORDERED, UNORDERED};
-enum modeExtentDistribution {EQUALLY , ED_RANDOM};
+//enum modeDistributionOrder {ORDERED, UNORDERED};
+//enum modeExtentDistribution {EQUALLY , ED_RANDOM};
 class Layout
 {
 public:
@@ -21,35 +23,17 @@ public:
 
 	void createRelationships(std::vector<struct HDDTest::RelationshipConfig>);
 
-	unsigned long long int getDiskStart() const {
-		return diskStart;
-	}
-
-	void setDiskStart(unsigned long long int diskStart) {
-		this->diskStart = diskStart;
-	}
-
-	int getExtentSizeInPages() const {
-		return extentSizeInPages;
-	}
-
-	void setExtentSizeInPages(int extentSizeInPages) {
-		this->extentSizeInPages = extentSizeInPages;
-	}
-
-	int getPageSizeInKb() const {
-		return pageSizeInKB;
-	}
-
-	void setPageSizeInKb(int pageSizeInKb) {
-		pageSizeInKB = pageSizeInKb;
-	}
-
-private:
-	std::vector<Relationship> relationships;
 	unsigned long long int diskStart;
 	int extentSizeInPages;
 	int pageSizeInKB;
+
+	HDDTest::Relationship* getRelationship(std::string);
+
+
+private:
+	std::vector<Relationship> relationships;
+	void init_rand();
+
 
 };
 

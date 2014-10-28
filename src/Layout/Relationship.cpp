@@ -9,13 +9,43 @@
 
 namespace HDDTest {
 
-Relationship::Relationship() {
-	// TODO Auto-generated constructor stub
+Relationship::Relationship(std::string name, unsigned long long int size, unsigned int pagesPerExtent, unsigned int pageSizeInKB)
+{
+	this->name = name;
+	this->extents.reserve(size);
+	this->unallocatedExtents = size;
+	this->pagesPerExtent = pagesPerExtent;
+	this->pageSizeInKB = pageSizeInKB;
 
 }
 
 Relationship::~Relationship() {
 	// TODO Auto-generated destructor stub
+}
+
+void Relationship::addExtent(unsigned long long int start)
+{
+	struct Extent extent;
+	extent.startKb = start;
+	extent.number = extents.size();
+	this->extents.push_back(extent);
+	this->unallocatedExtents--;
+}
+
+int Relationship::getProbability(unsigned long long int totalUnallocatedExtents)
+{
+	int prob = this->unallocatedExtents*100 / totalUnallocatedExtents ;
+	return prob;
+}
+
+unsigned long long int Relationship::getRandomExtent()
+{
+	return this->extents[rand() % this->extents.size()].startKb;
+}
+
+unsigned long long int Relationship::getRandomPage()
+{
+	return this->extents[rand() % this->extents.size()].startKb + (rand() % this->pagesPerExtent) * this->pageSizeInKB;
 }
 
 } /* namespace HDDTest */

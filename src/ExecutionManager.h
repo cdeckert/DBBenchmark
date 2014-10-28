@@ -7,12 +7,13 @@
 #define DBTESTING_SRC_EXECUTIONMANAGER_H_
 
 #include <thread>
-#include "Layout/ConfigGenerator.h"
+//#include "Layout/ConfigGenerator.h"
 #include "Configurator.h"
 #include "Tests/LogWriter.h"
 #include "Tests/FullTableScan.h"
 #include "Tests/IndexScan.h"
 #include "Tests/ATest.h"
+#include "Layout/Layout.h"
 
 namespace DBBenchmark
 {
