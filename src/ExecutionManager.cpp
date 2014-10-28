@@ -13,7 +13,7 @@
 namespace DBBenchmark {
 
 ExecutionManager::ExecutionManager() {
-	// TODO Auto-generated constructor stub
+	configurator = HDDTest::Configurator();
 
 }
 
@@ -65,9 +65,31 @@ HDDTest::ConfigGenerator ExecutionManager::initalizeLayout()
 }
 
 
-DBTest::ATest ExecutionManager::initalizeThread(struct HDDTest::TestThread *threadSettings)
+DBTest::ATest ExecutionManager::initalizeThread(struct HDDTest::TestThread *threadSettings, std::string device)
 {
-	return DBTest::FullTableScan();
+	DBTest::ATest aTestThread;
+
+	// switch based on thread setting
+	aTestThread = DBTest::FullTableScan();
+
+
+
+
+	aTestThread.setDevice(device);
+	return aTestThread;
+}
+
+void ExecutionManager::initalizeThreads(struct HDDTest::TestRun testRun, std::string device)
+{
+	// initalize main Thread
+	mainThread = initalizeThread(testRun.mainThread, device);
+
+	// initalize background Threads
+	this->backgroundThreads.clear();
+	for(struct HDDTest::TestThread *aThreadConfiguration : testRun.backgroundThreads)
+	{
+		this->backgroundThreads.push_back(this->initalizeThread(aThreadConfiguration, device));
+	}
 }
 
 
@@ -79,55 +101,46 @@ void ExecutionManager::startBackgroundTest()
 	}
 }
 
+void ExecutionManager::terminateBackgroundThreads()
+{
+	for(DBTest::ATest bg : backgroundThreads)
+	{
+		//bg.terminate();
+	}
+}
+
+
+void ExecutionManager::executeTestRuns(std::vector<struct HDDTest::TestRun> testRuns, std::string device)
+{
+	// for each test run
+	for(struct HDDTest::TestRun aTestRun : testRuns)
+	{
+		// initalize all threads
+		this->initalizeThreads(aTestRun, device);
+		// start all background threads
+		this->startBackgroundTest();
+		// start main thread and wait for them
+		this->mainThread.start();
+		// terminate all background threads
+		this->terminateBackgroundThreads();
+
+	}
+}
+
 
 
 void ExecutionManager::start()
 {
-	HDDTest::ConfigGenerator config = initalizeLayout();
-
-
-	HDDTest::Configurator configurator = HDDTest::Configurator();
-
 	configurator.fetchConfigurations();
 
-
-
+	HDDTest::ConfigGenerator config = initalizeLayout();
 
 	// execute tests for all specified devices
 	for(std::string  device : configurator.configuration.devices)
 	{
 		// execute all test runs
-		for(struct HDDTest::TestRun t : configurator.configuration.testRuns)
-		{
-			this->backgroundThreads.clear();
-			mainThread = initalizeThread(t.mainThread);
-
-			for(struct HDDTest::TestThread *aThreadConfiguration : t.backgroundThreads)
-			{
-				this->backgroundThreads.push_back(this->initalizeThread(aThreadConfiguration));
-			}
-
-
-			startBackgroundTest();
-			mainThread.start();
-
-			//...
-		}
+		this->executeTestRuns(configurator.configuration.testRuns, device);
 	}
-
-
-
-
-
-
-
-	for(DBTest::ATest bg : backgroundThreads)
-	{
-		//bg.terminate();
-	}
-
-
-
 }
 
 } /* namespace DBBenchmark */

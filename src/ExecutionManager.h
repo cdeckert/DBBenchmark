@@ -25,13 +25,17 @@ public:
 	virtual ~ExecutionManager();
 
 	void start();
-	DBTest::ATest initalizeThread(struct HDDTest::TestThread*);
+	DBTest::ATest initalizeThread(struct HDDTest::TestThread*, std::string);
 	HDDTest::ConfigGenerator initalizeLayout();
 
 private:
 	std::vector<DBTest::ATest> backgroundThreads;
 	DBTest::ATest mainThread;
 	void startBackgroundTest();
+	HDDTest::Configurator configurator;
+	void initalizeThreads(struct HDDTest::TestRun, std::string);
+	void executeTestRuns(std::vector<struct HDDTest::TestRun>, std::string);
+	void terminateBackgroundThreads();
 };
 
 } /* namespace DBBenchmark */

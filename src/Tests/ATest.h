@@ -76,7 +76,13 @@ public:
 	std::vector<struct HDDTest::extent> *relation;
 	virtual void testAlgorithm();
 
+	const std::string& getDevice() const {
+		return device;
+	}
 
+	void setDevice(const std::string& device) {
+		this->device = device;
+	}
 
 private:
 
