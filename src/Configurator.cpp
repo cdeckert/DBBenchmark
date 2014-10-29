@@ -78,6 +78,13 @@ void Configurator::fetchConfigurations()
 			testRun.mainThread.testName = testRunIt->FindMember("mainThread")->value["testName"].GetString();
 
 
+			for(Value::ConstValueIterator backgroundJobIt = testRunIt->FindMember("backgroundThreads")->value.Begin(); backgroundJobIt != testRunIt->FindMember("backgroundThreads")->value.End(); ++backgroundJobIt)
+			{
+				struct TestThread bgJob;
+				bgJob.relationship = backgroundJobIt->FindMember("relationship")->value.GetString();
+				bgJob.testName = backgroundJobIt->FindMember("testName")->value.GetString();
+				testRun.backgroundThreads.push_back(bgJob);
+			}
 
 
 			configuration.layout.testRuns.push_back((testRun));

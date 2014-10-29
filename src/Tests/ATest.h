@@ -38,7 +38,7 @@ public:
 	virtual ~ATest();
 
 	void start();
-	void virtual startAsThread();
+	void startAsThread();
 	void writePage(unsigned long long int);
 	void writeExtent(unsigned long long int);
 	void readPage(unsigned long long int);

@@ -70,18 +70,19 @@ void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std:
 
 void ExecutionManager::startBackgroundTest()
 {
-	/*for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
+	for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
 	{
-		bg->startAsThread();
-	}*/
+		std::cout << "###########################START BACKGROUND JOB #######################";
+		(*bg)->startAsThread();
+	}
 }
 
 void ExecutionManager::terminateBackgroundThreads()
 {
-	/*for (DBTest::ATest bg : backgroundThreads)
+	for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
 	{
-		bg.stopThread();
-	}*/
+		(*bg)->stopThread();
+	}
 }
 
 
