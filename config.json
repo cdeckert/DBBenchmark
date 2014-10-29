@@ -20,21 +20,15 @@
                         "name":"Run 1",
                         "mainThread":{
                         	"testName": "fullTableScan",
-                        	"relationship": "rel1",
-                            "setting1":1
+                        	"relationship": "rel1"
                         },
-                        "backgroundThreads":[  
-                        {
-                        	"relationship": "rel2",
-                            "testName": "indexScan"
-                        }]
+                        "backgroundThreads":[]
                         },
                         {  
                         "name":"abc",
                         "mainThread":{
                         	"testName": "indexScan",
-                        	"relationship": "rel1",
-                            "setting1":1
+                        	"relationship": "rel1"
                         },
                         "backgroundThreads":[  
                         {

@@ -124,7 +124,6 @@ void ExecutionManager::executeAllTestWithAllConfigurations()
 	for (std::vector<std::string>::iterator  device = configurator.configuration.devices.begin(); device != configurator.configuration.devices.end(); ++device)
 	{
 		// execute all test runs
-		std::cout << "HHHHHHH";
 		this->executeTestRuns(configurator.configuration.layout, *device);
 	}
 }
