@@ -17,7 +17,7 @@
                 },
                 "testRuns":[  
                    		{  
-                        "name":"abc",
+                        "name":"Run 1",
                         "mainThread":{
                         	"testName": "indexScan",
                         	"relationship": "rel1",
