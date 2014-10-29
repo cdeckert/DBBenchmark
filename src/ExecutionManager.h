@@ -27,7 +27,6 @@ public:
 
 	void executeAllTestWithAllConfigurations();
 	DBTest::ATest* initalizeSingleThread(struct HDDTest::TestThread, std::string, HDDTest::Layout*);
-	HDDTest::ConfigGenerator initalizeLayout();
 
 private:
 	std::vector<DBTest::ATest*> backgroundThreads;

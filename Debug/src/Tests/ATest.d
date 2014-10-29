@@ -1,6 +1,5 @@
 src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
- ../src/Tests/../Layout/ConfigGenerator.h ../src/Tests/../Layout/Layout.h \
- ../src/Tests/../Layout/Relationship.h \
+ ../src/Tests/../Layout/Layout.h ../src/Tests/../Layout/Relationship.h \
  ../src/Tests/../Layout/../Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
@@ -21,8 +20,6 @@ src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/stringbuffer.h
 
 ../src/Tests/ATest.h:
-
-../src/Tests/../Layout/ConfigGenerator.h:
 
 ../src/Tests/../Layout/Layout.h:
 

@@ -15,7 +15,6 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
-#include "../Layout/ConfigGenerator.h"
 #include <fstream>
 #include <stdio.h>
 #include "../Layout/Layout.h"
@@ -49,7 +48,6 @@ public:
 	void setExtentSize(int);
 	void setPageSize(int);
 	void speedUpDisk();
-	void setLayout(vector<struct HDDTest::extent> *);
 	void startTimer();
 	long long int getTime();
 	double getMbPerSec();
@@ -73,7 +71,6 @@ public:
 
 
 	bool isEndless;
-	std::vector<struct HDDTest::extent> *relation;
 	virtual void testAlgorithm();
 
 	const std::string &getDevice() const
