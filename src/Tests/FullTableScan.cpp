@@ -26,12 +26,11 @@ void FullTableScan::testAlgorithm()
 	startTimer();
 	for (int iteration = 0; iteration < numberOfIterations; iteration++)
 	{
-		/*for (std::vector<struct HDDTest::extent>::iterator it = relation->begin();
-				it != relation->end(); it++)
-		{
-			unsigned long long int start = (it->start);
-			readExtent(start);
-		}*/
+		unsigned long long int extentStart = this->getNextExtent();
+		do{
+			this->readExtent(extentStart);
+			extentStart = this->getNextExtent();
+		}while(this->isNextExtent());
 	}
 	storeMeasurement();
 	writeTestLog();

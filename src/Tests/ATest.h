@@ -64,6 +64,7 @@ public:
 
 	unsigned long long int getRandomPage();
 	unsigned long long int getRandomExtent();
+	unsigned long long int getNextExtent();
 
 	void storeMeasurement();
 
@@ -84,6 +85,7 @@ public:
 	}
 
 	void stopThread();
+	bool isNextExtent();
 
 
 	HDDTest::Layout* layout;

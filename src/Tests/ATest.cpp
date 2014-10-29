@@ -161,6 +161,16 @@ unsigned long long int ATest::getRandomExtent()
 	return layout->getRelationship(relationshipName)->getRandomExtent();
 }
 
+unsigned long long int ATest::getNextExtent()
+{
+	return layout->getRelationship(relationshipName)->getNextExtent();
+}
+
+bool ATest::isNextExtent()
+{
+	return layout->getRelationship(relationshipName)->isNextExtent();
+}
+
 
 /**
  * opens a disk for a specific disk path

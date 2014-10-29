@@ -32,11 +32,13 @@ public:
 	}
 
 
+
 	unsigned long long int getRandomExtent();
 	unsigned long long int getRandomPage();
 
-	unsigned long long int getOrderedExtent();
-	unsigned long long int getOrderedPage();
+	unsigned long long int getNextExtent();
+	unsigned long long int getNextPage();
+	bool isNextExtent();
 	std::vector<struct Extent> extents;
 	std::string name;
 
@@ -45,6 +47,7 @@ public:
 
 private:
 	unsigned long long int unallocatedExtents;
+	unsigned long long int nextExtent = 0;
 
 };
 
