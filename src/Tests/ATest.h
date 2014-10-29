@@ -54,6 +54,8 @@ public:
 	long long int getTime();
 	double getMbPerSec();
 
+	std::string relationshipName;
+
 	//void
 
 	void cleanDBCache();
@@ -61,10 +63,9 @@ public:
 	int numberOfIterations;
 	void execute();
 
-	unsigned long long int getNumberOfPages();
-	unsigned long long int getNumberOfExtents();
 
 	unsigned long long int getRandomPage();
+	unsigned long long int getRandomExtent();
 
 	void storeMeasurement();
 

@@ -28,10 +28,21 @@ ExecutionManager::~ExecutionManager()
 
 DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device, HDDTest::Layout* layout)
 {
+	std::cout << "initalized" << std::endl;
 	DBTest::ATest aTestThread;
-
 	// switch based on thread setting
-	aTestThread = DBTest::FullTableScan();
+	if(threadSettings.testName == "fullTableScan")
+	{
+		aTestThread = DBTest::FullTableScan();
+	}
+	else if(threadSettings.testName == "indexScan")
+	{
+		aTestThread = DBTest::IndexScan();
+	}
+	else if(true)
+	{
+		aTestThread = DBTest::FullTableScan();
+	}
 
 	aTestThread.layout = layout;
 
@@ -49,9 +60,9 @@ void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std:
 
 	// initalize background Threads
 	this->backgroundThreads.clear();
-	for (struct HDDTest::TestThread aThreadConfiguration : testRun.backgroundThreads)
+	for (std::vector<struct HDDTest::TestThread>::iterator aThreadConfiguration = testRun.backgroundThreads.begin(); aThreadConfiguration != testRun.backgroundThreads.end(); ++aThreadConfiguration)
 	{
-		this->backgroundThreads.push_back(this->initalizeSingleThread(aThreadConfiguration, device, layout));
+		this->backgroundThreads.push_back(this->initalizeSingleThread(*aThreadConfiguration, device, layout));
 	}
 }
 
@@ -75,21 +86,22 @@ void ExecutionManager::terminateBackgroundThreads()
 
 void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSetting, std::string device)
 {
+	std::cout << "executeTestRuns";
 	HDDTest::Layout layout = HDDTest::Layout();
 	layout.diskStart = 0;
 	layout.pageSizeInKB = layoutSetting.pageSizeInKB;
 	layout.extentSizeInPages = layoutSetting.pagesPerExtent;
 	layout.createRelationships(layoutSetting.relationships);
 	// for each test run
-	std::vector<struct HDDTest::TestRun> testRuns = layoutSetting.testRuns;
-	std::cout << layoutSetting.mode;
-	for (struct HDDTest::TestRun aTestRun : testRuns)
+	std::cout << layoutSetting.mode << "layoutSetting.mode\n";
+	std::cout << "layoutSetting.testRuns" << layoutSetting.testRuns.size() << std::endl;
+	for (std::vector<struct HDDTest::TestRun>::iterator aTestRun = layoutSetting.testRuns.begin(); aTestRun != layoutSetting.testRuns.end(); ++aTestRun)
 	{
-
+		std::cout << "##############################"<< std::endl;
 		//HDDTest::ConfigGenerator config = initalizeLayout();
 
 		// initalize all threads
-		this->initalizeAllThreads(aTestRun, device, &layout);
+		this->initalizeAllThreads(*aTestRun, device, &layout);
 
 		// start all background threads
 		this->startBackgroundTest();
@@ -108,10 +120,11 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 void ExecutionManager::executeAllTestWithAllConfigurations()
 {
 	// execute tests for all specified devices
-	for (std::string  device : configurator.configuration.devices)
+	for (std::vector<std::string>::iterator  device = configurator.configuration.devices.begin(); device != configurator.configuration.devices.end(); ++device)
 	{
 		// execute all test runs
-		this->executeTestRuns(configurator.configuration.layout, device);
+		std::cout << "HHHHHHH";
+		this->executeTestRuns(configurator.configuration.layout, *device);
 	}
 }
 

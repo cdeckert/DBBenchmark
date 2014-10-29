@@ -49,7 +49,7 @@ void Configurator::fetchConfigurations()
 
 
 	Value &runs = hostSettings["runs"];
-
+	cout << "config config config" << endl << endl << endl;
 	for(Value::ConstValueIterator run = runs.Begin(); run != runs.End(); ++run)
 	{
 		Value::ConstMemberIterator layoutSettings = run->FindMember("layoutSettings");
@@ -71,13 +71,11 @@ void Configurator::fetchConfigurations()
 		}
 
 
-		Value::ConstMemberIterator testRuns = run->FindMember("testRuns");
-		for(Value::ConstValueIterator testRunIt = testRuns->value.Begin(); testRunIt != testRuns->value.Begin(); ++testRunIt)
+		for(Value::ConstValueIterator testRunIt = run->FindMember("testRuns")->value.Begin(); testRunIt != run->FindMember("testRuns")->value.End(); ++testRunIt)
 		{
 			struct TestRun testRun;
 			testRun.mainThread.relationship = testRunIt->FindMember("mainThread")->value["relationship"].GetString();
 			testRun.mainThread.testName = testRunIt->FindMember("mainThread")->value["testName"].GetString();
-
 
 
 

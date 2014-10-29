@@ -11,6 +11,7 @@ namespace DBTest
 IndexScan::IndexScan()
 {
 	// TODO Auto-generated constructor stub
+	std::cout << "indexScan" << std::endl;
 
 }
 
@@ -22,7 +23,7 @@ IndexScan::~IndexScan()
 void IndexScan::testAlgorithm()
 {
 	unsigned long long int i = 1;
-	while (i < getNumberOfPages())
+	while (i < layout->getRelationship(this->relationshipName)->extents.size())
 	{
 		i = i * 2;
 		cleanDBCache();

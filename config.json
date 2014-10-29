@@ -19,7 +19,20 @@
                    		{  
                         "name":"abc",
                         "mainThread":{
-                        	"testName": "fullTableScan",
+                        	"testName": "indexScan",
+                        	"relationship": "rel1",
+                            "setting1":1
+                        },
+                        "backgroundThreads":[  
+                        {
+                        	"relationship": "rel2",
+                            "setting2":2
+                        }]
+                        },
+                        {  
+                        "name":"abc",
+                        "mainThread":{
+                        	"testName": "indexScan",
                         	"relationship": "rel1",
                             "setting1":1
                         },

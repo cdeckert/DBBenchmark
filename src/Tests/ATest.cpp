@@ -52,11 +52,11 @@ void ATest::setPageSize(int size)
 	this->pageBuffer = new char[pageSize * 1024];
 }
 
-void ATest::setLayout(std::vector<struct HDDTest::extent> *relation)
+/*void ATest::setLayout(std::vector<struct HDDTest::extent> *relation)
 {
 	this->relation = relation;
-}
-
+}*/
+/*
 unsigned long long int ATest::getNumberOfExtents()
 {
 	return this->relation->size();
@@ -65,7 +65,7 @@ unsigned long long int ATest::getNumberOfExtents()
 unsigned long long int ATest::getNumberOfPages()
 {
 	return getNumberOfExtents() * (extentSize / pageSize);
-}
+}*/
 
 void ATest::speedUpDisk()
 {
@@ -148,24 +148,21 @@ void ATest::cleanDBCache()
 	read(disk, buffer, 128 * 1024 * 1024);
 }
 
-/**
- * returns the number of pages for a given test
- */
-/**
- * returns the number of extents for a whole relation
- */
+
 /**
  * returns a random Page
  */
 unsigned long long int ATest::getRandomPage()
 {
-	unsigned long long int outputPage = this->relation->at(rand() % getNumberOfExtents()).start + (rand() % (extentSize / pageSize)) * pageSize;
-	return outputPage;
+	return layout->getRelationship(relationshipName)->getRandomPage();
 }
 
-/**
- * sets the size of a single page
- */
+unsigned long long int ATest::getRandomExtent()
+{
+	return layout->getRelationship(relationshipName)->getRandomExtent();
+}
+
+
 /**
  * opens a disk for a specific disk path
  */
@@ -187,18 +184,7 @@ bool ATest::isDiskValid()
 	return (this->disk != -1);
 }
 
-/**
- * checks if a disk is valid
- */
-/**
- * starts a timer;
- */
-/**
- * returns the duration between now and the timer start time
- */
-/**
- * an abstract test algorithm
- */
+
 void ATest::start()
 {
 	if (this->isEndless)
