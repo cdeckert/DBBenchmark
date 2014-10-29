@@ -28,6 +28,7 @@ void FullTableScan::testAlgorithm()
 	{
 		unsigned long long int extentStart = this->getNextExtent();
 		do{
+			//std::cout << "DEBUG DEBUG::::: " << extentStart;
 			this->readExtent(extentStart);
 			extentStart = this->getNextExtent();
 		}while(this->isNextExtent());

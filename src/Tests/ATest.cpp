@@ -79,7 +79,7 @@ void ATest::speedUpDisk()
 
 double ATest::getMbPerSec()
 {
-	return (executionSize / 1024.) / (getTime() / 1000000000.);
+	return (executionSize/1024.) / (getTime() / 1000000000.);
 	return 0;
 }
 
@@ -119,9 +119,9 @@ void ATest::writeTestLog()
 	{
 		writer.StartObject();
 		writer.String("duration");
-		writer.Double(static_cast<double> (it->duration / 1000000.));
+		writer.Double(static_cast<double> (it->duration / 1000000000.));
 		writer.String("size");
-		writer.Double(static_cast<double> (it->size / (1024 * 1024)));
+		writer.Double(static_cast<double> (it->size / (1024)));
 		writer.String("mbPerSec");
 		writer.Double(static_cast<double> (it->mbPerSec));
 		writer.EndObject();
@@ -248,15 +248,17 @@ void ATest::writeExtent(unsigned long long int start)
 
 void ATest::readExtent(unsigned long long int start)
 {
-	lseek64(disk, start * 1024, SEEK_SET);
+	std::cout << start/1024 << std::endl;
+	lseek64(disk, start , SEEK_SET);
 	read(disk, extentBuffer, extentSize * 1024);
 	executionSize += extentSize;
 }
 
 void ATest::readPage(unsigned long long int start)
 {
-	lseek64(disk, start * 1024, SEEK_SET);
-	read(disk, pageBuffer, pageSize * 1024);
+
+	lseek64(this->disk, start, SEEK_SET);
+	read(this->disk, pageBuffer, pageSize * 1024);
 	executionSize += pageSize;
 }
 

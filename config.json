@@ -23,20 +23,8 @@
                         	"relationship": "rel1"
                         },
                         "backgroundThreads":[]
-                        },
-                        {  
-                        "name":"abc",
-                        "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1"
-                        },
-                        "backgroundThreads":[  
-                        {
-                        	"relationship": "rel2",
-                            "testName": "indexScan"
                         }
-                        ]
-                    }
+                        
                 ]
             }
         ]

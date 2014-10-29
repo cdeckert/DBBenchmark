@@ -27,7 +27,6 @@ void Relationship::addExtent(unsigned long long int start)
 {
 	struct Extent extent;
 	extent.startKb = start;
-	//std::cout << "START KB" << start << std::endl;
 	extent.number = extents.size();
 	this->extents.push_back(extent);
 	this->unallocatedExtents--;
