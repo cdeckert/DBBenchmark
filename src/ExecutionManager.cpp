@@ -26,30 +26,31 @@ ExecutionManager::~ExecutionManager()
 
 
 
-DBTest::ATest ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device, HDDTest::Layout* layout)
+DBTest::ATest* ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device, HDDTest::Layout* layout)
 {
 	std::cout << "initalized" << std::endl;
-	DBTest::ATest aTestThread;
+	DBTest::ATest* aTestThread;
 	// switch based on thread setting
 	if(threadSettings.testName == "fullTableScan")
 	{
-		aTestThread = DBTest::FullTableScan();
+		aTestThread = new DBTest::FullTableScan();
 	}
 	else if(threadSettings.testName == "indexScan")
 	{
-		aTestThread = DBTest::IndexScan();
+		aTestThread = new DBTest::IndexScan();
 	}
-	else if(true)
+	else
 	{
-		aTestThread = DBTest::FullTableScan();
+		aTestThread = new DBTest::FullTableScan();
 	}
 
-	aTestThread.layout = layout;
+	aTestThread->layout = layout;
+	aTestThread->relationshipName = threadSettings.relationship;
 
 
 
 
-	aTestThread.setDevice(device);
+	aTestThread->setDevice(device);
 	return aTestThread;
 }
 
@@ -69,18 +70,18 @@ void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std:
 
 void ExecutionManager::startBackgroundTest()
 {
-	for (DBTest::ATest bg : backgroundThreads)
+	/*for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
 	{
-		bg.startAsThread();
-	}
+		bg->startAsThread();
+	}*/
 }
 
 void ExecutionManager::terminateBackgroundThreads()
 {
-	for (DBTest::ATest bg : backgroundThreads)
+	/*for (DBTest::ATest bg : backgroundThreads)
 	{
 		bg.stopThread();
-	}
+	}*/
 }
 
 
@@ -98,7 +99,6 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 	for (std::vector<struct HDDTest::TestRun>::iterator aTestRun = layoutSetting.testRuns.begin(); aTestRun != layoutSetting.testRuns.end(); ++aTestRun)
 	{
 		std::cout << "##############################"<< std::endl;
-		//HDDTest::ConfigGenerator config = initalizeLayout();
 
 		// initalize all threads
 		this->initalizeAllThreads(*aTestRun, device, &layout);
@@ -107,7 +107,7 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 		this->startBackgroundTest();
 
 		// start main thread and wait for them
-		this->mainThread.start();
+		this->mainThread->start();
 
 		// terminate all background threads
 		this->terminateBackgroundThreads();

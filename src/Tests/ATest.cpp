@@ -23,7 +23,6 @@ ATest::ATest()
 	init_rand();
 	sleepTime = 0;
 	measurements = new std::vector<measurement>();
-	this->device = "/dev/sdb";
 }
 
 ATest::~ATest()
@@ -209,12 +208,14 @@ void ATest::execute()
 {
 	openDisk(this->device);
 	speedUpDisk();
+	std::cout << "START TEST" << std::endl;
 	testAlgorithm();
 
 }
 
 void ATest::testAlgorithm()
 {
+	std::cout << "wrong Test";
 	std::cout << this->isEndless << std::endl;
 }
 
@@ -246,7 +247,6 @@ void ATest::readPage(unsigned long long int start)
 {
 	lseek64(disk, start * 1024, SEEK_SET);
 	read(disk, pageBuffer, pageSize * 1024);
-
 	executionSize += pageSize;
 }
 

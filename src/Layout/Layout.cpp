@@ -46,7 +46,7 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 			prob += r->getProbability(totalRelSize);
 			if(prob >= aRandVal)
 			{
-				r->addExtent(relStart * this->extentSizeInPages * this->pageSizeInKB);
+				r->addExtent(relStart + totalRelSize * this->extentSizeInPages * this->pageSizeInKB * 1024);
 				totalRelSize--;
 				break;
 			}
