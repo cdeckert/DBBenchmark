@@ -247,7 +247,7 @@ bool ATest::isDiskValid()
 
 void ATest::start()
 {
-	if (this->isEndless && getDisk() != -1)
+	if (this->isEndless)
 	{
 		while (true)
 		{
@@ -258,7 +258,7 @@ void ATest::start()
 			}
 		}
 	}
-	else if(getDisk() != -1)
+	else
 	{
 		execute();
 	}
@@ -337,7 +337,7 @@ void ATest::stopThread()
 {
 
 	terminateThread = true;
-	theThread->join();
+	//theThread->join();
 }
 
 
