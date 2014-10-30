@@ -14,6 +14,7 @@
 #include "Tests/IndexScan.h"
 #include "Tests/ATest.h"
 #include "Tests/NoTest.h"
+#include "Tests/WritePages.h"
 #include "Layout/Layout.h"
 
 namespace DBBenchmark
