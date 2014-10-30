@@ -27,7 +27,6 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 		totalRelSize+= relConf.size;
 	}
 
-	std::cout <<"totalRelSize" <<  totalRelSize << std::endl;
 
 	for(struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
 	{
@@ -47,7 +46,6 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 			prob += r->getProbability(totalRelSize);
 			if(prob >= aRandVal)
 			{
-				std::cout << "relation:" << r->name << i << std::endl;
 				r->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
 				break;
 			}
