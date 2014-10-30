@@ -41,12 +41,13 @@ DBTest::ATest* ExecutionManager::initalizeSingleThread(struct HDDTest::TestThrea
 	}
 	else
 	{
-		aTestThread = new DBTest::FullTableScan();
+		aTestThread = new DBTest::NoTest();
 	}
-
+	aTestThread->setPageSize(layout->pageSizeInKB);
+	aTestThread->setExtentSize(layout->pageSizeInKB * layout->extentSizeInPages);
 	aTestThread->layout = layout;
 	aTestThread->relationshipName = threadSettings.relationship;
-
+	aTestThread->setPageSize(layout->pageSizeInKB);
 
 
 
@@ -70,18 +71,19 @@ void ExecutionManager::initalizeAllThreads(struct HDDTest::TestRun testRun, std:
 
 void ExecutionManager::startBackgroundTest()
 {
-	/*for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
+	for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
 	{
-		bg->startAsThread();
-	}*/
+		std::cout << "###########################START BACKGROUND JOB #######################";
+		(*bg)->startAsThread();
+	}
 }
 
 void ExecutionManager::terminateBackgroundThreads()
 {
-	/*for (DBTest::ATest bg : backgroundThreads)
+	for (std::vector<DBTest::ATest*>::iterator bg = backgroundThreads.begin(); bg != backgroundThreads.end(); ++bg)
 	{
-		bg.stopThread();
-	}*/
+		(*bg)->stopThread();
+	}
 }
 
 
@@ -94,8 +96,6 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 	layout.extentSizeInPages = layoutSetting.pagesPerExtent;
 	layout.createRelationships(layoutSetting.relationships);
 	// for each test run
-	std::cout << layoutSetting.mode << "layoutSetting.mode\n";
-	std::cout << "layoutSetting.testRuns" << layoutSetting.testRuns.size() << std::endl;
 	for (std::vector<struct HDDTest::TestRun>::iterator aTestRun = layoutSetting.testRuns.begin(); aTestRun != layoutSetting.testRuns.end(); ++aTestRun)
 	{
 		std::cout << "##############################"<< std::endl;
@@ -119,12 +119,18 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 
 void ExecutionManager::executeAllTestWithAllConfigurations()
 {
+	try
+		{
 	// execute tests for all specified devices
 	for (std::vector<std::string>::iterator  device = configurator.configuration.devices.begin(); device != configurator.configuration.devices.end(); ++device)
 	{
 		// execute all test runs
-		std::cout << "HHHHHHH";
 		this->executeTestRuns(configurator.configuration.layout, *device);
+	}
+
+	}catch(const std::out_of_range& oor)
+	{
+		std::cout << "Out of Range error: " << oor.what() << '\n';
 	}
 }
 

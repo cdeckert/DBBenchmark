@@ -1,5 +1,7 @@
-src/ExecutionManager.d: ../src/ExecutionManager.cpp \
- ../src/ExecutionManager.h ../src/Configurator.h \
+src/Tests/NoTest.d: ../src/Tests/NoTest.cpp ../src/Tests/NoTest.h \
+ ../src/Tests/ATest.h ../src/Tests/../Layout/Layout.h \
+ ../src/Tests/../Layout/Relationship.h \
+ ../src/Tests/../Layout/../Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -10,17 +12,17 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/stack.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/error/error.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h \
- ../src/Tests/LogWriter.h ../src/Tests/ATest.h \
- ../src/Tests/../Layout/Layout.h ../src/Tests/../Layout/Relationship.h \
- ../src/Tests/../Layout/../Configurator.h ../src/Tests/FullTableScan.h \
- ../src/Tests/IndexScan.h ../src/Tests/ATest.h ../src/Tests/NoTest.h \
- ../src/Layout/Layout.h ../src/Layout/Relationship.h \
- ../src/Layout/../Configurator.h
+ /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h
 
-../src/ExecutionManager.h:
+../src/Tests/NoTest.h:
 
-../src/Configurator.h:
+../src/Tests/ATest.h:
+
+../src/Tests/../Layout/Layout.h:
+
+../src/Tests/../Layout/Relationship.h:
+
+../src/Tests/../Layout/../Configurator.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h:
 
@@ -43,27 +45,3 @@ src/ExecutionManager.d: ../src/ExecutionManager.cpp \
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h:
-
-../src/Tests/LogWriter.h:
-
-../src/Tests/ATest.h:
-
-../src/Tests/../Layout/Layout.h:
-
-../src/Tests/../Layout/Relationship.h:
-
-../src/Tests/../Layout/../Configurator.h:
-
-../src/Tests/FullTableScan.h:
-
-../src/Tests/IndexScan.h:
-
-../src/Tests/ATest.h:
-
-../src/Tests/NoTest.h:
-
-../src/Layout/Layout.h:
-
-../src/Layout/Relationship.h:
-
-../src/Layout/../Configurator.h:

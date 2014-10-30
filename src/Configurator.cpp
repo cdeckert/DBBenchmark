@@ -44,12 +44,10 @@ void Configurator::fetchConfigurations()
 	for (Value::ConstValueIterator itr = devices.Begin(); itr != devices.End(); ++itr)
 	{
 		configuration.devices.push_back(itr->GetString());
-		cout << itr->GetString() << endl;
 	}
 
 
 	Value &runs = hostSettings["runs"];
-	cout << "config config config" << endl << endl << endl;
 	for(Value::ConstValueIterator run = runs.Begin(); run != runs.End(); ++run)
 	{
 		Value::ConstMemberIterator layoutSettings = run->FindMember("layoutSettings");
@@ -78,35 +76,18 @@ void Configurator::fetchConfigurations()
 			testRun.mainThread.testName = testRunIt->FindMember("mainThread")->value["testName"].GetString();
 
 
+			for(Value::ConstValueIterator backgroundJobIt = testRunIt->FindMember("backgroundThreads")->value.Begin(); backgroundJobIt != testRunIt->FindMember("backgroundThreads")->value.End(); ++backgroundJobIt)
+			{
+				struct TestThread bgJob;
+				bgJob.relationship = backgroundJobIt->FindMember("relationship")->value.GetString();
+				bgJob.testName = backgroundJobIt->FindMember("testName")->value.GetString();
+				testRun.backgroundThreads.push_back(bgJob);
+			}
 
 
 			configuration.layout.testRuns.push_back((testRun));
 		}
 	}
-
-
-
-
-
-
-	//cout << "is Object: " << layoutSettings.IsObject() << endl;
-	/*
-
-	for (Value::ConstValueIterator itr = layoutSettings["relationshipAllocation"].Begin(); itr != layoutSettings["relationshipAllocation"].End(); ++itr)
-	{
-
-	}*/
-
-	//configuration.layout = &layout;
-
-	//Value &testRuns = run["testRuns"];
-
-
-
-
-
-
-
 	fclose(pFile);
 
 

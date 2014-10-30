@@ -7,7 +7,7 @@
             {  
                 "layoutSettings":{  
                     "mode":"ordered",
-                    "pageSizeInKB":8,
+                    "pageSizeInKB":10,
                     "pagesPerExtent":8,
                     "relationshipAllocation":{  
                         "rel1":6144,
@@ -19,30 +19,25 @@
                    		{  
                         "name":"Run 1",
                         "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1",
-                            "setting1":1
+                        	"testName": "aa",
+                        	"relationship": "rel1"
                         },
-                        "backgroundThreads":[  
-                        {
-                        	"relationship": "rel2",
-                            "setting2":2
-                        }]
-                        },
-                        {  
-                        "name":"abc",
-                        "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1",
-                            "setting1":1
-                        },
-                        "backgroundThreads":[  
-                        {
-                        	"relationship": "rel2",
-                            "setting2":2
+                        "backgroundThreads":[
+                        	{
+                        	"testName": "fullTableScan",
+                        	"relationship": "rel2"
                         }
                         ]
-                    }
+                        },
+                        {  
+                        "name":"Run 2",
+                        "mainThread":{
+                        	"testName": "indexScan",
+                        	"relationship": "rel1"
+                        },
+                        "backgroundThreads":[]
+                        }
+                        
                 ]
             }
         ]

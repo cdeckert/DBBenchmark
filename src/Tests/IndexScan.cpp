@@ -26,9 +26,10 @@ void IndexScan::testAlgorithm()
 	unsigned long long int i = 1;
 	HDDTest::Relationship *r = layout->getRelationship(this->relationshipName);
 	std::cout << r->name << "##########################################";
-	while (i < layout->getRelationship(this->relationshipName)->extents.size())
+
+	while (i < layout->getRelationship(this->relationshipName)->extents.size()*layout->getRelationship(this->relationshipName)->pagesPerExtent)
 	{
-		i=i+8;
+		i=i+1024;
 		cleanDBCache();
 		startTimer();
 		for (int iteration = 0; iteration < numberOfIterations; iteration++)
@@ -39,8 +40,8 @@ void IndexScan::testAlgorithm()
 			}
 		}
 		storeMeasurement();
-		std::cout << i << ":" << getTime() / 1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 	}
+
 	writeTestLog();
 }
 }
