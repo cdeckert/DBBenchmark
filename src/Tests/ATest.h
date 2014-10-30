@@ -15,12 +15,12 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
-#include "../Layout/ConfigGenerator.h"
 #include <fstream>
 #include <stdio.h>
 #include "../Layout/Layout.h"
 
 using namespace std;
+using namespace rapidjson;
 namespace DBTest
 {
 
@@ -39,7 +39,7 @@ public:
 	virtual ~ATest();
 
 	void start();
-	void virtual startAsThread();
+	void startAsThread();
 	void writePage(unsigned long long int);
 	void writeExtent(unsigned long long int);
 	void readPage(unsigned long long int);
@@ -49,7 +49,6 @@ public:
 	void setExtentSize(int);
 	void setPageSize(int);
 	void speedUpDisk();
-	void setLayout(vector<struct HDDTest::extent> *);
 	void startTimer();
 	long long int getTime();
 	double getMbPerSec();
@@ -66,14 +65,14 @@ public:
 
 	unsigned long long int getRandomPage();
 	unsigned long long int getRandomExtent();
+	unsigned long long int getNextExtent();
 
 	void storeMeasurement();
 
-	void writeTestLog();
+	string writeTestLog();
 
 
 	bool isEndless;
-	std::vector<struct HDDTest::extent> *relation;
 	virtual void testAlgorithm();
 
 	const std::string &getDevice() const
@@ -87,13 +86,18 @@ public:
 	}
 
 	void stopThread();
+	bool isNextExtent();
 
 
 	HDDTest::Layout* layout;
-
+	bool terminateThread = false;
+	//static int disk;
+	static int getDisk();
+	static void setDisk(int);
 private:
 
-	int disk;
+
+	static int disk;
 	int extentSize;
 	int pageSize;
 	char *pageBuffer;
@@ -102,7 +106,7 @@ private:
 	unsigned long long int executionSize;
 	int sleepTime;
 	string device;
-	bool terminateThread = false;
+
 	thread *theThread;
 
 
@@ -113,6 +117,10 @@ private:
 	void init_rand();
 
 };
+
+
+
+
 
 } /* namespace DBTest */
 

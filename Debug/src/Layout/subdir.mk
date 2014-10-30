@@ -4,20 +4,14 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Layout/ConfigGenerator.cpp \
-../src/Layout/HDDModePageReader.cpp \
 ../src/Layout/Layout.cpp \
 ../src/Layout/Relationship.cpp 
 
 OBJS += \
-./src/Layout/ConfigGenerator.o \
-./src/Layout/HDDModePageReader.o \
 ./src/Layout/Layout.o \
 ./src/Layout/Relationship.o 
 
 CPP_DEPS += \
-./src/Layout/ConfigGenerator.d \
-./src/Layout/HDDModePageReader.d \
 ./src/Layout/Layout.d \
 ./src/Layout/Relationship.d 
 
@@ -26,7 +20,7 @@ CPP_DEPS += \
 src/Layout/%.o: ../src/Layout/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
-	g++ -I"/home/christiandeckert/workspace/DBBenchmark/include" -O0 -g3 -Wall -c -fmessage-length=0  -std=c++11 -pthread -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	g++ -I"/home/christiandeckert/workspace/DBBenchmark/include" -O0 -g3 -Wall -c -fmessage-length=0  -std=c++11 -pthread -static -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

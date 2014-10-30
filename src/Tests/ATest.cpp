@@ -12,7 +12,7 @@
 using namespace rapidjson;
 namespace DBTest
 {
-
+int ATest::disk = -1;
 ATest::ATest()
 {
 	this->isEndless = false;
@@ -22,6 +22,7 @@ ATest::ATest()
 	setExtentSize(64);
 	init_rand();
 	sleepTime = 0;
+
 	measurements = new std::vector<measurement>();
 }
 
@@ -41,6 +42,7 @@ void ATest::init_rand()
 
 void ATest::setExtentSize(int size)
 {
+	std::cout << "setExtentSize" << size;
 	this->extentSize = size;
 	this->extentBuffer = new char[extentSize * 1024];
 }
@@ -70,16 +72,17 @@ void ATest::speedUpDisk()
 {
 	if (isDiskValid())
 	{
-		lseek64(disk, 0, SEEK_SET);
-		lseek64(disk, 0, SEEK_END);
-		lseek64(disk, 0, SEEK_SET);
+
+		lseek64(getDisk(), 0, SEEK_SET);
+		read(getDisk(), extentBuffer, extentSize * 1024);
+		read(getDisk(), extentBuffer, extentSize * 1024);
 		perror("seek startup");
 	}
 }
 
 double ATest::getMbPerSec()
 {
-	return (executionSize / 1024.) / (getTime() / 1000000000.);
+	return (executionSize/1024.) / (getTime() / 1000000000.);
 	return 0;
 }
 
@@ -106,8 +109,10 @@ void ATest::storeMeasurement()
 }
 
 
-void ATest::writeTestLog()
+std::string ATest::writeTestLog()
 {
+	if(!this->isEndless)
+	{
 	StringBuffer s;
 	Writer<StringBuffer> writer(s);
 	writer.StartObject();
@@ -118,19 +123,43 @@ void ATest::writeTestLog()
 	for (std::vector<struct measurement>::iterator it = this->measurements->begin() ; it != this->measurements->end(); ++it)
 	{
 		writer.StartObject();
-		writer.String("duration");
-		writer.Double(static_cast<double> (it->duration / 1000000.));
+		/*writer.String("relationship");
+		writer.StartArray();
+		for(std::vector<HDDTest::Extent>::iterator ext = this->layout->getRelationship(this->relationshipName)->extents.begin();
+				ext != this->layout->getRelationship(this->relationshipName)->extents.end(); ++ ext)
+		{
+			writer.Int64(static_cast<unsigned int>((*ext).startKb / 1024));
+		}
+		writer.EndArray();
+		*/writer.String("duration");
+		writer.Double(static_cast<double> (it->duration / 1000000000.));
 		writer.String("size");
-		writer.Double(static_cast<double> (it->size / (1024 * 1024)));
+		writer.Double(static_cast<double> (it->size / (1024)));
 		writer.String("mbPerSec");
 		writer.Double(static_cast<double> (it->mbPerSec));
+
 		writer.EndObject();
 	}
 	writer.EndArray();
 	writer.EndObject();
-	debug(s.GetString());
-}
+	std::ofstream json;
+	json.open("result.json");
+	json << s.GetString();
+	json.close();
 
+	debug(s.GetString());
+
+
+
+
+	return s.GetString();
+
+	}
+	close(getDisk());
+	disk = -1;
+	measurements->clear();
+	return "";
+}
 /**
  * Initalize random numbers
  */
@@ -143,8 +172,8 @@ void ATest::writeTestLog()
 void ATest::cleanDBCache()
 {
 	char *buffer = new char[128 * 1024 * 1024];;
-	lseek64(disk, -128 * 1024 * 1024, SEEK_END);
-	read(disk, buffer, 128 * 1024 * 1024);
+	lseek64(getDisk(), -128 * 1024 * 1024, SEEK_END);
+	read(getDisk(), buffer, 128 * 1024 * 1024);
 }
 
 
@@ -161,18 +190,45 @@ unsigned long long int ATest::getRandomExtent()
 	return layout->getRelationship(relationshipName)->getRandomExtent();
 }
 
+unsigned long long int ATest::getNextExtent()
+{
+	return layout->getRelationship(relationshipName)->getNextExtent();
+}
+
+bool ATest::isNextExtent()
+{
+	return layout->getRelationship(relationshipName)->isNextExtent();
+}
+
 
 /**
  * opens a disk for a specific disk path
  */
 void ATest::openDisk(std::string diskPath)
 {
-	this->disk = open64(diskPath.data(), O_RDWR | O_SYNC); // | O_DIRECT | O_LARGEFILE);
-	perror("OPEN");
-	if (!isDiskValid())
+	if(getDisk() == -1)
 	{
-		std::cout << "Error: Disk permissions";
+		setDisk(open64(diskPath.data(), O_RDWR | O_SYNC)); // | O_DIRECT | O_LARGEFILE);
+		perror("OPEN");
+		if (!isDiskValid())
+		{
+			std::cout << "Error: Disk permissions";
+		}
 	}
+}
+
+int ATest::getDisk()
+{
+
+	if(disk > 0)
+	return disk;
+	else
+	return -1;
+}
+
+void ATest::setDisk(int d)
+{
+	disk = d;
 }
 
 /**
@@ -180,7 +236,7 @@ void ATest::openDisk(std::string diskPath)
  */
 bool ATest::isDiskValid()
 {
-	return (this->disk != -1);
+	return (getDisk() != -1);
 }
 
 
@@ -201,7 +257,6 @@ void ATest::start()
 	{
 		execute();
 	}
-	close(disk);
 }
 
 void ATest::execute()
@@ -231,29 +286,30 @@ void ATest::testAlgorithm()
 void ATest::writeExtent(unsigned long long int start)
 {
 
-	lseek64(disk, start * 1024, SEEK_SET);
-	write(disk, &extentBuffer, extentSize * 1024);
+	lseek64(getDisk(), start * 1024, SEEK_SET);
+	write(getDisk(), &extentBuffer, extentSize * 1024);
 	executionSize += extentSize;
 }
 
 void ATest::readExtent(unsigned long long int start)
 {
-	lseek64(disk, start * 1024, SEEK_SET);
-	read(disk, extentBuffer, extentSize * 1024);
+	lseek64(getDisk(), start*1024, SEEK_SET) ;
+	read(getDisk(), extentBuffer, extentSize * 1024);
 	executionSize += extentSize;
 }
 
 void ATest::readPage(unsigned long long int start)
 {
-	lseek64(disk, start * 1024, SEEK_SET);
-	read(disk, pageBuffer, pageSize * 1024);
+
+	lseek64(getDisk(), start*1024, SEEK_SET);
+	read(getDisk(), pageBuffer, pageSize * 1024);
 	executionSize += pageSize;
 }
 
 void ATest::writePage(unsigned long long int start)
 {
-	lseek64(disk, start * 1024, SEEK_SET);
-	write(disk, pageBuffer, pageSize * 1024);
+	lseek64(getDisk(), start * 1024, SEEK_SET);
+	write(getDisk(), pageBuffer, pageSize * 1024);
 	executionSize += pageSize;
 }
 
@@ -274,6 +330,7 @@ void ATest::startAsThread()
 
 void ATest::stopThread()
 {
+
 	terminateThread = true;
 	theThread->join();
 }

@@ -37,7 +37,8 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 
 	// distribution
 	unsigned long long int relStart = this->diskStart;
-	while(totalRelSize != 0)
+
+	for(unsigned long long int i = 0;i != totalRelSize; i++)
 	{
 		int prob = 0;
 		int aRandVal = rand()%100+1;
@@ -46,10 +47,11 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 			prob += r->getProbability(totalRelSize);
 			if(prob >= aRandVal)
 			{
-				r->addExtent(relStart + totalRelSize * this->extentSizeInPages * this->pageSizeInKB * 1024);
-				totalRelSize--;
+				std::cout << "relation:" << r->name << i << std::endl;
+				r->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
 				break;
 			}
+
 		}
 	}
 }

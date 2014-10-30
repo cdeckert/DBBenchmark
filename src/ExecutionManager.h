@@ -13,6 +13,7 @@
 #include "Tests/FullTableScan.h"
 #include "Tests/IndexScan.h"
 #include "Tests/ATest.h"
+#include "Tests/NoTest.h"
 #include "Layout/Layout.h"
 
 namespace DBBenchmark
@@ -27,7 +28,6 @@ public:
 
 	void executeAllTestWithAllConfigurations();
 	DBTest::ATest* initalizeSingleThread(struct HDDTest::TestThread, std::string, HDDTest::Layout*);
-	HDDTest::ConfigGenerator initalizeLayout();
 
 private:
 	std::vector<DBTest::ATest*> backgroundThreads;
