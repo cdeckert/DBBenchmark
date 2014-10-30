@@ -29,6 +29,7 @@ ExecutionManager::~ExecutionManager()
 DBTest::ATest* ExecutionManager::initalizeSingleThread(struct HDDTest::TestThread threadSettings, std::string device, HDDTest::Layout* layout)
 {
 	std::cout << "initalized" << std::endl;
+
 	DBTest::ATest* aTestThread;
 	// switch based on thread setting
 	if(threadSettings.testName == "fullTableScan")
@@ -96,6 +97,7 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 	layout.extentSizeInPages = layoutSetting.pagesPerExtent;
 	layout.createRelationships(layoutSetting.relationships);
 	// for each test run
+
 	for (std::vector<struct HDDTest::TestRun>::iterator aTestRun = layoutSetting.testRuns.begin(); aTestRun != layoutSetting.testRuns.end(); ++aTestRun)
 	{
 		std::cout << "##############################"<< std::endl;
@@ -103,11 +105,14 @@ void ExecutionManager::executeTestRuns(struct HDDTest::LayoutSettings layoutSett
 		// initalize all threads
 		this->initalizeAllThreads(*aTestRun, device, &layout);
 
+
+
 		// start all background threads
 		this->startBackgroundTest();
 
 		// start main thread and wait for them
 		this->mainThread->start();
+
 
 		// terminate all background threads
 		this->terminateBackgroundThreads();

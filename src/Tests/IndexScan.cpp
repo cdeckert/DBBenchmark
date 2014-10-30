@@ -32,6 +32,7 @@ void IndexScan::testAlgorithm()
 		i=i+1024;
 		cleanDBCache();
 		startTimer();
+		if(getDisk() == -1) break;
 		for (int iteration = 0; iteration < numberOfIterations; iteration++)
 		{
 			for (unsigned long long int j = 0; j < i; j++)

@@ -20,6 +20,7 @@
 #include "../Layout/Layout.h"
 
 using namespace std;
+using namespace rapidjson;
 namespace DBTest
 {
 
@@ -68,7 +69,7 @@ public:
 
 	void storeMeasurement();
 
-	void writeTestLog();
+	string writeTestLog();
 
 
 	bool isEndless;
@@ -90,9 +91,13 @@ public:
 
 	HDDTest::Layout* layout;
 	bool terminateThread = false;
+	//static int disk;
+	static int getDisk();
+	static void setDisk(int);
 private:
 
-	int disk;
+
+	static int disk;
 	int extentSize;
 	int pageSize;
 	char *pageBuffer;
@@ -112,6 +117,10 @@ private:
 	void init_rand();
 
 };
+
+
+
+
 
 } /* namespace DBTest */
 
