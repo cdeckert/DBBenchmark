@@ -34,16 +34,23 @@ void Relationship::addExtent(unsigned long long int start)
 
 unsigned long long int Relationship::getNextExtent()
 {
+	if(isNextExtent())
+	{
 	unsigned long long int extentStart = this->extents.at(this->nextExtent).startKb;
 	this->nextExtent++;
 	return extentStart;
+	}
+	else
+	{
+		return 0;
+	}
+
 }
 
 bool Relationship::isNextExtent()
 {
 	return this->nextExtent < this->extents.size();
 }
-
 
 int Relationship::getProbability(unsigned long long int totalUnallocatedExtents)
 {

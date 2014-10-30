@@ -89,7 +89,7 @@ public:
 
 
 	HDDTest::Layout* layout;
-
+	bool terminateThread = false;
 private:
 
 	int disk;
@@ -101,7 +101,7 @@ private:
 	unsigned long long int executionSize;
 	int sleepTime;
 	string device;
-	bool terminateThread = false;
+
 	thread *theThread;
 
 

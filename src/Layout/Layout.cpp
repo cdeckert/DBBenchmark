@@ -48,7 +48,7 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 			if(prob >= aRandVal)
 			{
 				std::cout << "relation:" << r->name << i << std::endl;
-				r->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB * 1024);
+				r->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
 				break;
 			}
 

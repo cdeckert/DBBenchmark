@@ -7,7 +7,7 @@
             {  
                 "layoutSettings":{  
                     "mode":"ordered",
-                    "pageSizeInKB":8,
+                    "pageSizeInKB":10,
                     "pagesPerExtent":8,
                     "relationshipAllocation":{  
                         "rel1":6144,
@@ -19,7 +19,20 @@
                    		{  
                         "name":"Run 1",
                         "mainThread":{
+                        	"testName": "aa",
+                        	"relationship": "rel1"
+                        },
+                        "backgroundThreads":[
+                        	{
                         	"testName": "fullTableScan",
+                        	"relationship": "rel2"
+                        }
+                        ]
+                        },
+                        {  
+                        "name":"Run 2",
+                        "mainThread":{
+                        	"testName": "indexScan",
                         	"relationship": "rel1"
                         },
                         "backgroundThreads":[]

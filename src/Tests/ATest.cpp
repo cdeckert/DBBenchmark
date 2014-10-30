@@ -41,6 +41,7 @@ void ATest::init_rand()
 
 void ATest::setExtentSize(int size)
 {
+	std::cout << "setExtentSize" << size;
 	this->extentSize = size;
 	this->extentBuffer = new char[extentSize * 1024];
 }
@@ -71,8 +72,8 @@ void ATest::speedUpDisk()
 	if (isDiskValid())
 	{
 		lseek64(disk, 0, SEEK_SET);
-		lseek64(disk, 0, SEEK_END);
-		lseek64(disk, 0, SEEK_SET);
+		read(disk, extentBuffer, extentSize * 1024);
+		read(disk, extentBuffer, extentSize * 1024);
 		perror("seek startup");
 	}
 }
@@ -118,12 +119,21 @@ void ATest::writeTestLog()
 	for (std::vector<struct measurement>::iterator it = this->measurements->begin() ; it != this->measurements->end(); ++it)
 	{
 		writer.StartObject();
-		writer.String("duration");
+		/*writer.String("relationship");
+		writer.StartArray();
+		for(std::vector<HDDTest::Extent>::iterator ext = this->layout->getRelationship(this->relationshipName)->extents.begin();
+				ext != this->layout->getRelationship(this->relationshipName)->extents.end(); ++ ext)
+		{
+			writer.Int64(static_cast<unsigned int>((*ext).startKb / 1024));
+		}
+		writer.EndArray();
+		*/writer.String("duration");
 		writer.Double(static_cast<double> (it->duration / 1000000000.));
 		writer.String("size");
 		writer.Double(static_cast<double> (it->size / (1024)));
 		writer.String("mbPerSec");
 		writer.Double(static_cast<double> (it->mbPerSec));
+
 		writer.EndObject();
 	}
 	writer.EndArray();
@@ -248,8 +258,7 @@ void ATest::writeExtent(unsigned long long int start)
 
 void ATest::readExtent(unsigned long long int start)
 {
-	std::cout << start/1024 << std::endl;
-	lseek64(disk, start , SEEK_SET);
+	lseek64(disk, start*1024, SEEK_SET) ;
 	read(disk, extentBuffer, extentSize * 1024);
 	executionSize += extentSize;
 }
@@ -257,7 +266,7 @@ void ATest::readExtent(unsigned long long int start)
 void ATest::readPage(unsigned long long int start)
 {
 
-	lseek64(this->disk, start, SEEK_SET);
+	lseek64(this->disk, start*1024, SEEK_SET);
 	read(this->disk, pageBuffer, pageSize * 1024);
 	executionSize += pageSize;
 }
@@ -282,10 +291,15 @@ void ATest::startAsThread()
 	this->isEndless = true;
 	std::thread theThread(&ATest::start, this);
 	theThread.detach();
+
+
+	std::cout << "ID ****"<<theThread.hardware_concurrency()<<"****"<<theThread.joinable()<<"****************" << theThread.get_id() <<"*****************************";
+
 }
 
 void ATest::stopThread()
 {
+
 	terminateThread = true;
 	theThread->join();
 }
