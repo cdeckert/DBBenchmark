@@ -22,6 +22,7 @@ FullTableScan::~FullTableScan()
 
 void FullTableScan::testAlgorithm()
 {
+
 	cleanDBCache();
 	startTimer();
 	for (int iteration = 0; iteration < numberOfIterations; iteration++)
@@ -36,7 +37,6 @@ void FullTableScan::testAlgorithm()
 	storeMeasurement();
 	writeTestLog();
 
-	std::cout << getTime() / 1000000. / numberOfIterations << ":" << getMbPerSec() / numberOfIterations << std::endl;
 
 }
 

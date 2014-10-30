@@ -1,7 +1,7 @@
 {  
     "ubuntu":{  
         "devices":[  
-            "/dev/sdc"
+            "/dev/sdb"
         ],
         "runs":[  
             {  
@@ -19,21 +19,13 @@
                    		{  
                         "name":"Run 1",
                         "mainThread":{
-                        	"testName": "fullTableScan",
+                        	"testName": "indexScan",
                         	"relationship": "rel1"
                         },
                         "backgroundThreads":[{
                         	"testName": "fullTableScan",
                         	"relationship": "rel2"
                         }]
-                        },
-                        {  
-                        "name":"Run 2",
-                        "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1"
-                        },
-                        "backgroundThreads":[]
                         }
                         
                 ]

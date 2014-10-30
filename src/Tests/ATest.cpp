@@ -12,7 +12,7 @@
 using namespace rapidjson;
 namespace DBTest
 {
-int ATest::disk = -1;
+int ATest::disk;
 ATest::ATest()
 {
 	this->isEndless = false;
@@ -72,8 +72,9 @@ void ATest::speedUpDisk()
 {
 	if (isDiskValid())
 	{
-
+		std::cout << "getDisk" << getDisk() << std::endl;
 		lseek64(getDisk(), 0, SEEK_SET);
+		perror("seek");
 		read(getDisk(), extentBuffer, extentSize * 1024);
 		read(getDisk(), extentBuffer, extentSize * 1024);
 		perror("seek startup");
@@ -151,12 +152,12 @@ std::string ATest::writeTestLog()
 
 
 
-
+	close(getDisk());
+	disk = -1;
 	return s.GetString();
 
 	}
-	close(getDisk());
-	disk = -1;
+
 	measurements->clear();
 	return "";
 }
@@ -221,9 +222,13 @@ int ATest::getDisk()
 {
 
 	if(disk > 0)
-	return disk;
+	{
+		return disk;
+	}
 	else
-	return -1;
+	{
+		return -1;
+	}
 }
 
 void ATest::setDisk(int d)
@@ -242,7 +247,7 @@ bool ATest::isDiskValid()
 
 void ATest::start()
 {
-	if (this->isEndless)
+	if (this->isEndless && getDisk() != -1)
 	{
 		while (true)
 		{
@@ -253,7 +258,7 @@ void ATest::start()
 			}
 		}
 	}
-	else
+	else if(getDisk() != -1)
 	{
 		execute();
 	}
