@@ -40,7 +40,10 @@ DBTest::ATest* ExecutionManager::initalizeSingleThread(struct HDDTest::TestThrea
 	{
 		aTestThread = new DBTest::IndexScan();
 	}
-	else
+	else  if(threadSettings.testName == "indexScan")
+	{
+		aTestThread = new DBTest::WritePages();
+	}else
 	{
 		aTestThread = new DBTest::NoTest();
 	}
