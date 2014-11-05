@@ -19,8 +19,6 @@
 #include <stdio.h>
 #include "../Layout/Layout.h"
 
-using namespace std;
-using namespace rapidjson;
 namespace DBTest
 {
 
@@ -69,7 +67,7 @@ public:
 
 	void storeMeasurement();
 
-	string writeTestLog();
+	std::string writeTestLog();
 
 
 	bool isEndless;
@@ -105,14 +103,14 @@ private:
 	timespec startTime;
 	unsigned long long int executionSize;
 	int sleepTime;
-	string device;
+	std::string device;
 
-	thread *theThread;
+	std::thread *theThread;
 
 
 	void debug(std::string);
 
-	vector<struct measurement> *measurements;
+	std::vector<struct measurement> *measurements;
 
 	void init_rand();
 

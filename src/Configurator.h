@@ -11,52 +11,50 @@
 #include <iostream>
 #include <unistd.h>
 #include <vector>
+#include <string>
 
-using namespace rapidjson;
-using namespace std;
+/*using namespace rapidjson;
+using namespace std;*/
+
 namespace HDDTest
 {
 
 
 struct LayoutSettings
 {
-	string mode;
+	std::string mode;
 	unsigned int pageSizeInKB;
 	unsigned int pagesPerExtent;
-	vector<struct RelationshipConfig> relationships;
-	vector<struct TestRun> testRuns;
+	std::vector<struct RelationshipConfig> relationships;
+	std::vector<struct TestRun> testRuns;
 };
 
 struct Configuration
 {
-	vector<string> devices;
+	std::vector<std::string> devices;
 
 	struct LayoutSettings layout;
 };
 
 struct TestThread
 {
-	string relationship;
-	string testName;
+	std::string relationship;
+	std::string testName;
 	int abc;
 };
 
 struct TestRun
 {
-	string name;
+	std::string name;
 	struct TestThread mainThread;
-	vector<struct TestThread> backgroundThreads;
+	std::vector<struct TestThread> backgroundThreads;
 };
-
-
-
-
 
 
 struct RelationshipConfig
 {
 	unsigned int size;
-	string name;
+	std::string name;
 };
 
 class Configurator
