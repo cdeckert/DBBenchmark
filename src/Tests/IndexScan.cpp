@@ -23,7 +23,7 @@ IndexScan::~IndexScan()
 void IndexScan::testAlgorithm()
 {
 	std::cout << "TEST STARTED" << std::endl;
-	unsigned long long int i = 1;
+	uint64_t i = 1;
 	HDDTest::Relationship *r = layout->getRelationship(this->relationshipName);
 	std::cout << r->name << "##########################################";
 
@@ -35,7 +35,7 @@ void IndexScan::testAlgorithm()
 		if(getDisk() == -1) break;
 		for (int iteration = 0; iteration < numberOfIterations; iteration++)
 		{
-			for (unsigned long long int j = 0; j < i; j++)
+			for (uint64_t j = 0; j < i; j++)
 			{
 				readPage(getRandomPage());
 			}

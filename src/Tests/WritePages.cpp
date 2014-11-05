@@ -22,7 +22,7 @@ WritePages::~WritePages() {
 void WritePages::testAlgorithm()
 {
 	std::cout << "TEST STARTED" << std::endl;
-	unsigned long long int i = 1;
+	uint64_t i = 1;
 	HDDTest::Relationship *r = layout->getRelationship(this->relationshipName);
 	while (i < layout->getRelationship(this->relationshipName)->extents.size()*layout->getRelationship(this->relationshipName)->pagesPerExtent)
 	{
@@ -32,7 +32,7 @@ void WritePages::testAlgorithm()
 		if(getDisk() == -1) break;
 		for (int iteration = 0; iteration < numberOfIterations; iteration++)
 		{
-			for (unsigned long long int j = 0; j < i; j++)
+			for (uint64_t j = 0; j < i; j++)
 			{
 				writePage(getRandomPage());
 			}

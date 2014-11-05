@@ -27,7 +27,7 @@ void FullTableScan::testAlgorithm()
 	startTimer();
 	for (int iteration = 0; iteration < numberOfIterations; iteration++)
 	{
-		unsigned long long int extentStart = this->getNextExtent();
+		uint64_t extentStart = this->getNextExtent();
 		do{
 			if(getDisk() == -1) break;
 			this->readExtent(extentStart*1024);

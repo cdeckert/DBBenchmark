@@ -7,6 +7,7 @@
 #include "../Configurator.h"
 #include <cmath>
 #include <algorithm>
+#include <cstdint>
 
 #ifndef SRC_LAYOUT_LAYOUT_H_
 #define SRC_LAYOUT_LAYOUT_H_
@@ -23,7 +24,7 @@ public:
 
 	void createRelationships(std::vector<struct HDDTest::RelationshipConfig>);
 
-	unsigned long long int diskStart;
+	uint64_t diskStart;
 	int extentSizeInPages;
 	int pageSizeInKB;
 

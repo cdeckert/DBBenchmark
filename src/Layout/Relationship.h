@@ -9,35 +9,37 @@
 #define SRC_LAYOUT_RELATIONSHIP_H_
 #include <iostream>
 #include <vector>
+#include <cstdint>
+
 namespace HDDTest
 {
 
 struct Extent
 {
-	unsigned long long int number;
-	unsigned long long int startKb;
+	uint64_t number;
+	uint64_t startKb;
 };
 
 class Relationship
 {
 public:
-	Relationship(std::string, unsigned long long int, unsigned int, unsigned int);
+	Relationship(std::string, uint64_t, unsigned int, unsigned int);
 	virtual ~Relationship();
-	void addExtent(unsigned long long int);
+	void addExtent(uint64_t);
 
-	int getProbability(unsigned long long int);
+	int getProbability(uint64_t);
 
-	void setUnallocatedExtents(unsigned long long int unallocatedExtents) {
+	void setUnallocatedExtents(uint64_t unallocatedExtents) {
 		this->unallocatedExtents = unallocatedExtents;
 	}
 
 
 
-	unsigned long long int getRandomExtent();
-	unsigned long long int getRandomPage();
+	uint64_t getRandomExtent();
+	uint64_t getRandomPage();
 
-	unsigned long long int getNextExtent();
-	unsigned long long int getNextPage();
+	uint64_t getNextExtent();
+	uint64_t getNextPage();
 	bool isNextExtent();
 	std::vector<struct Extent> extents;
 	std::string name;
@@ -46,8 +48,8 @@ public:
 	unsigned int pageSizeInKB;
 
 private:
-	unsigned long long int unallocatedExtents;
-	unsigned long long int nextExtent = 0;
+	uint64_t unallocatedExtents;
+	uint64_t nextExtent = 0;
 
 };
 

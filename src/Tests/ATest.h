@@ -18,14 +18,15 @@
 #include <fstream>
 #include <stdio.h>
 #include "../Layout/Layout.h"
+#include <cstdint>
 
 namespace DBTest
 {
 
 struct measurement
 {
-	unsigned long long int size;
-	unsigned long long int duration;
+	uint64_t size;
+	uint64_t duration;
 	double mbPerSec;
 
 };
@@ -38,17 +39,17 @@ public:
 
 	void start();
 	void startAsThread();
-	void writePage(unsigned long long int);
-	void writeExtent(unsigned long long int);
-	void readPage(unsigned long long int);
-	void readExtent(unsigned long long int);
+	void writePage(uint64_t);
+	void writeExtent(uint64_t);
+	void readPage(uint64_t);
+	void readExtent(uint64_t);
 	void openDisk(std::string);
 	bool isDiskValid();
 	void setExtentSize(int);
 	void setPageSize(int);
 	void speedUpDisk();
 	void startTimer();
-	long long int getTime();
+	int64_t getTime();
 	double getMbPerSec();
 
 	std::string relationshipName;
@@ -61,9 +62,9 @@ public:
 	void execute();
 
 
-	unsigned long long int getRandomPage();
-	unsigned long long int getRandomExtent();
-	unsigned long long int getNextExtent();
+	uint64_t getRandomPage();
+	uint64_t getRandomExtent();
+	uint64_t getNextExtent();
 
 	void storeMeasurement();
 
@@ -101,7 +102,7 @@ private:
 	char *pageBuffer;
 	char *extentBuffer;
 	timespec startTime;
-	unsigned long long int executionSize;
+	uint64_t executionSize;
 	int sleepTime;
 	std::string device;
 

@@ -58,12 +58,12 @@ void ATest::setPageSize(int size)
 	this->relation = relation;
 }*/
 /*
-unsigned long long int ATest::getNumberOfExtents()
+uint64_t ATest::getNumberOfExtents()
 {
 	return this->relation->size();
 }
 
-unsigned long long int ATest::getNumberOfPages()
+uint64_t ATest::getNumberOfPages()
 {
 	return getNumberOfExtents() * (extentSize / pageSize);
 }*/
@@ -92,7 +92,7 @@ void ATest::startTimer()
 	clock_gettime(CLOCK_REALTIME, &startTime);
 }
 
-long long int ATest::getTime()
+int64_t ATest::getTime()
 {
 	timespec endTime;
 	clock_gettime(CLOCK_REALTIME, &endTime);
@@ -181,17 +181,17 @@ void ATest::cleanDBCache()
 /**
  * returns a random Page
  */
-unsigned long long int ATest::getRandomPage()
+uint64_t ATest::getRandomPage()
 {
 	return layout->getRelationship(relationshipName)->getRandomPage();
 }
 
-unsigned long long int ATest::getRandomExtent()
+uint64_t ATest::getRandomExtent()
 {
 	return layout->getRelationship(relationshipName)->getRandomExtent();
 }
 
-unsigned long long int ATest::getNextExtent()
+uint64_t ATest::getNextExtent()
 {
 	return layout->getRelationship(relationshipName)->getNextExtent();
 }
@@ -279,7 +279,7 @@ void ATest::testAlgorithm()
 	std::cout << this->isEndless << std::endl;
 }
 
-/*void ATest::writeLogFile(unsigned long long int iteration)
+/*void ATest::writeLogFile(uint64_t iteration)
 {
     log <<iteration << "," << getTime() /1000000000.;
 }*/
@@ -288,7 +288,7 @@ void ATest::testAlgorithm()
 /**
  * seeks to the end and start of the a disk
  */
-void ATest::writeExtent(unsigned long long int start)
+void ATest::writeExtent(uint64_t start)
 {
 
 	lseek64(getDisk(), start * 1024, SEEK_SET);
@@ -296,14 +296,14 @@ void ATest::writeExtent(unsigned long long int start)
 	executionSize += extentSize;
 }
 
-void ATest::readExtent(unsigned long long int start)
+void ATest::readExtent(uint64_t start)
 {
 	lseek64(getDisk(), start*1024, SEEK_SET) ;
 	read(getDisk(), extentBuffer, extentSize * 1024);
 	executionSize += extentSize;
 }
 
-void ATest::readPage(unsigned long long int start)
+void ATest::readPage(uint64_t start)
 {
 
 	lseek64(getDisk(), start*1024, SEEK_SET);
@@ -311,7 +311,7 @@ void ATest::readPage(unsigned long long int start)
 	executionSize += pageSize;
 }
 
-void ATest::writePage(unsigned long long int start)
+void ATest::writePage(uint64_t start)
 {
 	lseek64(getDisk(), start * 1024, SEEK_SET);
 	write(getDisk(), pageBuffer, pageSize * 1024);
