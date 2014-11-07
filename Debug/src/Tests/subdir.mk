@@ -5,6 +5,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Tests/ATest.cpp \
+../src/Tests/Drive.cpp \
 ../src/Tests/FullTableScan.cpp \
 ../src/Tests/IndexScan.cpp \
 ../src/Tests/LogWriter.cpp \
@@ -13,6 +14,7 @@ CPP_SRCS += \
 
 OBJS += \
 ./src/Tests/ATest.o \
+./src/Tests/Drive.o \
 ./src/Tests/FullTableScan.o \
 ./src/Tests/IndexScan.o \
 ./src/Tests/LogWriter.o \
@@ -21,6 +23,7 @@ OBJS += \
 
 CPP_DEPS += \
 ./src/Tests/ATest.d \
+./src/Tests/Drive.d \
 ./src/Tests/FullTableScan.d \
 ./src/Tests/IndexScan.d \
 ./src/Tests/LogWriter.d \
