@@ -18,8 +18,6 @@ ATest::ATest()
 	this->isEndless = false;
 	this->executionSize = 0;
 	this->numberOfIterations = 1;
-	setPageSize(8);
-	setExtentSize(64);
 	init_rand();
 	sleepTime = 0;
 
@@ -40,46 +38,7 @@ void ATest::init_rand()
 }
 
 
-void ATest::setExtentSize(int size)
-{
-	std::cout << "setExtentSize" << size;
-	this->extentSize = size;
-	this->extentBuffer = new char[extentSize * 1024];
-}
 
-void ATest::setPageSize(int size)
-{
-	this->pageSize = size;
-	this->pageBuffer = new char[pageSize * 1024];
-}
-
-/*void ATest::setLayout(std::vector<struct HDDTest::extent> *relation)
-{
-	this->relation = relation;
-}*/
-/*
-unsigned long long int ATest::getNumberOfExtents()
-{
-	return this->relation->size();
-}
-
-unsigned long long int ATest::getNumberOfPages()
-{
-	return getNumberOfExtents() * (extentSize / pageSize);
-}*/
-
-void ATest::speedUpDisk()
-{
-	if (isDiskValid())
-	{
-		std::cout << "getDisk" << getDisk() << std::endl;
-		lseek64(getDisk(), 0, SEEK_SET);
-		perror("seek");
-		read(getDisk(), extentBuffer, extentSize * 1024);
-		read(getDisk(), extentBuffer, extentSize * 1024);
-		perror("seek startup");
-	}
-}
 
 double ATest::getMbPerSec()
 {
@@ -170,12 +129,7 @@ std::string ATest::writeTestLog()
 /**
  * Makes sure that there is no data in your database cache
  */
-void ATest::cleanDBCache()
-{
-	char *buffer = new char[128 * 1024 * 1024];;
-	lseek64(getDisk(), -128 * 1024 * 1024, SEEK_END);
-	read(getDisk(), buffer, 128 * 1024 * 1024);
-}
+
 
 
 /**
@@ -202,47 +156,10 @@ bool ATest::isNextExtent()
 }
 
 
-/**
- * opens a disk for a specific disk path
- */
-void ATest::openDisk(std::string diskPath)
-{
-	if(getDisk() == -1)
-	{
-		setDisk(open64(diskPath.data(), O_RDWR | O_SYNC)); // | O_DIRECT | O_LARGEFILE);
-		perror("OPEN");
-		if (!isDiskValid())
-		{
-			std::cout << "Error: Disk permissions";
-		}
-	}
-}
 
-int ATest::getDisk()
-{
 
-	if(disk > 0)
-	{
-		return disk;
-	}
-	else
-	{
-		return -1;
-	}
-}
 
-void ATest::setDisk(int d)
-{
-	disk = d;
-}
 
-/**
- * injecting layout
- */
-bool ATest::isDiskValid()
-{
-	return (getDisk() != -1);
-}
 
 
 void ATest::start()

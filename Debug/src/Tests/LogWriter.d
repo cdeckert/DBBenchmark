@@ -12,7 +12,8 @@ src/Tests/LogWriter.d: ../src/Tests/LogWriter.cpp \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/stack.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/error/error.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h
+ /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h \
+ ../src/Tests/../Util/Disk.h
 
 ../src/Tests/LogWriter.h:
 
@@ -45,3 +46,5 @@ src/Tests/LogWriter.d: ../src/Tests/LogWriter.cpp \
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h:
+
+../src/Tests/../Util/Disk.h:

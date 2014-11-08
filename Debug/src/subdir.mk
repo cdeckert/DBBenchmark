@@ -6,19 +6,16 @@
 CPP_SRCS += \
 ../src/Configurator.cpp \
 ../src/DBBenchmark.cpp \
-../src/Disk.cpp \
 ../src/ExecutionManager.cpp 
 
 OBJS += \
 ./src/Configurator.o \
 ./src/DBBenchmark.o \
-./src/Disk.o \
 ./src/ExecutionManager.o 
 
 CPP_DEPS += \
 ./src/Configurator.d \
 ./src/DBBenchmark.d \
-./src/Disk.d \
 ./src/ExecutionManager.d 
 
 

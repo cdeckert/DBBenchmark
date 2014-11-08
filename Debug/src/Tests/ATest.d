@@ -12,6 +12,7 @@ src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/error/error.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h \
+ ../src/Tests/../Util/Disk.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/writer.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/dtoa.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/itoa.h \
@@ -48,6 +49,8 @@ src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h:
+
+../src/Tests/../Util/Disk.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/writer.h:
 

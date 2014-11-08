@@ -18,6 +18,7 @@
 #include <fstream>
 #include <stdio.h>
 #include "../Layout/Layout.h"
+#include "../Util/Disk.h"
 
 using namespace std;
 using namespace rapidjson;
