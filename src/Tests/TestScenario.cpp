@@ -9,19 +9,19 @@
 
 namespace HDDTest {
 
-TestScenario::TestScenario() {
-	// TODO Auto-generated constructor stub
-
+TestScenario::TestScenario(std::vector<std::string*> *diskPaths, std::unordered_map<std::string, Layout*> *layouts)
+{
+	this->diskPaths = diskPaths;
+	this->layouts = layouts;
+	this->backgroundThreads = new std::vector<ATest*>();
 }
 
 TestScenario::~TestScenario() {
 	// TODO Auto-generated destructor stub
 }
 
-std::vector<TestScenario*> TestScenario::generateScenarios(
-		HDDTest::Configurator*&) {
-	std::vector<TestScenario*> scenarios;
-	return scenarios;
+
+void TestScenario::run() {
 }
 
 } /* namespace HDDTest */

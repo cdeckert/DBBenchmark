@@ -11,63 +11,21 @@
 #include <iostream>
 #include <unistd.h>
 #include <vector>
+#include <unordered_map>
+#include "../Tests/TestScenario.h"
+#include "Disk.h"
+#include "../Layout/Layout.h"
 
 using namespace rapidjson;
-using namespace std;
-namespace HDDTest
-{
+namespace HDDTest {
 
-
-struct LayoutSettings
-{
-	string mode;
-	unsigned int pageSizeInKB;
-	unsigned int pagesPerExtent;
-	vector<struct RelationshipConfig> relationships;
-	vector<struct TestRun> testRuns;
-};
-
-struct Configuration
-{
-	vector<string> devices;
-
-	struct LayoutSettings layout;
-};
-
-struct TestThread
-{
-	string relationship;
-	string testName;
-	int abc;
-};
-
-struct TestRun
-{
-	string name;
-	struct TestThread mainThread;
-	vector<struct TestThread> backgroundThreads;
-};
-
-
-
-
-
-
-struct RelationshipConfig
-{
-	unsigned int size;
-	string name;
-};
 
 class Configurator
 {
 public:
 	Configurator();
 	virtual ~Configurator();
-	void fetchConfiguration();
-	struct Configuration configuration;
-
-
+	std::vector<TestScenario*>* getTestScenarios();
 };
 
 } /* namespace HDDTest */

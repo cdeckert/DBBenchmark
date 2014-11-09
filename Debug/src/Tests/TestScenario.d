@@ -1,39 +1,19 @@
 src/Tests/TestScenario.d: ../src/Tests/TestScenario.cpp \
- ../src/Tests/TestScenario.h ../src/Tests/../Util/Configurator.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/allocators.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/encodings.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/meta.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/pow10.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/stack.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/error/error.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
- /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h
+ ../src/Tests/TestScenario.h ../src/Tests/../Layout/Layout.h \
+ ../src/Tests/../Layout/Relationship.h ../src/Tests/../Util/Disk.h \
+ ../src/Tests/ATest.h ../src/Tests/../Layout/Relationship.h \
+ ../src/Tests/../Util/Log.h
 
 ../src/Tests/TestScenario.h:
 
-../src/Tests/../Util/Configurator.h:
+../src/Tests/../Layout/Layout.h:
 
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h:
+../src/Tests/../Layout/Relationship.h:
 
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h:
+../src/Tests/../Util/Disk.h:
 
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h:
+../src/Tests/ATest.h:
 
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/allocators.h:
+../src/Tests/../Layout/Relationship.h:
 
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/encodings.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/meta.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/pow10.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/stack.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/error/error.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h:
-
-/home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h:
+../src/Tests/../Util/Log.h:

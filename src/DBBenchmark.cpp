@@ -14,9 +14,13 @@ int main() {
 
 	// read configuration file
 	HDDTest::Configurator *config = new HDDTest::Configurator();
-	config->fetchConfiguration();
+	//config->fetchConfiguration();
 
-	std::vector<HDDTest::TestScenario*> testScenarios = HDDTest::TestScenario::generateScenarios(config);
+	std::vector<HDDTest::TestScenario*> *testScenarios = config->getTestScenarios();
+	/*for(HDDTest::TestScenario* t : testScenarios)
+	{
+		t->run();
+	}*/
 
 
 

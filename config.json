@@ -1,68 +1,21 @@
 {  
     "ubuntu":{  
-        "devices":[  
+        "disks":[  
             "/dev/sdb"
-        ],
-        "runs":[  
-            {  
-                "layoutSettings":{  
-                    "mode":"ordered",
-                    "pageSizeInKB":10,
-                    "pagesPerExtent":8,
-                    "relationshipAllocation":{  
-                        "rel1":6144,
-                        "rel2":7680,
-                        "rel3":2560
-                    }
-                },
-                "testRuns":[  
-                   		{  
-                        "name":"Run 1",
-                        "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1"
-                        },
-                        "backgroundThreads":[{
-                        	"testName": "fullTableScan",
-                        	"relationship": "rel2"
-                        }]
-                        }
-                        
-                ]
-            }
         ]
     },
-    "centaurus":{  
-        "devices":[  
-            "/dev/sdf"
-        ],
-        "runs":[  
-            {  
-                "layoutSettings":{  
-                    "mode":"ordered",
-                    "pageSizeInKB":10,
-                    "pagesPerExtent":8,
-                    "relationshipAllocation":{  
-                        "rel1":6144,
-                        "rel2":7680,
-                        "rel3":2560
-                    }
-                },
-                "testRuns":[  
-                        {  
-                        "name":"Run 1",
-                        "mainThread":{
-                            "testName": "indexScan",
-                            "relationship": "rel1"
-                        },
-                        "backgroundThreads":[{
-                            "testName": "fullTableScan",
-                            "relationship": "rel2"
-                        }]
-                        }
-                        
-                ]
+    "layouts":
+    {
+    	"ordered GB":
+    	{
+    		"mode":"ordered",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560
             }
-        ]
+        }
     }
 }

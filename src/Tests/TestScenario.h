@@ -8,16 +8,25 @@
 #ifndef SRC_TESTS_TESTSCENARIO_H_
 #define SRC_TESTS_TESTSCENARIO_H_
 #include <vector>
-#include "../Util/Configurator.h"
+#include "../Layout/Layout.h"
+#include "../Util/Disk.h"
+#include "ATest.h"
 
 namespace HDDTest {
 
 class TestScenario
 {
 public:
-	TestScenario();
+	TestScenario(std::vector<std::string*>*, std::unordered_map<std::string, Layout*>*);
 	virtual ~TestScenario();
-	static std::vector<TestScenario*> generateScenarios(HDDTest::Configurator*&);
+	void run();
+
+private:
+	std::vector<std::string*> *diskPaths;
+	std::unordered_map<std::string, Layout*> *layouts;
+
+	ATest *mainThread;
+	std::vector<ATest*>*backgroundThreads;
 };
 
 } /* namespace HDDTest */

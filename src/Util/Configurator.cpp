@@ -24,9 +24,13 @@ Configurator::~Configurator()
 
 
 
-void Configurator::fetchConfiguration()
+
+
+
+
+
+std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 {
-	// config file
 	FILE *pFile = fopen ("config.json" , "r");
 	FileStream fs(pFile);
 	Document d;
@@ -38,59 +42,54 @@ void Configurator::fetchConfiguration()
 
 	Value &hostSettings = d[hostname];
 
-	// read Configuration
-	// read devices
-	Value &devices = hostSettings["devices"];
-	for (Value::ConstValueIterator itr = devices.Begin(); itr != devices.End(); ++itr)
+	// disks
+	std::vector<std::string*> *diskPaths = new std::vector<std::string*>();
+	Value &disks = hostSettings["disks"];
+	for (Value::ConstValueIterator itr = disks.Begin(); itr != disks.End(); ++itr)
 	{
-		configuration.devices.push_back(itr->GetString());
+		std::string diskPath = itr->GetString();
+		diskPaths->push_back(&diskPath);
 	}
 
 
-	Value &runs = hostSettings["runs"];
-	for(Value::ConstValueIterator run = runs.Begin(); run != runs.End(); ++run)
+	// layout generation
+	Value &layoutSettings = d["layouts"];
+	std::unordered_map<std::string, Layout*>*layouts = new std::unordered_map<std::string, Layout*>();
+	for(Value::ConstMemberIterator itr = layoutSettings.MemberBegin(); itr != layoutSettings.MemberEnd(); ++itr)
 	{
-		Value::ConstMemberIterator layoutSettings = run->FindMember("layoutSettings");
+		std::string name = itr->name.GetString();
 
-		configuration.layout.mode = layoutSettings->value["mode"].GetString();
-		configuration.layout.pageSizeInKB = layoutSettings->value["pageSizeInKB"].GetUint();
-		configuration.layout.pagesPerExtent = layoutSettings->value["pagesPerExtent"].GetUint();
+		struct LayoutSettings layoutSetting;
+		layoutSetting.mode = itr->value["mode"].GetString();
+		layoutSetting.pageSizeInKB = itr->value["pageSizeInKB"].GetUint();
+		layoutSetting.pagesPerExtent = itr->value["pagesPerExtent"].GetUint();
 
-		for(Value::ConstMemberIterator relationshipSetting = layoutSettings->value["relationshipAllocation"].MemberBegin(); relationshipSetting != layoutSettings->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
+		for(Value::ConstMemberIterator relationshipSetting = itr->value["relationshipAllocation"].MemberBegin(); relationshipSetting != itr->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
 		{
 			struct RelationshipConfig relConf;
 			relConf.name = relationshipSetting->name.GetString();
 			relConf.size = relationshipSetting->value.GetUint();
-			configuration.layout.relationships.push_back(relConf);
-
-
-			// test methods
-			//configuration.layout.testRuns.mainThread.
+			layoutSetting.relationships.push_back(relConf);
 		}
 
 
-		for(Value::ConstValueIterator testRunIt = run->FindMember("testRuns")->value.Begin(); testRunIt != run->FindMember("testRuns")->value.End(); ++testRunIt)
-		{
-			struct TestRun testRun;
-			testRun.mainThread.relationship = testRunIt->FindMember("mainThread")->value["relationship"].GetString();
-			testRun.mainThread.testName = testRunIt->FindMember("mainThread")->value["testName"].GetString();
-
-
-			for(Value::ConstValueIterator backgroundJobIt = testRunIt->FindMember("backgroundThreads")->value.Begin(); backgroundJobIt != testRunIt->FindMember("backgroundThreads")->value.End(); ++backgroundJobIt)
-			{
-				struct TestThread bgJob;
-				bgJob.relationship = backgroundJobIt->FindMember("relationship")->value.GetString();
-				bgJob.testName = backgroundJobIt->FindMember("testName")->value.GetString();
-				testRun.backgroundThreads.push_back(bgJob);
-			}
-
-
-			configuration.layout.testRuns.push_back((testRun));
-		}
+		layouts->insert(std::make_pair(name, new Layout(layoutSetting)));
 	}
+
+	std::vector<TestScenario*> *scenarios = new std::vector<TestScenario*>();
+	// test scenarios
+	TestScenario *testScenario = new TestScenario(diskPaths, layouts);
+
+
+
+	scenarios->push_back(testScenario);
+
+
+
+
+
+
 	fclose(pFile);
+	return scenarios;
 }
-
-
-
 } /* namespace HDDTest */
