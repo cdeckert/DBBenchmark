@@ -52,11 +52,13 @@ void Log::write(std::string name)
 
 	for(std::vector<struct measurement>::iterator itr = measurements->begin(); itr != measurements->end(); ++itr)
 	{
+		writer.StartObject();
 		writer.String("duration");
 		writer.Uint64(itr->duration);
 
 		writer.String("size");
 		writer.Uint64(itr->size);
+		writer.EndObject();
 	}
 	writer.EndArray();
 	writer.EndObject();
