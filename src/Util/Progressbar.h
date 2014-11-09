@@ -20,6 +20,8 @@ public:
 	int barWidth;
 	std::string name;
 	virtual ~Progressbar();
+private:
+	int old;
 };
 
 } /* namespace HDDTest */

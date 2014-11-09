@@ -76,6 +76,7 @@ void Disk::readPage(uint64_t start)
 
 	lseek64(this->fd, start*1024, SEEK_SET);
 	read(this->fd, this->pageBuffer, this->pageSize*1024);
+	//perror("read");
 }
 
 void Disk::writeExtent(uint64_t start)

@@ -27,7 +27,7 @@ void IndexScan::executeTestAlgorithm()
 
 	uint64_t processedData = 0;
 
-	Progressbar *progress = new Progressbar("Index Scan", iterations);
+	Progressbar *progress = new Progressbar("Index Scan", (iterations+1)*iterations/2 * stepSize);
 
 	for(int i = 0; i < iterations; i++)
 	{
@@ -40,9 +40,10 @@ void IndexScan::executeTestAlgorithm()
 			this->disk->readPage(this->relationship->getRandomPage());
 			processedData += 8; // to-do
 			if(!this->runs) return;
+			progress->add(1);
 		}
 		this->log->stop(processedData);
-		progress->add(1);
+
 		this->sleep();
 	}
 
