@@ -1,4 +1,5 @@
 src/Layout/Layout.d: ../src/Layout/Layout.cpp ../src/Layout/Layout.h \
+<<<<<<< HEAD
  ../src/Layout/Relationship.h ../src/Layout/../Configurator.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/document.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/reader.h \
@@ -11,10 +12,14 @@ src/Layout/Layout.d: ../src/Layout/Layout.cpp ../src/Layout/Layout.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/error/error.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/internal/strfunc.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/filestream.h
+=======
+ ../src/Layout/Relationship.h
+>>>>>>> release/MoRelease
 
 ../src/Layout/Layout.h:
 
 ../src/Layout/Relationship.h:
+<<<<<<< HEAD
 
 ../src/Layout/../Configurator.h:
 
@@ -39,3 +44,5 @@ src/Layout/Layout.d: ../src/Layout/Layout.cpp ../src/Layout/Layout.h \
 /home/edv-hiwi/DBBenchmark/include/rapidjson/internal/strfunc.h:
 
 /home/edv-hiwi/DBBenchmark/include/rapidjson/filestream.h:
+=======
+>>>>>>> release/MoRelease

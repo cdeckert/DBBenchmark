@@ -1,58 +1,26 @@
 /*
- * ATest.cpp
+ * TestExecutor.cpp
  *
- *  Created on: Oct 9, 2014
+ *  Created on: Nov 8, 2014
  *      Author: root
  */
 
 #include "ATest.h"
 
-#include "rapidjson/writer.h"
-#include "rapidjson/stringbuffer.h"
-using namespace rapidjson;
-namespace DBTest
+namespace HDDTest
 {
-int ATest::disk;
-ATest::ATest()
-{
-	this->isEndless = false;
-	this->executionSize = 0;
-	this->numberOfIterations = 1;
-	setPageSize(8);
-	setExtentSize(64);
-	init_rand();
-	sleepTime = 0;
 
-	measurements = new std::vector<measurement>();
+ATest::ATest(std::string name, Disk* disk, Relationship* relationship)
+{
+	this->name = name;
+	this->disk = disk;
+	this->relationship = relationship;
+	this->log = new DBUtil::Log();
+	this->runs = true;
+	this->isMain = false;
 }
 
-ATest::~ATest()
-{
-
-}
-
-void ATest::init_rand()
-{
-	time_t t;
-
-	time(&t);
-	srand((unsigned int)t);
-}
-
-
-void ATest::setExtentSize(int size)
-{
-	std::cout << "setExtentSize" << size;
-	this->extentSize = size;
-	this->extentBuffer = new char[extentSize * 1024];
-}
-
-void ATest::setPageSize(int size)
-{
-	this->pageSize = size;
-	this->pageBuffer = new char[pageSize * 1024];
-}
-
+<<<<<<< HEAD
 /*void ATest::setLayout(std::vector<struct HDDTest::extent> *relation)
 {
 	this->relation = relation;
@@ -322,24 +290,20 @@ void ATest::writePage(uint64_t start)
 void ATest::debug(std::string input)
 {
 	std::cout << input;
-}
-
-
-
-void ATest::startAsThread()
+=======
+void ATest::start()
 {
-	this->isEndless = true;
-	std::thread theThread(&ATest::start, this);
-	theThread.detach();
+	executeTestAlgorithm();
+>>>>>>> release/MoRelease
 }
+void ATest::executeTestAlgorithm(){}
 
-void ATest::stopThread()
+ATest::~ATest()
 {
-
-	terminateThread = true;
-	//theThread->join();
+	delete log;
 }
 
+void ATest::sleep() {
+}
 
-
-} /* namespace DBTest */
+} /* namespace HDDTest */

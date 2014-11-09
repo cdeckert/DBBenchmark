@@ -1,6 +1,6 @@
-<<<<<<< HEAD
-src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/ExecutionManager.h \
- ../src/Configurator.h \
+<<<<<<< HEAD:Debug/src/ExecutionManager.d
+src/ExecutionManager.d: ../src/ExecutionManager.cpp \
+ ../src/ExecutionManager.h ../src/Configurator.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/document.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/reader.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -19,7 +19,8 @@ src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/ExecutionManager.h \
  ../src/Tests/WritePages.h ../src/Layout/Layout.h \
  ../src/Layout/Relationship.h ../src/Layout/../Configurator.h
 =======
-src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/Util/Configurator.h \
+src/Util/Configurator.d: ../src/Util/Configurator.cpp \
+ ../src/Util/Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -38,8 +39,8 @@ src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/Util/Configurator.h \
  ../src/Util/../Tests/../Layout/Relationship.h \
  ../src/Util/../Tests/../Util/Log.h ../src/Util/../Tests/IndexScan.h \
  ../src/Util/Disk.h ../src/Util/../Layout/Layout.h \
- ../src/Util/../Layout/Relationship.h ../src/Tests/TestScenario.h
->>>>>>> release/MoRelease
+ ../src/Util/../Layout/Relationship.h
+>>>>>>> release/MoRelease:Debug/src/Util/Configurator.d
 
 ../src/Util/Configurator.h:
 
@@ -86,5 +87,3 @@ src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/Util/Configurator.h \
 ../src/Util/../Layout/Layout.h:
 
 ../src/Util/../Layout/Relationship.h:
-
-../src/Tests/TestScenario.h:

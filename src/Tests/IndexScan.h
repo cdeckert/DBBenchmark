@@ -1,22 +1,22 @@
 /*
  * IndexScan.h
  *
+ *  Created on: Nov 8, 2014
+ *      Author: root
  */
 
 #ifndef SRC_TESTS_INDEXSCAN_H_
 #define SRC_TESTS_INDEXSCAN_H_
 #include "ATest.h"
 
-namespace DBTest
-{
+namespace HDDTest {
 
 class IndexScan : public ATest
 {
 public:
-	IndexScan();
+	IndexScan(std::string, Disk*, Relationship*);
 	virtual ~IndexScan();
-
-	void testAlgorithm() override;
+	void executeTestAlgorithm() override;
 };
 
 } /* namespace HDDTest */

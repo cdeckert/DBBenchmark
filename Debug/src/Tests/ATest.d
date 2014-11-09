@@ -1,4 +1,5 @@
 src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
+<<<<<<< HEAD
  ../src/Tests/../Layout/Layout.h ../src/Tests/../Layout/Relationship.h \
  ../src/Tests/../Layout/../Configurator.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/document.h \
@@ -18,13 +19,18 @@ src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/internal/itoa.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/stringbuffer.h \
  /home/edv-hiwi/DBBenchmark/include/rapidjson/stringbuffer.h
+=======
+ ../src/Tests/../Util/Disk.h ../src/Tests/../Layout/Relationship.h \
+ ../src/Tests/../Util/Log.h
+>>>>>>> release/MoRelease
 
 ../src/Tests/ATest.h:
 
-../src/Tests/../Layout/Layout.h:
+../src/Tests/../Util/Disk.h:
 
 ../src/Tests/../Layout/Relationship.h:
 
+<<<<<<< HEAD
 ../src/Tests/../Layout/../Configurator.h:
 
 /home/edv-hiwi/DBBenchmark/include/rapidjson/document.h:
@@ -60,3 +66,6 @@ src/Tests/ATest.d: ../src/Tests/ATest.cpp ../src/Tests/ATest.h \
 /home/edv-hiwi/DBBenchmark/include/rapidjson/stringbuffer.h:
 
 /home/edv-hiwi/DBBenchmark/include/rapidjson/stringbuffer.h:
+=======
+../src/Tests/../Util/Log.h:
+>>>>>>> release/MoRelease

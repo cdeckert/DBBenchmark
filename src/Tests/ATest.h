@@ -1,8 +1,11 @@
 /*
- * ATest.h
+ * TestExecutor.h
  *
+ *  Created on: Nov 8, 2014
+ *      Author: root
  */
 
+<<<<<<< HEAD
 #ifndef DBTESTING_SRC_ATEST_H_
 #define DBTESTING_SRC_ATEST_H_
 #include <iostream>
@@ -21,23 +24,40 @@
 #include <cstdint>
 
 namespace DBTest
-{
+=======
+#ifndef SRC_TESTS_ATEST_H_
+#define SRC_TESTS_ATEST_H_
 
-struct measurement
+#include "../Util/Disk.h"
+#include "../Layout/Relationship.h"
+#include "../Util/Log.h"
+#include <atomic>
+namespace HDDTest
+>>>>>>> release/MoRelease
 {
+struct TestSettings
+{
+<<<<<<< HEAD
 	uint64_t size;
 	uint64_t duration;
 	double mbPerSec;
+=======
+	std::string name;
+	std::uint64_t sleep;
+	std::string relationship;
+>>>>>>> release/MoRelease
 
 };
 
 class ATest
 {
 public:
-	ATest();
+	std::string name;
+	std::atomic<bool> isMain;
+	ATest(std::string, Disk*, Relationship*);
 	virtual ~ATest();
-
 	void start();
+<<<<<<< HEAD
 	void startAsThread();
 	void writePage(uint64_t);
 	void writeExtent(uint64_t);
@@ -73,29 +93,21 @@ public:
 
 	bool isEndless;
 	virtual void testAlgorithm();
+=======
+	virtual void executeTestAlgorithm();
+	void sleep();
+	DBUtil::Log* log;
+protected:
+>>>>>>> release/MoRelease
 
-	const std::string &getDevice() const
-	{
-		return device;
-	}
+	Relationship* relationship;
+	Disk* disk;
+	std::atomic<bool> runs;
 
-	void setDevice(const std::string &device)
-	{
-		this->device = device;
-	}
-
-	void stopThread();
-	bool isNextExtent();
-
-
-	HDDTest::Layout* layout;
-	bool terminateThread = false;
-	//static int disk;
-	static int getDisk();
-	static void setDisk(int);
 private:
 
 
+<<<<<<< HEAD
 	static int disk;
 	int extentSize;
 	int pageSize;
@@ -112,15 +124,12 @@ private:
 	void debug(std::string);
 
 	std::vector<struct measurement> *measurements;
+=======
 
-	void init_rand();
+>>>>>>> release/MoRelease
+
 
 };
+}/* namespace HDDTest */
 
-
-
-
-
-} /* namespace DBTest */
-
-#endif /* DBTESTING_SRC_ATEST_H_ */
+#endif /* SRC_TESTS_ATEST_H_ */

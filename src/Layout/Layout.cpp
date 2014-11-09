@@ -9,9 +9,12 @@
 
 namespace HDDTest {
 
-Layout::Layout() {
-	init_rand();
-
+Layout::Layout(LayoutSettings layoutSetting)
+{
+	this->init_rand();
+	this->extentSizeInPages = layoutSetting.pagesPerExtent;
+	this->pageSizeInKB = layoutSetting.pageSizeInKB;
+	this->createRelationships(layoutSetting.relationships);
 }
 
 Layout::~Layout() {
@@ -30,7 +33,7 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 
 	for(struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
 	{
-		this->relationships.push_back(HDDTest::Relationship(relConf.name, relConf.size, this->extentSizeInPages, this->pageSizeInKB));
+		this->relationships.push_back(new Relationship(relConf.name, relConf.size, this->extentSizeInPages, this->pageSizeInKB));
 	}
 
 
@@ -41,12 +44,12 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 	{
 		int prob = 0;
 		int aRandVal = rand()%100+1;
-		for(std::vector<HDDTest::Relationship>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
+		for(std::vector<HDDTest::Relationship*>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
 		{
-			prob += r->getProbability(totalRelSize);
+			prob += (*r)->getProbability(totalRelSize);
 			if(prob >= aRandVal)
 			{
-				r->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
+				(*r)->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
 				break;
 			}
 
@@ -56,11 +59,11 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 
 HDDTest::Relationship* Layout::getRelationship(std::string name)
 {
-	for(std::vector<HDDTest::Relationship>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
+	for(std::vector<HDDTest::Relationship*>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
 	{
-		if(r->name == name)
+		if((*r)->name == name)
 		{
-			return &*r;
+			return *r;
 		}
 	}
 	return NULL;

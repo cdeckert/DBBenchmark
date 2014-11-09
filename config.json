@@ -1,68 +1,70 @@
 {  
     "ubuntu":{  
-        "devices":[  
-            "/dev/sdb"
-        ],
-        "runs":[  
-            {  
-                "layoutSettings":{  
-                    "mode":"ordered",
-                    "pageSizeInKB":10,
-                    "pagesPerExtent":8,
-                    "relationshipAllocation":{  
-                        "rel1":6144,
-                        "rel2":7680,
-                        "rel3":2560
-                    }
-                },
-                "testRuns":[  
-                   		{  
-                        "name":"Run 1",
-                        "mainThread":{
-                        	"testName": "indexScan",
-                        	"relationship": "rel1"
-                        },
-                        "backgroundThreads":[{
-                        	"testName": "fullTableScan",
-                        	"relationship": "rel2"
-                        }]
-                        }
-                        
-                ]
-            }
+        "disks":[  
+            "/dev/sdb", "/dev/sdb"
         ]
     },
-    "centaurus":{  
-        "devices":[  
-            "/dev/sdf"
-        ],
-        "runs":[  
-            {  
-                "layoutSettings":{  
-                    "mode":"ordered",
-                    "pageSizeInKB":10,
-                    "pagesPerExtent":8,
-                    "relationshipAllocation":{  
-                        "rel1":6144,
-                        "rel2":7680,
-                        "rel3":2560
-                    }
-                },
-                "testRuns":[  
-                        {  
-                        "name":"Run 1",
-                        "mainThread":{
-                            "testName": "indexScan",
-                            "relationship": "rel1"
-                        },
-                        "backgroundThreads":[{
-                            "testName": "fullTableScan",
-                            "relationship": "rel2"
-                        }]
-                        }
-                        
-                ]
+    "centaurus":{
+    
+    	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
+    },
+    "layouts":
+    {
+    	"ordered GB":
+    	{
+    		"mode":"ordered",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560
             }
-        ]
-    }
+        }
+    },
+    "tests":
+    [
+    	{
+    		"name": "run1",
+    		"mainThread":
+    		{
+    			"name" : "IndexScan",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel2",
+    				"sleep": 0
+    			},
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel3",
+    				"sleep":0
+    			}
+    		]
+    	},
+    	{
+    		"name": "run2",
+    		"mainThread":
+    		{
+    			"name" : "IndexScan",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel2",
+    				"sleep": 0
+    			},
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel3",
+    				"sleep":0
+    			}
+    		]
+    	}
+    ]
 }

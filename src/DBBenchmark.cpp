@@ -7,14 +7,19 @@
 //============================================================================
 
 #include <iostream>
-#include "ExecutionManager.h"
 #include <unistd.h>
-using namespace std;
-
+#include "Util/Configurator.h"
+#include "Tests/TestScenario.h"
 int main() {
 
-	DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
-	manager.executeAllTestWithAllConfigurations();
-	//system("./update.sh");
+	// read configuration file
+	HDDTest::Configurator *config = new HDDTest::Configurator();
+	std::vector<HDDTest::TestScenario*> *testScenarios = config->getTestScenarios();
+
+	for(HDDTest::TestScenario *t : *testScenarios)
+	{
+		t->run();
+	}
+	while(true){}
 	return 0;
 }

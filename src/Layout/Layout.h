@@ -4,7 +4,6 @@
  */
 
 #include "Relationship.h"
-#include "../Configurator.h"
 #include <cmath>
 #include <algorithm>
 #include <cstdint>
@@ -16,23 +15,46 @@ namespace HDDTest
 {
 //enum modeDistributionOrder {ORDERED, UNORDERED};
 //enum modeExtentDistribution {EQUALLY , ED_RANDOM};
+
+struct RelationshipConfig
+{
+	unsigned int size;
+	std::string name;
+};
+
+
+struct LayoutSettings
+{
+	std::string mode;
+	uint64_t pageSizeInKB;
+	uint64_t pagesPerExtent;
+	std::vector<struct RelationshipConfig> relationships;
+};
+
 class Layout
 {
 public:
-	Layout();
+	Layout(struct LayoutSettings);
 	virtual ~Layout();
 
-	void createRelationships(std::vector<struct HDDTest::RelationshipConfig>);
+	void createRelationships(std::vector<struct RelationshipConfig>);
 
+	uint64_t diskStart;
+
+<<<<<<< HEAD
 	uint64_t diskStart;
 	int extentSizeInPages;
 	int pageSizeInKB;
+=======
+>>>>>>> release/MoRelease
 
 	HDDTest::Relationship* getRelationship(std::string);
 
 
 private:
-	std::vector<Relationship> relationships;
+	std::vector<Relationship*> relationships;
+	int extentSizeInPages;
+	int pageSizeInKB;
 	void init_rand();
 
 

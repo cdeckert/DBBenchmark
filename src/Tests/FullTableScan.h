@@ -1,24 +1,25 @@
 /*
  * FullTableScan.h
  *
+ *  Created on: Nov 9, 2014
+ *      Author: root
  */
 
-#ifndef SRC_FULLTABLESCAN_H_
-#define SRC_FULLTABLESCAN_H_
+#ifndef SRC_TESTS_FULLTABLESCAN_H_
+#define SRC_TESTS_FULLTABLESCAN_H_
+
 #include "ATest.h"
 
-
-namespace DBTest
-{
+namespace HDDTest {
 
 class FullTableScan : public ATest
 {
 public:
-	FullTableScan();
+	FullTableScan(std::string, Disk*, Relationship*);
 	virtual ~FullTableScan();
-	void testAlgorithm() override;
+	void executeTestAlgorithm() override;
 };
 
-} /* namespace DBTest */
+} /* namespace HDDTest */
 
-#endif /* SRC_FULLTABLESCAN_H_ */
+#endif /* SRC_TESTS_FULLTABLESCAN_H_ */
