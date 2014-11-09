@@ -14,13 +14,13 @@ namespace HDDTest
 std::unordered_map<std::string, Disk*> Disk::disks;
 
 
-Disk* Disk::get(std::string *path)
+Disk* Disk::get(std::string path)
 {
-	if(disks.count(*path) == 0)
+	if(disks.count(path) == 0)
 	{
-		disks.insert(std::make_pair(*path, new Disk(*path)));
+		disks.insert(std::make_pair(path, new Disk(path)));
 	}
-	return disks.at(*path);
+	return disks.at(path);
 }
 
 
@@ -35,7 +35,9 @@ Disk::Disk(std::string path)
 
 void Disk::open(std::string path)
 {
+	std::cout << "PATH: "<< path;
 	this->path = path;
+
 	this->fd = open64(this->path.data(), O_RDWR | O_SYNC);
 }
 

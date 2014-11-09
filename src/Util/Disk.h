@@ -12,6 +12,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <iostream>
 namespace HDDTest
 {
 
@@ -21,7 +22,7 @@ public:
 
 
 
-	static Disk* get(std::string*);
+	static Disk* get(std::string);
 
 	void readPage(uint64_t);
 	void readExtent(uint64_t);
@@ -30,15 +31,16 @@ public:
 	void del();
 	void setPageSize(int);
 	void setExtentSize(int);
-
+	std::string path;
 protected:
+
 	bool isValid();
 
 private:
 
 	uint64_t pageSize;
 	uint64_t extentSize;
-	std::string path;
+
 	int fd;
 
 	char *pageBuffer;

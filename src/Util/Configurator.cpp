@@ -43,12 +43,12 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 	Value &hostSettings = d[hostname];
 
 	// disks
-	std::vector<std::string*> *diskPaths = new std::vector<std::string*>();
+	std::vector<std::string> *diskPaths = new std::vector<std::string>();
 	Value &disks = hostSettings["disks"];
 	for (Value::ConstValueIterator itr = disks.Begin(); itr != disks.End(); ++itr)
 	{
 		std::string diskPath = itr->GetString();
-		diskPaths->push_back(&diskPath);
+		diskPaths->push_back(diskPath);
 	}
 
 

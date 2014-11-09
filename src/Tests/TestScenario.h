@@ -18,13 +18,13 @@ namespace HDDTest {
 class TestScenario
 {
 public:
-	TestScenario(std::vector<std::string*>*, std::unordered_map<std::string, Layout*>*, TestSettings, std::vector<TestSettings>);
+	TestScenario(std::vector<std::string>*, std::unordered_map<std::string, Layout*>*, TestSettings, std::vector<TestSettings>);
 	virtual ~TestScenario();
 	void run();
 	int getNumberOfTests();
 
 private:
-	std::vector<std::string*> *diskPaths;
+	std::vector<std::string> *diskPaths;
 	std::unordered_map<std::string, Layout*> *layouts;
 
 	struct TestSettings mainThreadSettings;

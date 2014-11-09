@@ -24,14 +24,17 @@ void IndexScan::executeTestAlgorithm()
 		stepSize = 1;
 	}
 
-	uint64_t processedData;
+	uint64_t processedData = 0;
 
 	for(int i = 0; i < 200; i++)
 	{
 		this->log->start();
 		processedData = 0;
-		for(uint64_t j = 0; j < i * stepSize; j = j+stepSize)
+
+		for(uint64_t j = 0; j < (1+i) * stepSize; j = j+stepSize)
 		{
+			std::cout << "execute" << stepSize << disk->path;
+			std::cout.flush();
 			this->disk->readPage(this->relationship->getRandomPage());
 			processedData += 8; // to-do
 			if(!this->runs) return;

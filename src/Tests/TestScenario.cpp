@@ -11,7 +11,7 @@
 
 namespace HDDTest {
 
-TestScenario::TestScenario(std::vector<std::string*> *diskPaths, std::unordered_map<std::string, Layout*> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
+TestScenario::TestScenario(std::vector<std::string> *diskPaths, std::unordered_map<std::string, Layout*> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
 {
 	this->diskPaths = diskPaths;
 	this->layouts = layouts;
@@ -28,14 +28,16 @@ void TestScenario::run()
 {
 	std::cout << "Start Test Scenario" << std::endl;
 	Progressbar *scenarioProgress = new Progressbar("Szenario",this->getNumberOfTests());
-	for(std::string *s : *diskPaths)
+	for(std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
 	{
-		Disk *disk = Disk::get(s);
+		Disk *disk = Disk::get(*diskItr);
 
 		ATest *mainThread;
 
-
+		std::cout << "first" << layouts->begin()->first;
 		Layout *layout = layouts->at("ordered GB");
+
+		std::cout << layout->diskStart;
 
 		mainThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
 
@@ -45,7 +47,7 @@ void TestScenario::run()
 
 		}
 
-
+		scenarioProgress->add(1);
 		mainThread->start();
 
 
