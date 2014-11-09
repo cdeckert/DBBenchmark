@@ -30,7 +30,7 @@ private:
 	std::unordered_map<std::string, Layout *> *layouts;
 
 	struct TestSettings mainThreadSettings;
-	std::vector<TestSettings> backgroundThreadsSettings;
+	std::vector<struct TestSettings> backgroundThreadsSettings;
 
 	ATest *initTest(struct TestSettings);
 

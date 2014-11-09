@@ -12,6 +12,8 @@
 #include "../Layout/Relationship.h"
 #include "../Util/Log.h"
 #include <atomic>
+#include <thread>
+
 namespace HDDTest
 {
 struct TestSettings
@@ -32,6 +34,7 @@ public:
 	void start();
 	virtual void executeTestAlgorithm();
 	void sleep();
+	void startBackground();
 	DBUtil::Log *log;
 protected:
 

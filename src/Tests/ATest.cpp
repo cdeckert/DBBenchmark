@@ -22,7 +22,20 @@ ATest::ATest(std::string name, Disk *disk, Relationship *relationship)
 
 void ATest::start()
 {
-	executeTestAlgorithm();
+
+	if(isMain)
+	{
+		executeTestAlgorithm();
+	}
+	else
+	{
+		while(true)
+		{
+			std::cout << "BACKGROUND";
+			std::cout.flush();
+			executeTestAlgorithm();
+		}
+	}
 }
 void ATest::executeTestAlgorithm() {}
 
@@ -33,6 +46,12 @@ ATest::~ATest()
 
 void ATest::sleep()
 {
+}
+
+void ATest::startBackground()
+{
+	std::thread t1(&ATest::start, this);
+	std::cout << t1.get_id();
 }
 
 } /* namespace HDDTest */
