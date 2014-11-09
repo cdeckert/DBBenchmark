@@ -24,7 +24,7 @@ Configurator::~Configurator()
 
 
 
-void Configurator::fetchConfigurations()
+void Configurator::fetchConfiguration()
 {
 	// config file
 	FILE *pFile = fopen ("config.json" , "r");
@@ -89,10 +89,7 @@ void Configurator::fetchConfigurations()
 		}
 	}
 	fclose(pFile);
-
-
 }
-
 
 
 

@@ -4,7 +4,7 @@
  */
 
 #include "Relationship.h"
-#include "../Configurator.h"
+#include "../Util/Configurator.h"
 #include <cmath>
 #include <algorithm>
 
@@ -23,15 +23,16 @@ public:
 
 	void createRelationships(std::vector<struct HDDTest::RelationshipConfig>);
 
-	unsigned long long int diskStart;
-	int extentSizeInPages;
-	int pageSizeInKB;
+	uint64_t diskStart;
+
 
 	HDDTest::Relationship* getRelationship(std::string);
 
 
 private:
 	std::vector<Relationship> relationships;
+	int extentSizeInPages;
+	int pageSizeInKB;
 	void init_rand();
 
 

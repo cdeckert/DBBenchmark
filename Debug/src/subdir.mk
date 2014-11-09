@@ -4,15 +4,12 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/Configurator.cpp \
 ../src/DBBenchmark.cpp 
 
 OBJS += \
-./src/Configurator.o \
 ./src/DBBenchmark.o 
 
 CPP_DEPS += \
-./src/Configurator.d \
 ./src/DBBenchmark.d 
 
 

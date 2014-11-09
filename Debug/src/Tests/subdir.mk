@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Tests/ATest.cpp \
-../src/Tests/IndexScan.cpp 
+../src/Tests/IndexScan.cpp \
+../src/Tests/TestScenario.cpp 
 
 OBJS += \
 ./src/Tests/ATest.o \
-./src/Tests/IndexScan.o 
+./src/Tests/IndexScan.o \
+./src/Tests/TestScenario.o 
 
 CPP_DEPS += \
 ./src/Tests/ATest.d \
-./src/Tests/IndexScan.d 
+./src/Tests/IndexScan.d \
+./src/Tests/TestScenario.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -64,7 +64,7 @@ class Configurator
 public:
 	Configurator();
 	virtual ~Configurator();
-	void fetchConfigurations();
+	void fetchConfiguration();
 	struct Configuration configuration;
 
 

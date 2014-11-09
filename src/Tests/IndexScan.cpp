@@ -7,12 +7,10 @@
 
 #include "IndexScan.h"
 
-namespace HDDTest {
-
-IndexScan::IndexScan(Disk* disk, Relationship* relationship) : ATest(disk, relationship)
+namespace HDDTest
 {
 
-}
+IndexScan::IndexScan(Disk* disk, Relationship* relationship) : ATest(disk, relationship){}
 
 
 void IndexScan::executeTestAlgorithm()
@@ -27,25 +25,24 @@ void IndexScan::executeTestAlgorithm()
 	}
 
 	uint64_t processedData;
+
 	for(int i = 0; i < 200; i++)
 	{
 		this->log->start();
 		processedData = 0;
-		for(uint64_t j = 0; j < i*stepSize; j+stepSize)
+		for(uint64_t j = 0; j < i * stepSize; j = j+stepSize)
 		{
 			this->disk->readPage(this->relationship->getRandomPage());
-			processedData += 8;
+			processedData += 8; // to-do
 			if(!this->runs) return;
 		}
 		this->log->stop(processedData);
 		this->sleep();
-
 	}
 
 }
 
-IndexScan::~IndexScan() {
-	// TODO Auto-generated destructor stub
-}
+IndexScan::~IndexScan()
+{}
 
 } /* namespace HDDTest */

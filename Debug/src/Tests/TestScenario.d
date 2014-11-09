@@ -1,4 +1,5 @@
-src/Configurator.d: ../src/Configurator.cpp ../src/Configurator.h \
+src/Tests/TestScenario.d: ../src/Tests/TestScenario.cpp \
+ ../src/Tests/TestScenario.h ../src/Tests/../Util/Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -11,7 +12,9 @@ src/Configurator.d: ../src/Configurator.cpp ../src/Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h
 
-../src/Configurator.h:
+../src/Tests/TestScenario.h:
+
+../src/Tests/../Util/Configurator.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h:
 

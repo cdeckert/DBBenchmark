@@ -8,9 +8,17 @@
 #ifndef SRC_UTIL_LOG_H_
 #define SRC_UTIL_LOG_H_
 #include <inttypes.h>
+#include <time.h>
+#include <vector>
 
 namespace DBUtil
 {
+
+struct measurement
+{
+	uint64_t duration;
+	uint64_t size;
+};
 
 class Log
 {
@@ -19,6 +27,10 @@ public:
 	virtual ~Log();
 	void start();
 	void stop(uint64_t);
+
+private:
+	timespec startTime;
+	std::vector<struct measurement> *measurements;
 };
 
 } /* namespace HDDTest */

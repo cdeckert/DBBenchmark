@@ -1,5 +1,5 @@
-src/Layout/Layout.d: ../src/Layout/Layout.cpp ../src/Layout/Layout.h \
- ../src/Layout/Relationship.h ../src/Layout/../Util/Configurator.h \
+src/Util/Configurator.d: ../src/Util/Configurator.cpp \
+ ../src/Util/Configurator.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/reader.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/rapidjson.h \
@@ -12,11 +12,7 @@ src/Layout/Layout.d: ../src/Layout/Layout.cpp ../src/Layout/Layout.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/internal/strfunc.h \
  /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/filestream.h
 
-../src/Layout/Layout.h:
-
-../src/Layout/Relationship.h:
-
-../src/Layout/../Util/Configurator.h:
+../src/Util/Configurator.h:
 
 /home/christiandeckert/workspace/DBBenchmark/include/rapidjson/document.h:
 
