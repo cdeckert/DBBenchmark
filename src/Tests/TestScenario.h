@@ -18,12 +18,13 @@ namespace HDDTest {
 class TestScenario
 {
 public:
-	TestScenario(std::vector<std::string>*, std::unordered_map<std::string, Layout*>*, TestSettings, std::vector<TestSettings>);
+	TestScenario(std::string, std::vector<std::string>*, std::unordered_map<std::string, Layout*>*, TestSettings, std::vector<TestSettings>);
 	virtual ~TestScenario();
 	void run();
 	int getNumberOfTests();
 
 private:
+	std::string name;
 	std::vector<std::string> *diskPaths;
 	std::unordered_map<std::string, Layout*> *layouts;
 
@@ -31,8 +32,7 @@ private:
 	std::vector<TestSettings> backgroundThreadsSettings;
 
 	ATest* initTest(struct TestSettings);
-	//ATest *mainThread;
-	//std::vector<ATest*>*backgroundThreads;
+
 };
 
 } /* namespace HDDTest */

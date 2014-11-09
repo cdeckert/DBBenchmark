@@ -6,6 +6,10 @@
  */
 
 #include "Log.h"
+#include "rapidjson/writer.h"
+#include "rapidjson/stringbuffer.h"
+using namespace rapidjson;
+
 
 namespace DBUtil
 {
@@ -36,7 +40,32 @@ void Log::stop(uint64_t size)
 	measurements->push_back(m);
 }
 
-void Log::write(std::string allocator) {
+void Log::write(std::string name)
+{
+	StringBuffer s;
+	Writer<StringBuffer> writer(s);
+	writer.StartObject();
+	writer.String("name");
+	writer.String(name.data());
+	writer.String("measurements");
+	writer.StartArray();
+
+	for(std::vector<struct measurement>::iterator itr = measurements->begin(); itr != measurements->end(); ++itr)
+	{
+		writer.String("duration");
+		writer.Uint64(itr->duration);
+
+		writer.String("size");
+		writer.Uint64(itr->size);
+	}
+	writer.EndArray();
+	writer.EndObject();
+
+
+	std::ofstream json;
+	json.open(name+".json");
+	json << s.GetString();
+	json.close();
 }
 
 } /* namespace HDDTest */

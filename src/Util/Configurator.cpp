@@ -81,9 +81,13 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 	Value &tests = d["tests"];
 	for(Value::ConstValueIterator testItr = tests.Begin(); testItr != tests.End(); ++testItr)
 	{
+
 		struct TestSettings mainThread;
 
 		const Value &testSettings = *testItr;
+
+		std::string testScenarioName = testSettings["name"].GetString();
+
 		const Value &mainThreadSettings = testSettings["mainThread"];
 		mainThread.name = mainThreadSettings["name"].GetString();
 		mainThread.sleep = mainThreadSettings["sleep"].GetInt64();
@@ -101,7 +105,7 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 			backgroundThreads.push_back(backgroundThread);
 		}
 
-		TestScenario *testScenario = new TestScenario(diskPaths, layouts, mainThread, backgroundThreads);
+		TestScenario *testScenario = new TestScenario(testScenarioName, diskPaths, layouts, mainThread, backgroundThreads);
 		scenarios->push_back(testScenario);
 	}
 	fclose(pFile);

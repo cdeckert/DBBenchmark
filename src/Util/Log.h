@@ -11,6 +11,7 @@
 #include <time.h>
 #include <vector>
 #include <string>
+#include <fstream>
 
 namespace DBUtil
 {

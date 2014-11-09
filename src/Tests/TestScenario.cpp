@@ -11,16 +11,17 @@
 
 namespace HDDTest {
 
-TestScenario::TestScenario(std::vector<std::string> *diskPaths, std::unordered_map<std::string, Layout*> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
+TestScenario::TestScenario(std::string name, std::vector<std::string> *diskPaths, std::unordered_map<std::string, Layout*> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
 {
 	this->diskPaths = diskPaths;
 	this->layouts = layouts;
+	this->name = name;
 	this->mainThreadSettings = mainThreadSettings;
 	this->backgroundThreadsSettings = backgroundThreadsSettings;
 }
 
 TestScenario::~TestScenario() {
-	// TODO Auto-generated destructor stub
+
 }
 
 
@@ -50,9 +51,9 @@ void TestScenario::run()
 		scenarioProgress->add(1);
 		mainThread->start();
 
-		mainThread->log->write("");
-
+		mainThread->log->write(name);
 		delete mainThread;
+
 
 		scenarioProgress->add(1);
 	}
