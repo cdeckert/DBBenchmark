@@ -1,8 +1,6 @@
 /*
  * Progressbar.cpp
  *
- *  Created on: Nov 9, 2014
- *      Author: root
  */
 
 #include "Progressbar.h"
