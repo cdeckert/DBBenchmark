@@ -9,9 +9,10 @@
 #include "../Util/Progressbar.h"
 
 
-namespace HDDTest {
+namespace HDDTest
+{
 
-TestScenario::TestScenario(std::string name, std::vector<std::string> *diskPaths, std::unordered_map<std::string, Layout*> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
+TestScenario::TestScenario(std::string name, std::vector<std::string> *diskPaths, std::unordered_map<std::string, Layout *> *layouts, TestSettings mainThreadSettings, std::vector<TestSettings> backgroundThreadsSettings)
 {
 	this->diskPaths = diskPaths;
 	this->layouts = layouts;
@@ -20,7 +21,8 @@ TestScenario::TestScenario(std::string name, std::vector<std::string> *diskPaths
 	this->backgroundThreadsSettings = backgroundThreadsSettings;
 }
 
-TestScenario::~TestScenario() {
+TestScenario::~TestScenario()
+{
 
 }
 
@@ -28,8 +30,8 @@ TestScenario::~TestScenario() {
 void TestScenario::run()
 {
 	std::cout << "Start Test Scenario" << std::endl;
-	Progressbar *scenarioProgress = new Progressbar("Szenario",this->getNumberOfTests());
-	for(std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
+	Progressbar *scenarioProgress = new Progressbar("Szenario", this->getNumberOfTests());
+	for (std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
 	{
 		Disk *disk = Disk::get(*diskItr);
 
@@ -43,7 +45,7 @@ void TestScenario::run()
 		mainThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
 		mainThread->isMain = true;
 
-		if(mainThreadSettings.name == "IndexScan")
+		if (mainThreadSettings.name == "IndexScan")
 		{
 
 		}

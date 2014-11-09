@@ -6,7 +6,6 @@
 #include "Relationship.h"
 #include <cmath>
 #include <algorithm>
-#include <cstdint>
 
 #ifndef SRC_LAYOUT_LAYOUT_H_
 #define SRC_LAYOUT_LAYOUT_H_
@@ -41,18 +40,12 @@ public:
 
 	uint64_t diskStart;
 
-<<<<<<< HEAD
-	uint64_t diskStart;
-	int extentSizeInPages;
-	int pageSizeInKB;
-=======
->>>>>>> release/MoRelease
 
-	HDDTest::Relationship* getRelationship(std::string);
+	HDDTest::Relationship *getRelationship(std::string);
 
 
 private:
-	std::vector<Relationship*> relationships;
+	std::vector<Relationship *> relationships;
 	int extentSizeInPages;
 	int pageSizeInKB;
 	void init_rand();

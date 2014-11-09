@@ -8,9 +8,11 @@
 #include "Progressbar.h"
 
 
-namespace HDDTest {
+namespace HDDTest
+{
 
-Progressbar::Progressbar(std::string name, uint64_t total) {
+Progressbar::Progressbar(std::string name, uint64_t total)
+{
 	this->total = total;
 	this->current = 0;
 	this->barWidth = 70;
@@ -24,14 +26,14 @@ void Progressbar::add(uint64_t addition)
 
 	this->current = this->current + addition;
 	int prg = int(100. * this->current / this->total);
-	if(prg != old)
+	if (prg != old)
 	{
 		int pos = 1. * this->current / this->total * this->barWidth;
 
 
 		std::cout << this->name << ": ";
 		std::cout << "[";
-		for(int i = 0; i < barWidth; ++i)
+		for (int i = 0; i < barWidth; ++i)
 		{
 			if (i < pos) std::cout << "=";
 			else if (i == pos) std::cout << ">";
@@ -43,7 +45,8 @@ void Progressbar::add(uint64_t addition)
 	}
 }
 
-Progressbar::~Progressbar() {
+Progressbar::~Progressbar()
+{
 	// TODO Auto-generated destructor stub
 }
 

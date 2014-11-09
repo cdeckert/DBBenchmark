@@ -13,12 +13,13 @@
 #include "ATest.h"
 #include "IndexScan.h"
 
-namespace HDDTest {
+namespace HDDTest
+{
 
 class TestScenario
 {
 public:
-	TestScenario(std::string, std::vector<std::string>*, std::unordered_map<std::string, Layout*>*, TestSettings, std::vector<TestSettings>);
+	TestScenario(std::string, std::vector<std::string> *, std::unordered_map<std::string, Layout *> *, TestSettings, std::vector<TestSettings>);
 	virtual ~TestScenario();
 	void run();
 	int getNumberOfTests();
@@ -26,12 +27,12 @@ public:
 private:
 	std::string name;
 	std::vector<std::string> *diskPaths;
-	std::unordered_map<std::string, Layout*> *layouts;
+	std::unordered_map<std::string, Layout *> *layouts;
 
 	struct TestSettings mainThreadSettings;
 	std::vector<TestSettings> backgroundThreadsSettings;
 
-	ATest* initTest(struct TestSettings);
+	ATest *initTest(struct TestSettings);
 
 };
 

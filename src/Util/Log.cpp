@@ -50,7 +50,7 @@ void Log::write(std::string name)
 	writer.String("measurements");
 	writer.StartArray();
 
-	for(std::vector<struct measurement>::iterator itr = measurements->begin(); itr != measurements->end(); ++itr)
+	for (std::vector<struct measurement>::iterator itr = measurements->begin(); itr != measurements->end(); ++itr)
 	{
 		writer.StartObject();
 		writer.String("duration");
@@ -65,7 +65,7 @@ void Log::write(std::string name)
 
 
 	std::ofstream json;
-	json.open(name+".json");
+	json.open(name + ".json");
 	json << s.GetString();
 	json.close();
 }

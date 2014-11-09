@@ -17,7 +17,8 @@
 #include "../Layout/Layout.h"
 
 using namespace rapidjson;
-namespace HDDTest {
+namespace HDDTest
+{
 
 
 class Configurator
@@ -25,7 +26,7 @@ class Configurator
 public:
 	Configurator();
 	virtual ~Configurator();
-	std::vector<TestScenario*>* getTestScenarios();
+	std::vector<TestScenario *> *getTestScenarios();
 };
 
 } /* namespace HDDTest */

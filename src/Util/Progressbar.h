@@ -9,9 +9,11 @@
 #define SRC_UTIL_PROGRESSBAR_H_
 #include <stdint.h>
 #include <iostream>
-namespace HDDTest {
+namespace HDDTest
+{
 
-class Progressbar {
+class Progressbar
+{
 public:
 	Progressbar(std::string, uint64_t);
 	void add(uint64_t);

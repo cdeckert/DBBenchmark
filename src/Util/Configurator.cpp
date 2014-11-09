@@ -29,7 +29,7 @@ Configurator::~Configurator()
 
 
 
-std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
+std::vector<TestScenario *> *HDDTest::Configurator::getTestScenarios()
 {
 	FILE *pFile = fopen ("config.json" , "r");
 	FileStream fs(pFile);
@@ -54,8 +54,8 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 
 	// layout generation
 	Value &layoutSettings = d["layouts"];
-	std::unordered_map<std::string, Layout*>*layouts = new std::unordered_map<std::string, Layout*>();
-	for(Value::ConstMemberIterator itr = layoutSettings.MemberBegin(); itr != layoutSettings.MemberEnd(); ++itr)
+	std::unordered_map<std::string, Layout *> *layouts = new std::unordered_map<std::string, Layout *>();
+	for (Value::ConstMemberIterator itr = layoutSettings.MemberBegin(); itr != layoutSettings.MemberEnd(); ++itr)
 	{
 		std::string name = itr->name.GetString();
 		std::cout << name;
@@ -64,7 +64,7 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 		layoutSetting.pageSizeInKB = itr->value["pageSizeInKB"].GetUint();
 		layoutSetting.pagesPerExtent = itr->value["pagesPerExtent"].GetUint();
 
-		for(Value::ConstMemberIterator relationshipSetting = itr->value["relationshipAllocation"].MemberBegin(); relationshipSetting != itr->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
+		for (Value::ConstMemberIterator relationshipSetting = itr->value["relationshipAllocation"].MemberBegin(); relationshipSetting != itr->value["relationshipAllocation"].MemberEnd(); ++relationshipSetting)
 		{
 			struct RelationshipConfig relConf;
 			relConf.name = relationshipSetting->name.GetString();
@@ -76,10 +76,10 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 		layouts->insert(std::make_pair(name, new Layout(layoutSetting)));
 	}
 
-	std::vector<TestScenario*> *scenarios = new std::vector<TestScenario*>();
+	std::vector<TestScenario *> *scenarios = new std::vector<TestScenario *>();
 	// test scenarios
 	Value &tests = d["tests"];
-	for(Value::ConstValueIterator testItr = tests.Begin(); testItr != tests.End(); ++testItr)
+	for (Value::ConstValueIterator testItr = tests.Begin(); testItr != tests.End(); ++testItr)
 	{
 
 		struct TestSettings mainThread;
@@ -95,7 +95,7 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 
 		std::vector<struct TestSettings> backgroundThreads;
 		const Value &background = testSettings["backgroundThreads"];
-		for(Value::ConstValueIterator itr = background.Begin(); itr != background.End(); ++itr)
+		for (Value::ConstValueIterator itr = background.Begin(); itr != background.End(); ++itr)
 		{
 			const Value &backgroundTestSettings = *itr;
 			struct TestSettings backgroundThread;

@@ -2,7 +2,7 @@
 // Name        : DBBenchmark.cpp
 // Author      : Chris
 // Version     :
-// Copyright   : 
+// Copyright   :
 // Description : Hello World in C++, Ansi-style
 //============================================================================
 
@@ -10,16 +10,17 @@
 #include <unistd.h>
 #include "Util/Configurator.h"
 #include "Tests/TestScenario.h"
-int main() {
+int main()
+{
 
 	// read configuration file
 	HDDTest::Configurator *config = new HDDTest::Configurator();
-	std::vector<HDDTest::TestScenario*> *testScenarios = config->getTestScenarios();
+	std::vector<HDDTest::TestScenario *> *testScenarios = config->getTestScenarios();
 
-	for(HDDTest::TestScenario *t : *testScenarios)
+	for (HDDTest::TestScenario *t : *testScenarios)
 	{
 		t->run();
 	}
-	while(true){}
+	while (true) {}
 	return 0;
 }

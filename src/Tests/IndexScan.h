@@ -9,12 +9,13 @@
 #define SRC_TESTS_INDEXSCAN_H_
 #include "ATest.h"
 
-namespace HDDTest {
+namespace HDDTest
+{
 
 class IndexScan : public ATest
 {
 public:
-	IndexScan(std::string, Disk*, Relationship*);
+	IndexScan(std::string, Disk *, Relationship *);
 	virtual ~IndexScan();
 	void executeTestAlgorithm() override;
 };

@@ -7,7 +7,8 @@
 
 #include "Layout.h"
 
-namespace HDDTest {
+namespace HDDTest
+{
 
 Layout::Layout(LayoutSettings layoutSetting)
 {
@@ -17,37 +18,38 @@ Layout::Layout(LayoutSettings layoutSetting)
 	this->createRelationships(layoutSetting.relationships);
 }
 
-Layout::~Layout() {
+Layout::~Layout()
+{
 	// TODO Auto-generated destructor stub
 }
 
 
 void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig> relationshipConfigs)
 {
-	uint64_t totalRelSize = 0;
-	for(struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
+	unsigned long long int totalRelSize = 0;
+	for (struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
 	{
-		totalRelSize+= relConf.size;
+		totalRelSize += relConf.size;
 	}
 
 
-	for(struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
+	for (struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
 	{
 		this->relationships.push_back(new Relationship(relConf.name, relConf.size, this->extentSizeInPages, this->pageSizeInKB));
 	}
 
 
 	// distribution
-	uint64_t relStart = this->diskStart;
+	unsigned long long int relStart = this->diskStart;
 
-	for(uint64_t i = 0;i != totalRelSize; i++)
+	for (unsigned long long int i = 0; i != totalRelSize; i++)
 	{
 		int prob = 0;
-		int aRandVal = rand()%100+1;
-		for(std::vector<HDDTest::Relationship*>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
+		int aRandVal = rand() % 100 + 1;
+		for (std::vector<HDDTest::Relationship *>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
 		{
 			prob += (*r)->getProbability(totalRelSize);
-			if(prob >= aRandVal)
+			if (prob >= aRandVal)
 			{
 				(*r)->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
 				break;
@@ -57,11 +59,11 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 	}
 }
 
-HDDTest::Relationship* Layout::getRelationship(std::string name)
+HDDTest::Relationship *Layout::getRelationship(std::string name)
 {
-	for(std::vector<HDDTest::Relationship*>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
+	for (std::vector<HDDTest::Relationship *>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
 	{
-		if((*r)->name == name)
+		if ((*r)->name == name)
 		{
 			return *r;
 		}

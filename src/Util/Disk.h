@@ -22,7 +22,7 @@ public:
 
 
 
-	static Disk* get(std::string);
+	static Disk *get(std::string);
 
 	void readPage(uint64_t);
 	void readExtent(uint64_t);
@@ -52,7 +52,7 @@ private:
 	void startup();
 	void open(std::string);
 
-	static std::unordered_map<std::string, Disk*> disks;
+	static std::unordered_map<std::string, Disk *> disks;
 };
 
 } /* namespace DBTest */

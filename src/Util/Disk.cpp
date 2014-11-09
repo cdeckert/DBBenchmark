@@ -11,12 +11,12 @@ namespace HDDTest
 {
 
 // init disks
-std::unordered_map<std::string, Disk*> Disk::disks;
+std::unordered_map<std::string, Disk *> Disk::disks;
 
 
-Disk* Disk::get(std::string path)
+Disk *Disk::get(std::string path)
 {
-	if(disks.count(path) == 0)
+	if (disks.count(path) == 0)
 	{
 		disks.insert(std::make_pair(path, new Disk(path)));
 	}
@@ -35,7 +35,7 @@ Disk::Disk(std::string path)
 
 void Disk::open(std::string path)
 {
-	std::cout << "PATH: "<< path;
+	std::cout << "PATH: " << path;
 	this->path = path;
 
 	this->fd = open64(this->path.data(), O_RDWR | O_SYNC);
@@ -44,7 +44,7 @@ void Disk::open(std::string path)
 
 void Disk::startup()
 {
-	if(this->isValid())
+	if (this->isValid())
 	{
 		char *buffer = new char[128 * 1024 * 1024];;
 		lseek64(this->fd, -128 * 1024 * 1024, SEEK_END);
@@ -67,28 +67,28 @@ void Disk::setPageSize(int size)
 
 void Disk::readExtent(uint64_t start)
 {
-	lseek64(this->fd, start*1024, SEEK_SET);
-	read(this->fd, this->extentBuffer, this->extentSize*1024);
+	lseek64(this->fd, start * 1024, SEEK_SET);
+	read(this->fd, this->extentBuffer, this->extentSize * 1024);
 }
 
 void Disk::readPage(uint64_t start)
 {
 
-	lseek64(this->fd, start*1024, SEEK_SET);
-	read(this->fd, this->pageBuffer, this->pageSize*1024);
+	lseek64(this->fd, start * 1024, SEEK_SET);
+	read(this->fd, this->pageBuffer, this->pageSize * 1024);
 	//perror("read");
 }
 
 void Disk::writeExtent(uint64_t start)
 {
-	lseek64(this->fd, start*1024, SEEK_SET);
-	write(this->fd, this->extentBuffer, this->extentSize*1024);
+	lseek64(this->fd, start * 1024, SEEK_SET);
+	write(this->fd, this->extentBuffer, this->extentSize * 1024);
 }
 
 void Disk::writePage(uint64_t start)
 {
-	lseek64(this->fd, start*1024, SEEK_SET);
-	write(this->fd, this->pageBuffer, this->pageSize*1024);
+	lseek64(this->fd, start * 1024, SEEK_SET);
+	write(this->fd, this->pageBuffer, this->pageSize * 1024);
 }
 
 
