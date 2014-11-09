@@ -7,7 +7,7 @@
 
 #include "Disk.h"
 
-namespace DBUtil
+namespace HDDTest
 {
 
 // init disks
@@ -66,8 +66,27 @@ void Disk::setPageSize(int size)
 void Disk::readExtent(uint64_t start)
 {
 	lseek64(this->fd, start*1024, SEEK_SET);
-	//read(start, new char[extnetSize*1024], extnetSize*1024);
+	read(this->fd, this->extentBuffer, this->extentSize*1024);
 }
+
+void Disk::readPage(uint64_t start)
+{
+	lseek64(this->fd, start*1024, SEEK_SET);
+	read(this->fd, this->pageBuffer, this->pageSize*1024);
+}
+
+void Disk::writeExtent(uint64_t start)
+{
+	lseek64(this->fd, start*1024, SEEK_SET);
+	write(this->fd, this->extentBuffer, this->extentSize*1024);
+}
+
+void Disk::writePage(uint64_t start)
+{
+	lseek64(this->fd, start*1024, SEEK_SET);
+	write(this->fd, this->pageBuffer, this->pageSize*1024);
+}
+
 
 void Disk::del()
 {
@@ -80,8 +99,8 @@ bool Disk::isValid()
 	return this->fd != -1;
 }
 
-Disk::~Disk() {
-	// TODO Auto-generated destructor stub
+Disk::~Disk()
+{
 }
 
 } /* namespace DBTest */

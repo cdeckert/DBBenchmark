@@ -5,14 +5,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/Util/Disk.cpp \
+../src/Util/Log.cpp \
 ../src/Util/Units.cpp 
 
 OBJS += \
 ./src/Util/Disk.o \
+./src/Util/Log.o \
 ./src/Util/Units.o 
 
 CPP_DEPS += \
 ./src/Util/Disk.d \
+./src/Util/Log.d \
 ./src/Util/Units.d 
 
 

@@ -12,12 +12,15 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-namespace DBUtil
+namespace HDDTest
 {
 
 class Disk
 {
 public:
+
+
+
 	static Disk* get(std::string);
 
 	void readPage(uint64_t);
@@ -32,12 +35,12 @@ protected:
 	bool isValid();
 
 private:
-	static std::unordered_map<std::string, Disk*> disks;
 
-	std::string path;
-	int fd;
 	uint64_t pageSize;
 	uint64_t extentSize;
+	std::string path;
+	int fd;
+
 	char *pageBuffer;
 	char *extentBuffer;
 
@@ -46,6 +49,8 @@ private:
 
 	void startup();
 	void open(std::string);
+
+	static std::unordered_map<std::string, Disk*> disks;
 };
 
 } /* namespace DBTest */

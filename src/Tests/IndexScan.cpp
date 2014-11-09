@@ -1,48 +1,51 @@
 /*
  * IndexScan.cpp
  *
+ *  Created on: Nov 8, 2014
+ *      Author: root
  */
 
 #include "IndexScan.h"
 
-namespace DBTest
-{
+namespace HDDTest {
 
-IndexScan::IndexScan()
+IndexScan::IndexScan(Disk* disk, Relationship* relationship) : ATest(disk, relationship)
 {
-	// TODO Auto-generated constructor stub
-	std::cout << "indexScan" << std::endl;
 
 }
 
-IndexScan::~IndexScan()
+
+void IndexScan::executeTestAlgorithm()
 {
+
+
+	uint64_t stepSize = (this->relationship->extents.size() * 8) / 200;
+
+	if(stepSize == 0)
+	{
+		stepSize = 1;
+	}
+
+	uint64_t processedData;
+	for(int i = 0; i < 200; i++)
+	{
+		this->log->start();
+		processedData = 0;
+		for(uint64_t j = 0; j < i*stepSize; j+stepSize)
+		{
+			this->disk->readPage(this->relationship->getRandomPage());
+			processedData += 8;
+			if(!this->runs) return;
+		}
+		this->log->stop(processedData);
+		this->sleep();
+
+	}
+
+}
+
+IndexScan::~IndexScan() {
 	// TODO Auto-generated destructor stub
 }
 
-void IndexScan::testAlgorithm()
-{
-	std::cout << "TEST STARTED" << std::endl;
-	unsigned long long int i = 1;
-	HDDTest::Relationship *r = layout->getRelationship(this->relationshipName);
-	std::cout << r->name << "##########################################";
-
-	while (i < layout->getRelationship(this->relationshipName)->extents.size()*layout->getRelationship(this->relationshipName)->pagesPerExtent)
-	{
-		i=i+1024;
-		cleanDBCache();
-		startTimer();
-		if(getDisk() == -1) break;
-		for (int iteration = 0; iteration < numberOfIterations; iteration++)
-		{
-			for (unsigned long long int j = 0; j < i; j++)
-			{
-				readPage(getRandomPage());
-			}
-		}
-		storeMeasurement();
-	}
-
-	writeTestLog();
-}
-}
+} /* namespace HDDTest */

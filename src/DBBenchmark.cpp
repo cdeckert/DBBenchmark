@@ -7,14 +7,13 @@
 //============================================================================
 
 #include <iostream>
-#include "ExecutionManager.h"
 #include <unistd.h>
 using namespace std;
 
 int main() {
 
-	DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
-	manager.executeAllTestWithAllConfigurations();
+	//DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
+	//manager.executeAllTestWithAllConfigurations();
 	//system("./update.sh");
 	return 0;
 }
