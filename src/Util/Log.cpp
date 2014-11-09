@@ -12,7 +12,7 @@ namespace DBUtil
 
 Log::Log()
 {
-	// TODO Auto-generated constructor stub
+	this->measurements = new std::vector<struct measurement>();
 
 }
 

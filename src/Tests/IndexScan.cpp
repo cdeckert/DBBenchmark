@@ -6,6 +6,7 @@
  */
 
 #include "IndexScan.h"
+#include "../Util/Progressbar.h"
 
 namespace HDDTest
 {
@@ -16,8 +17,8 @@ IndexScan::IndexScan(std::string name, Disk* disk, Relationship* relationship) :
 void IndexScan::executeTestAlgorithm()
 {
 
-
-	uint64_t stepSize = (this->relationship->extents.size() * 8) / 200;
+	int iterations = 20;
+	uint64_t stepSize = (this->relationship->extents.size() * 8) / iterations;
 
 	if(stepSize == 0)
 	{
@@ -26,20 +27,22 @@ void IndexScan::executeTestAlgorithm()
 
 	uint64_t processedData = 0;
 
-	for(int i = 0; i < 200; i++)
+	Progressbar *progress = new Progressbar("Index Scan", iterations);
+
+	for(int i = 0; i < iterations; i++)
 	{
 		this->log->start();
 		processedData = 0;
 
-		for(uint64_t j = 0; j < (1+i) * stepSize; j = j+stepSize)
+		for(uint64_t j = 0; j < i * stepSize; j++)
 		{
-			std::cout << "execute" << stepSize << disk->path;
-			std::cout.flush();
+
 			this->disk->readPage(this->relationship->getRandomPage());
 			processedData += 8; // to-do
 			if(!this->runs) return;
 		}
 		this->log->stop(processedData);
+		progress->add(1);
 		this->sleep();
 	}
 
