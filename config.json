@@ -4,6 +4,10 @@
             "/dev/sdb", "/dev/sdb"
         ]
     },
+    "centaurus":{
+    
+    	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
+    },
     "layouts":
     {
     	"ordered GB":
