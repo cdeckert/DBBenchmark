@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-IndexScan::IndexScan(Disk* disk, Relationship* relationship) : ATest(disk, relationship){}
+IndexScan::IndexScan(std::string name, Disk* disk, Relationship* relationship) : ATest(name, disk, relationship){}
 
 
 void IndexScan::executeTestAlgorithm()

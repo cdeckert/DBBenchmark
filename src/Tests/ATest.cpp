@@ -10,8 +10,9 @@
 namespace HDDTest
 {
 
-ATest::ATest(Disk* disk, Relationship* relationship)
+ATest::ATest(std::string name, Disk* disk, Relationship* relationship)
 {
+	this->name = name;
 	this->disk = disk;
 	this->relationship = relationship;
 	this->log = new DBUtil::Log();
@@ -20,7 +21,7 @@ ATest::ATest(Disk* disk, Relationship* relationship)
 
 void ATest::start()
 {
-
+	executeTestAlgorithm();
 }
 void ATest::executeTestAlgorithm(){}
 

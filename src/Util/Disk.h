@@ -21,7 +21,7 @@ public:
 
 
 
-	static Disk* get(std::string);
+	static Disk* get(std::string*);
 
 	void readPage(uint64_t);
 	void readExtent(uint64_t);

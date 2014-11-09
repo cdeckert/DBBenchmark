@@ -14,11 +14,19 @@
 #include <atomic>
 namespace HDDTest
 {
+struct TestSettings
+{
+	std::string name;
+	std::uint64_t sleep;
+	std::string relationship;
+
+};
 
 class ATest
 {
 public:
-	ATest(Disk*, Relationship*);
+	std::string name;
+	ATest(std::string, Disk*, Relationship*);
 	virtual ~ATest();
 	void start();
 	virtual void executeTestAlgorithm();

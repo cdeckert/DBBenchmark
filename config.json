@@ -1,7 +1,7 @@
 {  
     "ubuntu":{  
         "disks":[  
-            "/dev/sdb"
+            "/dev/sdb", "dev/sdb"
         ]
     },
     "layouts":
@@ -17,5 +17,29 @@
                 "rel3":2560
             }
         }
-    }
+    },
+    "tests":
+    [
+    	{
+    		"name": "run1",
+    		"mainThread":
+    		{
+    			"name" : "IndexScan",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "indexScan",
+    				"relationship": "rel2",
+    				"sleep": 0
+    			},
+    			{
+    				"name" : "indexScan",
+    				"relationship": "rel3",
+    				"sleep":0
+    			}
+    		]
+    	}
+    ]
 }

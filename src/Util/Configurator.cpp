@@ -58,7 +58,7 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 	for(Value::ConstMemberIterator itr = layoutSettings.MemberBegin(); itr != layoutSettings.MemberEnd(); ++itr)
 	{
 		std::string name = itr->name.GetString();
-
+		std::cout << name;
 		struct LayoutSettings layoutSetting;
 		layoutSetting.mode = itr->value["mode"].GetString();
 		layoutSetting.pageSizeInKB = itr->value["pageSizeInKB"].GetUint();
@@ -78,17 +78,32 @@ std::vector<TestScenario*>* HDDTest::Configurator::getTestScenarios()
 
 	std::vector<TestScenario*> *scenarios = new std::vector<TestScenario*>();
 	// test scenarios
-	TestScenario *testScenario = new TestScenario(diskPaths, layouts);
+	Value &tests = d["tests"];
+	for(Value::ConstValueIterator testItr = tests.Begin(); testItr != tests.End(); ++testItr)
+	{
+		struct TestSettings mainThread;
 
+		const Value &testSettings = *testItr;
+		const Value &mainThreadSettings = testSettings["mainThread"];
+		mainThread.name = mainThreadSettings["name"].GetString();
+		mainThread.sleep = mainThreadSettings["sleep"].GetInt64();
+		mainThread.relationship = mainThreadSettings["relationship"].GetString();
 
+		std::vector<struct TestSettings> backgroundThreads;
+		const Value &background = testSettings["backgroundThreads"];
+		for(Value::ConstValueIterator itr = background.Begin(); itr != background.End(); ++itr)
+		{
+			const Value &backgroundTestSettings = *itr;
+			struct TestSettings backgroundThread;
+			backgroundThread.name = backgroundTestSettings["name"].GetString();
+			backgroundThread.sleep = backgroundTestSettings["sleep"].GetInt64();
+			backgroundThread.relationship = backgroundTestSettings["relationship"].GetString();
+			backgroundThreads.push_back(backgroundThread);
+		}
 
-	scenarios->push_back(testScenario);
-
-
-
-
-
-
+		TestScenario *testScenario = new TestScenario(diskPaths, layouts, mainThread, backgroundThreads);
+		scenarios->push_back(testScenario);
+	}
 	fclose(pFile);
 	return scenarios;
 }

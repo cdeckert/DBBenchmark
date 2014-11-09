@@ -14,7 +14,7 @@ namespace HDDTest {
 class IndexScan : public ATest
 {
 public:
-	IndexScan(Disk*, Relationship*);
+	IndexScan(std::string, Disk*, Relationship*);
 	virtual ~IndexScan();
 	void executeTestAlgorithm() override;
 };

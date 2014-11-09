@@ -17,11 +17,17 @@ int main() {
 	//config->fetchConfiguration();
 
 	std::vector<HDDTest::TestScenario*> *testScenarios = config->getTestScenarios();
-	/*for(HDDTest::TestScenario* t : testScenarios)
+
+	for(HDDTest::TestScenario *t : *testScenarios)
 	{
 		t->run();
-	}*/
+	}
 
+
+	while(false)
+	{
+
+	}
 
 
 	//DBBenchmark::ExecutionManager manager = DBBenchmark::ExecutionManager();
