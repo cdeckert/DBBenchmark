@@ -40,7 +40,7 @@ void TestScenario::run()
 		std::cout << layout->diskStart;
 
 		mainThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
-
+		mainThread->isMain = true;
 
 		if(mainThreadSettings.name == "IndexScan")
 		{
@@ -50,6 +50,9 @@ void TestScenario::run()
 		scenarioProgress->add(1);
 		mainThread->start();
 
+		mainThread->log->write("");
+
+		delete mainThread;
 
 		scenarioProgress->add(1);
 	}

@@ -18,7 +18,7 @@ Log::Log()
 
 Log::~Log()
 {
-	// TODO Auto-generated destructor stub
+	delete measurements;
 }
 
 void Log::start()
@@ -34,6 +34,9 @@ void Log::stop(uint64_t size)
 	clock_gettime(CLOCK_REALTIME, &endTime);
 	m.duration = (endTime.tv_sec - startTime.tv_sec) * 1000000000 + (endTime.tv_nsec - startTime.tv_nsec);
 	measurements->push_back(m);
+}
+
+void Log::write(std::string allocator) {
 }
 
 } /* namespace HDDTest */

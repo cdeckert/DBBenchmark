@@ -31,7 +31,10 @@ void IndexScan::executeTestAlgorithm()
 
 	for(int i = 0; i < iterations; i++)
 	{
-		this->log->start();
+		if(isMain)
+		{
+			this->log->start();
+		}
 		processedData = 0;
 
 		for(uint64_t j = 0; j < i * stepSize; j++)
@@ -42,7 +45,11 @@ void IndexScan::executeTestAlgorithm()
 			if(!this->runs) return;
 			progress->add(1);
 		}
-		this->log->stop(processedData);
+		if(isMain)
+		{
+			this->log->stop(processedData);
+		}
+
 
 		this->sleep();
 	}

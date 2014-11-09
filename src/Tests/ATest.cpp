@@ -17,6 +17,7 @@ ATest::ATest(std::string name, Disk* disk, Relationship* relationship)
 	this->relationship = relationship;
 	this->log = new DBUtil::Log();
 	this->runs = true;
+	this->isMain = false;
 }
 
 void ATest::start()
@@ -27,7 +28,7 @@ void ATest::executeTestAlgorithm(){}
 
 ATest::~ATest()
 {
-	// TODO Auto-generated destructor stub
+	delete log;
 }
 
 void ATest::sleep() {

@@ -26,17 +26,19 @@ class ATest
 {
 public:
 	std::string name;
+	std::atomic<bool> isMain;
 	ATest(std::string, Disk*, Relationship*);
 	virtual ~ATest();
 	void start();
 	virtual void executeTestAlgorithm();
 	void sleep();
-
-protected:
 	DBUtil::Log* log;
+protected:
+
 	Relationship* relationship;
 	Disk* disk;
 	std::atomic<bool> runs;
+
 private:
 
 

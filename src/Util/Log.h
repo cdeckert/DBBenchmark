@@ -10,6 +10,7 @@
 #include <inttypes.h>
 #include <time.h>
 #include <vector>
+#include <string>
 
 namespace DBUtil
 {
@@ -27,6 +28,7 @@ public:
 	virtual ~Log();
 	void start();
 	void stop(uint64_t);
+	void write(std::string);
 
 private:
 	timespec startTime;
