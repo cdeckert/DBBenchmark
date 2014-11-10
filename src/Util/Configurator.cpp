@@ -1,8 +1,6 @@
-/*
- * Configurator.cpp
- *
+/**
+ * Test Configurator
  */
-
 #include "Configurator.h"
 
 
@@ -28,7 +26,11 @@ Configurator::~Configurator()
 
 
 
-
+/**
+ * @brief Scenario generation based on config file
+ * @details Creates scenarios inc. test configurations, layouts etc.
+ * @return vector of test scenarios which can be executed later
+ */
 std::vector<TestScenario *> *HDDTest::Configurator::getTestScenarios()
 {
 	FILE *pFile = fopen ("config.json" , "r");

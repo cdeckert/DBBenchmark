@@ -1,8 +1,5 @@
-/*
- * Disk.cpp
- *
- *  Created on: Nov 7, 2014
- *      Author: root
+/**
+ * Disk manager
  */
 
 #include "Disk.h"
@@ -13,7 +10,13 @@ namespace HDDTest
 // init disks
 std::unordered_map<std::string, Disk *> Disk::disks;
 
-
+/**
+ * @brief returns disk
+ * @details returns a disk pointer
+ *
+ * @param path disk path
+ * @return pointer to disk instance
+ */
 Disk *Disk::get(std::string path)
 {
 	if (disks.count(path) == 0)
@@ -24,7 +27,12 @@ Disk *Disk::get(std::string path)
 }
 
 
-// private
+/**
+ * @brief Disk constructor
+ * @details The disk constructor initalizes a disk based on a given path
+ *
+ * @param path Disk-path
+ */
 Disk::Disk(std::string path)
 {
 	this->open(path);
@@ -33,15 +41,23 @@ Disk::Disk(std::string path)
 	this->startup();
 }
 
+/**
+ * @brief open a disk
+ * @details Opens a disk and sets a member variable called path
+ *
+ * @param path Disk-path
+ */
 void Disk::open(std::string path)
 {
-	std::cout << "PATH: " << path;
 	this->path = path;
-
 	this->fd = open64(this->path.data(), O_RDWR | O_SYNC);
 }
 
 
+/**
+ * @brief speeds up a disk
+ * @details speeds up a disk and read the 1 GB of data
+ */
 void Disk::startup()
 {
 	if (this->isValid())
@@ -49,15 +65,28 @@ void Disk::startup()
 		char *buffer = new char[128 * 1024 * 1024];;
 		lseek64(this->fd, -128 * 1024 * 1024, SEEK_END);
 		read(this->fd, buffer, 128 * 1024 * 1024);
+		delete buffer;
 	}
 }
 
+/**
+ * @brief extent-size-setter
+ * @details sets the extent size in kb
+ *
+ * @param size Size of a extent in kb
+ */
 void Disk::setExtentSize(int size)
 {
 	this->extentSize = size;
 	this->extentBuffer = new char[extentSize * 1024];
 }
 
+/**
+ * @brief [brief description]
+ * @details [long description]
+ *
+ * @param size [description]
+ */
 void Disk::setPageSize(int size)
 {
 	this->pageSize = size;
