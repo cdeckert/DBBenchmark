@@ -26,7 +26,7 @@ Layout::~Layout()
 
 void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig> relationshipConfigs)
 {
-	unsigned long long int totalRelSize = 0;
+	uint64_t totalRelSize = 0;
 	for (struct HDDTest::RelationshipConfig relConf : relationshipConfigs)
 	{
 		totalRelSize += relConf.size;
@@ -40,9 +40,9 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 
 
 	// distribution
-	unsigned long long int relStart = this->diskStart;
+	uint64_t relStart = this->diskStart;
 
-	for (unsigned long long int i = 0; i != totalRelSize; i++)
+	for (uint64_t i = 0; i != totalRelSize; i++)
 	{
 		int prob = 0;
 		int aRandVal = rand() % 100 + 1;

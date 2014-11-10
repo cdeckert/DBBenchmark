@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-Relationship::Relationship(std::string name, unsigned long long int size, unsigned int pagesPerExtent, unsigned int pageSizeInKB)
+Relationship::Relationship(std::string name, uint64_t size, unsigned int pagesPerExtent, unsigned int pageSizeInKB)
 {
 	this->name = name;
 	this->extents.reserve(size);
@@ -25,7 +25,7 @@ Relationship::~Relationship()
 	// TODO Auto-generated destructor stub
 }
 
-void Relationship::addExtent(unsigned long long int start)
+void Relationship::addExtent(uint64_t start)
 {
 	struct Extent extent;
 	extent.startKb = start;
@@ -34,11 +34,11 @@ void Relationship::addExtent(unsigned long long int start)
 	this->unallocatedExtents--;
 }
 
-unsigned long long int Relationship::getNextExtent()
+uint64_t Relationship::getNextExtent()
 {
 	if (isNextExtent())
 	{
-		unsigned long long int extentStart = this->extents.at(this->nextExtent).startKb;
+		uint64_t extentStart = this->extents.at(this->nextExtent).startKb;
 		this->nextExtent++;
 		return extentStart;
 	}
@@ -54,18 +54,18 @@ bool Relationship::isNextExtent()
 	return this->nextExtent < this->extents.size();
 }
 
-int Relationship::getProbability(unsigned long long int totalUnallocatedExtents)
+int Relationship::getProbability(uint64_t totalUnallocatedExtents)
 {
 	int prob = this->unallocatedExtents * 100 / totalUnallocatedExtents ;
 	return prob;
 }
 
-unsigned long long int Relationship::getRandomExtent()
+uint64_t Relationship::getRandomExtent()
 {
 	return this->extents[rand() % this->extents.size()].startKb;
 }
 
-unsigned long long int Relationship::getRandomPage()
+uint64_t Relationship::getRandomPage()
 {
 	return this->extents[rand() % this->extents.size()].startKb + (rand() % this->pagesPerExtent) * this->pageSizeInKB;
 }
