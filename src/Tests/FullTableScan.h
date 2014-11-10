@@ -1,43 +1,26 @@
 /*
- * FullTableScan.cpp
+ * FullTableScan.h
  *
  *  Created on: Nov 9, 2014
  *      Author: root
  */
 
-#include "FullTableScan.h"
+#ifndef SRC_TESTS_FULLTABLESCAN_H_
+#define SRC_TESTS_FULLTABLESCAN_H_
+
+#include "ATest.h"
 
 namespace HDDTest
 {
 
-FullTableScan::FullTableScan(std::string name, Disk *disk, Relationship *relationship) : ATest(name, disk, relationship) {}
-
-
-
-
-void FullTableScan::executeTestAlgorithm()
+class FullTableScan : public ATest
 {
-	uint64_t processedData;
-	if (isMain)
-	{
-		this->log->start();
-	}
-	do
-	{
-		this->disk->readExtent(this->relationship->getNextExtent());
-		if (!this->runs) return;
-	}
-	while (this->relationship->isNextExtent());
-
-	if (isMain)
-	{
-		this->log->stop(processedData);
-	}
-}
-
-FullTableScan::~FullTableScan()
-{
-	// TODO Auto-generated destructor stub
-}
+public:
+	FullTableScan(std::string, Disk *, Relationship *);
+	virtual ~FullTableScan();
+	void executeTestAlgorithm() override;
+};
 
 } /* namespace HDDTest */
+
+#endif /* SRC_TESTS_FULLTABLESCAN_H_ */
