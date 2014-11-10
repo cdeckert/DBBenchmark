@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_d_b_util_1_1_log" kind="class" prot="public">
+    <compoundname>DBUtil::Log</compoundname>
+    <includes refid="_log_8h" local="no">Log.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_util_1_1_log_1a08aee823d08a4126ae325566bc2dfafe" prot="private" static="no" mutable="no">
+        <type>timespec</type>
+        <definition>timespec DBUtil::Log::startTime</definition>
+        <argsstring></argsstring>
+        <name>startTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="35" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_util_1_1_log_1a421e369e058c9a816e5859bce62ea8f6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; struct <ref refid="struct_d_b_util_1_1measurement" kindref="compound">measurement</ref> &gt; *</type>
+        <definition>std::vector&lt;struct measurement&gt;* DBUtil::Log::measurements</definition>
+        <argsstring></argsstring>
+        <name>measurements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="36" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_util_1_1_log_1afc06f47293c880700ed2c92abdbaef9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DBUtil::Log::Log</definition>
+        <argsstring>()</argsstring>
+        <name>Log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="28" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_util_1_1_log_1a2d17e870ff4661b670ce9bb10d4c7e82" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>DBUtil::Log::~Log</definition>
+        <argsstring>()</argsstring>
+        <name>~Log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="29" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_util_1_1_log_1a64073692efb1f1b5bde7af7faee62e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBUtil::Log::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="30" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.cpp" bodystart="28" bodyend="31"/>
+        <referencedby refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" compoundref="_full_table_scan_8h" startline="18" endline="36">HDDTest::FullTableScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" compoundref="_index_scan_8cpp" startline="17" endline="57">HDDTest::IndexScan::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_util_1_1_log_1ae6a543277090bfe89db07e49a71ec4e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBUtil::Log::stop</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>stop</name>
+        <param>
+          <type>uint64_t</type>
+          <defname>size</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="31" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.cpp" bodystart="33" bodyend="41"/>
+        <references refid="struct_d_b_util_1_1measurement_1aa1de62e639b640d4dadb2fd6d0f95d9e" compoundref="_log_8h" startline="22">DBUtil::measurement::size</references>
+        <references refid="struct_d_b_util_1_1measurement_1a91c62eb1fa3de2e3be1a9127c5822b96" compoundref="_log_8h" startline="21">DBUtil::measurement::duration</references>
+        <referencedby refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" compoundref="_full_table_scan_8h" startline="18" endline="36">HDDTest::FullTableScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" compoundref="_index_scan_8cpp" startline="17" endline="57">HDDTest::IndexScan::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DBUtil::Log::write</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>write</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="32" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.cpp" bodystart="43" bodyend="71"/>
+        <referencedby refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" compoundref="_test_scenario_8cpp" startline="30" endline="74">HDDTest::TestScenario::run</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" line="26" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h" bodystart="25" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_d_b_util_1_1_log_1afc06f47293c880700ed2c92abdbaef9e" prot="public" virt="non-virtual"><scope>DBUtil::Log</scope><name>Log</name></member>
+      <member refid="class_d_b_util_1_1_log_1a421e369e058c9a816e5859bce62ea8f6" prot="private" virt="non-virtual"><scope>DBUtil::Log</scope><name>measurements</name></member>
+      <member refid="class_d_b_util_1_1_log_1a64073692efb1f1b5bde7af7faee62e8c" prot="public" virt="non-virtual"><scope>DBUtil::Log</scope><name>start</name></member>
+      <member refid="class_d_b_util_1_1_log_1a08aee823d08a4126ae325566bc2dfafe" prot="private" virt="non-virtual"><scope>DBUtil::Log</scope><name>startTime</name></member>
+      <member refid="class_d_b_util_1_1_log_1ae6a543277090bfe89db07e49a71ec4e1" prot="public" virt="non-virtual"><scope>DBUtil::Log</scope><name>stop</name></member>
+      <member refid="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" prot="public" virt="non-virtual"><scope>DBUtil::Log</scope><name>write</name></member>
+      <member refid="class_d_b_util_1_1_log_1a2d17e870ff4661b670ce9bb10d4c7e82" prot="public" virt="virtual"><scope>DBUtil::Log</scope><name>~Log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

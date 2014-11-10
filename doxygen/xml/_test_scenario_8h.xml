@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_test_scenario_8h" kind="file">
+    <compoundname>TestScenario.h</compoundname>
+    <includes local="no">vector</includes>
+    <includes refid="_layout_8h" local="yes">../Layout/Layout.h</includes>
+    <includes refid="_disk_8h" local="yes">../Util/Disk.h</includes>
+    <includes refid="_a_test_8h" local="yes">ATest.h</includes>
+    <includes refid="_index_scan_8h" local="yes">IndexScan.h</includes>
+    <includedby refid="_configurator_8h" local="yes">src/Util/Configurator.h</includedby>
+    <includedby refid="_d_b_benchmark_8cpp" local="yes">src/DBBenchmark.cpp</includedby>
+    <includedby refid="_test_scenario_8cpp" local="yes">src/Tests/TestScenario.cpp</includedby>
+    <incdepgraph>
+      <node id="580">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="589">
+        <label>atomic</label>
+      </node>
+      <node id="572">
+        <label>../Layout/Layout.h</label>
+        <link refid="_layout_8h"/>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+      <node id="577">
+        <label>../Util/Disk.h</label>
+        <link refid="_disk_8h"/>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="579" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+      </node>
+      <node id="575">
+        <label>cmath</label>
+      </node>
+      <node id="573">
+        <label>Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="574" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+      </node>
+      <node id="581">
+        <label>fcntl.h</label>
+      </node>
+      <node id="584">
+        <label>../Util/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="585" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+      </node>
+      <node id="587">
+        <label>string</label>
+      </node>
+      <node id="591">
+        <label>IndexScan.h</label>
+        <link refid="_index_scan_8h"/>
+        <childnode refid="583" relation="include">
+        </childnode>
+      </node>
+      <node id="588">
+        <label>fstream</label>
+      </node>
+      <node id="579">
+        <label>sys/types.h</label>
+      </node>
+      <node id="582">
+        <label>unistd.h</label>
+      </node>
+      <node id="571">
+        <label>vector</label>
+      </node>
+      <node id="586">
+        <label>time.h</label>
+      </node>
+      <node id="574">
+        <label>iostream</label>
+      </node>
+      <node id="578">
+        <label>unordered_map</label>
+      </node>
+      <node id="570">
+        <label>src/Tests/TestScenario.h</label>
+        <link refid="TestScenario.h"/>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="577" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="591" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>thread</label>
+      </node>
+      <node id="576">
+        <label>algorithm</label>
+      </node>
+      <node id="583">
+        <label>ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="577" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+      </node>
+      <node id="585">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="594">
+        <label>src/DBBenchmark.cpp</label>
+        <link refid="_d_b_benchmark_8cpp"/>
+      </node>
+      <node id="596">
+        <label>src/Tests/TestScenario.cpp</label>
+        <link refid="_test_scenario_8cpp"/>
+      </node>
+      <node id="593">
+        <label>src/Util/Configurator.h</label>
+        <link refid="_configurator_8h"/>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+      </node>
+      <node id="595">
+        <label>src/Util/Configurator.cpp</label>
+        <link refid="_configurator_8cpp"/>
+      </node>
+      <node id="592">
+        <label>src/Tests/TestScenario.h</label>
+        <link refid="TestScenario.h"/>
+        <childnode refid="593" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_h_d_d_test_1_1_test_scenario" prot="public">HDDTest::TestScenario</innerclass>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>TestScenario.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>9,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_TESTS_TESTSCENARIO_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_TESTS_TESTSCENARIO_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Layout/Layout.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Util/Disk.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_test_8h" kindref="compound">ATest.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_index_scan_8h" kindref="compound">IndexScan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_h_d_d_test_1_1_test_scenario" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_d_d_test_1_1_test_scenario" kindref="compound">TestScenario</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" kindref="member">TestScenario</ref>(std::string,<sp/>std::vector&lt;std::string&gt;<sp/>*,<sp/>std::unordered_map&lt;std::string,<sp/>Layout<sp/>*&gt;<sp/>*,<sp/><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref>,<sp/>std::vector&lt;TestSettings&gt;);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" kindref="member">~TestScenario</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" kindref="member">getNumberOfTests</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>name;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/>*diskPaths;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unordered_map&lt;std::string,<sp/>Layout<sp/>*&gt;<sp/>*layouts;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref><sp/>mainThreadSettings;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;struct<sp/>TestSettings&gt;<sp/>backgroundThreadsSettings;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref><sp/>*initTest(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref>);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_TESTS_TESTSCENARIO_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h"/>
+  </compounddef>
+</doxygen>

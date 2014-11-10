@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_configurator_8h" kind="file">
+    <compoundname>Configurator.h</compoundname>
+    <includes local="no">rapidjson/document.h</includes>
+    <includes local="no">rapidjson/filestream.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">unistd.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">unordered_map</includes>
+    <includes refid="_test_scenario_8h" local="yes">../Tests/TestScenario.h</includes>
+    <includes refid="_disk_8h" local="yes">Disk.h</includes>
+    <includes refid="_layout_8h" local="yes">../Layout/Layout.h</includes>
+    <includedby refid="_d_b_benchmark_8cpp" local="yes">src/DBBenchmark.cpp</includedby>
+    <includedby refid="_configurator_8cpp" local="yes">src/Util/Configurator.cpp</includedby>
+    <incdepgraph>
+      <node id="638">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="646">
+        <label>atomic</label>
+      </node>
+      <node id="632">
+        <label>../Layout/Layout.h</label>
+        <link refid="_layout_8h"/>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="634" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+      </node>
+      <node id="636">
+        <label>../Util/Disk.h</label>
+        <link refid="_disk_8h"/>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="638" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+      </node>
+      <node id="634">
+        <label>cmath</label>
+      </node>
+      <node id="633">
+        <label>Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+      </node>
+      <node id="639">
+        <label>fcntl.h</label>
+      </node>
+      <node id="641">
+        <label>../Util/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+      </node>
+      <node id="644">
+        <label>string</label>
+      </node>
+      <node id="648">
+        <label>IndexScan.h</label>
+        <link refid="_index_scan_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+      </node>
+      <node id="625">
+        <label>rapidjson/document.h</label>
+      </node>
+      <node id="645">
+        <label>fstream</label>
+      </node>
+      <node id="624">
+        <label>src/Util/Configurator.h</label>
+        <link refid="Configurator.h"/>
+        <childnode refid="625" relation="include">
+        </childnode>
+        <childnode refid="626" relation="include">
+        </childnode>
+        <childnode refid="627" relation="include">
+        </childnode>
+        <childnode refid="628" relation="include">
+        </childnode>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="630" relation="include">
+        </childnode>
+        <childnode refid="631" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>sys/types.h</label>
+      </node>
+      <node id="628">
+        <label>unistd.h</label>
+      </node>
+      <node id="629">
+        <label>vector</label>
+      </node>
+      <node id="643">
+        <label>time.h</label>
+      </node>
+      <node id="627">
+        <label>iostream</label>
+      </node>
+      <node id="630">
+        <label>unordered_map</label>
+      </node>
+      <node id="631">
+        <label>../Tests/TestScenario.h</label>
+        <link refid="_test_scenario_8h"/>
+        <childnode refid="629" relation="include">
+        </childnode>
+        <childnode refid="632" relation="include">
+        </childnode>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+      </node>
+      <node id="647">
+        <label>thread</label>
+      </node>
+      <node id="635">
+        <label>algorithm</label>
+      </node>
+      <node id="640">
+        <label>ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="636" relation="include">
+        </childnode>
+        <childnode refid="633" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+      </node>
+      <node id="642">
+        <label>inttypes.h</label>
+      </node>
+      <node id="626">
+        <label>rapidjson/filestream.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="650">
+        <label>src/DBBenchmark.cpp</label>
+        <link refid="_d_b_benchmark_8cpp"/>
+      </node>
+      <node id="649">
+        <label>src/Util/Configurator.h</label>
+        <link refid="Configurator.h"/>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>src/Util/Configurator.cpp</label>
+        <link refid="_configurator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_h_d_d_test_1_1_configurator" prot="public">HDDTest::Configurator</innerclass>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Configurator.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_CONFIGURATOR_H_</highlight></codeline>
+<codeline lineno="7"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_CONFIGURATOR_H_</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rapidjson/document.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;rapidjson/filestream.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unistd.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Tests/TestScenario.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_disk_8h" kindref="compound">Disk.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Layout/Layout.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">rapidjson;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_h_d_d_test_1_1_configurator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_d_d_test_1_1_configurator" kindref="compound">Configurator</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_configurator" kindref="compound">Configurator</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_h_d_d_test_1_1_configurator" kindref="compound">Configurator</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;TestScenario<sp/>*&gt;<sp/>*getTestScenarios();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_CONFIGURATOR_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Configurator.h"/>
+  </compounddef>
+</doxygen>

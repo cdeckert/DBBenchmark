@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_h_d_d_test" kind="namespace">
+    <compoundname>HDDTest</compoundname>
+    <innerclass refid="struct_h_d_d_test_1_1_relationship_config" prot="public">HDDTest::RelationshipConfig</innerclass>
+    <innerclass refid="struct_h_d_d_test_1_1_layout_settings" prot="public">HDDTest::LayoutSettings</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_layout" prot="public">HDDTest::Layout</innerclass>
+    <innerclass refid="struct_h_d_d_test_1_1_extent" prot="public">HDDTest::Extent</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_relationship" prot="public">HDDTest::Relationship</innerclass>
+    <innerclass refid="struct_h_d_d_test_1_1_test_settings" prot="public">HDDTest::TestSettings</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_a_test" prot="public">HDDTest::ATest</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_full_table_scan" prot="public">HDDTest::FullTableScan</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_index_scan" prot="public">HDDTest::IndexScan</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_test_scenario" prot="public">HDDTest::TestScenario</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_configurator" prot="public">HDDTest::Configurator</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_disk" prot="public">HDDTest::Disk</innerclass>
+    <innerclass refid="class_h_d_d_test_1_1_progressbar" prot="public">HDDTest::Progressbar</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref> manager </para>    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" line="11" column="1"/>
+  </compounddef>
+</doxygen>

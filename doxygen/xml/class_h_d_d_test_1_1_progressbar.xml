@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_progressbar" kind="class" prot="public">
+    <compoundname>HDDTest::Progressbar</compoundname>
+    <includes refid="_progressbar_8h" local="no">Progressbar.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_progressbar_1a611fb784d62df0f9f2d56ad90e15c47c" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Progressbar::total</definition>
+        <argsstring></argsstring>
+        <name>total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="20" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" compoundref="_progressbar_8cpp" startline="12" endline="20">Progressbar</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" compoundref="_progressbar_8cpp" startline="22" endline="44">add</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_progressbar_1a8064f75e6a8ad05753bbff8752d6a5a7" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Progressbar::current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="21" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" compoundref="_progressbar_8cpp" startline="12" endline="20">Progressbar</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" compoundref="_progressbar_8cpp" startline="22" endline="44">add</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_progressbar_1a754f1137a1b68fced60aebfc87269a84" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HDDTest::Progressbar::barWidth</definition>
+        <argsstring></argsstring>
+        <name>barWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="22" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" compoundref="_progressbar_8cpp" startline="12" endline="20">Progressbar</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" compoundref="_progressbar_8cpp" startline="22" endline="44">add</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_progressbar_1a07e67985ad3a30bee17d36014a56b328" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HDDTest::Progressbar::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="23" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" compoundref="_progressbar_8cpp" startline="12" endline="20">Progressbar</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" compoundref="_progressbar_8cpp" startline="22" endline="44">add</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_progressbar_1ae7d46dd5e739dcf8e8660b197b0a6df7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HDDTest::Progressbar::old</definition>
+        <argsstring></argsstring>
+        <name>old</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="26" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::Progressbar::Progressbar</definition>
+        <argsstring>(std::string, uint64_t)</argsstring>
+        <name>Progressbar</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <defname>total</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="18" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.cpp" bodystart="12" bodyend="20"/>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a611fb784d62df0f9f2d56ad90e15c47c" compoundref="_progressbar_8h" startline="20">total</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a8064f75e6a8ad05753bbff8752d6a5a7" compoundref="_progressbar_8h" startline="21">current</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a754f1137a1b68fced60aebfc87269a84" compoundref="_progressbar_8h" startline="22">barWidth</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a07e67985ad3a30bee17d36014a56b328" compoundref="_progressbar_8h" startline="23">name</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Progressbar::add</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>add</name>
+        <param>
+          <type>uint64_t</type>
+          <defname>addition</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="19" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.cpp" bodystart="22" bodyend="44"/>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a8064f75e6a8ad05753bbff8752d6a5a7" compoundref="_progressbar_8h" startline="21">current</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a611fb784d62df0f9f2d56ad90e15c47c" compoundref="_progressbar_8h" startline="20">total</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a754f1137a1b68fced60aebfc87269a84" compoundref="_progressbar_8h" startline="22">barWidth</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a07e67985ad3a30bee17d36014a56b328" compoundref="_progressbar_8h" startline="23">name</references>
+        <referencedby refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" compoundref="_index_scan_8cpp" startline="17" endline="57">HDDTest::IndexScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" compoundref="_test_scenario_8cpp" startline="30" endline="74">HDDTest::TestScenario::run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_progressbar_1a0abee569b47da1c25a8aef42339dc5f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::Progressbar::~Progressbar</definition>
+        <argsstring>()</argsstring>
+        <name>~Progressbar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="24" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" line="16" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Util/Progressbar.h" bodystart="15" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>add</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a754f1137a1b68fced60aebfc87269a84" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>barWidth</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a8064f75e6a8ad05753bbff8752d6a5a7" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>current</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a07e67985ad3a30bee17d36014a56b328" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>name</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1ae7d46dd5e739dcf8e8660b197b0a6df7" prot="private" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>old</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>Progressbar</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a611fb784d62df0f9f2d56ad90e15c47c" prot="public" virt="non-virtual"><scope>HDDTest::Progressbar</scope><name>total</name></member>
+      <member refid="class_h_d_d_test_1_1_progressbar_1a0abee569b47da1c25a8aef42339dc5f2" prot="public" virt="virtual"><scope>HDDTest::Progressbar</scope><name>~Progressbar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

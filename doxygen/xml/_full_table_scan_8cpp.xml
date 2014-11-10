@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_full_table_scan_8cpp" kind="file">
+    <compoundname>FullTableScan.cpp</compoundname>
+    <includes refid="_a_test_8h" local="yes">ATest.h</includes>
+    <incdepgraph>
+      <node id="481">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="492">
+        <label>atomic</label>
+      </node>
+      <node id="478">
+        <label>../Util/Disk.h</label>
+        <link refid="_disk_8h"/>
+        <childnode refid="479" relation="include">
+        </childnode>
+        <childnode refid="480" relation="include">
+        </childnode>
+        <childnode refid="481" relation="include">
+        </childnode>
+        <childnode refid="482" relation="include">
+        </childnode>
+        <childnode refid="483" relation="include">
+        </childnode>
+        <childnode refid="484" relation="include">
+        </childnode>
+      </node>
+      <node id="485">
+        <label>../Layout/Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="484" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+      </node>
+      <node id="482">
+        <label>fcntl.h</label>
+      </node>
+      <node id="487">
+        <label>../Util/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="488" relation="include">
+        </childnode>
+        <childnode refid="489" relation="include">
+        </childnode>
+        <childnode refid="486" relation="include">
+        </childnode>
+        <childnode refid="490" relation="include">
+        </childnode>
+        <childnode refid="491" relation="include">
+        </childnode>
+      </node>
+      <node id="490">
+        <label>string</label>
+      </node>
+      <node id="491">
+        <label>fstream</label>
+      </node>
+      <node id="476">
+        <label>src/Tests/FullTableScan.cpp</label>
+        <link refid="FullTableScan.cpp"/>
+        <childnode refid="477" relation="include">
+        </childnode>
+      </node>
+      <node id="480">
+        <label>sys/types.h</label>
+      </node>
+      <node id="483">
+        <label>unistd.h</label>
+      </node>
+      <node id="486">
+        <label>vector</label>
+      </node>
+      <node id="489">
+        <label>time.h</label>
+      </node>
+      <node id="484">
+        <label>iostream</label>
+      </node>
+      <node id="479">
+        <label>unordered_map</label>
+      </node>
+      <node id="493">
+        <label>thread</label>
+      </node>
+      <node id="477">
+        <label>ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="478" relation="include">
+        </childnode>
+        <childnode refid="485" relation="include">
+        </childnode>
+        <childnode refid="487" relation="include">
+        </childnode>
+        <childnode refid="492" relation="include">
+        </childnode>
+        <childnode refid="493" relation="include">
+        </childnode>
+      </node>
+      <node id="488">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_h_d_d_test_1_1_full_table_scan" prot="public">HDDTest::FullTableScan</innerclass>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_full_table_scan_8cpp_1a1a05343cf317a02c2a82b5d4f731eb60" prot="public" static="no">
+        <name>SRC_TESTS_FULLTABLESCAN_H_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" line="9" column="9" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>FullTableScan.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>9,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_TESTS_FULLTABLESCAN_H_</highlight></codeline>
+<codeline lineno="9" refid="_full_table_scan_8cpp_1a1a05343cf317a02c2a82b5d4f731eb60" refkind="member"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_TESTS_FULLTABLESCAN_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_test_8h" kindref="compound">ATest.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_h_d_d_test_1_1_full_table_scan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_d_d_test_1_1_full_table_scan" kindref="compound">FullTableScan</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_full_table_scan_1a7c4efb4b22a6d61f9ae672fcf64b147e" kindref="member">FullTableScan</ref>(std::string,<sp/><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref><sp/>*,<sp/><ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">Relationship</ref><sp/>*);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_full_table_scan_1aeea7425b20a671f3fd55fca6a2a3620d" kindref="member">~FullTableScan</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" kindref="member">executeTestAlgorithm</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_TESTS_FULLTABLESCAN_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_test_scenario" kind="class" prot="public">
+    <compoundname>HDDTest::TestScenario</compoundname>
+    <includes refid="_test_scenario_8h" local="no">TestScenario.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_test_scenario_1a82b4d547993ecb8801818df3e237e1ff" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HDDTest::TestScenario::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="28" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_test_scenario_1a182996f8687526cbc7181e93374199c0" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt; *</type>
+        <definition>std::vector&lt;std::string&gt;* HDDTest::TestScenario::diskPaths</definition>
+        <argsstring></argsstring>
+        <name>diskPaths</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="29" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_test_scenario_1ab7cc67e0b26468dbe8207373635f98d3" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, <ref refid="class_h_d_d_test_1_1_layout" kindref="compound">Layout</ref> * &gt; *</type>
+        <definition>std::unordered_map&lt;std::string, Layout *&gt;* HDDTest::TestScenario::layouts</definition>
+        <argsstring></argsstring>
+        <name>layouts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="30" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_test_scenario_1a8866710288b04115da28f69c5d787b7c" prot="private" static="no" mutable="no">
+        <type>struct <ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref></type>
+        <definition>struct TestSettings HDDTest::TestScenario::mainThreadSettings</definition>
+        <argsstring></argsstring>
+        <name>mainThreadSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="30" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_test_scenario_1a8fd2ea35c462396cb3398805e5a03c01" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; struct <ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref> &gt;</type>
+        <definition>std::vector&lt;struct TestSettings&gt; HDDTest::TestScenario::backgroundThreadsSettings</definition>
+        <argsstring></argsstring>
+        <name>backgroundThreadsSettings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="33" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::TestScenario::TestScenario</definition>
+        <argsstring>(std::string, std::vector&lt; std::string &gt; *, std::unordered_map&lt; std::string, Layout * &gt; *, TestSettings, std::vector&lt; TestSettings &gt;)</argsstring>
+        <name>TestScenario</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; *</type>
+          <defname>diskPaths</defname>
+        </param>
+        <param>
+          <type>std::unordered_map&lt; std::string, <ref refid="class_h_d_d_test_1_1_layout" kindref="compound">Layout</ref> * &gt; *</type>
+          <defname>layouts</defname>
+        </param>
+        <param>
+          <type><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref></type>
+          <defname>mainThreadSettings</defname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref> &gt;</type>
+          <defname>backgroundThreadsSettings</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="22" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp" bodystart="15" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::TestScenario::~TestScenario</definition>
+        <argsstring>()</argsstring>
+        <name>~TestScenario</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="23" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::TestScenario::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="24" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp" bodystart="30" bodyend="74"/>
+        <references refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" compoundref="_test_scenario_8cpp" startline="79" endline="82">getNumberOfTests</references>
+        <references refid="class_h_d_d_test_1_1_disk_1a0f6006970c964527bb5a2e6e0cb16b87" compoundref="_disk_8cpp" startline="20" endline="27">HDDTest::Disk::get</references>
+        <references refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" compoundref="_layout_8cpp" startline="62" endline="72">HDDTest::Layout::getRelationship</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" compoundref="_a_test_8h" startline="31">HDDTest::ATest::isMain</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1ad4846b9edaba08c50795e0cb3f61c7cb" compoundref="_a_test_8cpp" startline="51" endline="55">HDDTest::ATest::startBackground</references>
+        <references refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" compoundref="_a_test_8h" startline="21">HDDTest::TestSettings::name</references>
+        <references refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" compoundref="_a_test_8h" startline="23">HDDTest::TestSettings::relationship</references>
+        <references refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" compoundref="_progressbar_8cpp" startline="22" endline="44">HDDTest::Progressbar::add</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a3c3ae1353dc05321bafa921ff6de4342" compoundref="_a_test_8cpp" startline="23" endline="39">HDDTest::ATest::start</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" compoundref="_a_test_8h" startline="38">HDDTest::ATest::log</references>
+        <references refid="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" compoundref="_log_8cpp" startline="43" endline="71">DBUtil::Log::write</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HDDTest::TestScenario::getNumberOfTests</definition>
+        <argsstring>()</argsstring>
+        <name>getNumberOfTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="25" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp" bodystart="79" bodyend="82"/>
+        <referencedby refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" compoundref="_test_scenario_8cpp" startline="30" endline="74">run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_test_scenario_1a4ff16ab2b8a1e9ef2f15b0456a242efa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref> *</type>
+        <definition>ATest * HDDTest::TestScenario::initTest</definition>
+        <argsstring>(struct TestSettings)</argsstring>
+        <name>initTest</name>
+        <param>
+          <type>struct <ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref></type>
+          <defname>testSettings</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="35" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp" bodystart="84" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" line="20" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.h" bodystart="19" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a8fd2ea35c462396cb3398805e5a03c01" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>backgroundThreadsSettings</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a182996f8687526cbc7181e93374199c0" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>diskPaths</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" prot="public" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>getNumberOfTests</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a4ff16ab2b8a1e9ef2f15b0456a242efa" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>initTest</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1ab7cc67e0b26468dbe8207373635f98d3" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>layouts</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a8866710288b04115da28f69c5d787b7c" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>mainThreadSettings</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a82b4d547993ecb8801818df3e237e1ff" prot="private" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>name</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" prot="public" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>run</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" prot="public" virt="non-virtual"><scope>HDDTest::TestScenario</scope><name>TestScenario</name></member>
+      <member refid="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" prot="public" virt="virtual"><scope>HDDTest::TestScenario</scope><name>~TestScenario</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

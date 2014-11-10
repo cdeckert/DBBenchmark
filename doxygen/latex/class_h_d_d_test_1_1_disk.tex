@@ -19,14 +19,14 @@ void \hyperlink{class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd}{wri
 void \hyperlink{class_h_d_d_test_1_1_disk_a08131fbb8f001b5f8b60056308f5a8da}{del} ()
 \item 
 void \hyperlink{class_h_d_d_test_1_1_disk_a161bd5f5921eb78bdd7a51757267e61b}{set\-Page\-Size} (int)
-\item 
+\begin{DoxyCompactList}\small\item\em \mbox{[}brief description\mbox{]} \end{DoxyCompactList}\item 
 void \hyperlink{class_h_d_d_test_1_1_disk_a78e515afa9536ed390d317c1f595fe9e}{set\-Extent\-Size} (int)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em extent-\/size-\/setter \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_h_d_d_test_1_1_disk}{Disk} $\ast$ \hyperlink{class_h_d_d_test_1_1_disk_a0f6006970c964527bb5a2e6e0cb16b87}{get} (std\-::string)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em returns disk \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -56,7 +56,7 @@ Definition at line 19 of file Disk.\-h.
 )}}\label{class_h_d_d_test_1_1_disk_a08131fbb8f001b5f8b60056308f5a8da}
 
 
-Definition at line 95 of file Disk.\-cpp.
+Definition at line 124 of file Disk.\-cpp.
 
 \hypertarget{class_h_d_d_test_1_1_disk_a0f6006970c964527bb5a2e6e0cb16b87}{\index{H\-D\-D\-Test\-::\-Disk@{H\-D\-D\-Test\-::\-Disk}!get@{get}}
 \index{get@{get}!HDDTest::Disk@{H\-D\-D\-Test\-::\-Disk}}
@@ -67,12 +67,25 @@ Definition at line 95 of file Disk.\-cpp.
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{class_h_d_d_test_1_1_disk_a0f6006970c964527bb5a2e6e0cb16b87}
 
 
-Definition at line 17 of file Disk.\-cpp.
+returns disk 
+
+returns a disk pointer
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & disk path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to disk instance 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Disk.\-cpp.
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -90,7 +103,7 @@ Here is the caller graph for this function\-:
 )\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_h_d_d_test_1_1_disk_a94248b3946f474cce092b5768cfaf8fd}
 
 
-Definition at line 101 of file Disk.\-cpp.
+Definition at line 130 of file Disk.\-cpp.
 
 \hypertarget{class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf}{\index{H\-D\-D\-Test\-::\-Disk@{H\-D\-D\-Test\-::\-Disk}!read\-Extent@{read\-Extent}}
 \index{read\-Extent@{read\-Extent}!HDDTest::Disk@{H\-D\-D\-Test\-::\-Disk}}
@@ -101,12 +114,11 @@ Definition at line 101 of file Disk.\-cpp.
 )}}\label{class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf}
 
 
-Definition at line 68 of file Disk.\-cpp.
+Definition at line 97 of file Disk.\-cpp.
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -124,12 +136,11 @@ Here is the caller graph for this function\-:
 )}}\label{class_h_d_d_test_1_1_disk_a5afff4786de776408acd86e3a91206c7}
 
 
-Definition at line 74 of file Disk.\-cpp.
+Definition at line 103 of file Disk.\-cpp.
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -147,7 +158,18 @@ Here is the caller graph for this function\-:
 )}}\label{class_h_d_d_test_1_1_disk_a78e515afa9536ed390d317c1f595fe9e}
 
 
-Definition at line 55 of file Disk.\-cpp.
+extent-\/size-\/setter 
+
+sets the extent size in kb
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & Size of a extent in kb \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Disk.\-cpp.
 
 \hypertarget{class_h_d_d_test_1_1_disk_a161bd5f5921eb78bdd7a51757267e61b}{\index{H\-D\-D\-Test\-::\-Disk@{H\-D\-D\-Test\-::\-Disk}!set\-Page\-Size@{set\-Page\-Size}}
 \index{set\-Page\-Size@{set\-Page\-Size}!HDDTest::Disk@{H\-D\-D\-Test\-::\-Disk}}
@@ -158,7 +180,18 @@ Definition at line 55 of file Disk.\-cpp.
 )}}\label{class_h_d_d_test_1_1_disk_a161bd5f5921eb78bdd7a51757267e61b}
 
 
-Definition at line 61 of file Disk.\-cpp.
+\mbox{[}brief description\mbox{]} 
+
+\mbox{[}long description\mbox{]}
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & \mbox{[}description\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file Disk.\-cpp.
 
 \hypertarget{class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd}{\index{H\-D\-D\-Test\-::\-Disk@{H\-D\-D\-Test\-::\-Disk}!write\-Extent@{write\-Extent}}
 \index{write\-Extent@{write\-Extent}!HDDTest::Disk@{H\-D\-D\-Test\-::\-Disk}}
@@ -169,7 +202,7 @@ Definition at line 61 of file Disk.\-cpp.
 )}}\label{class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd}
 
 
-Definition at line 82 of file Disk.\-cpp.
+Definition at line 111 of file Disk.\-cpp.
 
 \hypertarget{class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1}{\index{H\-D\-D\-Test\-::\-Disk@{H\-D\-D\-Test\-::\-Disk}!write\-Page@{write\-Page}}
 \index{write\-Page@{write\-Page}!HDDTest::Disk@{H\-D\-D\-Test\-::\-Disk}}
@@ -180,7 +213,7 @@ Definition at line 82 of file Disk.\-cpp.
 )}}\label{class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1}
 
 
-Definition at line 88 of file Disk.\-cpp.
+Definition at line 117 of file Disk.\-cpp.
 
 
 

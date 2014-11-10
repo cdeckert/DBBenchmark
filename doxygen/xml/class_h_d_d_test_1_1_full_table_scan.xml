@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_full_table_scan" kind="class" prot="public">
+    <compoundname>HDDTest::FullTableScan</compoundname>
+    <basecompoundref refid="class_h_d_d_test_1_1_a_test" prot="public" virt="non-virtual">HDDTest::ATest</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_full_table_scan_1a7c4efb4b22a6d61f9ae672fcf64b147e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::FullTableScan::FullTableScan</definition>
+        <argsstring>(std::string, Disk *, Relationship *)</argsstring>
+        <name>FullTableScan</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref> *</type>
+          <defname>disk</defname>
+        </param>
+        <param>
+          <type><ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">Relationship</ref> *</type>
+          <defname>relationship</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" line="19" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.h" bodystart="13" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_full_table_scan_1aeea7425b20a671f3fd55fca6a2a3620d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::FullTableScan::~FullTableScan</definition>
+        <argsstring>()</argsstring>
+        <name>~FullTableScan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" line="20" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.h" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HDDTest::FullTableScan::executeTestAlgorithm</definition>
+        <argsstring>() override</argsstring>
+        <name>executeTestAlgorithm</name>
+        <reimplements refid="class_h_d_d_test_1_1_a_test_1a7dc054e211eccf42c03a6bb31d7fdc6e">executeTestAlgorithm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" line="21" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.h" bodystart="18" bodyend="36"/>
+        <references refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" compoundref="_a_test_8h" startline="31">HDDTest::ATest::isMain</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" compoundref="_a_test_8h" startline="38">HDDTest::ATest::log</references>
+        <references refid="class_d_b_util_1_1_log_1a64073692efb1f1b5bde7af7faee62e8c" compoundref="_log_8cpp" startline="28" endline="31">DBUtil::Log::start</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a8299c80c0778b70fabcc8af49e3f0334" compoundref="_a_test_8h" startline="42">HDDTest::ATest::disk</references>
+        <references refid="class_h_d_d_test_1_1_disk_1adb3541b1531a7029e5d688f123df9baf" compoundref="_disk_8cpp" startline="97" endline="101">HDDTest::Disk::readExtent</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a2c3b0b7b9ec6c37f8dce5cceba4b728e" compoundref="_a_test_8h" startline="41">HDDTest::ATest::relationship</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a4056c89b36da88b193ad5121b496a191" compoundref="_relationship_8cpp" startline="37" endline="50">HDDTest::Relationship::getNextExtent</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a3b5cdf4b9fef9a7c74ec02755a08df24" compoundref="_a_test_8h" startline="43">HDDTest::ATest::runs</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" compoundref="_relationship_8cpp" startline="52" endline="55">HDDTest::Relationship::isNextExtent</references>
+        <references refid="class_d_b_util_1_1_log_1ae6a543277090bfe89db07e49a71ec4e1" compoundref="_log_8cpp" startline="33" endline="41">DBUtil::Log::stop</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="58">
+        <label>HDDTest::FullTableScan</label>
+        <link refid="class_h_d_d_test_1_1_full_table_scan"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>HDDTest::ATest</label>
+        <link refid="class_h_d_d_test_1_1_a_test"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>HDDTest::Disk</label>
+        <link refid="class_h_d_d_test_1_1_disk"/>
+      </node>
+      <node id="62">
+        <label>DBUtil::Log</label>
+        <link refid="class_d_b_util_1_1_log"/>
+      </node>
+      <node id="60">
+        <label>HDDTest::FullTableScan</label>
+        <link refid="class_h_d_d_test_1_1_full_table_scan"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>HDDTest::ATest</label>
+        <link refid="class_h_d_d_test_1_1_a_test"/>
+        <childnode refid="62" relation="usage">
+          <edgelabel>log</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>relationship</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>disk</edgelabel>
+        </childnode>
+      </node>
+      <node id="63">
+        <label>HDDTest::Relationship</label>
+        <link refid="class_h_d_d_test_1_1_relationship"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" line="17" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/FullTableScan.cpp" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_a_test_1af07238e3cb280500d2c32968bd798b3b" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>ATest</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a8299c80c0778b70fabcc8af49e3f0334" prot="protected" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>disk</name></member>
+      <member refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" prot="public" virt="virtual"><scope>HDDTest::FullTableScan</scope><name>executeTestAlgorithm</name></member>
+      <member refid="class_h_d_d_test_1_1_full_table_scan_1a7c4efb4b22a6d61f9ae672fcf64b147e" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>FullTableScan</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>isMain</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>log</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1aa7570476c8072fbbf8ec24c8f997656f" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>name</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a2c3b0b7b9ec6c37f8dce5cceba4b728e" prot="protected" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>relationship</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a3b5cdf4b9fef9a7c74ec02755a08df24" prot="protected" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>runs</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a34afdf1fdbea73fd11422392eeb88320" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>sleep</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a3c3ae1353dc05321bafa921ff6de4342" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>start</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ad4846b9edaba08c50795e0cb3f61c7cb" prot="public" virt="non-virtual"><scope>HDDTest::FullTableScan</scope><name>startBackground</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ac3b7b3b7fa2da5fa4c8b13bd95f46859" prot="public" virt="virtual"><scope>HDDTest::FullTableScan</scope><name>~ATest</name></member>
+      <member refid="class_h_d_d_test_1_1_full_table_scan_1aeea7425b20a671f3fd55fca6a2a3620d" prot="public" virt="virtual"><scope>HDDTest::FullTableScan</scope><name>~FullTableScan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
