@@ -116,7 +116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_h_d_d_test_1_1_layout.html#afeb15d353e1bb5b8089ce0fd35d00c44">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_h_d_d_test_1_1_layout.html#afeb15d353e1bb5b8089ce0fd35d00c44">Layout::createRelationships</a>(std::vector&lt;struct HDDTest::RelationshipConfig&gt; relationshipConfigs)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> totalRelSize = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    uint64_t totalRelSize = 0;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">struct</span> <a class="code" href="struct_h_d_d_test_1_1_relationship_config.html">HDDTest::RelationshipConfig</a> relConf : relationshipConfigs)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    {</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        totalRelSize += relConf.size;</div>
@@ -130,9 +130,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// distribution</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> relStart = this-&gt;<a class="code" href="class_h_d_d_test_1_1_layout.html#aeba9e8e44b4ba70259ff783680b988fe">diskStart</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    uint64_t relStart = this-&gt;<a class="code" href="class_h_d_d_test_1_1_layout.html#aeba9e8e44b4ba70259ff783680b988fe">diskStart</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> <span class="keywordtype">int</span> i = 0; i != totalRelSize; i++)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">for</span> (uint64_t i = 0; i != totalRelSize; i++)</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> prob = 0;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> aRandVal = rand() % 100 + 1;</div>
@@ -187,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 10 2014 01:03:30 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 10 2014 01:31:51 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
