@@ -33,6 +33,7 @@ void TestScenario::run()
 	Progressbar *scenarioProgress = new Progressbar("Szenario", this->getNumberOfTests());
 	for (std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
 	{
+		std::cout << "Start Test\n";
 		Disk *disk = Disk::get(*diskItr);
 		Layout *layout = layouts->at("ordered GB");
 
@@ -40,15 +41,17 @@ void TestScenario::run()
 		std::vector<ATest*> background;
 		for(std::vector<struct TestSettings>::iterator itr = this->backgroundThreadsSettings.begin(); itr != this->backgroundThreadsSettings.end(); ++itr)
 		{
+			std::cout << "start background thread: " << itr->name << ", " << disk->getPath() << "\n";
 			ATest *backgroundThread = new IndexScan(itr->name, disk, layout->getRelationship(itr->relationship));
 			backgroundThread->isMain = false;
 			backgroundThread->startBackground();
+			std::cout << "\n";
 		}
 
 
 
 
-
+		std::cout << "start main\n";
 		ATest *mainThread;
 
 

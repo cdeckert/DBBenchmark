@@ -22,9 +22,9 @@ ATest::ATest(std::string name, Disk *disk, Relationship *relationship)
 
 void ATest::start()
 {
-
 	if(isMain)
 	{
+		std::cout << "MAINTHREAD";
 		executeTestAlgorithm();
 	}
 	else
@@ -51,7 +51,9 @@ void ATest::sleep()
 void ATest::startBackground()
 {
 	std::thread t1(&ATest::start, this);
-	std::cout << t1.get_id();
+	std::cout << "thread id: " << t1.get_id() << "\n";
+	t1.detach();
+	//t1.join();
 }
 
 } /* namespace HDDTest */

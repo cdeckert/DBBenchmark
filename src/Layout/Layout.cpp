@@ -16,6 +16,7 @@ Layout::Layout(LayoutSettings layoutSetting)
 	this->extentSizeInPages = layoutSetting.pagesPerExtent;
 	this->pageSizeInKB = layoutSetting.pageSizeInKB;
 	this->createRelationships(layoutSetting.relationships);
+	this->diskStart = 0; // TODO
 }
 
 Layout::~Layout()

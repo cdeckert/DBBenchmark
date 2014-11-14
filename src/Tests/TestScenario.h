@@ -12,6 +12,7 @@
 #include "../Util/Disk.h"
 #include "ATest.h"
 #include "IndexScan.h"
+#include <iostream>
 
 namespace HDDTest
 {

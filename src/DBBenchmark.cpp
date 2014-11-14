@@ -21,6 +21,6 @@ int main()
 	{
 		t->run();
 	}
-	while (true) {}
+	//while (true) {}
 	return 0;
 }
