@@ -35,6 +35,8 @@ void TestScenario::run()
 	{
 		std::cout << "Start Test\n";
 		Disk *disk = Disk::get(*diskItr);
+
+		std::cout << "DISK::::" << disk->getName() << std::endl;
 		Layout *layout = layouts->at("ordered GB");
 
 
@@ -68,7 +70,13 @@ void TestScenario::run()
 		scenarioProgress->add(1);
 		mainThread->start();
 
-		mainThread->log->write(name);
+
+		char hostname[1024];
+		gethostname(hostname, 1024);
+		std::string host(hostname);
+
+
+		mainThread->log->write(host +"-"+disk->getName()+"-"+name);
 		delete mainThread;
 
 
@@ -85,6 +93,8 @@ int TestScenario::getNumberOfTests()
 }
 
 ATest* TestScenario::initTest(struct TestSettings testSettings) {
+	ATest *test;
+	return test;
 }
 
 } /* namespace HDDTest */

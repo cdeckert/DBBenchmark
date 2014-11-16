@@ -37,4 +37,4 @@ drawChart = (data)->
 
 $(document).ready ->
 	
-	getRun("run1");
+	getRun("../results/ubuntu-sdb-RawIndexScan.json");

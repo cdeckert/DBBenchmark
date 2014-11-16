@@ -136,4 +136,11 @@ Disk::~Disk()
 {
 }
 
+
+
+std::string Disk::getName()
+{
+	std::string name = this->path;
+	return name.replace(name.find("/dev/"), 5, "");
+}
 } /* namespace DBTest */

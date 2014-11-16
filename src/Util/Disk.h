@@ -31,6 +31,7 @@ public:
 	void del();
 	void setPageSize(int);
 	void setExtentSize(int);
+	std::string getName();
 
 	const std::string& getPath() const {
 		return path;

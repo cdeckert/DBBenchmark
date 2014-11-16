@@ -1,7 +1,7 @@
 {  
     "ubuntu":{  
         "disks":[  
-            "/dev/sdb", "/dev/sdb"
+            "/dev/sdb"
         ]
     },
     "centaurus":{
@@ -28,25 +28,14 @@
     "tests":
     [
     	{
-    		"name": "run1",
+    		"name": "RawIndexScan",
     		"mainThread":
     		{
     			"name" : "IndexScan",
     			"sleep": 0,
     			"relationship": "rel1"
     		},
-    		"backgroundThreads":[
-    			{
-    				"name" : "IndexScan",
-    				"relationship": "rel2",
-    				"sleep": 0
-    			},
-    			{
-    				"name" : "IndexScan",
-    				"relationship": "rel3",
-    				"sleep":0
-    			}
-    		]
+    		"backgroundThreads":[]
     	},
     	{
     		"name": "run2",

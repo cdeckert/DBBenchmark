@@ -13,6 +13,7 @@
 #include "ATest.h"
 #include "IndexScan.h"
 #include <iostream>
+#include <string>
 
 namespace HDDTest
 {

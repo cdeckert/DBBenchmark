@@ -7,19 +7,22 @@ CPP_SRCS += \
 ../src/Util/Configurator.cpp \
 ../src/Util/Disk.cpp \
 ../src/Util/Log.cpp \
-../src/Util/Progressbar.cpp 
+../src/Util/Progressbar.cpp \
+../src/Util/Randomizer.cpp 
 
 OBJS += \
 ./src/Util/Configurator.o \
 ./src/Util/Disk.o \
 ./src/Util/Log.o \
-./src/Util/Progressbar.o 
+./src/Util/Progressbar.o \
+./src/Util/Randomizer.o 
 
 CPP_DEPS += \
 ./src/Util/Configurator.d \
 ./src/Util/Disk.d \
 ./src/Util/Log.d \
-./src/Util/Progressbar.d 
+./src/Util/Progressbar.d \
+./src/Util/Randomizer.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

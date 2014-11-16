@@ -42,6 +42,7 @@ void Log::stop(uint64_t size)
 
 void Log::write(std::string name)
 {
+
 	StringBuffer s;
 	Writer<StringBuffer> writer(s);
 	writer.StartObject();
@@ -65,9 +66,11 @@ void Log::write(std::string name)
 
 
 	std::ofstream json;
-	json.open(name + ".json");
+	json.open("results/"+name + ".json");
 	json << s.GetString();
 	json.close();
+
+	perror("WRITER");
 }
 
 } /* namespace HDDTest */

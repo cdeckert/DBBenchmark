@@ -7,19 +7,25 @@ CPP_SRCS += \
 ../src/Tests/ATest.cpp \
 ../src/Tests/FullTableScan.cpp \
 ../src/Tests/IndexScan.cpp \
-../src/Tests/TestScenario.cpp 
+../src/Tests/IndexWrite.cpp \
+../src/Tests/TestScenario.cpp \
+../src/Tests/TransactionLog.cpp 
 
 OBJS += \
 ./src/Tests/ATest.o \
 ./src/Tests/FullTableScan.o \
 ./src/Tests/IndexScan.o \
-./src/Tests/TestScenario.o 
+./src/Tests/IndexWrite.o \
+./src/Tests/TestScenario.o \
+./src/Tests/TransactionLog.o 
 
 CPP_DEPS += \
 ./src/Tests/ATest.d \
 ./src/Tests/FullTableScan.d \
 ./src/Tests/IndexScan.d \
-./src/Tests/TestScenario.d 
+./src/Tests/IndexWrite.d \
+./src/Tests/TestScenario.d \
+./src/Tests/TransactionLog.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

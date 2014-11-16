@@ -18,6 +18,7 @@ ATest::ATest(std::string name, Disk *disk, Relationship *relationship)
 	this->log = new DBUtil::Log();
 	this->runs = true;
 	this->isMain = false;
+	this->initSleep(1);
 }
 
 void ATest::start()
@@ -44,8 +45,15 @@ ATest::~ATest()
 	delete log;
 }
 
+void ATest::initSleep(double sleepTime)
+{
+		tv.tv_sec = (time_t) sleepTime;
+		tv.tv_nsec = (long) ((sleepTime - tv.tv_sec) * 1e+9);
+}
+
 void ATest::sleep()
 {
+	nanosleep (&tv, &tv);
 }
 
 void ATest::startBackground()
