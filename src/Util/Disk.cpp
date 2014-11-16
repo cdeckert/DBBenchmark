@@ -50,7 +50,8 @@ Disk::Disk(std::string path)
 void Disk::open(std::string path)
 {
 	this->path = path;
-	this->fd = open64(this->path.data(), O_RDWR | O_SYNC | O_DIRECT);
+	this->fd = open64(this->path.data(), O_RDWR | O_DIRECT | O_LARGEFILE | O_SYNC);
+	perror("OPEN");
 }
 
 
@@ -105,7 +106,7 @@ void Disk::readPage(uint64_t start)
 
 	lseek64(this->fd, start * 1024, SEEK_SET);
 	read(this->fd, this->pageBuffer, this->pageSize * 1024);
-	//perror("read");
+	perror("read");
 }
 
 void Disk::writeExtent(uint64_t start)
