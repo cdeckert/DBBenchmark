@@ -38,6 +38,7 @@ public:
 	uint64_t getRandomPage();
 
 	uint64_t getNextExtent();
+	uint64_t getPrevExtent();
 	uint64_t getNextPage();
 	bool isNextExtent();
 	std::vector<struct Extent> extents;
@@ -45,6 +46,7 @@ public:
 
 	unsigned int pagesPerExtent;
 	unsigned int pageSizeInKB;
+	void setNextExtent(uint64_t);
 
 private:
 	uint64_t unallocatedExtents;
