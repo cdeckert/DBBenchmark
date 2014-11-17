@@ -55,6 +55,8 @@ transformSerie = (data) ->
 
 configure = (data) ->
 	filePrefixes = []
+	for d in data.auriga.disks
+		filePrefixes.push "auriga-"+d.replace("/dev/", "")+"-";
 	for d in data.centaurus.disks
 		filePrefixes.push "centaurus-"+d.replace("/dev/", "")+"-";
 
