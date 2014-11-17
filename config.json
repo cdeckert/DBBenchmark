@@ -8,6 +8,10 @@
     
     	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
     },
+    "auriga":{
+    
+    	"disks": ["/dev/sdb"]
+    },
     "mathe5r1":{
         "disks": ["/dev/sdb"]
     },
