@@ -2,7 +2,7 @@ $.ajaxSetup({async: false});
 
 chartOptions = {
 	title:
-		text: "chart"
+		text: ""
 	series: []
 	yAxis:
 		title:
@@ -42,13 +42,13 @@ getSeries = (test) ->
 transformSerie = (data) ->
 	serie = {}
 	serie.data = []
-
-	for d in data.measurements
-		line = []
-		line.push d.size/1024
-		line.push d.duration/1000000000
-		serie.data.push line
-		serie.name = data.name
+	if data
+		for d in data.measurements
+			line = []
+			line.push d.size/1024
+			line.push d.duration/1000000000
+			serie.data.push line
+			serie.name = data.name
 	serie
 
 
@@ -57,6 +57,9 @@ configure = (data) ->
 	filePrefixes = []
 	for d in data.centaurus.disks
 		filePrefixes.push "centaurus-"+d.replace("/dev/", "")+"-";
+
+	for d in data.ubuntu.disks
+		filePrefixes.push "ubuntu-"+d.replace("/dev/", "")+"-";
 	
 	for test in data.tests
 		test.filePrefixes = filePrefixes
