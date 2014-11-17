@@ -35,6 +35,20 @@ drawChart = (data)->
 
 	$('#container').highcharts(chartOptions);
 
+
+configure = (data) ->
+	filePrefixes = []
+	for d in data.centaurus.disks
+		filePrefixes.push "centaurus-"+d+"-";
+
+fetchConfiguration = ->
+	$.getJSON("../config.json", configure);
+
+
+
+
+
 $(document).ready ->
 	
 	getRun("../results/ubuntu-sdb-RawIndexScan");
+	#getRun("../results/centaurus-sdh-RawIndexScan");
