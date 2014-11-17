@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_index_write_8h" kind="file">
+    <compoundname>IndexWrite.h</compoundname>
+    <includes refid="_a_test_8h" local="yes">ATest.h</includes>
+    <includedby refid="_test_scenario_8h" local="yes">src/Tests/TestScenario.h</includedby>
+    <includedby refid="_index_write_8cpp" local="yes">src/Tests/IndexWrite.cpp</includedby>
+    <incdepgraph>
+      <node id="802">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="815">
+        <label>atomic</label>
+      </node>
+      <node id="799">
+        <label>../Util/Disk.h</label>
+        <link refid="_disk_8h"/>
+        <childnode refid="800" relation="include">
+        </childnode>
+        <childnode refid="801" relation="include">
+        </childnode>
+        <childnode refid="802" relation="include">
+        </childnode>
+        <childnode refid="803" relation="include">
+        </childnode>
+        <childnode refid="804" relation="include">
+        </childnode>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="806" relation="include">
+        </childnode>
+        <childnode refid="807" relation="include">
+        </childnode>
+      </node>
+      <node id="808">
+        <label>../Layout/Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="805" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+      </node>
+      <node id="803">
+        <label>fcntl.h</label>
+      </node>
+      <node id="810">
+        <label>../Util/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="811" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+        <childnode refid="809" relation="include">
+        </childnode>
+        <childnode refid="813" relation="include">
+        </childnode>
+        <childnode refid="814" relation="include">
+        </childnode>
+      </node>
+      <node id="813">
+        <label>string</label>
+      </node>
+      <node id="806">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="814">
+        <label>fstream</label>
+      </node>
+      <node id="807">
+        <label>linux/hdreg.h</label>
+      </node>
+      <node id="801">
+        <label>sys/types.h</label>
+      </node>
+      <node id="804">
+        <label>unistd.h</label>
+      </node>
+      <node id="809">
+        <label>vector</label>
+      </node>
+      <node id="812">
+        <label>time.h</label>
+      </node>
+      <node id="805">
+        <label>iostream</label>
+      </node>
+      <node id="800">
+        <label>unordered_map</label>
+      </node>
+      <node id="797">
+        <label>src/Tests/IndexWrite.h</label>
+        <link refid="IndexWrite.h"/>
+        <childnode refid="798" relation="include">
+        </childnode>
+      </node>
+      <node id="816">
+        <label>thread</label>
+      </node>
+      <node id="798">
+        <label>ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="799" relation="include">
+        </childnode>
+        <childnode refid="808" relation="include">
+        </childnode>
+        <childnode refid="810" relation="include">
+        </childnode>
+        <childnode refid="815" relation="include">
+        </childnode>
+        <childnode refid="816" relation="include">
+        </childnode>
+        <childnode refid="812" relation="include">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="823">
+        <label>src/Tests/IndexWrite.cpp</label>
+        <link refid="_index_write_8cpp"/>
+      </node>
+      <node id="820">
+        <label>src/DBBenchmark.cpp</label>
+        <link refid="_d_b_benchmark_8cpp"/>
+      </node>
+      <node id="822">
+        <label>src/Tests/TestScenario.cpp</label>
+        <link refid="_test_scenario_8cpp"/>
+      </node>
+      <node id="819">
+        <label>src/Util/Configurator.h</label>
+        <link refid="_configurator_8h"/>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="821" relation="include">
+        </childnode>
+      </node>
+      <node id="821">
+        <label>src/Util/Configurator.cpp</label>
+        <link refid="_configurator_8cpp"/>
+      </node>
+      <node id="817">
+        <label>src/Tests/IndexWrite.h</label>
+        <link refid="IndexWrite.h"/>
+        <childnode refid="818" relation="include">
+        </childnode>
+        <childnode refid="823" relation="include">
+        </childnode>
+      </node>
+      <node id="818">
+        <label>src/Tests/TestScenario.h</label>
+        <link refid="_test_scenario_8h"/>
+        <childnode refid="819" relation="include">
+        </childnode>
+        <childnode refid="820" relation="include">
+        </childnode>
+        <childnode refid="822" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_h_d_d_test_1_1_index_write" prot="public">HDDTest::IndexWrite</innerclass>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>IndexWrite.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>8,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_TESTS_INDEXWrite_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_TESTS_INDEXWrite_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_a_test_8h" kindref="compound">ATest.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_h_d_d_test_1_1_index_write" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_h_d_d_test_1_1_index_write" kindref="compound">IndexWrite</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_index_write_1ad5adafd055f5090a353cc0d516720fda" kindref="member">IndexWrite</ref>(std::string,<sp/><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref><sp/>*,<sp/><ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">Relationship</ref><sp/>*);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_write_1ac936ba268793c1cf380668fa82382afa" kindref="member">~IndexWrite</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_write_1afe685020b557ab773d4804d290cc361b" kindref="member">executeTestAlgorithm</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_TESTS_INDEXWrite_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/IndexWrite.h"/>
+  </compounddef>
+</doxygen>

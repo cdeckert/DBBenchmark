@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_layout" kind="class" prot="public">
+    <compoundname>HDDTest::Layout</compoundname>
+    <includes refid="_layout_8h" local="no">Layout.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_layout_1aeba9e8e44b4ba70259ff783680b988fe" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Layout::diskStart</definition>
+        <argsstring></argsstring>
+        <name>diskStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="41" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" compoundref="_layout_8cpp" startline="13" endline="20">Layout</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1afeb15d353e1bb5b8089ce0fd35d00c44" compoundref="_layout_8cpp" startline="28" endline="61">createRelationships</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_layout_1a6727869c4550ac426cd58b0d1777b3f7" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">Relationship</ref> * &gt;</type>
+        <definition>std::vector&lt;Relationship *&gt; HDDTest::Layout::relationships</definition>
+        <argsstring></argsstring>
+        <name>relationships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="48" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_layout_1af8a89c35edfee7c8ead9bb1572ad8775" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HDDTest::Layout::extentSizeInPages</definition>
+        <argsstring></argsstring>
+        <name>extentSizeInPages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="49" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_layout_1a4c21a93c43b82bbc02f13a9fcdd80651" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HDDTest::Layout::pageSizeInKB</definition>
+        <argsstring></argsstring>
+        <name>pageSizeInKB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="50" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::Layout::Layout</definition>
+        <argsstring>(struct LayoutSettings)</argsstring>
+        <name>Layout</name>
+        <param>
+          <type>struct <ref refid="struct_h_d_d_test_1_1_layout_settings" kindref="compound">LayoutSettings</ref></type>
+          <defname>layoutSetting</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="36" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" bodystart="13" bodyend="20"/>
+        <references refid="struct_h_d_d_test_1_1_layout_settings_1aea0e0ec07c3ddc2dd198345689f6899e" compoundref="_layout_8h" startline="29">HDDTest::LayoutSettings::pagesPerExtent</references>
+        <references refid="struct_h_d_d_test_1_1_layout_settings_1ac0a3416abc480fde8b194b02cbfcad25" compoundref="_layout_8h" startline="28">HDDTest::LayoutSettings::pageSizeInKB</references>
+        <references refid="class_h_d_d_test_1_1_layout_1afeb15d353e1bb5b8089ce0fd35d00c44" compoundref="_layout_8cpp" startline="28" endline="61">createRelationships</references>
+        <references refid="struct_h_d_d_test_1_1_layout_settings_1a9d2aea674708a168136bd3aba5a27be9" compoundref="_layout_8h" startline="30">HDDTest::LayoutSettings::relationships</references>
+        <references refid="class_h_d_d_test_1_1_layout_1aeba9e8e44b4ba70259ff783680b988fe" compoundref="_layout_8h" startline="41">diskStart</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_layout_1aa12e04fdf79d0976d2020c4ee6c9305e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::Layout::~Layout</definition>
+        <argsstring>()</argsstring>
+        <name>~Layout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="37" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_layout_1afeb15d353e1bb5b8089ce0fd35d00c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Layout::createRelationships</definition>
+        <argsstring>(std::vector&lt; struct RelationshipConfig &gt;)</argsstring>
+        <name>createRelationships</name>
+        <param>
+          <type>std::vector&lt; struct <ref refid="struct_h_d_d_test_1_1_relationship_config" kindref="compound">RelationshipConfig</ref> &gt;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="39" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" bodystart="28" bodyend="61"/>
+        <references refid="class_h_d_d_test_1_1_layout_1aeba9e8e44b4ba70259ff783680b988fe" compoundref="_layout_8h" startline="41">diskStart</references>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" compoundref="_layout_8cpp" startline="13" endline="20">Layout</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">HDDTest::Relationship</ref> *</type>
+        <definition>HDDTest::Relationship * HDDTest::Layout::getRelationship</definition>
+        <argsstring>(std::string)</argsstring>
+        <name>getRelationship</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="44" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" bodystart="63" bodyend="73"/>
+        <referencedby refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" compoundref="_test_scenario_8cpp" startline="30" endline="105">HDDTest::TestScenario::run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_layout_1ab1c58be21ea0589138ad12d599470c43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Layout::init_rand</definition>
+        <argsstring>()</argsstring>
+        <name>init_rand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="51" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.cpp" bodystart="75" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="34" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="33" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_layout_1afeb15d353e1bb5b8089ce0fd35d00c44" prot="public" virt="non-virtual"><scope>HDDTest::Layout</scope><name>createRelationships</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1aeba9e8e44b4ba70259ff783680b988fe" prot="public" virt="non-virtual"><scope>HDDTest::Layout</scope><name>diskStart</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1af8a89c35edfee7c8ead9bb1572ad8775" prot="private" virt="non-virtual"><scope>HDDTest::Layout</scope><name>extentSizeInPages</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" prot="public" virt="non-virtual"><scope>HDDTest::Layout</scope><name>getRelationship</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1ab1c58be21ea0589138ad12d599470c43" prot="private" virt="non-virtual"><scope>HDDTest::Layout</scope><name>init_rand</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" prot="public" virt="non-virtual"><scope>HDDTest::Layout</scope><name>Layout</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1a4c21a93c43b82bbc02f13a9fcdd80651" prot="private" virt="non-virtual"><scope>HDDTest::Layout</scope><name>pageSizeInKB</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1a6727869c4550ac426cd58b0d1777b3f7" prot="private" virt="non-virtual"><scope>HDDTest::Layout</scope><name>relationships</name></member>
+      <member refid="class_h_d_d_test_1_1_layout_1aa12e04fdf79d0976d2020c4ee6c9305e" prot="public" virt="virtual"><scope>HDDTest::Layout</scope><name>~Layout</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

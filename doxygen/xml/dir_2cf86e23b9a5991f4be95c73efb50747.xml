@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_2cf86e23b9a5991f4be95c73efb50747" kind="dir">
+    <compoundname>src/Layout</compoundname>
+    <innerfile refid="_layout_8cpp">Layout.cpp</innerfile>
+    <innerfile refid="_layout_8h">Layout.h</innerfile>
+    <innerfile refid="_relationship_8cpp">Relationship.cpp</innerfile>
+    <innerfile refid="_relationship_8h">Relationship.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/"/>
+  </compounddef>
+</doxygen>

@@ -12,6 +12,10 @@
 #include "../Util/Disk.h"
 #include "ATest.h"
 #include "IndexScan.h"
+#include "IndexWrite.h"
+#include "TransactionLog.h"
+#include <iostream>
+#include <string>
 
 namespace HDDTest
 {

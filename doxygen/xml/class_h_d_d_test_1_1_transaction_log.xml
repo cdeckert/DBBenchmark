@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_transaction_log" kind="class" prot="public">
+    <compoundname>HDDTest::TransactionLog</compoundname>
+    <basecompoundref refid="class_h_d_d_test_1_1_a_test" prot="public" virt="non-virtual">HDDTest::ATest</basecompoundref>
+    <includes refid="_transaction_log_8h" local="no">TransactionLog.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_transaction_log_1ab6c72f23eff8b91c3dc71727480ba0fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::TransactionLog::TransactionLog</definition>
+        <argsstring>(std::string, Disk *, Relationship *)</argsstring>
+        <name>TransactionLog</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref> *</type>
+          <defname>disk</defname>
+        </param>
+        <param>
+          <type><ref refid="class_h_d_d_test_1_1_relationship" kindref="compound">Relationship</ref> *</type>
+          <defname>relationship</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.h" line="17" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.cpp" bodystart="12" bodyend="15"/>
+        <references refid="class_h_d_d_test_1_1_a_test_1a9f790949cab92f3c110545af91cb49bf" compoundref="_a_test_8cpp" startline="48" endline="52">HDDTest::ATest::initSleep</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_transaction_log_1a0ff191553e0eb906cec8964daf57730e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::TransactionLog::~TransactionLog</definition>
+        <argsstring>()</argsstring>
+        <name>~TransactionLog</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.h" line="18" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.cpp" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void HDDTest::TransactionLog::executeTestAlgorithm</definition>
+        <argsstring>() override</argsstring>
+        <name>executeTestAlgorithm</name>
+        <reimplements refid="class_h_d_d_test_1_1_a_test_1a7dc054e211eccf42c03a6bb31d7fdc6e">executeTestAlgorithm</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.h" line="19" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.cpp" bodystart="21" bodyend="52"/>
+        <references refid="class_h_d_d_test_1_1_a_test_1a8299c80c0778b70fabcc8af49e3f0334" compoundref="_a_test_8h" startline="46">HDDTest::ATest::disk</references>
+        <references refid="class_h_d_d_test_1_1_disk_1a4954ba9185b24bb98828934cb116b8dd" compoundref="_disk_8cpp" startline="112" endline="116">HDDTest::Disk::writeExtent</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a2c3b0b7b9ec6c37f8dce5cceba4b728e" compoundref="_a_test_8h" startline="45">HDDTest::ATest::relationship</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" compoundref="_relationship_8cpp" startline="42" endline="55">HDDTest::Relationship::getNextExtent</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a3b5cdf4b9fef9a7c74ec02755a08df24" compoundref="_a_test_8h" startline="47">HDDTest::ATest::runs</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" compoundref="_relationship_8cpp" startline="71" endline="74">HDDTest::Relationship::isNextExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" compoundref="_relationship_8h" startline="47">HDDTest::Relationship::pagesPerExtent</references>
+        <references refid="class_h_d_d_test_1_1_disk_1adb3541b1531a7029e5d688f123df9baf" compoundref="_disk_8cpp" startline="98" endline="102">HDDTest::Disk::readExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" compoundref="_relationship_8cpp" startline="57" endline="69">HDDTest::Relationship::getPrevExtent</references>
+        <references refid="class_h_d_d_test_1_1_a_test_1a34afdf1fdbea73fd11422392eeb88320" compoundref="_a_test_8cpp" startline="54" endline="57">HDDTest::ATest::sleep</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" compoundref="_relationship_8cpp" startline="37" endline="40">HDDTest::Relationship::setNextExtent</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="120">
+        <label>HDDTest::ATest</label>
+        <link refid="class_h_d_d_test_1_1_a_test"/>
+      </node>
+      <node id="119">
+        <label>HDDTest::TransactionLog</label>
+        <link refid="class_h_d_d_test_1_1_transaction_log"/>
+        <childnode refid="120" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="125">
+        <label>HDDTest::Disk</label>
+        <link refid="class_h_d_d_test_1_1_disk"/>
+      </node>
+      <node id="123">
+        <label>DBUtil::Log</label>
+        <link refid="class_d_b_util_1_1_log"/>
+      </node>
+      <node id="122">
+        <label>HDDTest::ATest</label>
+        <link refid="class_h_d_d_test_1_1_a_test"/>
+        <childnode refid="123" relation="usage">
+          <edgelabel>log</edgelabel>
+        </childnode>
+        <childnode refid="124" relation="usage">
+          <edgelabel>relationship</edgelabel>
+        </childnode>
+        <childnode refid="125" relation="usage">
+          <edgelabel>disk</edgelabel>
+        </childnode>
+      </node>
+      <node id="121">
+        <label>HDDTest::TransactionLog</label>
+        <link refid="class_h_d_d_test_1_1_transaction_log"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>HDDTest::Relationship</label>
+        <link refid="class_h_d_d_test_1_1_relationship"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.h" line="15" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TransactionLog.h" bodystart="14" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_a_test_1af07238e3cb280500d2c32968bd798b3b" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>ATest</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a8299c80c0778b70fabcc8af49e3f0334" prot="protected" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>disk</name></member>
+      <member refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" prot="public" virt="virtual"><scope>HDDTest::TransactionLog</scope><name>executeTestAlgorithm</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a9f790949cab92f3c110545af91cb49bf" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>initSleep</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>isMain</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>log</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1aa7570476c8072fbbf8ec24c8f997656f" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>name</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a2c3b0b7b9ec6c37f8dce5cceba4b728e" prot="protected" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>relationship</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a3b5cdf4b9fef9a7c74ec02755a08df24" prot="protected" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>runs</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a34afdf1fdbea73fd11422392eeb88320" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>sleep</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a3c3ae1353dc05321bafa921ff6de4342" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>start</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ad4846b9edaba08c50795e0cb3f61c7cb" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>startBackground</name></member>
+      <member refid="class_h_d_d_test_1_1_transaction_log_1ab6c72f23eff8b91c3dc71727480ba0fa" prot="public" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>TransactionLog</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1a2479468580e5e88344aa09eb474021a4" prot="protected" virt="non-virtual"><scope>HDDTest::TransactionLog</scope><name>tv</name></member>
+      <member refid="class_h_d_d_test_1_1_a_test_1ac3b7b3b7fa2da5fa4c8b13bd95f46859" prot="public" virt="virtual"><scope>HDDTest::TransactionLog</scope><name>~ATest</name></member>
+      <member refid="class_h_d_d_test_1_1_transaction_log_1a0ff191553e0eb906cec8964daf57730e" prot="public" virt="virtual"><scope>HDDTest::TransactionLog</scope><name>~TransactionLog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

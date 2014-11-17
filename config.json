@@ -1,12 +1,19 @@
 {  
     "ubuntu":{  
         "disks":[  
-            "/dev/sdb", "/dev/sdb"
+            "/dev/sdb"
         ]
     },
     "centaurus":{
     
     	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
+    },
+    "auriga":{
+    
+    	"disks": ["/dev/sdb"]
+    },
+    "mathe5r1":{
+        "disks": ["/dev/sdb"]
     },
     "layouts":
     {
@@ -25,7 +32,27 @@
     "tests":
     [
     	{
-    		"name": "run1",
+    		"name": "RawIndexScan",
+    		"mainThread":
+    		{
+    			"name" : "IndexScan",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[]
+    	},
+    	{
+    		"name": "RawIndexWrite",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[]
+    	},
+    	{
+    		"name": "IndexScanTransactionLog",
     		"mainThread":
     		{
     			"name" : "IndexScan",
@@ -34,14 +61,25 @@
     		},
     		"backgroundThreads":[
     			{
-    				"name" : "IndexScan",
+    				"name" : "TransactionLog",
     				"relationship": "rel2",
-    				"sleep": 0
-    			},
+    				"sleep": 100
+    			}
+    		]
+    	},
+    	{
+    		"name": "IndexWriteTransactionLog",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
     			{
-    				"name" : "IndexScan",
-    				"relationship": "rel3",
-    				"sleep":0
+    				"name" : "TransactionLog",
+    				"relationship": "rel2",
+    				"sleep": 100
     			}
     		]
     	},

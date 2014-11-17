@@ -50,7 +50,8 @@ Disk::Disk(std::string path)
 void Disk::open(std::string path)
 {
 	this->path = path;
-	this->fd = open64(this->path.data(), O_RDWR | O_SYNC);
+	this->fd = open64(this->path.data(), O_RDWR |  O_LARGEFILE |  O_SYNC); // O_DIRECT
+	perror("OPEN");
 }
 
 
@@ -136,4 +137,11 @@ Disk::~Disk()
 {
 }
 
+
+
+std::string Disk::getName()
+{
+	std::string name = this->path;
+	return name.replace(name.find("/dev/"), 5, "");
+}
 } /* namespace DBTest */

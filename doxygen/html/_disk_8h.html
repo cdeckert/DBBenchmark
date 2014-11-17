@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -97,6 +97,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <code>#include &lt;fcntl.h&gt;</code><br/>
 <code>#include &lt;unistd.h&gt;</code><br/>
 <code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;sys/ioctl.h&gt;</code><br/>
+<code>#include &lt;linux/hdreg.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Disk.h:</div>
 <div class="dyncontent">
@@ -109,7 +111,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="_disk_8h__dep__incl.png" border="0" usemap="#src_2_util_2_disk_8hdep" alt=""/></div>
 <map name="src_2_util_2_disk_8hdep" id="src_2_util_2_disk_8hdep">
-<area shape="rect" id="node2" href="_test_scenario_8h.html" title="src/Tests/TestScenario.h" alt="" coords="245,229,413,256"/><area shape="rect" id="node3" href="_configurator_8h.html" title="src/Util/Configurator.h" alt="" coords="11,304,161,331"/><area shape="rect" id="node7" href="_a_test_8h.html" title="src/Tests/ATest.h" alt="" coords="171,80,297,107"/><area shape="rect" id="node12" href="_disk_8cpp.html" title="src/Util/Disk.cpp" alt="" coords="323,80,443,107"/><area shape="rect" id="node4" href="_d_b_benchmark_8cpp.html" title="src/DBBenchmark.cpp" alt="" coords="261,379,415,405"/><area shape="rect" id="node6" href="_test_scenario_8cpp.html" title="src/Tests/TestScenario.cpp" alt="" coords="186,304,368,331"/><area shape="rect" id="node5" href="_configurator_8cpp.html" title="src/Util/Configurator.cpp" alt="" coords="5,379,168,405"/><area shape="rect" id="node8" href="_index_scan_8h.html" title="src/Tests/IndexScan.h" alt="" coords="499,155,652,181"/><area shape="rect" id="node10" href="_a_test_8cpp.html" title="src/Tests/ATest.cpp" alt="" coords="69,155,209,181"/><area shape="rect" id="node11" href="_full_table_scan_8cpp.html" title="src/Tests/FullTableScan.cpp" alt="" coords="235,155,424,181"/><area shape="rect" id="node9" href="_index_scan_8cpp.html" title="src/Tests/IndexScan.cpp" alt="" coords="492,229,660,256"/></map>
+<area shape="rect" id="node2" href="_test_scenario_8h.html" title="src/Tests/TestScenario.h" alt="" coords="198,229,367,256"/><area shape="rect" id="node3" href="_configurator_8h.html" title="src/Util/Configurator.h" alt="" coords="421,304,571,331"/><area shape="rect" id="node7" href="_a_test_8h.html" title="src/Tests/ATest.h" alt="" coords="565,80,691,107"/><area shape="rect" id="node17" href="_disk_8cpp.html" title="src/Util/Disk.cpp" alt="" coords="1159,80,1279,107"/><area shape="rect" id="node4" href="_d_b_benchmark_8cpp.html" title="src/DBBenchmark.cpp" alt="" coords="271,379,424,405"/><area shape="rect" id="node6" href="_test_scenario_8cpp.html" title="src/Tests/TestScenario.cpp" alt="" coords="127,304,309,331"/><area shape="rect" id="node5" href="_configurator_8cpp.html" title="src/Util/Configurator.cpp" alt="" coords="450,379,613,405"/><area shape="rect" id="node8" href="_index_scan_8h.html" title="src/Tests/IndexScan.h" alt="" coords="129,155,283,181"/><area shape="rect" id="node10" href="_index_write_8h.html" title="src/Tests/IndexWrite.h" alt="" coords="359,155,512,181"/><area shape="rect" id="node12" href="_transaction_log_8h.html" title="src/Tests/TransactionLog.h" alt="" coords="537,155,719,181"/><area shape="rect" id="node14" href="_a_test_8cpp.html" title="src/Tests/ATest.cpp" alt="" coords="943,155,1083,181"/><area shape="rect" id="node15" href="_full_table_scan_8h.html" title="src/Tests/FullTableScan.h" alt="" coords="743,155,917,181"/><area shape="rect" id="node9" href="_index_scan_8cpp.html" title="src/Tests/IndexScan.cpp" alt="" coords="5,229,173,256"/><area shape="rect" id="node11" href="_index_write_8cpp.html" title="src/Tests/IndexWrite.cpp" alt="" coords="391,229,560,256"/><area shape="rect" id="node13" href="_transaction_log_8cpp.html" title="src/Tests/TransactionLog.cpp" alt="" coords="585,229,780,256"/><area shape="rect" id="node16" href="_full_table_scan_8cpp.html" title="src/Tests/FullTableScan.cpp" alt="" coords="804,229,993,256"/></map>
 </div>
 </div>
 <p><a href="_disk_8h_source.html">Go to the source code of this file.</a></p>
@@ -127,7 +129,7 @@ Namespaces</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 10 2014 01:31:51 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 17 2014 13:27:05 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

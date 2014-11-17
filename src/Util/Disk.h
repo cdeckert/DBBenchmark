@@ -13,6 +13,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <iostream>
+#include <sys/ioctl.h>
+#include <linux/hdreg.h>
 namespace HDDTest
 {
 
@@ -31,6 +33,12 @@ public:
 	void del();
 	void setPageSize(int);
 	void setExtentSize(int);
+	std::string getName();
+
+	const std::string& getPath() const {
+		return path;
+	}
+
 	std::string path;
 protected:
 

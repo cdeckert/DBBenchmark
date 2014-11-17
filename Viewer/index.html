@@ -6,9 +6,55 @@
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script src="http://code.highcharts.com/modules/exporting.js"></script>
 	<script type="text/javascript" src="assets/script.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
 </head>
 <body>
-	<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Index Scan</div>
+
+					
+					  <div class="panel-body"><div id="RawIndexScan" style="min-width: 100px; height: 400px; margin: 0 auto"></div></div>
+						
+					
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Index Write</div>
+					<div class="panel-body">
+						<div id="RawIndexWrite" style="min-width: 100px; height: 400px; margin: 0 auto"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Index Scan (Background Jobs)</div>
+
+					
+					  <div class="panel-body"><div id="IndexScanTransactionLog" style="min-width: 310px; height: 400px; margin: 0 auto"></div></div>
+						
+					
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">Index Write (Background Jobs)</div>
+					<div class="panel-body">
+						<div id="IndexWriteTransactionLog" style="min-width: 100px; height: 400px; margin: 0 auto"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="run2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+	</div>
 </body>
 </html>

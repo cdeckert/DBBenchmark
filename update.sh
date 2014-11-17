@@ -1,3 +1,7 @@
+
+git add -A;
+git commit -m "results";
 git pull;
-./Debug/DBBenchmark;
+git push;
+
 exit 0;

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="class_h_d_d_test_1_1_a_test" kind="class"><name>HDDTest::ATest</name>
+    <member refid="class_h_d_d_test_1_1_a_test_1aa7570476c8072fbbf8ec24c8f997656f" kind="variable"><name>name</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" kind="variable"><name>isMain</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" kind="variable"><name>log</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a2479468580e5e88344aa09eb474021a4" kind="variable"><name>tv</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a2c3b0b7b9ec6c37f8dce5cceba4b728e" kind="variable"><name>relationship</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a8299c80c0778b70fabcc8af49e3f0334" kind="variable"><name>disk</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a3b5cdf4b9fef9a7c74ec02755a08df24" kind="variable"><name>runs</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1af07238e3cb280500d2c32968bd798b3b" kind="function"><name>ATest</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1ac3b7b3b7fa2da5fa4c8b13bd95f46859" kind="function"><name>~ATest</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a3c3ae1353dc05321bafa921ff6de4342" kind="function"><name>start</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a7dc054e211eccf42c03a6bb31d7fdc6e" kind="function"><name>executeTestAlgorithm</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a34afdf1fdbea73fd11422392eeb88320" kind="function"><name>sleep</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1ad4846b9edaba08c50795e0cb3f61c7cb" kind="function"><name>startBackground</name></member>
+    <member refid="class_h_d_d_test_1_1_a_test_1a9f790949cab92f3c110545af91cb49bf" kind="function"><name>initSleep</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_configurator" kind="class"><name>HDDTest::Configurator</name>
+    <member refid="class_h_d_d_test_1_1_configurator_1a33abd9be7ab39d0dc567d8f86c7b463e" kind="function"><name>Configurator</name></member>
+    <member refid="class_h_d_d_test_1_1_configurator_1ace450749321fcdc845940c5686d280a7" kind="function"><name>~Configurator</name></member>
+    <member refid="class_h_d_d_test_1_1_configurator_1a77eb045da43a5c8ffde204f8e86e9e9e" kind="function"><name>getTestScenarios</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_disk" kind="class"><name>HDDTest::Disk</name>
+    <member refid="class_h_d_d_test_1_1_disk_1ac8e5dd8530a2f2913a8d1f25013549a4" kind="variable"><name>path</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a24d70d20f80bf546121ce0b097c76f26" kind="variable"><name>pageSize</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a6c6db400b902aadc50f3acea927bc351" kind="variable"><name>extentSize</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a97bac0181a4c3c09a7130dc951785e0a" kind="variable"><name>fd</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a0f5c720a99d7dae2e70020cab2be93fe" kind="variable"><name>pageBuffer</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a1ebdeef3b41d505073f9a08937887107" kind="variable"><name>extentBuffer</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1afbe4c811f00c783c8b011f385449a298" kind="variable"><name>disks</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a0f6006970c964527bb5a2e6e0cb16b87" kind="function"><name>get</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a5afff4786de776408acd86e3a91206c7" kind="function"><name>readPage</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1adb3541b1531a7029e5d688f123df9baf" kind="function"><name>readExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a538c61b9ff956231d7f05d19419eada1" kind="function"><name>writePage</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a4954ba9185b24bb98828934cb116b8dd" kind="function"><name>writeExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a08131fbb8f001b5f8b60056308f5a8da" kind="function"><name>del</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a161bd5f5921eb78bdd7a51757267e61b" kind="function"><name>setPageSize</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a78e515afa9536ed390d317c1f595fe9e" kind="function"><name>setExtentSize</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a60304c382744f4729813d29a68a41cc0" kind="function"><name>getName</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1aa07e489920a40f8edf6531f343689ed4" kind="function"><name>getPath</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a94248b3946f474cce092b5768cfaf8fd" kind="function"><name>isValid</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a1df312b8d4185d0b21d590007958ec18" kind="function"><name>Disk</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a6c50d3450f5e1d663f2145f36735a657" kind="function"><name>~Disk</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a9f8814e739c2387fee4686fb714fcf52" kind="function"><name>startup</name></member>
+    <member refid="class_h_d_d_test_1_1_disk_1a89c9484f0533517678cc85f9a9502b5d" kind="function"><name>open</name></member>
+  </compound>
+  <compound refid="struct_h_d_d_test_1_1_extent" kind="struct"><name>HDDTest::Extent</name>
+    <member refid="struct_h_d_d_test_1_1_extent_1ac0deb3659d689a07ccbe70e29a5e53a1" kind="variable"><name>number</name></member>
+    <member refid="struct_h_d_d_test_1_1_extent_1aec7fca41414d25591790a92c6d43786c" kind="variable"><name>startKb</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_full_table_scan" kind="class"><name>HDDTest::FullTableScan</name>
+    <member refid="class_h_d_d_test_1_1_full_table_scan_1a7c4efb4b22a6d61f9ae672fcf64b147e" kind="function"><name>FullTableScan</name></member>
+    <member refid="class_h_d_d_test_1_1_full_table_scan_1aeea7425b20a671f3fd55fca6a2a3620d" kind="function"><name>~FullTableScan</name></member>
+    <member refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" kind="function"><name>executeTestAlgorithm</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_index_scan" kind="class"><name>HDDTest::IndexScan</name>
+    <member refid="class_h_d_d_test_1_1_index_scan_1a30df1045c8296dd944bacac2bcee8692" kind="function"><name>IndexScan</name></member>
+    <member refid="class_h_d_d_test_1_1_index_scan_1afb5fc1d7594508c651e232cb249909e4" kind="function"><name>~IndexScan</name></member>
+    <member refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" kind="function"><name>executeTestAlgorithm</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_index_write" kind="class"><name>HDDTest::IndexWrite</name>
+    <member refid="class_h_d_d_test_1_1_index_write_1ad5adafd055f5090a353cc0d516720fda" kind="function"><name>IndexWrite</name></member>
+    <member refid="class_h_d_d_test_1_1_index_write_1ac936ba268793c1cf380668fa82382afa" kind="function"><name>~IndexWrite</name></member>
+    <member refid="class_h_d_d_test_1_1_index_write_1afe685020b557ab773d4804d290cc361b" kind="function"><name>executeTestAlgorithm</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_layout" kind="class"><name>HDDTest::Layout</name>
+    <member refid="class_h_d_d_test_1_1_layout_1aeba9e8e44b4ba70259ff783680b988fe" kind="variable"><name>diskStart</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1a6727869c4550ac426cd58b0d1777b3f7" kind="variable"><name>relationships</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1af8a89c35edfee7c8ead9bb1572ad8775" kind="variable"><name>extentSizeInPages</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1a4c21a93c43b82bbc02f13a9fcdd80651" kind="variable"><name>pageSizeInKB</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" kind="function"><name>Layout</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1aa12e04fdf79d0976d2020c4ee6c9305e" kind="function"><name>~Layout</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1afeb15d353e1bb5b8089ce0fd35d00c44" kind="function"><name>createRelationships</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kind="function"><name>getRelationship</name></member>
+    <member refid="class_h_d_d_test_1_1_layout_1ab1c58be21ea0589138ad12d599470c43" kind="function"><name>init_rand</name></member>
+  </compound>
+  <compound refid="struct_h_d_d_test_1_1_layout_settings" kind="struct"><name>HDDTest::LayoutSettings</name>
+    <member refid="struct_h_d_d_test_1_1_layout_settings_1ae44172312461b7fa707c3c76dcbf834a" kind="variable"><name>mode</name></member>
+    <member refid="struct_h_d_d_test_1_1_layout_settings_1ac0a3416abc480fde8b194b02cbfcad25" kind="variable"><name>pageSizeInKB</name></member>
+    <member refid="struct_h_d_d_test_1_1_layout_settings_1aea0e0ec07c3ddc2dd198345689f6899e" kind="variable"><name>pagesPerExtent</name></member>
+    <member refid="struct_h_d_d_test_1_1_layout_settings_1a9d2aea674708a168136bd3aba5a27be9" kind="variable"><name>relationships</name></member>
+  </compound>
+  <compound refid="class_d_b_util_1_1_log" kind="class"><name>DBUtil::Log</name>
+    <member refid="class_d_b_util_1_1_log_1a08aee823d08a4126ae325566bc2dfafe" kind="variable"><name>startTime</name></member>
+    <member refid="class_d_b_util_1_1_log_1a421e369e058c9a816e5859bce62ea8f6" kind="variable"><name>measurements</name></member>
+    <member refid="class_d_b_util_1_1_log_1afc06f47293c880700ed2c92abdbaef9e" kind="function"><name>Log</name></member>
+    <member refid="class_d_b_util_1_1_log_1a2d17e870ff4661b670ce9bb10d4c7e82" kind="function"><name>~Log</name></member>
+    <member refid="class_d_b_util_1_1_log_1a64073692efb1f1b5bde7af7faee62e8c" kind="function"><name>start</name></member>
+    <member refid="class_d_b_util_1_1_log_1ae6a543277090bfe89db07e49a71ec4e1" kind="function"><name>stop</name></member>
+    <member refid="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" kind="function"><name>write</name></member>
+  </compound>
+  <compound refid="struct_d_b_util_1_1measurement" kind="struct"><name>DBUtil::measurement</name>
+    <member refid="struct_d_b_util_1_1measurement_1a91c62eb1fa3de2e3be1a9127c5822b96" kind="variable"><name>duration</name></member>
+    <member refid="struct_d_b_util_1_1measurement_1aa1de62e639b640d4dadb2fd6d0f95d9e" kind="variable"><name>size</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_progressbar" kind="class"><name>HDDTest::Progressbar</name>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a611fb784d62df0f9f2d56ad90e15c47c" kind="variable"><name>total</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a8064f75e6a8ad05753bbff8752d6a5a7" kind="variable"><name>current</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a754f1137a1b68fced60aebfc87269a84" kind="variable"><name>barWidth</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a07e67985ad3a30bee17d36014a56b328" kind="variable"><name>name</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1ae7d46dd5e739dcf8e8660b197b0a6df7" kind="variable"><name>old</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1ae8156d41aec4243b1328b62361965af1" kind="function"><name>Progressbar</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" kind="function"><name>add</name></member>
+    <member refid="class_h_d_d_test_1_1_progressbar_1a0abee569b47da1c25a8aef42339dc5f2" kind="function"><name>~Progressbar</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_randomizer" kind="class"><name>HDDTest::Randomizer</name>
+    <member refid="class_h_d_d_test_1_1_randomizer_1a9038bfc378507cd2234368145885e362" kind="variable"><name>rng</name></member>
+    <member refid="class_h_d_d_test_1_1_randomizer_1af2b09f326a10a75f53a8c3655e79c4cc" kind="function"><name>seed</name></member>
+    <member refid="class_h_d_d_test_1_1_randomizer_1ae6a1aa07280dc34dc99cc2b74b650624" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_relationship" kind="class"><name>HDDTest::Relationship</name>
+    <member refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kind="variable"><name>extents</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a3de1cc2d49400d4914d958a0ca17f672" kind="variable"><name>name</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" kind="variable"><name>pagesPerExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" kind="variable"><name>pageSizeInKB</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a9aa61535f07a3c3b2a1270f3fd4d8bb4" kind="variable"><name>unallocatedExtents</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a6e6e413a275248b99ffabbd5372dce53" kind="variable"><name>nextExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" kind="function"><name>Relationship</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a57554a697ebd4128d471dc3a103020c6" kind="function"><name>~Relationship</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" kind="function"><name>addExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a2f4a99590b8ce3522158ac30ab9adf2f" kind="function"><name>getProbability</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a2ed606e57f4d5e3acbb3b0d905d1938e" kind="function"><name>setUnallocatedExtents</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" kind="function"><name>getRandomExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" kind="function"><name>getRandomPage</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" kind="function"><name>getNextExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" kind="function"><name>getPrevExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a6366d75c0a634b72b8235f46d0a20793" kind="function"><name>getNextPage</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" kind="function"><name>isNextExtent</name></member>
+    <member refid="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" kind="function"><name>setNextExtent</name></member>
+  </compound>
+  <compound refid="struct_h_d_d_test_1_1_relationship_config" kind="struct"><name>HDDTest::RelationshipConfig</name>
+    <member refid="struct_h_d_d_test_1_1_relationship_config_1aa85591a1ae2dce1683ea483f410d281d" kind="variable"><name>size</name></member>
+    <member refid="struct_h_d_d_test_1_1_relationship_config_1afd83c7f8b3b77c39814f43e1e86c56c8" kind="variable"><name>name</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_test_scenario" kind="class"><name>HDDTest::TestScenario</name>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a82b4d547993ecb8801818df3e237e1ff" kind="variable"><name>name</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a182996f8687526cbc7181e93374199c0" kind="variable"><name>diskPaths</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1ab7cc67e0b26468dbe8207373635f98d3" kind="variable"><name>layouts</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a8866710288b04115da28f69c5d787b7c" kind="variable"><name>mainThreadSettings</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a8fd2ea35c462396cb3398805e5a03c01" kind="variable"><name>backgroundThreadsSettings</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" kind="function"><name>TestScenario</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" kind="function"><name>~TestScenario</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" kind="function"><name>run</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" kind="function"><name>getNumberOfTests</name></member>
+    <member refid="class_h_d_d_test_1_1_test_scenario_1a4ff16ab2b8a1e9ef2f15b0456a242efa" kind="function"><name>initTest</name></member>
+  </compound>
+  <compound refid="struct_h_d_d_test_1_1_test_settings" kind="struct"><name>HDDTest::TestSettings</name>
+    <member refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kind="variable"><name>name</name></member>
+    <member refid="struct_h_d_d_test_1_1_test_settings_1a689e6ed46e39f14544a7f257c506d9b9" kind="variable"><name>sleep</name></member>
+    <member refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kind="variable"><name>relationship</name></member>
+  </compound>
+  <compound refid="class_h_d_d_test_1_1_transaction_log" kind="class"><name>HDDTest::TransactionLog</name>
+    <member refid="class_h_d_d_test_1_1_transaction_log_1ab6c72f23eff8b91c3dc71727480ba0fa" kind="function"><name>TransactionLog</name></member>
+    <member refid="class_h_d_d_test_1_1_transaction_log_1a0ff191553e0eb906cec8964daf57730e" kind="function"><name>~TransactionLog</name></member>
+    <member refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" kind="function"><name>executeTestAlgorithm</name></member>
+  </compound>
+  <compound refid="namespace_d_b_util" kind="namespace"><name>DBUtil</name>
+  </compound>
+  <compound refid="namespace_h_d_d_test" kind="namespace"><name>HDDTest</name>
+  </compound>
+  <compound refid="namespacerapidjson" kind="namespace"><name>rapidjson</name>
+  </compound>
+  <compound refid="_d_b_benchmark_8cpp" kind="file"><name>DBBenchmark.cpp</name>
+    <member refid="_d_b_benchmark_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_layout_8cpp" kind="file"><name>Layout.cpp</name>
+  </compound>
+  <compound refid="_layout_8h" kind="file"><name>Layout.h</name>
+  </compound>
+  <compound refid="_relationship_8cpp" kind="file"><name>Relationship.cpp</name>
+  </compound>
+  <compound refid="_relationship_8h" kind="file"><name>Relationship.h</name>
+  </compound>
+  <compound refid="_a_test_8cpp" kind="file"><name>ATest.cpp</name>
+  </compound>
+  <compound refid="_a_test_8h" kind="file"><name>ATest.h</name>
+  </compound>
+  <compound refid="_full_table_scan_8cpp" kind="file"><name>FullTableScan.cpp</name>
+  </compound>
+  <compound refid="_full_table_scan_8h" kind="file"><name>FullTableScan.h</name>
+  </compound>
+  <compound refid="_index_scan_8cpp" kind="file"><name>IndexScan.cpp</name>
+  </compound>
+  <compound refid="_index_scan_8h" kind="file"><name>IndexScan.h</name>
+  </compound>
+  <compound refid="_index_write_8cpp" kind="file"><name>IndexWrite.cpp</name>
+  </compound>
+  <compound refid="_index_write_8h" kind="file"><name>IndexWrite.h</name>
+  </compound>
+  <compound refid="_test_scenario_8cpp" kind="file"><name>TestScenario.cpp</name>
+  </compound>
+  <compound refid="_test_scenario_8h" kind="file"><name>TestScenario.h</name>
+  </compound>
+  <compound refid="_transaction_log_8cpp" kind="file"><name>TransactionLog.cpp</name>
+  </compound>
+  <compound refid="_transaction_log_8h" kind="file"><name>TransactionLog.h</name>
+  </compound>
+  <compound refid="_configurator_8cpp" kind="file"><name>Configurator.cpp</name>
+  </compound>
+  <compound refid="_configurator_8h" kind="file"><name>Configurator.h</name>
+  </compound>
+  <compound refid="_disk_8cpp" kind="file"><name>Disk.cpp</name>
+  </compound>
+  <compound refid="_disk_8h" kind="file"><name>Disk.h</name>
+  </compound>
+  <compound refid="_log_8cpp" kind="file"><name>Log.cpp</name>
+  </compound>
+  <compound refid="_log_8h" kind="file"><name>Log.h</name>
+  </compound>
+  <compound refid="_progressbar_8cpp" kind="file"><name>Progressbar.cpp</name>
+  </compound>
+  <compound refid="_progressbar_8h" kind="file"><name>Progressbar.h</name>
+  </compound>
+  <compound refid="_randomizer_8cpp" kind="file"><name>Randomizer.cpp</name>
+  </compound>
+  <compound refid="_randomizer_8h" kind="file"><name>Randomizer.h</name>
+  </compound>
+  <compound refid="dir_2cf86e23b9a5991f4be95c73efb50747" kind="dir"><name>src/Layout</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_a0d713cea12394a4c028036c439896df" kind="dir"><name>src/Tests</name>
+  </compound>
+  <compound refid="dir_3e37c3eecdc42aac03248fab5c81cb58" kind="dir"><name>src/Util</name>
+  </compound>
+</doxygenindex>

@@ -12,8 +12,7 @@ var indexSectionsWithContent =
   2: "dh",
   3: "acdfilprt",
   4: "acdefgilmprstw~",
-  5: "bcdeilmnprst",
-  6: "s"
+  5: "bcdeilmnprst"
 };
 
 var indexSectionNames =
@@ -23,8 +22,7 @@ var indexSectionNames =
   2: "namespaces",
   3: "files",
   4: "functions",
-  5: "variables",
-  6: "defines"
+  5: "variables"
 };
 
 function convertToId(search)

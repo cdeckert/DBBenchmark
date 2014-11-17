@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_test_scenario_8cpp" kind="file">
+    <compoundname>TestScenario.cpp</compoundname>
+    <includes refid="_test_scenario_8h" local="yes">TestScenario.h</includes>
+    <includes refid="_progressbar_8h" local="yes">../Util/Progressbar.h</includes>
+    <incdepgraph>
+      <node id="835">
+        <label>sys/stat.h</label>
+      </node>
+      <node id="846">
+        <label>atomic</label>
+      </node>
+      <node id="827">
+        <label>../Layout/Layout.h</label>
+        <link refid="_layout_8h"/>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="830" relation="include">
+        </childnode>
+        <childnode refid="831" relation="include">
+        </childnode>
+      </node>
+      <node id="851">
+        <label>../Util/Progressbar.h</label>
+        <link refid="_progressbar_8h"/>
+        <childnode refid="852" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+      </node>
+      <node id="832">
+        <label>../Util/Disk.h</label>
+        <link refid="_disk_8h"/>
+        <childnode refid="833" relation="include">
+        </childnode>
+        <childnode refid="834" relation="include">
+        </childnode>
+        <childnode refid="835" relation="include">
+        </childnode>
+        <childnode refid="836" relation="include">
+        </childnode>
+        <childnode refid="837" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="838" relation="include">
+        </childnode>
+        <childnode refid="839" relation="include">
+        </childnode>
+      </node>
+      <node id="852">
+        <label>stdint.h</label>
+      </node>
+      <node id="830">
+        <label>cmath</label>
+      </node>
+      <node id="828">
+        <label>Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+      </node>
+      <node id="836">
+        <label>fcntl.h</label>
+      </node>
+      <node id="841">
+        <label>../Util/Log.h</label>
+        <link refid="_log_8h"/>
+        <childnode refid="842" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+        <childnode refid="845" relation="include">
+        </childnode>
+      </node>
+      <node id="844">
+        <label>string</label>
+      </node>
+      <node id="848">
+        <label>IndexScan.h</label>
+        <link refid="_index_scan_8h"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="850">
+        <label>TransactionLog.h</label>
+        <link refid="_transaction_log_8h"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="838">
+        <label>sys/ioctl.h</label>
+      </node>
+      <node id="824">
+        <label>src/Tests/TestScenario.cpp</label>
+        <link refid="TestScenario.cpp"/>
+        <childnode refid="825" relation="include">
+        </childnode>
+        <childnode refid="851" relation="include">
+        </childnode>
+      </node>
+      <node id="845">
+        <label>fstream</label>
+      </node>
+      <node id="839">
+        <label>linux/hdreg.h</label>
+      </node>
+      <node id="834">
+        <label>sys/types.h</label>
+      </node>
+      <node id="837">
+        <label>unistd.h</label>
+      </node>
+      <node id="826">
+        <label>vector</label>
+      </node>
+      <node id="843">
+        <label>time.h</label>
+      </node>
+      <node id="829">
+        <label>iostream</label>
+      </node>
+      <node id="833">
+        <label>unordered_map</label>
+      </node>
+      <node id="849">
+        <label>IndexWrite.h</label>
+        <link refid="_index_write_8h"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="825">
+        <label>TestScenario.h</label>
+        <link refid="_test_scenario_8h"/>
+        <childnode refid="826" relation="include">
+        </childnode>
+        <childnode refid="827" relation="include">
+        </childnode>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="840" relation="include">
+        </childnode>
+        <childnode refid="848" relation="include">
+        </childnode>
+        <childnode refid="849" relation="include">
+        </childnode>
+        <childnode refid="850" relation="include">
+        </childnode>
+        <childnode refid="829" relation="include">
+        </childnode>
+        <childnode refid="844" relation="include">
+        </childnode>
+      </node>
+      <node id="847">
+        <label>thread</label>
+      </node>
+      <node id="831">
+        <label>algorithm</label>
+      </node>
+      <node id="840">
+        <label>ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="832" relation="include">
+        </childnode>
+        <childnode refid="828" relation="include">
+        </childnode>
+        <childnode refid="841" relation="include">
+        </childnode>
+        <childnode refid="846" relation="include">
+        </childnode>
+        <childnode refid="847" relation="include">
+        </childnode>
+        <childnode refid="843" relation="include">
+        </childnode>
+      </node>
+      <node id="842">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>TestScenario.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>9,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_test_scenario_8h" kindref="compound">TestScenario.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Util/Progressbar.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" refkind="member"><highlight class="normal"><ref refid="class_h_d_d_test_1_1_test_scenario_1abbe9499202d1095c50140f570a2532dc" kindref="member">TestScenario::TestScenario</ref>(std::string<sp/>name,<sp/>std::vector&lt;std::string&gt;<sp/>*diskPaths,<sp/>std::unordered_map&lt;std::string,<sp/>Layout<sp/>*&gt;<sp/>*layouts,<sp/><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref><sp/>mainThreadSettings,<sp/>std::vector&lt;TestSettings&gt;<sp/>backgroundThreadsSettings)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;diskPaths<sp/>=<sp/>diskPaths;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;layouts<sp/>=<sp/>layouts;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;name<sp/>=<sp/>name;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;mainThreadSettings<sp/>=<sp/>mainThreadSettings;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;backgroundThreadsSettings<sp/>=<sp/>backgroundThreadsSettings;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" refkind="member"><highlight class="normal"><ref refid="class_h_d_d_test_1_1_test_scenario_1a696957520e2865654b1a3fb862c386c0" kindref="member">TestScenario::~TestScenario</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1a33ace13f97b5c5ded8da22ca55416c5a" kindref="member">TestScenario::run</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Start<sp/>Test<sp/>Scenario&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_progressbar" kindref="compound">Progressbar</ref><sp/>*scenarioProgress<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_progressbar" kindref="compound">Progressbar</ref>(</highlight><highlight class="stringliteral">&quot;Szenario&quot;</highlight><highlight class="normal">,<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" kindref="member">getNumberOfTests</ref>());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(std::vector&lt;std::string&gt;::iterator<sp/>diskItr<sp/>=<sp/>diskPaths-&gt;begin();<sp/>diskItr<sp/>!=<sp/>diskPaths-&gt;end();<sp/>++diskItr)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Start<sp/>Test\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_disk" kindref="compound">Disk</ref><sp/>*disk<sp/>=<sp/><ref refid="class_h_d_d_test_1_1_disk_1a0f6006970c964527bb5a2e6e0cb16b87" kindref="member">Disk::get</ref>(*diskItr);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;DISK::::&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>disk-&gt;<ref refid="class_h_d_d_test_1_1_disk_1a60304c382744f4729813d29a68a41cc0" kindref="member">getName</ref>()<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_layout" kindref="compound">Layout</ref><sp/>*layout<sp/>=<sp/>layouts-&gt;at(</highlight><highlight class="stringliteral">&quot;ordered<sp/>GB&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;ATest*&gt;<sp/>background;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(std::vector&lt;struct<sp/>TestSettings&gt;::iterator<sp/>itr<sp/>=<sp/>this-&gt;backgroundThreadsSettings.begin();<sp/>itr<sp/>!=<sp/>this-&gt;backgroundThreadsSettings.end();<sp/>++itr)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;start<sp/>background<sp/>thread:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>itr-&gt;name<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>disk-&gt;<ref refid="class_h_d_d_test_1_1_disk_1aa07e489920a40f8edf6531f343689ed4" kindref="member">getPath</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref><sp/>*backgroundThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_scan" kindref="compound">IndexScan</ref>(itr-&gt;name,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(itr-&gt;relationship));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(itr-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IndexScan&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backgroundThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_scan" kindref="compound">IndexScan</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(itr-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IndexWrite&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backgroundThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_write" kindref="compound">IndexWrite</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(itr-&gt;name<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;TransactionLog&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backgroundThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_transaction_log" kindref="compound">TransactionLog</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backgroundThread-&gt;<ref refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" kindref="member">isMain</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>backgroundThread-&gt;<ref refid="class_h_d_d_test_1_1_a_test_1ad4846b9edaba08c50795e0cb3f61c7cb" kindref="member">startBackground</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;start<sp/>main\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref><sp/>*mainThread;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_scan" kindref="compound">IndexScan</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IndexScan&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_scan" kindref="compound">IndexScan</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref><sp/>==<sp/></highlight><highlight class="stringliteral">&quot;IndexWrite&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_index_write" kindref="compound">IndexWrite</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1acb1acd81644b7dc295e3cfd187469cb9" kindref="member">name</ref>,<sp/>disk,<sp/>layout-&gt;<ref refid="class_h_d_d_test_1_1_layout_1af7aef9c0227433e1cfc6252cb85e8dc3" kindref="member">getRelationship</ref>(mainThreadSettings.<ref refid="struct_h_d_d_test_1_1_test_settings_1a2ae4bf77f3d9d63cc28ac44622327d23" kindref="member">relationship</ref>));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread-&gt;<ref refid="class_h_d_d_test_1_1_a_test_1ac32f948a2541934bba8137e20987bf71" kindref="member">isMain</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenarioProgress-&gt;<ref refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" kindref="member">add</ref>(1);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread-&gt;<ref refid="class_h_d_d_test_1_1_a_test_1a3c3ae1353dc05321bafa921ff6de4342" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>hostname[1024];</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gethostname(hostname,<sp/>1024);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>host(hostname);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mainThread-&gt;<ref refid="class_h_d_d_test_1_1_a_test_1a5db6314a0231c885e25a9c98ea41e95a" kindref="member">log</ref>-&gt;<ref refid="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" kindref="member">write</ref>(host<sp/>+</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">+disk-&gt;<ref refid="class_h_d_d_test_1_1_disk_1a60304c382744f4729813d29a68a41cc0" kindref="member">getName</ref>()+</highlight><highlight class="stringliteral">&quot;-&quot;</highlight><highlight class="normal">+name);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>mainThread;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scenarioProgress-&gt;<ref refid="class_h_d_d_test_1_1_progressbar_1a031bb6b1e7a3305d441bc10353c37966" kindref="member">add</ref>(1);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_test_scenario_1afe92bd2a756f3f753f7cb8e8dd59eb53" kindref="member">TestScenario::getNumberOfTests</ref>()</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;layouts-&gt;size()<sp/>*<sp/>this-&gt;diskPaths-&gt;size();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref>*<sp/>TestScenario::initTest(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="struct_h_d_d_test_1_1_test_settings" kindref="compound">TestSettings</ref><sp/>testSettings)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_h_d_d_test_1_1_a_test" kindref="compound">ATest</ref><sp/>*test;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>test;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Tests/TestScenario.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,6 @@
 <map id="src/Util/Progressbar.h" name="src/Util/Progressbar.h">
 <area shape="rect" id="node2" href="$_index_scan_8cpp.html" title="src/Tests/IndexScan.cpp" alt="" coords="5,80,173,107"/>
-<area shape="rect" id="node3" href="$_test_scenario_8cpp.html" title="src/Tests/TestScenario.cpp" alt="" coords="198,80,380,107"/>
-<area shape="rect" id="node4" href="$_progressbar_8cpp.html" title="src/Util/Progressbar.cpp" alt="" coords="405,80,568,107"/>
+<area shape="rect" id="node3" href="$_index_write_8cpp.html" title="src/Tests/IndexWrite.cpp" alt="" coords="198,80,367,107"/>
+<area shape="rect" id="node4" href="$_test_scenario_8cpp.html" title="src/Tests/TestScenario.cpp" alt="" coords="391,80,573,107"/>
+<area shape="rect" id="node5" href="$_progressbar_8cpp.html" title="src/Util/Progressbar.cpp" alt="" coords="599,80,761,107"/>
 </map>

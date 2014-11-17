@@ -18,13 +18,14 @@ ATest::ATest(std::string name, Disk *disk, Relationship *relationship)
 	this->log = new DBUtil::Log();
 	this->runs = true;
 	this->isMain = false;
+	this->initSleep(0);
 }
 
 void ATest::start()
 {
-
 	if(isMain)
 	{
+		std::cout << "MAINTHREAD";
 		executeTestAlgorithm();
 	}
 	else
@@ -44,14 +45,23 @@ ATest::~ATest()
 	delete log;
 }
 
+void ATest::initSleep(double sleepTime)
+{
+		tv.tv_sec = (time_t) sleepTime;
+		tv.tv_nsec = (long) ((sleepTime - tv.tv_sec) * 1e+9);
+}
+
 void ATest::sleep()
 {
+	nanosleep (&tv, &tv);
 }
 
 void ATest::startBackground()
 {
 	std::thread t1(&ATest::start, this);
-	std::cout << t1.get_id();
+	std::cout << "thread id: " << t1.get_id() << "\n";
+	t1.detach();
+	//t1.join();
 }
 
 } /* namespace HDDTest */

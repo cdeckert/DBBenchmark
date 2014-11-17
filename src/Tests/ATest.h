@@ -13,6 +13,7 @@
 #include "../Util/Log.h"
 #include <atomic>
 #include <thread>
+#include <time.h>
 
 namespace HDDTest
 {
@@ -23,6 +24,8 @@ struct TestSettings
 	std::string relationship;
 
 };
+
+
 
 class ATest
 {
@@ -36,8 +39,9 @@ public:
 	void sleep();
 	void startBackground();
 	DBUtil::Log *log;
+	void initSleep(double);
 protected:
-
+	struct timespec tv;
 	Relationship *relationship;
 	Disk *disk;
 	std::atomic<bool> runs;

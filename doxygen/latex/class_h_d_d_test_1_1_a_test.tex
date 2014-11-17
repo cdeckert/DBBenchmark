@@ -12,13 +12,12 @@ Inheritance diagram for H\-D\-D\-Test\-:\-:A\-Test\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=335pt]{class_h_d_d_test_1_1_a_test__inherit__graph}
+\includegraphics[width=340pt]{class_h_d_d_test_1_1_a_test__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for H\-D\-D\-Test\-:\-:A\-Test\-:
-\nopagebreak
+Collaboration diagram for H\-D\-D\-Test\-:\-:A\-Test\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -39,6 +38,8 @@ virtual void \hyperlink{class_h_d_d_test_1_1_a_test_a7dc054e211eccf42c03a6bb31d7
 void \hyperlink{class_h_d_d_test_1_1_a_test_a34afdf1fdbea73fd11422392eeb88320}{sleep} ()
 \item 
 void \hyperlink{class_h_d_d_test_1_1_a_test_ad4846b9edaba08c50795e0cb3f61c7cb}{start\-Background} ()
+\item 
+void \hyperlink{class_h_d_d_test_1_1_a_test_a9f790949cab92f3c110545af91cb49bf}{init\-Sleep} (double)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -52,6 +53,8 @@ std\-::atomic$<$ bool $>$ \hyperlink{class_h_d_d_test_1_1_a_test_ac32f948a254193
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
+struct timespec \hyperlink{class_h_d_d_test_1_1_a_test_a2479468580e5e88344aa09eb474021a4}{tv}
+\item 
 \hyperlink{class_h_d_d_test_1_1_relationship}{Relationship} $\ast$ \hyperlink{class_h_d_d_test_1_1_a_test_a2c3b0b7b9ec6c37f8dce5cceba4b728e}{relationship}
 \item 
 \hyperlink{class_h_d_d_test_1_1_disk}{Disk} $\ast$ \hyperlink{class_h_d_d_test_1_1_a_test_a8299c80c0778b70fabcc8af49e3f0334}{disk}
@@ -63,7 +66,7 @@ std\-::atomic$<$ bool $>$ \hyperlink{class_h_d_d_test_1_1_a_test_a3b5cdf4b9fef9a
 \subsection{Detailed Description}
 
 
-Definition at line 27 of file A\-Test.\-h.
+Definition at line 30 of file A\-Test.\-h.
 
 
 
@@ -81,6 +84,18 @@ Definition at line 27 of file A\-Test.\-h.
 
 Definition at line 13 of file A\-Test.\-cpp.
 
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_h_d_d_test_1_1_a_test_af07238e3cb280500d2c32968bd798b3b_cgraph}
+\end{center}
+\end{figure}
+
+
 \hypertarget{class_h_d_d_test_1_1_a_test_ac3b7b3b7fa2da5fa4c8b13bd95f46859}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!$\sim$\-A\-Test@{$\sim$\-A\-Test}}
 \index{$\sim$\-A\-Test@{$\sim$\-A\-Test}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{$\sim$\-A\-Test}]{\setlength{\rightskip}{0pt plus 5cm}H\-D\-D\-Test\-::\-A\-Test\-::$\sim$\-A\-Test (
@@ -90,7 +105,7 @@ Definition at line 13 of file A\-Test.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_h_d_d_test_1_1_a_test_ac3b7b3b7fa2da5fa4c8b13bd95f46859}
 
 
-Definition at line 42 of file A\-Test.\-cpp.
+Definition at line 43 of file A\-Test.\-cpp.
 
 
 
@@ -104,11 +119,33 @@ Definition at line 42 of file A\-Test.\-cpp.
 )\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_h_d_d_test_1_1_a_test_a7dc054e211eccf42c03a6bb31d7fdc6e}
 
 
-Reimplemented in \hyperlink{class_h_d_d_test_1_1_full_table_scan_a732473e7440538517ab2c1f6e9e636eb}{H\-D\-D\-Test\-::\-Full\-Table\-Scan}, and \hyperlink{class_h_d_d_test_1_1_index_scan_a63c295ffb3dd74515cf6c6583c9dc462}{H\-D\-D\-Test\-::\-Index\-Scan}.
+Reimplemented in \hyperlink{class_h_d_d_test_1_1_full_table_scan_a732473e7440538517ab2c1f6e9e636eb}{H\-D\-D\-Test\-::\-Full\-Table\-Scan}, \hyperlink{class_h_d_d_test_1_1_index_scan_a63c295ffb3dd74515cf6c6583c9dc462}{H\-D\-D\-Test\-::\-Index\-Scan}, \hyperlink{class_h_d_d_test_1_1_index_write_afe685020b557ab773d4804d290cc361b}{H\-D\-D\-Test\-::\-Index\-Write}, and \hyperlink{class_h_d_d_test_1_1_transaction_log_a3454c7970a87effe1f5154e7bcd73273}{H\-D\-D\-Test\-::\-Transaction\-Log}.
 
 
 
-Definition at line 40 of file A\-Test.\-cpp.
+Definition at line 41 of file A\-Test.\-cpp.
+
+
+
+Here is the caller graph for this function\-:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_h_d_d_test_1_1_a_test_a7dc054e211eccf42c03a6bb31d7fdc6e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_h_d_d_test_1_1_a_test_a9f790949cab92f3c110545af91cb49bf}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!init\-Sleep@{init\-Sleep}}
+\index{init\-Sleep@{init\-Sleep}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
+\subsubsection[{init\-Sleep}]{\setlength{\rightskip}{0pt plus 5cm}void H\-D\-D\-Test\-::\-A\-Test\-::init\-Sleep (
+\begin{DoxyParamCaption}
+\item[{double}]{sleep\-Time}
+\end{DoxyParamCaption}
+)}}\label{class_h_d_d_test_1_1_a_test_a9f790949cab92f3c110545af91cb49bf}
+
+
+Definition at line 48 of file A\-Test.\-cpp.
 
 
 
@@ -117,7 +154,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_h_d_d_test_1_1_a_test_a7dc054e211eccf42c03a6bb31d7fdc6e_icgraph}
+\includegraphics[width=350pt]{class_h_d_d_test_1_1_a_test_a9f790949cab92f3c110545af91cb49bf_icgraph}
 \end{center}
 \end{figure}
 
@@ -131,7 +168,7 @@ Here is the caller graph for this function\-:
 )}}\label{class_h_d_d_test_1_1_a_test_a34afdf1fdbea73fd11422392eeb88320}
 
 
-Definition at line 47 of file A\-Test.\-cpp.
+Definition at line 54 of file A\-Test.\-cpp.
 
 
 
@@ -154,12 +191,11 @@ Here is the caller graph for this function\-:
 )}}\label{class_h_d_d_test_1_1_a_test_a3c3ae1353dc05321bafa921ff6de4342}
 
 
-Definition at line 23 of file A\-Test.\-cpp.
+Definition at line 24 of file A\-Test.\-cpp.
 
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -170,8 +206,7 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -189,12 +224,11 @@ Here is the caller graph for this function\-:
 )}}\label{class_h_d_d_test_1_1_a_test_ad4846b9edaba08c50795e0cb3f61c7cb}
 
 
-Definition at line 51 of file A\-Test.\-cpp.
+Definition at line 59 of file A\-Test.\-cpp.
 
 
 
-Here is the call graph for this function\-:
-\nopagebreak
+Here is the call graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -205,8 +239,7 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:
-\nopagebreak
+Here is the caller graph for this function\-:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -223,42 +256,49 @@ Here is the caller graph for this function\-:
 \subsubsection[{disk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Disk}$\ast$ H\-D\-D\-Test\-::\-A\-Test\-::disk\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_h_d_d_test_1_1_a_test_a8299c80c0778b70fabcc8af49e3f0334}
 
 
-Definition at line 42 of file A\-Test.\-h.
+Definition at line 46 of file A\-Test.\-h.
 
 \hypertarget{class_h_d_d_test_1_1_a_test_ac32f948a2541934bba8137e20987bf71}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!is\-Main@{is\-Main}}
 \index{is\-Main@{is\-Main}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{is\-Main}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ H\-D\-D\-Test\-::\-A\-Test\-::is\-Main}}\label{class_h_d_d_test_1_1_a_test_ac32f948a2541934bba8137e20987bf71}
 
 
-Definition at line 31 of file A\-Test.\-h.
+Definition at line 34 of file A\-Test.\-h.
 
 \hypertarget{class_h_d_d_test_1_1_a_test_a5db6314a0231c885e25a9c98ea41e95a}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!log@{log}}
 \index{log@{log}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{log}]{\setlength{\rightskip}{0pt plus 5cm}{\bf D\-B\-Util\-::\-Log}$\ast$ H\-D\-D\-Test\-::\-A\-Test\-::log}}\label{class_h_d_d_test_1_1_a_test_a5db6314a0231c885e25a9c98ea41e95a}
 
 
-Definition at line 38 of file A\-Test.\-h.
+Definition at line 41 of file A\-Test.\-h.
 
 \hypertarget{class_h_d_d_test_1_1_a_test_aa7570476c8072fbbf8ec24c8f997656f}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!name@{name}}
 \index{name@{name}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string H\-D\-D\-Test\-::\-A\-Test\-::name}}\label{class_h_d_d_test_1_1_a_test_aa7570476c8072fbbf8ec24c8f997656f}
 
 
-Definition at line 30 of file A\-Test.\-h.
+Definition at line 33 of file A\-Test.\-h.
 
 \hypertarget{class_h_d_d_test_1_1_a_test_a2c3b0b7b9ec6c37f8dce5cceba4b728e}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!relationship@{relationship}}
 \index{relationship@{relationship}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{relationship}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Relationship}$\ast$ H\-D\-D\-Test\-::\-A\-Test\-::relationship\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_h_d_d_test_1_1_a_test_a2c3b0b7b9ec6c37f8dce5cceba4b728e}
 
 
-Definition at line 41 of file A\-Test.\-h.
+Definition at line 45 of file A\-Test.\-h.
 
 \hypertarget{class_h_d_d_test_1_1_a_test_a3b5cdf4b9fef9a7c74ec02755a08df24}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!runs@{runs}}
 \index{runs@{runs}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
 \subsubsection[{runs}]{\setlength{\rightskip}{0pt plus 5cm}std\-::atomic$<$bool$>$ H\-D\-D\-Test\-::\-A\-Test\-::runs\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_h_d_d_test_1_1_a_test_a3b5cdf4b9fef9a7c74ec02755a08df24}
 
 
-Definition at line 43 of file A\-Test.\-h.
+Definition at line 47 of file A\-Test.\-h.
+
+\hypertarget{class_h_d_d_test_1_1_a_test_a2479468580e5e88344aa09eb474021a4}{\index{H\-D\-D\-Test\-::\-A\-Test@{H\-D\-D\-Test\-::\-A\-Test}!tv@{tv}}
+\index{tv@{tv}!HDDTest::ATest@{H\-D\-D\-Test\-::\-A\-Test}}
+\subsubsection[{tv}]{\setlength{\rightskip}{0pt plus 5cm}struct timespec H\-D\-D\-Test\-::\-A\-Test\-::tv\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_h_d_d_test_1_1_a_test_a2479468580e5e88344aa09eb474021a4}
+
+
+Definition at line 44 of file A\-Test.\-h.
 
 
 

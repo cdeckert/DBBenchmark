@@ -16,7 +16,6 @@ IndexScan::IndexScan(std::string name, Disk *disk, Relationship *relationship) :
 
 void IndexScan::executeTestAlgorithm()
 {
-
 	int iterations = 20;
 	uint64_t stepSize = (this->relationship->extents.size() * 8) / iterations;
 
@@ -26,6 +25,7 @@ void IndexScan::executeTestAlgorithm()
 	}
 
 	uint64_t processedData = 0;
+
 
 	Progressbar *progress = new Progressbar("Index Scan", (iterations + 1)*iterations / 2 * stepSize);
 
@@ -39,9 +39,8 @@ void IndexScan::executeTestAlgorithm()
 
 		for (uint64_t j = 0; j < i * stepSize; j++)
 		{
-
 			this->disk->readPage(this->relationship->getRandomPage());
-			processedData += 8; // to-do
+			processedData += 8; // todo
 			if (!this->runs) return;
 			progress->add(1);
 		}

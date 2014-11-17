@@ -1,6 +1,8 @@
 var searchData=
 [
+  ['seed',['seed',['../class_h_d_d_test_1_1_randomizer.html#af2b09f326a10a75f53a8c3655e79c4cc',1,'HDDTest::Randomizer']]],
   ['setextentsize',['setExtentSize',['../class_h_d_d_test_1_1_disk.html#a78e515afa9536ed390d317c1f595fe9e',1,'HDDTest::Disk']]],
+  ['setnextextent',['setNextExtent',['../class_h_d_d_test_1_1_relationship.html#ae189760e0ed6b81f17b1c186b242daad',1,'HDDTest::Relationship']]],
   ['setpagesize',['setPageSize',['../class_h_d_d_test_1_1_disk.html#a161bd5f5921eb78bdd7a51757267e61b',1,'HDDTest::Disk']]],
   ['setunallocatedextents',['setUnallocatedExtents',['../class_h_d_d_test_1_1_relationship.html#a2ed606e57f4d5e3acbb3b0d905d1938e',1,'HDDTest::Relationship']]],
   ['sleep',['sleep',['../class_h_d_d_test_1_1_a_test.html#a34afdf1fdbea73fd11422392eeb88320',1,'HDDTest::ATest']]],
