@@ -21,5 +21,6 @@ int main()
 		t->run();
 	}
 	//while (true) {}
+	system("./update.sh");
 	return 0;
 }
