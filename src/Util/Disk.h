@@ -13,6 +13,8 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <iostream>
+#include <sys/ioctl.h>
+#include <linux/hdreg.h>
 namespace HDDTest
 {
 
