@@ -68,6 +68,22 @@
     		]
     	},
     	{
+    		"name": "IndexWriteTransactionLog",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "TransactionLog",
+    				"relationship": "rel2",
+    				"sleep": 100
+    			}
+    		]
+    	},
+    	{
     		"name": "run2",
     		"mainThread":
     		{
