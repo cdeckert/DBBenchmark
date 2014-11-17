@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="struct_h_d_d_test_1_1_layout_settings" kind="struct" prot="public">
+    <compoundname>HDDTest::LayoutSettings</compoundname>
+    <includes refid="_layout_8h" local="no">Layout.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_d_d_test_1_1_layout_settings_1ae44172312461b7fa707c3c76dcbf834a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HDDTest::LayoutSettings::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="27" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_configurator_1a77eb045da43a5c8ffde204f8e86e9e9e" compoundref="_configurator_8cpp" startline="34" endline="115">HDDTest::Configurator::getTestScenarios</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_d_d_test_1_1_layout_settings_1ac0a3416abc480fde8b194b02cbfcad25" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::LayoutSettings::pageSizeInKB</definition>
+        <argsstring></argsstring>
+        <name>pageSizeInKB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="28" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" compoundref="_layout_8cpp" startline="13" endline="20">HDDTest::Layout::Layout</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_configurator_1a77eb045da43a5c8ffde204f8e86e9e9e" compoundref="_configurator_8cpp" startline="34" endline="115">HDDTest::Configurator::getTestScenarios</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_d_d_test_1_1_layout_settings_1aea0e0ec07c3ddc2dd198345689f6899e" prot="public" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::LayoutSettings::pagesPerExtent</definition>
+        <argsstring></argsstring>
+        <name>pagesPerExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="29" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" compoundref="_layout_8cpp" startline="13" endline="20">HDDTest::Layout::Layout</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_configurator_1a77eb045da43a5c8ffde204f8e86e9e9e" compoundref="_configurator_8cpp" startline="34" endline="115">HDDTest::Configurator::getTestScenarios</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_d_d_test_1_1_layout_settings_1a9d2aea674708a168136bd3aba5a27be9" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; struct <ref refid="struct_h_d_d_test_1_1_relationship_config" kindref="compound">RelationshipConfig</ref> &gt;</type>
+        <definition>std::vector&lt;struct RelationshipConfig&gt; HDDTest::LayoutSettings::relationships</definition>
+        <argsstring></argsstring>
+        <name>relationships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="30" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_layout_1a65643db5707927aefc6069735da99a21" compoundref="_layout_8cpp" startline="13" endline="20">HDDTest::Layout::Layout</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_configurator_1a77eb045da43a5c8ffde204f8e86e9e9e" compoundref="_configurator_8cpp" startline="34" endline="115">HDDTest::Configurator::getTestScenarios</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" line="26" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Layout.h" bodystart="25" bodyend="31"/>
+    <listofallmembers>
+      <member refid="struct_h_d_d_test_1_1_layout_settings_1ae44172312461b7fa707c3c76dcbf834a" prot="public" virt="non-virtual"><scope>HDDTest::LayoutSettings</scope><name>mode</name></member>
+      <member refid="struct_h_d_d_test_1_1_layout_settings_1ac0a3416abc480fde8b194b02cbfcad25" prot="public" virt="non-virtual"><scope>HDDTest::LayoutSettings</scope><name>pageSizeInKB</name></member>
+      <member refid="struct_h_d_d_test_1_1_layout_settings_1aea0e0ec07c3ddc2dd198345689f6899e" prot="public" virt="non-virtual"><scope>HDDTest::LayoutSettings</scope><name>pagesPerExtent</name></member>
+      <member refid="struct_h_d_d_test_1_1_layout_settings_1a9d2aea674708a168136bd3aba5a27be9" prot="public" virt="non-virtual"><scope>HDDTest::LayoutSettings</scope><name>relationships</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

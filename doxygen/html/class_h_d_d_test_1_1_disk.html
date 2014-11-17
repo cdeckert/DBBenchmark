@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,6 +117,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a78e515afa9536ed390d317c1f595fe9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_d_d_test_1_1_disk.html#a78e515afa9536ed390d317c1f595fe9e">setExtentSize</a> (int)</td></tr>
 <tr class="memdesc:a78e515afa9536ed390d317c1f595fe9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">extent-size-setter  <a href="#a78e515afa9536ed390d317c1f595fe9e">More...</a><br/></td></tr>
 <tr class="separator:a78e515afa9536ed390d317c1f595fe9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60304c382744f4729813d29a68a41cc0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_d_d_test_1_1_disk.html#a60304c382744f4729813d29a68a41cc0">getName</a> ()</td></tr>
+<tr class="separator:a60304c382744f4729813d29a68a41cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa07e489920a40f8edf6531f343689ed4"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_h_d_d_test_1_1_disk.html#aa07e489920a40f8edf6531f343689ed4">getPath</a> () const </td></tr>
+<tr class="separator:aa07e489920a40f8edf6531f343689ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -136,7 +140,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="_disk_8h_source.html#l00019">19</a> of file <a class="el" href="_disk_8h_source.html">Disk.h</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8h_source.html#l00021">21</a> of file <a class="el" href="_disk_8h_source.html">Disk.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a08131fbb8f001b5f8b60056308f5a8da"></a>
 <div class="memitem">
@@ -151,7 +155,7 @@ Protected Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00124">124</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00125">125</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 </div>
 </div>
@@ -200,6 +204,66 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a60304c382744f4729813d29a68a41cc0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string HDDTest::Disk::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00142">142</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_h_d_d_test_1_1_disk_a60304c382744f4729813d29a68a41cc0_icgraph.png" border="0" usemap="#class_h_d_d_test_1_1_disk_a60304c382744f4729813d29a68a41cc0_icgraph" alt=""/></div>
+<map name="class_h_d_d_test_1_1_disk_a60304c382744f4729813d29a68a41cc0_icgraph" id="class_h_d_d_test_1_1_disk_a60304c382744f4729813d29a68a41cc0_icgraph">
+<area shape="rect" id="node2" href="class_h_d_d_test_1_1_test_scenario.html#a33ace13f97b5c5ded8da22ca55416c5a" title="HDDTest::TestScenario::run" alt="" coords="229,5,419,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa07e489920a40f8edf6531f343689ed4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::string&amp; HDDTest::Disk::getPath </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="_disk_8h_source.html#l00038">38</a> of file <a class="el" href="_disk_8h_source.html">Disk.h</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_h_d_d_test_1_1_disk_aa07e489920a40f8edf6531f343689ed4_icgraph.png" border="0" usemap="#class_h_d_d_test_1_1_disk_aa07e489920a40f8edf6531f343689ed4_icgraph" alt=""/></div>
+<map name="class_h_d_d_test_1_1_disk_aa07e489920a40f8edf6531f343689ed4_icgraph" id="class_h_d_d_test_1_1_disk_aa07e489920a40f8edf6531f343689ed4_icgraph">
+<area shape="rect" id="node2" href="class_h_d_d_test_1_1_test_scenario.html#a33ace13f97b5c5ded8da22ca55416c5a" title="HDDTest::TestScenario::run" alt="" coords="221,5,411,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a94248b3946f474cce092b5768cfaf8fd"></a>
 <div class="memitem">
 <div class="memproto">
@@ -221,7 +285,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00130">130</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00131">131</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 </div>
 </div>
@@ -239,14 +303,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00097">97</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00098">98</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf_icgraph.png" border="0" usemap="#class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf_icgraph" alt=""/></div>
 <map name="class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf_icgraph" id="class_h_d_d_test_1_1_disk_adb3541b1531a7029e5d688f123df9baf_icgraph">
-<area shape="rect" id="node2" href="class_h_d_d_test_1_1_full_table_scan.html#a732473e7440538517ab2c1f6e9e636eb" title="HDDTest::FullTableScan\l::executeTestAlgorithm" alt="" coords="238,5,407,46"/></map>
+<area shape="rect" id="node2" href="class_h_d_d_test_1_1_full_table_scan.html#a732473e7440538517ab2c1f6e9e636eb" title="HDDTest::FullTableScan\l::executeTestAlgorithm" alt="" coords="241,5,410,46"/><area shape="rect" id="node3" href="class_h_d_d_test_1_1_transaction_log.html#a3454c7970a87effe1f5154e7bcd73273" title="HDDTest::TransactionLog\l::executeTestAlgorithm" alt="" coords="238,70,413,111"/></map>
 </div>
 </p>
 
@@ -266,7 +330,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00103">103</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00104">104</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -302,7 +366,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00078">78</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00079">79</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 </div>
 </div>
@@ -329,7 +393,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00090">90</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00091">91</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
 
 </div>
 </div>
@@ -347,7 +411,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00111">111</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00112">112</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd_icgraph.png" border="0" usemap="#class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd_icgraph" alt=""/></div>
+<map name="class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd_icgraph" id="class_h_d_d_test_1_1_disk_a4954ba9185b24bb98828934cb116b8dd_icgraph">
+<area shape="rect" id="node2" href="class_h_d_d_test_1_1_transaction_log.html#a3454c7970a87effe1f5154e7bcd73273" title="HDDTest::TransactionLog\l::executeTestAlgorithm" alt="" coords="241,5,415,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -365,7 +438,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00117">117</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8cpp_source.html#l00118">118</a> of file <a class="el" href="_disk_8cpp_source.html">Disk.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1_icgraph.png" border="0" usemap="#class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1_icgraph" alt=""/></div>
+<map name="class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1_icgraph" id="class_h_d_d_test_1_1_disk_a538c61b9ff956231d7f05d19419eada1_icgraph">
+<area shape="rect" id="node2" href="class_h_d_d_test_1_1_index_write.html#afe685020b557ab773d4804d290cc361b" title="HDDTest::IndexWrite\l::executeTestAlgorithm" alt="" coords="232,5,389,46"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -380,7 +462,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="_disk_8h_source.html#l00034">34</a> of file <a class="el" href="_disk_8h_source.html">Disk.h</a>.</p>
+<p>Definition at line <a class="el" href="_disk_8h_source.html#l00042">42</a> of file <a class="el" href="_disk_8h_source.html">Disk.h</a>.</p>
 
 </div>
 </div>
@@ -391,7 +473,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 10 2014 01:31:51 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 17 2014 13:27:05 for DB-Test by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

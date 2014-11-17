@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_relationship_8cpp" kind="file">
+    <compoundname>Relationship.cpp</compoundname>
+    <includes refid="_relationship_8h" local="yes">Relationship.h</includes>
+    <incdepgraph>
+      <node id="597">
+        <label>Relationship.h</label>
+        <link refid="_relationship_8h"/>
+        <childnode refid="598" relation="include">
+        </childnode>
+        <childnode refid="599" relation="include">
+        </childnode>
+      </node>
+      <node id="596">
+        <label>src/Layout/Relationship.cpp</label>
+        <link refid="Relationship.cpp"/>
+        <childnode refid="597" relation="include">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>vector</label>
+      </node>
+      <node id="598">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespace_h_d_d_test">HDDTest</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Relationship.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Oct<sp/>28,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_relationship_8h" kindref="compound">Relationship.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">HDDTest</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" refkind="member"><highlight class="normal"><ref refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" kindref="member">Relationship::Relationship</ref>(std::string<sp/>name,<sp/>uint64_t<sp/>size,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pagesPerExtent,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pageSizeInKB)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;name<sp/>=<sp/><ref refid="class_h_d_d_test_1_1_relationship_1a3de1cc2d49400d4914d958a0ca17f672" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.reserve(size);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;unallocatedExtents<sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pagesPerExtent<sp/>=<sp/><ref refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" kindref="member">pagesPerExtent</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;pageSizeInKB<sp/>=<sp/><ref refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" kindref="member">pageSizeInKB</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_h_d_d_test_1_1_relationship_1a57554a697ebd4128d471dc3a103020c6" refkind="member"><highlight class="normal"><ref refid="class_h_d_d_test_1_1_relationship_1a57554a697ebd4128d471dc3a103020c6" kindref="member">Relationship::~Relationship</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>Auto-generated<sp/>destructor<sp/>stub</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" kindref="member">Relationship::addExtent</ref>(uint64_t<sp/>start)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_d_d_test_1_1_extent" kindref="compound">Extent</ref><sp/>extent;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>extent.<ref refid="struct_h_d_d_test_1_1_extent_1aec7fca41414d25591790a92c6d43786c" kindref="member">startKb</ref><sp/>=<sp/>start;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>extent.<ref refid="struct_h_d_d_test_1_1_extent_1ac0deb3659d689a07ccbe70e29a5e53a1" kindref="member">number</ref><sp/>=<sp/><ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.size();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.push_back(extent);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;unallocatedExtents--;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" kindref="member">Relationship::setNextExtent</ref>(uint64_t<sp/>nextExtent)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nextExtent<sp/>=<sp/>nextExtent;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" refkind="member"><highlight class="normal">uint64_t<sp/><ref refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" kindref="member">Relationship::getNextExtent</ref>()</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" kindref="member">isNextExtent</ref>())</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>extentStart<sp/>=<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.at(this-&gt;nextExtent).startKb;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;nextExtent++;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>extentStart;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" refkind="member"><highlight class="normal">uint64_t<sp/><ref refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" kindref="member">Relationship::getPrevExtent</ref>()</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" kindref="member">isNextExtent</ref>())</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;nextExtent--;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/>extentStart<sp/>=<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.at(this-&gt;nextExtent).startKb;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>extentStart;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" kindref="member">Relationship::isNextExtent</ref>()</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;nextExtent<sp/>&lt;<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.size();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="class_h_d_d_test_1_1_relationship_1a2f4a99590b8ce3522158ac30ab9adf2f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_h_d_d_test_1_1_relationship_1a2f4a99590b8ce3522158ac30ab9adf2f" kindref="member">Relationship::getProbability</ref>(uint64_t<sp/>totalUnallocatedExtents)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>prob<sp/>=<sp/>this-&gt;unallocatedExtents<sp/>*<sp/>100<sp/>/<sp/>totalUnallocatedExtents<sp/>;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prob;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" refkind="member"><highlight class="normal">uint64_t<sp/><ref refid="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" kindref="member">Relationship::getRandomExtent</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>[rand()<sp/>%<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.size()].startKb;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" refkind="member"><highlight class="normal">uint64_t<sp/><ref refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" kindref="member">Relationship::getRandomPage</ref>()</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>[rand()<sp/>%<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" kindref="member">extents</ref>.size()].startKb<sp/>+<sp/>(rand()<sp/>%<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" kindref="member">pagesPerExtent</ref>)<sp/>*<sp/>this-&gt;<ref refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" kindref="member">pageSizeInKB</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp"/>
+  </compounddef>
+</doxygen>

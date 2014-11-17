@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_h_d_d_test_1_1_relationship" kind="class" prot="public">
+    <compoundname>HDDTest::Relationship</compoundname>
+    <includes refid="_relationship_8h" local="no">Relationship.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; struct <ref refid="struct_h_d_d_test_1_1_extent" kindref="compound">Extent</ref> &gt;</type>
+        <definition>std::vector&lt;struct Extent&gt; HDDTest::Relationship::extents</definition>
+        <argsstring></argsstring>
+        <name>extents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="44" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" compoundref="_relationship_8cpp" startline="13" endline="21">Relationship</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" compoundref="_relationship_8cpp" startline="28" endline="35">addExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" compoundref="_relationship_8cpp" startline="42" endline="55">getNextExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" compoundref="_relationship_8cpp" startline="57" endline="69">getPrevExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" compoundref="_relationship_8cpp" startline="71" endline="74">isNextExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" compoundref="_relationship_8cpp" startline="82" endline="85">getRandomExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" compoundref="_relationship_8cpp" startline="87" endline="90">getRandomPage</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" compoundref="_index_scan_8cpp" startline="17" endline="56">HDDTest::IndexScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_index_write_1afe685020b557ab773d4804d290cc361b" compoundref="_index_write_8cpp" startline="17" endline="56">HDDTest::IndexWrite::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1a3de1cc2d49400d4914d958a0ca17f672" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string HDDTest::Relationship::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="45" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" compoundref="_relationship_8cpp" startline="13" endline="21">Relationship</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int HDDTest::Relationship::pagesPerExtent</definition>
+        <argsstring></argsstring>
+        <name>pagesPerExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="47" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" compoundref="_relationship_8cpp" startline="13" endline="21">Relationship</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" compoundref="_relationship_8cpp" startline="87" endline="90">getRandomPage</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" compoundref="_transaction_log_8cpp" startline="21" endline="52">HDDTest::TransactionLog::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int HDDTest::Relationship::pageSizeInKB</definition>
+        <argsstring></argsstring>
+        <name>pageSizeInKB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="48" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" compoundref="_relationship_8cpp" startline="13" endline="21">Relationship</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" compoundref="_relationship_8cpp" startline="87" endline="90">getRandomPage</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1a9aa61535f07a3c3b2a1270f3fd4d8bb4" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::unallocatedExtents</definition>
+        <argsstring></argsstring>
+        <name>unallocatedExtents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="52" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_h_d_d_test_1_1_relationship_1a6e6e413a275248b99ffabbd5372dce53" prot="private" static="no" mutable="no">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::nextExtent</definition>
+        <argsstring></argsstring>
+        <name>nextExtent</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="53" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HDDTest::Relationship::Relationship</definition>
+        <argsstring>(std::string, uint64_t, unsigned int, unsigned int)</argsstring>
+        <name>Relationship</name>
+        <param>
+          <type>std::string</type>
+          <defname>name</defname>
+        </param>
+        <param>
+          <type>uint64_t</type>
+          <defname>size</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+          <defname>pagesPerExtent</defname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>int</declname>
+          <defname>pageSizeInKB</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="24" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="13" bodyend="21"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a3de1cc2d49400d4914d958a0ca17f672" compoundref="_relationship_8h" startline="45">name</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" compoundref="_relationship_8h" startline="47">pagesPerExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" compoundref="_relationship_8h" startline="48">pageSizeInKB</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a57554a697ebd4128d471dc3a103020c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>HDDTest::Relationship::~Relationship</definition>
+        <argsstring>()</argsstring>
+        <name>~Relationship</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="25" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Relationship::addExtent</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>addExtent</name>
+        <param>
+          <type>uint64_t</type>
+          <defname>start</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="26" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="28" bodyend="35"/>
+        <references refid="struct_h_d_d_test_1_1_extent_1aec7fca41414d25591790a92c6d43786c" compoundref="_relationship_8h" startline="18">HDDTest::Extent::startKb</references>
+        <references refid="struct_h_d_d_test_1_1_extent_1ac0deb3659d689a07ccbe70e29a5e53a1" compoundref="_relationship_8h" startline="17">HDDTest::Extent::number</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a2f4a99590b8ce3522158ac30ab9adf2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int HDDTest::Relationship::getProbability</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>getProbability</name>
+        <param>
+          <type>uint64_t</type>
+          <defname>totalUnallocatedExtents</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="28" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a2ed606e57f4d5e3acbb3b0d905d1938e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Relationship::setUnallocatedExtents</definition>
+        <argsstring>(uint64_t unallocatedExtents)</argsstring>
+        <name>setUnallocatedExtents</name>
+        <param>
+          <type>uint64_t</type>
+          <declname>unallocatedExtents</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="30" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::getRandomExtent</definition>
+        <argsstring>()</argsstring>
+        <name>getRandomExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="37" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="82" bodyend="85"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::getRandomPage</definition>
+        <argsstring>()</argsstring>
+        <name>getRandomPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="38" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="87" bodyend="90"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" compoundref="_relationship_8h" startline="47">pagesPerExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" compoundref="_relationship_8h" startline="48">pageSizeInKB</references>
+        <referencedby refid="class_h_d_d_test_1_1_index_scan_1a63c295ffb3dd74515cf6c6583c9dc462" compoundref="_index_scan_8cpp" startline="17" endline="56">HDDTest::IndexScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_index_write_1afe685020b557ab773d4804d290cc361b" compoundref="_index_write_8cpp" startline="17" endline="56">HDDTest::IndexWrite::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::getNextExtent</definition>
+        <argsstring>()</argsstring>
+        <name>getNextExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="40" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="42" bodyend="55"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" compoundref="_relationship_8cpp" startline="71" endline="74">isNextExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+        <referencedby refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" compoundref="_full_table_scan_8cpp" startline="18" endline="36">HDDTest::FullTableScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" compoundref="_transaction_log_8cpp" startline="21" endline="52">HDDTest::TransactionLog::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::getPrevExtent</definition>
+        <argsstring>()</argsstring>
+        <name>getPrevExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="41" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="57" bodyend="69"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" compoundref="_relationship_8cpp" startline="71" endline="74">isNextExtent</references>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+        <referencedby refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" compoundref="_transaction_log_8cpp" startline="21" endline="52">HDDTest::TransactionLog::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a6366d75c0a634b72b8235f46d0a20793" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint64_t</type>
+        <definition>uint64_t HDDTest::Relationship::getNextPage</definition>
+        <argsstring>()</argsstring>
+        <name>getNextPage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="42" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool HDDTest::Relationship::isNextExtent</definition>
+        <argsstring>()</argsstring>
+        <name>isNextExtent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="43" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="71" bodyend="74"/>
+        <references refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" compoundref="_relationship_8h" startline="44">extents</references>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" compoundref="_relationship_8cpp" startline="42" endline="55">getNextExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" compoundref="_relationship_8cpp" startline="57" endline="69">getPrevExtent</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_full_table_scan_1a732473e7440538517ab2c1f6e9e636eb" compoundref="_full_table_scan_8cpp" startline="18" endline="36">HDDTest::FullTableScan::executeTestAlgorithm</referencedby>
+        <referencedby refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" compoundref="_transaction_log_8cpp" startline="21" endline="52">HDDTest::TransactionLog::executeTestAlgorithm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void HDDTest::Relationship::setNextExtent</definition>
+        <argsstring>(uint64_t)</argsstring>
+        <name>setNextExtent</name>
+        <param>
+          <type>uint64_t</type>
+          <defname>nextExtent</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="49" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.cpp" bodystart="37" bodyend="40"/>
+        <referencedby refid="class_h_d_d_test_1_1_transaction_log_1a3454c7970a87effe1f5154e7bcd73273" compoundref="_transaction_log_8cpp" startline="21" endline="52">HDDTest::TransactionLog::executeTestAlgorithm</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" line="22" column="1" bodyfile="/home/christiandeckert/workspace/DBBenchmark/src/Layout/Relationship.h" bodystart="21" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_h_d_d_test_1_1_relationship_1afcafd9d406a021206887787f43453188" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>addExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a06c160bdbec302af0040fbbadd368c70" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>extents</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a8e9549c7ca201f7b3bf0efec375c52e2" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getNextExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a6366d75c0a634b72b8235f46d0a20793" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getNextPage</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a60827ca3c08026891845b4fec9ada22d" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getPrevExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a2f4a99590b8ce3522158ac30ab9adf2f" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getProbability</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1af752170ba4eb288adf7e3cc04ce274a9" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getRandomExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1af1efe5fc2eda8fc97af447db84247c1f" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>getRandomPage</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a53966cb62025f69c97a18919e83b98c0" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>isNextExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a3de1cc2d49400d4914d958a0ca17f672" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>name</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a6e6e413a275248b99ffabbd5372dce53" prot="private" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>nextExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1ac986788af3ce964e514a737645aa6cd1" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>pageSizeInKB</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1ada41b15d153b3baa5788de2a66295bcb" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>pagesPerExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a60844c9f3d6bbc244e84fccaace8f8ce" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>Relationship</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1ae189760e0ed6b81f17b1c186b242daad" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>setNextExtent</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a2ed606e57f4d5e3acbb3b0d905d1938e" prot="public" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>setUnallocatedExtents</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a9aa61535f07a3c3b2a1270f3fd4d8bb4" prot="private" virt="non-virtual"><scope>HDDTest::Relationship</scope><name>unallocatedExtents</name></member>
+      <member refid="class_h_d_d_test_1_1_relationship_1a57554a697ebd4128d471dc3a103020c6" prot="public" virt="virtual"><scope>HDDTest::Relationship</scope><name>~Relationship</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_log_8h" kind="file">
+    <compoundname>Log.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">time.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">fstream</includes>
+    <includedby refid="_a_test_8h" local="yes">src/Tests/ATest.h</includedby>
+    <includedby refid="_log_8cpp" local="yes">src/Util/Log.cpp</includedby>
+    <incdepgraph>
+      <node id="1044">
+        <label>src/Util/Log.h</label>
+        <link refid="Log.h"/>
+        <childnode refid="1045" relation="include">
+        </childnode>
+        <childnode refid="1046" relation="include">
+        </childnode>
+        <childnode refid="1047" relation="include">
+        </childnode>
+        <childnode refid="1048" relation="include">
+        </childnode>
+        <childnode refid="1049" relation="include">
+        </childnode>
+      </node>
+      <node id="1048">
+        <label>string</label>
+      </node>
+      <node id="1049">
+        <label>fstream</label>
+      </node>
+      <node id="1047">
+        <label>vector</label>
+      </node>
+      <node id="1046">
+        <label>time.h</label>
+      </node>
+      <node id="1045">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1060">
+        <label>src/Tests/IndexWrite.cpp</label>
+        <link refid="_index_write_8cpp"/>
+      </node>
+      <node id="1064">
+        <label>src/Tests/FullTableScan.h</label>
+        <link refid="_full_table_scan_8h"/>
+        <childnode refid="1065" relation="include">
+        </childnode>
+      </node>
+      <node id="1063">
+        <label>src/Tests/ATest.cpp</label>
+        <link refid="_a_test_8cpp"/>
+      </node>
+      <node id="1054">
+        <label>src/DBBenchmark.cpp</label>
+        <link refid="_d_b_benchmark_8cpp"/>
+      </node>
+      <node id="1050">
+        <label>src/Util/Log.h</label>
+        <link refid="Log.h"/>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1066" relation="include">
+        </childnode>
+      </node>
+      <node id="1057">
+        <label>src/Tests/IndexScan.h</label>
+        <link refid="_index_scan_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1058" relation="include">
+        </childnode>
+      </node>
+      <node id="1061">
+        <label>src/Tests/TransactionLog.h</label>
+        <link refid="_transaction_log_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1062" relation="include">
+        </childnode>
+      </node>
+      <node id="1066">
+        <label>src/Util/Log.cpp</label>
+        <link refid="_log_8cpp"/>
+      </node>
+      <node id="1056">
+        <label>src/Tests/TestScenario.cpp</label>
+        <link refid="_test_scenario_8cpp"/>
+      </node>
+      <node id="1062">
+        <label>src/Tests/TransactionLog.cpp</label>
+        <link refid="_transaction_log_8cpp"/>
+      </node>
+      <node id="1065">
+        <label>src/Tests/FullTableScan.cpp</label>
+        <link refid="_full_table_scan_8cpp"/>
+      </node>
+      <node id="1053">
+        <label>src/Util/Configurator.h</label>
+        <link refid="_configurator_8h"/>
+        <childnode refid="1054" relation="include">
+        </childnode>
+        <childnode refid="1055" relation="include">
+        </childnode>
+      </node>
+      <node id="1055">
+        <label>src/Util/Configurator.cpp</label>
+        <link refid="_configurator_8cpp"/>
+      </node>
+      <node id="1058">
+        <label>src/Tests/IndexScan.cpp</label>
+        <link refid="_index_scan_8cpp"/>
+      </node>
+      <node id="1059">
+        <label>src/Tests/IndexWrite.h</label>
+        <link refid="_index_write_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1060" relation="include">
+        </childnode>
+      </node>
+      <node id="1052">
+        <label>src/Tests/TestScenario.h</label>
+        <link refid="_test_scenario_8h"/>
+        <childnode refid="1053" relation="include">
+        </childnode>
+        <childnode refid="1054" relation="include">
+        </childnode>
+        <childnode refid="1056" relation="include">
+        </childnode>
+      </node>
+      <node id="1051">
+        <label>src/Tests/ATest.h</label>
+        <link refid="_a_test_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
+        </childnode>
+        <childnode refid="1059" relation="include">
+        </childnode>
+        <childnode refid="1061" relation="include">
+        </childnode>
+        <childnode refid="1063" relation="include">
+        </childnode>
+        <childnode refid="1064" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_d_b_util_1_1measurement" prot="public">DBUtil::measurement</innerclass>
+    <innerclass refid="class_d_b_util_1_1_log" prot="public">DBUtil::Log</innerclass>
+    <innernamespace refid="namespace_d_b_util">DBUtil</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Log.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>Nov<sp/>8,<sp/>2014</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>root</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_UTIL_LOG_H_</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>SRC_UTIL_LOG_H_</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;time.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">DBUtil</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="struct_d_b_util_1_1measurement" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_d_b_util_1_1measurement" kindref="compound">measurement</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="struct_d_b_util_1_1measurement_1a91c62eb1fa3de2e3be1a9127c5822b96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_d_b_util_1_1measurement_1a91c62eb1fa3de2e3be1a9127c5822b96" kindref="member">duration</ref>;</highlight></codeline>
+<codeline lineno="22" refid="struct_d_b_util_1_1measurement_1aa1de62e639b640d4dadb2fd6d0f95d9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="struct_d_b_util_1_1measurement_1aa1de62e639b640d4dadb2fd6d0f95d9e" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_d_b_util_1_1_log" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_d_b_util_1_1_log" kindref="compound">Log</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_d_b_util_1_1_log_1afc06f47293c880700ed2c92abdbaef9e" kindref="member">Log</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_d_b_util_1_1_log_1a2d17e870ff4661b670ce9bb10d4c7e82" kindref="member">~Log</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_util_1_1_log_1a64073692efb1f1b5bde7af7faee62e8c" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_util_1_1_log_1ae6a543277090bfe89db07e49a71ec4e1" kindref="member">stop</ref>(uint64_t);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_d_b_util_1_1_log_1a56f0e1120dcb0000063664f5efe39453" kindref="member">write</ref>(std::string);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>timespec<sp/>startTime;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;struct<sp/>measurement&gt;<sp/>*measurements;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}<sp/></highlight><highlight class="comment">/*<sp/>namespace<sp/>HDDTest<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_UTIL_LOG_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="/home/christiandeckert/workspace/DBBenchmark/src/Util/Log.h"/>
+  </compounddef>
+</doxygen>
