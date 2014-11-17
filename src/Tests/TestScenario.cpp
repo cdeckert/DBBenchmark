@@ -45,6 +45,20 @@ void TestScenario::run()
 		{
 			std::cout << "start background thread: " << itr->name << ", " << disk->getPath() << "\n";
 			ATest *backgroundThread = new IndexScan(itr->name, disk, layout->getRelationship(itr->relationship));
+
+			if (itr->name == "IndexScan")
+			{
+				backgroundThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
+			}
+			else if(itr->name == "IndexWrite")
+			{
+				backgroundThread = new IndexWrite(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
+			}
+			else if(itr->name == "TransactionLog")
+			{
+				backgroundThread = new TransactionLog(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
+			}
+
 			backgroundThread->isMain = false;
 			backgroundThread->startBackground();
 			std::cout << "\n";

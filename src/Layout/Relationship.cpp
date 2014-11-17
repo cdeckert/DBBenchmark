@@ -34,6 +34,11 @@ void Relationship::addExtent(uint64_t start)
 	this->unallocatedExtents--;
 }
 
+void Relationship::setNextExtent(uint64_t nextExtent)
+{
+	this->nextExtent = nextExtent;
+}
+
 uint64_t Relationship::getNextExtent()
 {
 	if (isNextExtent())
@@ -47,6 +52,20 @@ uint64_t Relationship::getNextExtent()
 		return 0;
 	}
 
+}
+
+uint64_t Relationship::getPrevExtent()
+{
+	if (isNextExtent())
+		{
+			this->nextExtent--;
+			uint64_t extentStart = this->extents.at(this->nextExtent).startKb;
+			return extentStart;
+		}
+		else
+		{
+			return 0;
+		}
 }
 
 bool Relationship::isNextExtent()

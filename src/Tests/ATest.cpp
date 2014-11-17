@@ -18,7 +18,7 @@ ATest::ATest(std::string name, Disk *disk, Relationship *relationship)
 	this->log = new DBUtil::Log();
 	this->runs = true;
 	this->isMain = false;
-	this->initSleep(1);
+	this->initSleep(0);
 }
 
 void ATest::start()
