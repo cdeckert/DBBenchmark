@@ -12,6 +12,7 @@
 #include "../Util/Disk.h"
 #include "ATest.h"
 #include "IndexScan.h"
+#include "IndexWrite.h"
 #include <iostream>
 #include <string>
 

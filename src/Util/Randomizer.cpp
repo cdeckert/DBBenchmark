@@ -9,8 +9,7 @@
 
 namespace HDDTest {
 
-unsigned int Randomizer::getNumber() {
-	return 4;
-}
+std::mt19937_64 Randomizer::rng;
+
 
 } /* namespace HDDTest */

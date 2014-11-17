@@ -38,6 +38,16 @@
     		"backgroundThreads":[]
     	},
     	{
+    		"name": "RawIndexWrite",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[]
+    	},
+    	{
     		"name": "run2",
     		"mainThread":
     		{

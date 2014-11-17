@@ -12,7 +12,6 @@
 #include "Tests/TestScenario.h"
 int main()
 {
-
 	// read configuration file
 	HDDTest::Configurator *config = new HDDTest::Configurator();
 	std::vector<HDDTest::TestScenario *> *testScenarios = config->getTestScenarios();

@@ -16,8 +16,9 @@ src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/Util/Configurator.h \
  ../src/Util/../Tests/../Util/Disk.h ../src/Util/../Tests/ATest.h \
  ../src/Util/../Tests/../Layout/Relationship.h \
  ../src/Util/../Tests/../Util/Log.h ../src/Util/../Tests/IndexScan.h \
- ../src/Util/Disk.h ../src/Util/../Layout/Layout.h \
- ../src/Util/../Layout/Relationship.h ../src/Tests/TestScenario.h
+ ../src/Util/../Tests/IndexWrite.h ../src/Util/Disk.h \
+ ../src/Util/../Layout/Layout.h ../src/Util/../Layout/Relationship.h \
+ ../src/Tests/TestScenario.h
 
 ../src/Util/Configurator.h:
 
@@ -58,6 +59,8 @@ src/DBBenchmark.d: ../src/DBBenchmark.cpp ../src/Util/Configurator.h \
 ../src/Util/../Tests/../Util/Log.h:
 
 ../src/Util/../Tests/IndexScan.h:
+
+../src/Util/../Tests/IndexWrite.h:
 
 ../src/Util/Disk.h:
 

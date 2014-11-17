@@ -60,12 +60,18 @@ void TestScenario::run()
 
 
 		mainThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
-		mainThread->isMain = true;
+
 
 		if (mainThreadSettings.name == "IndexScan")
 		{
-
+			mainThread = new IndexScan(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
 		}
+		else if(mainThreadSettings.name == "IndexWrite")
+		{
+			mainThread = new IndexWrite(mainThreadSettings.name, disk, layout->getRelationship(mainThreadSettings.relationship));
+		}
+
+		mainThread->isMain = true;
 
 		scenarioProgress->add(1);
 		mainThread->start();
