@@ -51,7 +51,6 @@ void Disk::open(std::string path)
 {
 	this->path = path;
 	this->fd = open64(this->path.data(), O_RDWR |  O_LARGEFILE |  O_SYNC); // O_DIRECT
-	std::cout << ioctl(fd, HDIO_SET_DMA, 1);
 	perror("OPEN");
 }
 
