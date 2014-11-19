@@ -15,6 +15,9 @@
 #include <iostream>
 #include <sys/ioctl.h>
 #include <linux/hdreg.h>
+#include <sys/ioctl.h>
+#include <linux/fs.h>
+#include <malloc.h>
 namespace HDDTest
 {
 
@@ -59,6 +62,10 @@ private:
 
 	void startup();
 	void open(std::string);
+
+	unsigned long blockSize;
+
+	size_t calcBufferSize(size_t);
 
 	static std::unordered_map<std::string, Disk *> disks;
 };
