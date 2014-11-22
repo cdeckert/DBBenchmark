@@ -50,8 +50,13 @@ Disk::Disk(std::string path)
 void Disk::open(std::string path)
 {
 	this->path = path;
-	this->fd = open64(this->path.data(), O_RDWR |  O_LARGEFILE |  O_SYNC); // O_DIRECT
-	perror("OPEN");
+	this->fd = open64(this->path.data(), O_RDWR |  O_LARGEFILE | O_DIRECT); // O_SYNC
+	if(fd == -1) perror("Disk.cpp: OPEN");
+
+	blockSize = 0;
+	int rc = ioctl(fd, BLKSSZGET, &blockSize);
+	if(fd == -1)
+		perror("IOCTL BLKSSZGET");
 }
 
 
@@ -63,9 +68,12 @@ void Disk::startup()
 {
 	if (this->isValid())
 	{
-		char *buffer = new char[128 * 1024 * 1024];;
-		lseek64(this->fd, -128 * 1024 * 1024, SEEK_END);
-		read(this->fd, buffer, 128 * 1024 * 1024);
+		char *buffer = (char*)memalign(calcBufferSize(128 * 1024 * 1024),calcBufferSize(128 * 1024 * 1024));
+		if (pageBuffer == NULL) {
+			perror("ERROR MEMALIGN");
+		}
+		lseek64(this->fd, -calcBufferSize(128 * 1024 * 1024), SEEK_END);
+		read(this->fd, buffer, calcBufferSize(128 * 1024 * 1024));
 		delete buffer;
 	}
 }
@@ -79,7 +87,11 @@ void Disk::startup()
 void Disk::setExtentSize(int size)
 {
 	this->extentSize = size;
-	this->extentBuffer = new char[extentSize * 1024];
+
+	this->extentBuffer = (char*)memalign(calcBufferSize(extentSize * 1024),calcBufferSize(extentSize * 1024));
+	if (pageBuffer == NULL) {
+		perror("ERROR MEMALIGN");
+	}
 }
 
 /**
@@ -92,33 +104,46 @@ void Disk::setPageSize(int size)
 {
 	this->pageSize = size;
 	this->pageBuffer = new char[pageSize * 1024];
+
+
+	this->pageBuffer = (char*)memalign(calcBufferSize(pageSize * 1024),calcBufferSize(pageSize * 1024));
+	if (pageBuffer == NULL) {
+		perror("ERROR MEMALIGN");
+	}
 }
 
 
 void Disk::readExtent(uint64_t start)
 {
 	lseek64(this->fd, start * 1024, SEEK_SET);
-	read(this->fd, this->extentBuffer, this->extentSize * 1024);
+	int rd = read(this->fd, this->extentBuffer, calcBufferSize(this->extentSize * 1024));
+	if (rd == -1)
+		perror("ERROR READ");
 }
 
 void Disk::readPage(uint64_t start)
 {
 
 	lseek64(this->fd, start * 1024, SEEK_SET);
-	read(this->fd, this->pageBuffer, this->pageSize * 1024);
-	//perror("read");
+	int rd = read(this->fd, this->pageBuffer, calcBufferSize(this->pageSize * 1024));
+	if (rd == -1)
+		perror("ERROR READ");
 }
 
 void Disk::writeExtent(uint64_t start)
 {
 	lseek64(this->fd, start * 1024, SEEK_SET);
-	write(this->fd, this->extentBuffer, this->extentSize * 1024);
+	int wr = write(this->fd, this->extentBuffer, calcBufferSize(this->extentSize * 1024));
+	if (wr == -1)
+		perror("ERROR WRITE");
 }
 
 void Disk::writePage(uint64_t start)
 {
 	lseek64(this->fd, start * 1024, SEEK_SET);
-	write(this->fd, this->pageBuffer, this->pageSize * 1024);
+	int wr = write(this->fd, this->pageBuffer, calcBufferSize(this->pageSize * 1024));
+	if (wr == -1)
+		perror("ERROR WRITE");
 }
 
 
@@ -135,6 +160,13 @@ bool Disk::isValid()
 
 Disk::~Disk()
 {
+}
+
+size_t Disk::calcBufferSize(size_t minBufferSize) {
+	size_t tmpSize = minBufferSize*1024/blockSize;
+	if(minBufferSize*1024%blockSize != 0)
+		tmpSize += blockSize;
+	return tmpSize;
 }
 
 
