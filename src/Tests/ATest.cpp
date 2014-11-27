@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-ATest::ATest(std::string name, std::string layoutName, Disk *disk, Relationship *relationship)
+ATest::ATest(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship)
 {
 	this->name = name;
 	this->disk = disk;
@@ -20,6 +20,7 @@ ATest::ATest(std::string name, std::string layoutName, Disk *disk, Relationship 
 	this->isMain = false;
 	this->initSleep(0);
 	this->layoutName = layoutName;
+	this->layout = layout;
 }
 
 void ATest::start()

@@ -10,6 +10,7 @@
 
 #include "../Util/Disk.h"
 #include "../Layout/Relationship.h"
+#include "../Layout/Layout.h"
 #include "../Util/Log.h"
 #include <atomic>
 #include <thread>
@@ -32,7 +33,7 @@ class ATest
 public:
 	std::string name;
 	std::atomic<bool> isMain;
-	ATest(std::string, std::string, Disk *, Relationship *);
+	ATest(std::string, std::string, Layout *, Disk *, Relationship *);
 	virtual ~ATest();
 	void start();
 	virtual void executeTestAlgorithm();
@@ -46,6 +47,7 @@ protected:
 	Disk *disk;
 	std::atomic<bool> runs;
 	std::string layoutName;
+	Layout * layout;
 
 private:
 

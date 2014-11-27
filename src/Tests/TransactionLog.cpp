@@ -9,7 +9,7 @@
 
 namespace HDDTest {
 
-TransactionLog::TransactionLog(std::string name, std::string layoutName, Disk *disk, Relationship *relationship) : ATest(name, layoutName, disk, relationship)
+TransactionLog::TransactionLog(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship) : ATest(name, layoutName, layout, disk, relationship)
 {
 	this->initSleep(100);
 }

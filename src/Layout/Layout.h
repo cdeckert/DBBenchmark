@@ -43,6 +43,17 @@ public:
 
 	HDDTest::Relationship *getRelationship(std::string);
 
+	int getExtentSizeInPages() const {
+		return extentSizeInPages;
+	}
+
+	int getPageSizeInKB() const {
+		return pageSizeInKB;
+	}
+
+	int getExtentSizeInKB() const {
+			return getPageSizeInKB()*getExtentSizeInPages();
+	}
 
 private:
 	std::vector<Relationship *> relationships;
