@@ -16,7 +16,7 @@ namespace HDDTest
 class FullTableScan : public ATest
 {
 public:
-	FullTableScan(std::string, Disk *, Relationship *);
+	FullTableScan(std::string, std::string, Disk *, Relationship *);
 	virtual ~FullTableScan();
 	void executeTestAlgorithm() override;
 };

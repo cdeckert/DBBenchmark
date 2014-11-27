@@ -32,7 +32,7 @@ class ATest
 public:
 	std::string name;
 	std::atomic<bool> isMain;
-	ATest(std::string, Disk *, Relationship *);
+	ATest(std::string, std::string, Disk *, Relationship *);
 	virtual ~ATest();
 	void start();
 	virtual void executeTestAlgorithm();
@@ -45,6 +45,7 @@ protected:
 	Relationship *relationship;
 	Disk *disk;
 	std::atomic<bool> runs;
+	std::string layoutName;
 
 private:
 

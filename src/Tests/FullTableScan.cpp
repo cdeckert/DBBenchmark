@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-FullTableScan::FullTableScan(std::string name, Disk *disk, Relationship *relationship) : ATest(name, disk, relationship) {}
+FullTableScan::FullTableScan(std::string name, std::string layoutName, Disk *disk, Relationship *relationship) : ATest(name, layoutName, disk, relationship) {}
 
 
 

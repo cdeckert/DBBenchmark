@@ -15,7 +15,7 @@ namespace HDDTest
 class IndexWrite : public ATest
 {
 public:
-	IndexWrite(std::string, Disk *, Relationship *);
+	IndexWrite(std::string, std::string, Disk *, Relationship *);
 	virtual ~IndexWrite();
 	void executeTestAlgorithm() override;
 };

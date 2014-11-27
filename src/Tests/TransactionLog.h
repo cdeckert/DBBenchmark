@@ -14,7 +14,7 @@ namespace HDDTest {
 class TransactionLog  : public ATest
 {
 public:
-	TransactionLog(std::string, Disk *, Relationship *);
+	TransactionLog(std::string, std::string, Disk *, Relationship *);
 	virtual ~TransactionLog();
 	void executeTestAlgorithm() override;
 };

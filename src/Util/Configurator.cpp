@@ -107,8 +107,11 @@ std::vector<TestScenario *> *HDDTest::Configurator::getTestScenarios()
 			backgroundThreads.push_back(backgroundThread);
 		}
 
-		TestScenario *testScenario = new TestScenario(testScenarioName, diskPaths, layouts, mainThread, backgroundThreads);
-		scenarios->push_back(testScenario);
+		// create test for this scenario with each layout
+		for(auto layoutIterator = layouts->begin(); layoutIterator != layouts->end(); layoutIterator++) {
+			TestScenario *testScenario = new TestScenario(testScenarioName, diskPaths, layoutIterator->first, layoutIterator->second, mainThread, backgroundThreads);
+			scenarios->push_back(testScenario);
+		}
 	}
 	fclose(pFile);
 	return scenarios;
