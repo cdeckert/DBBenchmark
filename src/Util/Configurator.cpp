@@ -60,7 +60,7 @@ std::vector<TestScenario *> *HDDTest::Configurator::getTestScenarios()
 	for (Value::ConstMemberIterator itr = layoutSettings.MemberBegin(); itr != layoutSettings.MemberEnd(); ++itr)
 	{
 		std::string name = itr->name.GetString();
-		std::cout << name;
+		//std::cout << name;
 		struct LayoutSettings layoutSetting;
 		layoutSetting.mode = itr->value["mode"].GetString();
 		layoutSetting.pageSizeInKB = itr->value["pageSizeInKB"].GetUint();

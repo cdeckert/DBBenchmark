@@ -34,12 +34,14 @@ void TestScenario::run()
 {
 	std::cout << "Start Test Scenario" << std::endl;
 	Progressbar *scenarioProgress = new Progressbar("Szenario", this->getNumberOfTests());
+	std::cout << "OK ------ \n";
 	for (std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
 	{
 		std::cout << "Start Test\n";
 		Disk *disk = Disk::get(*diskItr);
 
 		std::cout << "DISK::::" << disk->getName() << std::endl;
+		std::cout << "LAYOUT::" << layoutName << std::endl;
 		//Layout *layout = layouts->at("ordered GB");
 
 
