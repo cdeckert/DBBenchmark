@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-ATest::ATest(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship)
+ATest::ATest(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime)
 {
 	this->name = name;
 	this->disk = disk;
@@ -21,6 +21,7 @@ ATest::ATest(std::string name, std::string layoutName, Layout * layout, Disk *di
 	this->initSleep(0);
 	this->layoutName = layoutName;
 	this->layout = layout;
+	this->initSleep(sleepTime);
 }
 
 void ATest::start()
@@ -55,7 +56,10 @@ void ATest::initSleep(double sleepTime)
 
 void ATest::sleep()
 {
-	nanosleep (&tv, &tv);
+	int tmp = nanosleep (&tv, NULL);
+	if(tmp == -1) {
+		perror("ERROR NANOSLEEP");
+	}
 }
 
 void ATest::startBackground()

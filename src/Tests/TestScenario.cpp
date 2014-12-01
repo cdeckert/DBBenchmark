@@ -47,19 +47,19 @@ void TestScenario::run()
 		for(std::vector<struct TestSettings>::iterator itr = this->backgroundThreadsSettings.begin(); itr != this->backgroundThreadsSettings.end(); ++itr)
 		{
 			std::cout << "start background thread: " << itr->name << ", " << disk->getPath() << "\n";
-			ATest *backgroundThread = new IndexScan(itr->name, layoutName, layout, disk, layout->getRelationship(itr->relationship));
+			ATest *backgroundThread = new IndexScan(itr->name, layoutName, layout, disk, layout->getRelationship(itr->relationship), itr->sleep);
 
 			if (itr->name == "IndexScan")
 			{
-				backgroundThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+				backgroundThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), itr->sleep);
 			}
 			else if(itr->name == "IndexWrite")
 			{
-				backgroundThread = new IndexWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+				backgroundThread = new IndexWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), itr->sleep);
 			}
 			else if(itr->name == "TransactionLog")
 			{
-				backgroundThread = new TransactionLog(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+				backgroundThread = new TransactionLog(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), itr->sleep);
 			}
 
 			backgroundThread->isMain = false;
@@ -76,16 +76,16 @@ void TestScenario::run()
 
 
 
-		mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+		mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 
 
 		if (mainThreadSettings.name == "IndexScan")
 		{
-			mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+			mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 		}
 		else if(mainThreadSettings.name == "IndexWrite")
 		{
-			mainThread = new IndexWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship));
+			mainThread = new IndexWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 		}
 
 		mainThread->isMain = true;

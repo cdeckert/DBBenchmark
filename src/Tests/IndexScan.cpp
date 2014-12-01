@@ -11,7 +11,7 @@
 namespace HDDTest
 {
 
-IndexScan::IndexScan(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship) : ATest(name, layoutName, layout, disk, relationship) {}
+IndexScan::IndexScan(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime) : ATest(name, layoutName, layout, disk, relationship, sleepTime) {}
 
 
 void IndexScan::executeTestAlgorithm()
@@ -43,6 +43,7 @@ void IndexScan::executeTestAlgorithm()
 			processedData += layout->getPageSizeInKB();
 			if (!this->runs) return;
 			progress->add(1);
+			this->sleep();
 		}
 		if (isMain)
 		{

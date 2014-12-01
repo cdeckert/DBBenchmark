@@ -33,7 +33,7 @@ class ATest
 public:
 	std::string name;
 	std::atomic<bool> isMain;
-	ATest(std::string, std::string, Layout *, Disk *, Relationship *);
+	ATest(std::string, std::string, Layout *, Disk *, Relationship *, double);
 	virtual ~ATest();
 	void start();
 	virtual void executeTestAlgorithm();

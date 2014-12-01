@@ -10,7 +10,7 @@
 namespace HDDTest
 {
 
-FullTableScan::FullTableScan(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship) : ATest(name, layoutName, layout, disk, relationship) {}
+FullTableScan::FullTableScan(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime) : ATest(name, layoutName, layout, disk, relationship, sleepTime) {}
 
 
 
@@ -25,6 +25,7 @@ void FullTableScan::executeTestAlgorithm()
 	do
 	{
 		this->disk->readExtent(this->relationship->getNextExtent());
+		this->sleep();
 		if (!this->runs) return;
 	}
 	while (this->relationship->isNextExtent());
