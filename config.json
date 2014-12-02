@@ -202,21 +202,21 @@
             "backgroundThreads":[]
         },
         {
-            "name": "RawIndexScanSleep100",
+            "name": "RawIndexScanSleep1000000",
             "mainThread":
             {
                 "name" : "IndexScan",
-                "sleep": 100,
+                "sleep": 1000000,
                 "relationship": "rel1"
             },
             "backgroundThreads":[]
         },
         {
-            "name": "RawIndexScanSleep1000",
+            "name": "RawIndexScanSleep10000000",
             "mainThread":
             {
                 "name" : "IndexScan",
-                "sleep": 1000,
+                "sleep": 10000000,
                 "relationship": "rel1"
             },
             "backgroundThreads":[]
@@ -242,7 +242,7 @@
     		"backgroundThreads":[]
     	},
     	{
-            "name": "IndexScanTransactionLogSleep100",
+            "name": "IndexScanTransactionLogSleep1000000",
             "mainThread":
             {
                 "name" : "IndexScan",
@@ -253,12 +253,12 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 100
+                    "sleep": 1000000
                 }
             ]
         },
         {
-            "name": "IndexScanTransactionLogSleep1000",
+            "name": "IndexScanTransactionLogSleep10000000",
             "mainThread":
             {
                 "name" : "IndexScan",
@@ -269,12 +269,12 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 1000
+                    "sleep": 10000000
                 }
             ]
         },
         {
-            "name": "IndexScanTransactionLogSleep10000",
+            "name": "IndexScanTransactionLogSleep100000000",
             "mainThread":
             {
                 "name" : "IndexScan",
@@ -285,12 +285,12 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 10000
+                    "sleep": 100000000
                 }
             ]
         },
         {
-            "name": "FullTableScanTransactionLogSleep100",
+            "name": "FullTableScanTransactionLogSleep1000000",
             "mainThread":
             {
                 "name" : "FullTableScan",
@@ -301,12 +301,12 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 100
+                    "sleep": 1000000
                 }
             ]
         },
         {
-            "name": "FullTableScanTransactionLogSleep1000",
+            "name": "FullTableScanTransactionLogSleep10000000",
             "mainThread":
             {
                 "name" : "FullTableScan",
@@ -317,12 +317,12 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 1000
+                    "sleep": 10000000
                 }
             ]
         },
         {
-            "name": "FullTableScanTransactionLogSleep10000",
+            "name": "FullTableScanTransactionLogSleep100000000",
             "mainThread":
             {
                 "name" : "FullTableScan",
@@ -333,7 +333,7 @@
                 {
                     "name" : "TransactionLog",
                     "relationship": "rel2",
-                    "sleep": 10000
+                    "sleep": 100000000
                 }
             ]
         },
@@ -349,7 +349,7 @@
     			{
     				"name" : "TransactionLog",
     				"relationship": "rel2",
-    				"sleep": 100
+    				"sleep": 1000000
     			}
     		]
     	},
