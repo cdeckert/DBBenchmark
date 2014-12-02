@@ -221,7 +221,16 @@
             },
             "backgroundThreads":[]
         },
-        
+        {
+            "name": "FulltableScan",
+            "mainThread":
+            {
+                "name" : "FulltableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
     	{
     		"name": "RawIndexWrite",
     		"mainThread":
@@ -233,21 +242,101 @@
     		"backgroundThreads":[]
     	},
     	{
-    		"name": "IndexScanTransactionLog",
-    		"mainThread":
-    		{
-    			"name" : "IndexScan",
-    			"sleep": 0,
-    			"relationship": "rel1"
-    		},
-    		"backgroundThreads":[
-    			{
-    				"name" : "TransactionLog",
-    				"relationship": "rel2",
-    				"sleep": 100
-    			}
-    		]
-    	},
+            "name": "IndexScanTransactionLogSleep100",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 100
+                }
+            ]
+        },
+        {
+            "name": "IndexScanTransactionLogSleep1000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000
+                }
+            ]
+        },
+        {
+            "name": "IndexScanTransactionLogSleep10000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 10000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep100",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 100
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep1000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep10000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 10000
+                }
+            ]
+        },
     	{
     		"name": "IndexWriteTransactionLog",
     		"mainThread":
