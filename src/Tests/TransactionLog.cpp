@@ -9,7 +9,7 @@
 
 namespace HDDTest {
 
-TransactionLog::TransactionLog(std::string name, Disk *disk, Relationship *relationship) : ATest(name, disk, relationship)
+TransactionLog::TransactionLog(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime) : ATest(name, layoutName, layout, disk, relationship, sleepTime)
 {
 	this->initSleep(100);
 }
@@ -20,7 +20,7 @@ TransactionLog::~TransactionLog() {
 
 void TransactionLog::executeTestAlgorithm()
 {
-	int logSize = 0;
+	unsigned int logSize = 0;
 	this->disk->writeExtent(this->relationship->getNextExtent());
 	while(true)
 	{

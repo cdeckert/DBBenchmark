@@ -69,7 +69,7 @@ void Disk::startup()
 	if (this->isValid())
 	{
 		char *buffer = (char*)memalign(calcBufferSize(128 * 1024 * 1024),calcBufferSize(128 * 1024 * 1024));
-		if (pageBuffer == NULL) {
+		if (buffer == NULL) {
 			perror("ERROR MEMALIGN");
 		}
 		lseek64(this->fd, -calcBufferSize(128 * 1024 * 1024), SEEK_END);
@@ -89,7 +89,7 @@ void Disk::setExtentSize(int size)
 	this->extentSize = size;
 
 	this->extentBuffer = (char*)memalign(calcBufferSize(extentSize * 1024),calcBufferSize(extentSize * 1024));
-	if (pageBuffer == NULL) {
+	if (this->extentBuffer == NULL) {
 		perror("ERROR MEMALIGN");
 	}
 }
@@ -107,7 +107,7 @@ void Disk::setPageSize(int size)
 
 
 	this->pageBuffer = (char*)memalign(calcBufferSize(pageSize * 1024),calcBufferSize(pageSize * 1024));
-	if (pageBuffer == NULL) {
+	if (this->pageBuffer == NULL) {
 		perror("ERROR MEMALIGN");
 	}
 }

@@ -11,13 +11,13 @@
 namespace HDDTest
 {
 
-IndexScan::IndexScan(std::string name, Disk *disk, Relationship *relationship) : ATest(name, disk, relationship) {}
+IndexScan::IndexScan(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime) : ATest(name, layoutName, layout, disk, relationship, sleepTime) {}
 
 
 void IndexScan::executeTestAlgorithm()
 {
 	int iterations = 20;
-	uint64_t stepSize = (this->relationship->extents.size() * 8) / iterations;
+	uint64_t stepSize = (this->relationship->extents.size() * layout->getPageSizeInKB()) / iterations;
 
 	if (stepSize == 0)
 	{
@@ -40,9 +40,10 @@ void IndexScan::executeTestAlgorithm()
 		for (uint64_t j = 0; j < i * stepSize; j++)
 		{
 			this->disk->readPage(this->relationship->getRandomPage());
-			processedData += 8; // todo
+			processedData += layout->getPageSizeInKB();
 			if (!this->runs) return;
 			progress->add(1);
+			this->sleep();
 		}
 		if (isMain)
 		{

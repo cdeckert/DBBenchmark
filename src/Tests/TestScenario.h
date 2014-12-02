@@ -23,7 +23,7 @@ namespace HDDTest
 class TestScenario
 {
 public:
-	TestScenario(std::string, std::vector<std::string> *, std::unordered_map<std::string, Layout *> *, TestSettings, std::vector<TestSettings>);
+	TestScenario(std::string, std::vector<std::string> *, std::string, Layout *, TestSettings, std::vector<TestSettings>);
 	virtual ~TestScenario();
 	void run();
 	int getNumberOfTests();
@@ -37,6 +37,9 @@ private:
 	std::vector<struct TestSettings> backgroundThreadsSettings;
 
 	ATest *initTest(struct TestSettings);
+
+	std::string layoutName;
+	Layout * layout;
 
 };
 

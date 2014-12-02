@@ -11,7 +11,7 @@
 namespace HDDTest
 {
 
-IndexWrite::IndexWrite(std::string name, Disk *disk, Relationship *relationship) : ATest(name, disk, relationship) {}
+IndexWrite::IndexWrite(std::string name, std::string layoutName, Layout * layout, Disk *disk, Relationship *relationship, double sleepTime) : ATest(name, layoutName, layout, disk, relationship, sleepTime) {}
 
 
 void IndexWrite::executeTestAlgorithm()
@@ -40,9 +40,10 @@ void IndexWrite::executeTestAlgorithm()
 		for (uint64_t j = 0; j < i * stepSize; j++)
 		{
 			this->disk->writePage(this->relationship->getRandomPage());
-			processedData += 8; // todo
+			processedData += layout->getPageSizeInKB();
 			if (!this->runs) return;
 			progress->add(1);
+			this->sleep();
 		}
 		if (isMain)
 		{
