@@ -50,8 +50,8 @@ ATest::~ATest()
 
 void ATest::initSleep(double sleepTime)
 {
-		tv.tv_sec = (time_t) sleepTime;
-		tv.tv_nsec = (long) ((sleepTime - tv.tv_sec) * 1e+9);
+	tv.tv_sec = (time_t) sleepTime / 1e+9;
+	tv.tv_nsec = (sleepTime - tv.tv_sec*1e+9);
 }
 
 void ATest::sleep()
