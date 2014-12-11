@@ -87,6 +87,15 @@ void TestScenario::run()
 		{
 			mainThread = new IndexWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 		}
+		else if(mainThreadSettings.name == "FullTableScan")
+		{
+			mainThread = new FullTableScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
+		}
+
+		else if(mainThreadSettings.name == "FullTableWrite")
+		{
+			//mainThread = new FullTableWrite(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
+		}
 
 		mainThread->isMain = true;
 
