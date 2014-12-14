@@ -1,6 +1,0 @@
-<map id="HDDTest::Relationship::isNextExtent" name="HDDTest::Relationship::isNextExtent">
-<area shape="rect" id="node2" href="$class_h_d_d_test_1_1_relationship.html#a8e9549c7ca201f7b3bf0efec375c52e2" title="HDDTest::Relationship\l::getNextExtent" alt="" coords="214,37,373,78"/>
-<area shape="rect" id="node3" href="$class_h_d_d_test_1_1_full_table_scan.html#a732473e7440538517ab2c1f6e9e636eb" title="HDDTest::FullTableScan\l::executeTestAlgorithm" alt="" coords="425,5,594,46"/>
-<area shape="rect" id="node4" href="$class_h_d_d_test_1_1_transaction_log.html#a3454c7970a87effe1f5154e7bcd73273" title="HDDTest::TransactionLog\l::executeTestAlgorithm" alt="" coords="422,95,597,137"/>
-<area shape="rect" id="node5" href="$class_h_d_d_test_1_1_relationship.html#a60827ca3c08026891845b4fec9ada22d" title="HDDTest::Relationship\l::getPrevExtent" alt="" coords="214,154,373,195"/>
-</map>

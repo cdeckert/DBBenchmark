@@ -14,14 +14,18 @@
 
     Chart.prototype.getChartData = function() {
       return {
-        chartData: {
-          title: this.title
+        chart: {
+          zoomType: "xy"
+        },
+        title: {
+          text: this.title
         },
         series: this.series
       };
     };
 
     Chart.prototype.draw = function() {
+      console.log(JSON.stringify(this.getChartData()));
       return $("#" + this.id).highcharts(this.getChartData());
     };
 
@@ -30,11 +34,12 @@
   })();
 
   Serie = (function() {
-    function Serie(computer, disk, test, layout) {
+    function Serie(computer, disk, test, layout, chartType) {
       this.computer = computer;
       this.disk = disk;
       this.test = test;
       this.layout = layout;
+      this.chartType = chartType != null ? chartType : "line";
       this.query();
       this.formatData();
     }
@@ -47,24 +52,28 @@
     };
 
     Serie.prototype.formatData = function() {
-      var d, _i, _len, _ref, _results;
+      var d, _i, _len, _ref;
       this.data = [];
-      if (this.rawData.measurements.length === 1) {
-        this.data.push([0, this.rawData.measurements[0].duration / 1000000000]);
+      if (this.chartType === "line") {
+        if (this.rawData.measurements.length === 1) {
+          this.data.push([0, this.rawData.measurements[0].duration / 1000000000]);
+        }
+        _ref = this.rawData.measurements;
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          d = _ref[_i];
+          this.data.push([d.size / 1024, d.duration / 1000000000]);
+        }
+      } else {
+        this.data.push(this.rawData.measurements[0].duration / 1000000000);
       }
-      _ref = this.rawData.measurements;
-      _results = [];
-      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
-        d = _ref[_i];
-        _results.push(this.data.push([d.size / 1024, d.duration / 1000000000]));
-      }
-      return _results;
+      return 0;
     };
 
     Serie.prototype.get = function() {
       return {
-        data: this.data,
-        name: this.test
+        type: this.chartType,
+        name: this.test,
+        data: this.data
       };
     };
 
@@ -73,11 +82,12 @@
   })();
 
   start = function() {
-    var a, c, s;
-    s = new Serie("centaurus", "sdf", "FullTableScan", "unordered-16kb-Page");
-    a = new Serie("centaurus", "sdf", "RawIndexScan", "unordered-16kb-Page");
-    console.log(s.get());
-    c = new Chart("c1", "abc", s, a);
+    var c, unordered16kb, unordered16kb4PpE, unordered2xRel, unorderedStandard;
+    unorderedStandard = new Serie("auriga", "sdb", "FullTableScan", "unordered", "column");
+    unordered2xRel = new Serie("auriga", "sdb", "FullTableScan", "unordered-2x-rel", "column");
+    unordered16kb = new Serie("auriga", "sdb", "FullTableScan", "unordered-16kb-Page", "column");
+    unordered16kb4PpE = new Serie("auriga", "sdb", "FullTableScan", "unordered-2x-rel-16kb-4-PpE", "column");
+    c = new Chart("c1", "abc", unorderedStandard.get(), unordered2xRel.get(), unordered16kb.get(), unordered16kb4PpE.get());
     return c.draw();
   };
 

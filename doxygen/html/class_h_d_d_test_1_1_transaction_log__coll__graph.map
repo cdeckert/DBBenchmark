@@ -1,6 +1,0 @@
-<map id="HDDTest::TransactionLog" name="HDDTest::TransactionLog">
-<area shape="rect" id="node2" href="$class_h_d_d_test_1_1_a_test.html" title="HDDTest::ATest" alt="" coords="139,96,260,123"/>
-<area shape="rect" id="node3" href="$class_d_b_util_1_1_log.html" title="DBUtil::Log" alt="" coords="5,5,96,32"/>
-<area shape="rect" id="node4" href="$class_h_d_d_test_1_1_relationship.html" title="HDDTest::Relationship" alt="" coords="121,5,279,32"/>
-<area shape="rect" id="node5" href="$class_h_d_d_test_1_1_disk.html" title="HDDTest::Disk" alt="" coords="303,5,416,32"/>
-</map>

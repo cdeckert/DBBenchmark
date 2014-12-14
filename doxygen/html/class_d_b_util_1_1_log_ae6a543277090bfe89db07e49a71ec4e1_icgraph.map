@@ -1,5 +1,0 @@
-<map id="DBUtil::Log::stop" name="DBUtil::Log::stop">
-<area shape="rect" id="node2" href="$class_h_d_d_test_1_1_full_table_scan.html#a732473e7440538517ab2c1f6e9e636eb" title="HDDTest::FullTableScan\l::executeTestAlgorithm" alt="" coords="177,5,346,46"/>
-<area shape="rect" id="node3" href="$class_h_d_d_test_1_1_index_scan.html#a63c295ffb3dd74515cf6c6583c9dc462" title="HDDTest::IndexScan\l::executeTestAlgorithm" alt="" coords="183,70,340,111"/>
-<area shape="rect" id="node4" href="$class_h_d_d_test_1_1_index_write.html#afe685020b557ab773d4804d290cc361b" title="HDDTest::IndexWrite\l::executeTestAlgorithm" alt="" coords="183,135,340,177"/>
-</map>
