@@ -192,10 +192,10 @@
     "tests":
     [
     	{
-            "name": "FulltableScan",
+            "name": "FullTableScan",
             "mainThread":
             {
-                "name" : "FulltableScan",
+                "name" : "FullTableScan",
                 "sleep": 0,
                 "relationship": "rel1"
             },
