@@ -75,7 +75,7 @@ bool Relationship::isNextExtent()
 
 bool Relationship::isUnAllocatedExtent()
 {
-	return this->unallocatedExtents == 0;
+	return this->unallocatedExtents != 0;
 }
 
 int Relationship::getProbability(uint64_t totalUnallocatedExtents)

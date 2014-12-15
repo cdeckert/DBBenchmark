@@ -123,12 +123,8 @@ void Disk::readExtent(uint64_t start)
 
 void Disk::readPage(uint64_t start)
 {
-	std::cout << "SEEK PAGE START" << std::endl;
-	std::cout.flush();
 	lseek64(this->fd, start * 1024, SEEK_SET);
-	std::cout << "READ PAGE START" << std::endl;
 	int rd = read(this->fd, this->pageBuffer, calcBufferSize(this->pageSize * 1024));
-	perror("ERROR READ");
 	if (rd == -1)
 	{
 		perror("ERROR READ");
