@@ -30,33 +30,34 @@ void IndexScan::executeTestAlgorithm()
 	uint64_t processedData = 0;
 
 
-	Progressbar *progress = new Progressbar("Index Scan", (iterations + 1)*iterations / 2 * stepSize);
+	Progressbar *progress = new Progressbar("Index Scan - Speed",  stepSize * iterations);
 
-	for (int i = 0; i < iterations; i++)
+
+	if (isMain)
 	{
-		if (isMain)
-		{
-			this->log->start();
-		}
-		processedData = 0;
+		this->log->start();
+	}
+	uint64_t numberOfLoggedIterations = 0;
+	while(numberOfLoggedIterations < stepSize * iterations)
+	{
 
-		for (uint64_t j = 0; j < i * stepSize; j++)
-		{
-			this->disk->readPage(this->relationship->getRandomPage());
-			processedData += layout->getPageSizeInKB();
-			if (!this->runs) return;
-			progress->add(1);
-			this->sleep();
-		}
-		if (isMain)
+		this->disk->readPage(this->relationship->getRandomPage());
+		processedData += layout->getPageSizeInKB();
+
+
+
+		if (!this->runs) return;
+		if(numberOfLoggedIterations % stepSize == 0)
 		{
 			this->log->stop(processedData);
 		}
-
+		numberOfLoggedIterations++;
+		progress->add(1);
 
 		this->sleep();
-	}
 
+
+	}
 }
 
 IndexScan::~IndexScan()
