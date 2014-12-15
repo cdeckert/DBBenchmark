@@ -1,8 +1,8 @@
-/*
- * Layout.cpp
- *
- *  Created on: Oct 28, 2014
- *      Author: root
+/**
+ * @file	Layout.cpp
+ * @Author	Christian Deckert (christian.deckert@zentrale2.com)
+ * @date	October, 2014
+ * @brief
  */
 
 #include "Layout.h"
