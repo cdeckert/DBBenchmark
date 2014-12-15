@@ -8,6 +8,7 @@ CPP_SRCS += \
 ../src/Tests/FullTableScan.cpp \
 ../src/Tests/IndexScan.cpp \
 ../src/Tests/IndexWrite.cpp \
+../src/Tests/OrderedIndexScan.cpp \
 ../src/Tests/TestScenario.cpp \
 ../src/Tests/TransactionLog.cpp 
 
@@ -16,6 +17,7 @@ OBJS += \
 ./src/Tests/FullTableScan.o \
 ./src/Tests/IndexScan.o \
 ./src/Tests/IndexWrite.o \
+./src/Tests/OrderedIndexScan.o \
 ./src/Tests/TestScenario.o \
 ./src/Tests/TransactionLog.o 
 
@@ -24,6 +26,7 @@ CPP_DEPS += \
 ./src/Tests/FullTableScan.d \
 ./src/Tests/IndexScan.d \
 ./src/Tests/IndexWrite.d \
+./src/Tests/OrderedIndexScan.d \
 ./src/Tests/TestScenario.d \
 ./src/Tests/TransactionLog.d 
 

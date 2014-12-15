@@ -54,6 +54,26 @@ uint64_t Relationship::getNextExtent()
 
 }
 
+uint64_t Relationship::getNextPage()
+{
+	uint64_t nextPage;
+	if(this->pageNumber == 0)
+	{
+		this->currentExtent = this->getNextExtent();
+		nextPage = this->currentExtent;
+	}
+
+	nextPage = currentExtent + this->pageNumber * this->pageSizeInKB;
+	pageNumber++;
+	if(pageNumber == this->pagesPerExtent)
+	{
+		pageNumber = 0;
+	}
+
+	return nextPage;
+}
+
+
 uint64_t Relationship::getPrevExtent()
 {
 	if (isNextExtent())
