@@ -17,6 +17,15 @@ Layout::Layout(LayoutSettings layoutSetting)
 	this->pageSizeInKB = layoutSetting.pageSizeInKB;
 	this->createRelationships(layoutSetting.relationships);
 	this->diskStart = 0; // TODO
+	if(layoutSetting.mode == "ordered")
+	{
+		this->distributionOrder = ORDERED;
+	}
+	else
+	{
+		this->distributionOrder = UNORDERED;
+	}
+
 }
 
 Layout::~Layout()
@@ -42,22 +51,36 @@ void Layout::createRelationships(std::vector<struct HDDTest::RelationshipConfig>
 
 	// distribution
 	uint64_t relStart = this->diskStart;
-
-	for (uint64_t i = 0; i != totalRelSize; i++)
+	if(this->distributionOrder == ORDERED)
 	{
-		int prob = 0;
-		int aRandVal = rand() % 100 + 1;
+		uint64_t i = 0;
 		for (std::vector<HDDTest::Relationship *>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
 		{
-			prob += (*r)->getProbability(totalRelSize);
-			if (prob >= aRandVal)
+			while((*r)->isUnAllocatedExtent())
 			{
 				(*r)->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
-				break;
+				i++;
 			}
-
 		}
 	}
+	else // unordered Distribution
+	{
+		for (uint64_t i = 0; i != totalRelSize; i++)
+		{
+			int prob = 0;
+			int aRandVal = rand() % 100 + 1;
+			for (std::vector<HDDTest::Relationship *>::iterator r = this->relationships.begin(); r != this->relationships.end(); ++r)
+			{
+				prob += (*r)->getProbability(totalRelSize);
+				if (prob >= aRandVal)
+				{
+					(*r)->addExtent(relStart + i * this->extentSizeInPages * this->pageSizeInKB);
+					break;
+				}
+			}
+		}
+	}
+
 }
 
 HDDTest::Relationship *Layout::getRelationship(std::string name)

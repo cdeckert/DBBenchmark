@@ -12,8 +12,7 @@
 
 namespace HDDTest
 {
-//enum modeDistributionOrder {ORDERED, UNORDERED};
-//enum modeExtentDistribution {EQUALLY , ED_RANDOM};
+enum DistributionMode {ORDERED, UNORDERED};
 
 struct RelationshipConfig
 {
@@ -60,6 +59,7 @@ private:
 	int extentSizeInPages;
 	int pageSizeInKB;
 	void init_rand();
+	DistributionMode distributionOrder;
 
 
 };

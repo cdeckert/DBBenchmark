@@ -11,7 +11,6 @@ FullTableScan::FullTableScan(std::string name, std::string layoutName, Layout * 
 void FullTableScan::executeTestAlgorithm()
 {
 	uint64_t processedData = 0;
-	std::cout << "LAYOUT" << layout->getExtentSizeInKB() << std::endl;
 	if (isMain)
 	{
 		this->log->start();

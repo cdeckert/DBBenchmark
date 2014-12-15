@@ -41,6 +41,7 @@ public:
 	uint64_t getPrevExtent();
 	uint64_t getNextPage();
 	bool isNextExtent();
+	bool isUnAllocatedExtent();
 	std::vector<struct Extent> extents;
 	std::string name;
 
