@@ -1,10 +1,3 @@
-/*
- * FullTableScan.cpp
- *
- *  Created on: Nov 9, 2014
- *      Author: root
- */
-
 #include "FullTableScan.h"
 
 namespace HDDTest
