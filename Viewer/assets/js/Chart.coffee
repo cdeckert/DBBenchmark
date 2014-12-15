@@ -4,8 +4,8 @@ class Chart
 		{
 			chart:
 				zoomType: "xy"
-				title:
-					text: ""
+			title:
+				text: ""
 			series: []
 
 		yAxis:

@@ -142,10 +142,10 @@ Chart = (function() {
     this.title = title;
     this.chartData = {
       chart: {
-        zoomType: "xy",
-        title: {
-          text: ""
-        }
+        zoomType: "xy"
+      },
+      title: {
+        text: ""
       },
       series: [],
       yAxis: {
