@@ -15,6 +15,7 @@
 #include "IndexWrite.h"
 #include "FullTableScan.h"
 #include "TransactionLog.h"
+#include "OrderedIndexScan.h"
 #include <iostream>
 #include <string>
 

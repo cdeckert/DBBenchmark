@@ -47,11 +47,14 @@ public:
 
 	unsigned int pagesPerExtent;
 	unsigned int pageSizeInKB;
+
 	void setNextExtent(uint64_t);
 
 private:
 	uint64_t unallocatedExtents;
 	uint64_t nextExtent = 0;
+	uint64_t currentExtent = 0;
+	int pageNumber = 0;
 
 };
 

@@ -18,7 +18,8 @@ src/Util/Configurator.d: ../src/Util/Configurator.cpp \
  ../src/Util/../Tests/../Layout/Relationship.h \
  ../src/Util/../Tests/../Util/Log.h ../src/Util/../Tests/IndexScan.h \
  ../src/Util/../Tests/IndexWrite.h ../src/Util/../Tests/FullTableScan.h \
- ../src/Util/../Tests/TransactionLog.h ../src/Util/Disk.h \
+ ../src/Util/../Tests/TransactionLog.h \
+ ../src/Util/../Tests/OrderedIndexScan.h ../src/Util/Disk.h \
  ../src/Util/../Layout/Layout.h ../src/Util/../Layout/Relationship.h
 
 ../src/Util/Configurator.h:
@@ -66,6 +67,8 @@ src/Util/Configurator.d: ../src/Util/Configurator.cpp \
 ../src/Util/../Tests/FullTableScan.h:
 
 ../src/Util/../Tests/TransactionLog.h:
+
+../src/Util/../Tests/OrderedIndexScan.h:
 
 ../src/Util/Disk.h:
 
