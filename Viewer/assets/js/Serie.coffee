@@ -1,5 +1,5 @@
 class Serie
-	constructor: (@computer, @disk, @test, @layout)->
+	constructor: (@computer, @disk, @test, @layout, @chartType = "line")->
 		@.query()
 		@.formatData()
 	query: ->
@@ -8,10 +8,15 @@ class Serie
 
 	formatData: ->
 		@data = []
-		@data.push [0, @rawData.measurements[0].duration/1000000000] if @rawData.measurements.length == 1
-		@data.push [d.size/1024, d.duration/1000000000] for d in @rawData.measurements
+		if @chartType == "line"
+			@data.push [0, @rawData.measurements[0].duration/1000000000] if @rawData.measurements.length == 1
+			@data.push [d.size/1024, d.duration/1000000000] for d in @rawData.measurements
+		else
+			@data.push @rawData.measurements[0].duration/1000000000
+		0
 
 
 	get: ->
-		data: @data
+		type: @chartType
 		name: @test
+		data: @data

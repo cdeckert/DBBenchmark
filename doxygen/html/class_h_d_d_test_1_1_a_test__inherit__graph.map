@@ -1,6 +1,0 @@
-<map id="HDDTest::ATest" name="HDDTest::ATest">
-<area shape="rect" id="node2" href="$class_h_d_d_test_1_1_full_table_scan.html" title="HDDTest::FullTableScan" alt="" coords="179,5,349,32"/>
-<area shape="rect" id="node3" href="$class_h_d_d_test_1_1_index_scan.html" title="HDDTest::IndexScan" alt="" coords="190,56,338,83"/>
-<area shape="rect" id="node4" href="$class_h_d_d_test_1_1_index_write.html" title="HDDTest::IndexWrite" alt="" coords="189,107,339,133"/>
-<area shape="rect" id="node5" href="$class_h_d_d_test_1_1_transaction_log.html" title="HDDTest::TransactionLog" alt="" coords="177,157,351,184"/>
-</map>

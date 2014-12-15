@@ -1,5 +1,0 @@
-<map id="HDDTest::ATest::sleep" name="HDDTest::ATest::sleep">
-<area shape="rect" id="node2" href="$class_h_d_d_test_1_1_index_scan.html#a63c295ffb3dd74515cf6c6583c9dc462" title="HDDTest::IndexScan\l::executeTestAlgorithm" alt="" coords="223,5,380,46"/>
-<area shape="rect" id="node3" href="$class_h_d_d_test_1_1_index_write.html#afe685020b557ab773d4804d290cc361b" title="HDDTest::IndexWrite\l::executeTestAlgorithm" alt="" coords="223,70,380,111"/>
-<area shape="rect" id="node4" href="$class_h_d_d_test_1_1_transaction_log.html#a3454c7970a87effe1f5154e7bcd73273" title="HDDTest::TransactionLog\l::executeTestAlgorithm" alt="" coords="214,135,389,177"/>
-</map>
