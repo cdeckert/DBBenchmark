@@ -1,15 +1,25 @@
 class Chart
-	constructor: (@id, @title, @series...) ->
+	constructor: (@id, @title) ->
+		@chartData = 
+		{
+			chart:
+				zoomType: "xy"
+				title:
+					text: @title
+			series: []
+		}
+		console.log JSON.stringify @chartData
+
+	addSerie: (serie)->
+		@chartData.series.push serie.get()
+		console.log @chartData
 
 	getChartData: ->
-		chart:
-			 zoomType: "xy"
-		title:
-			text: @title
-		series: @series
+		@chartData
 
 
 
 	draw: ->
-		console.log JSON.stringify @.getChartData()
+		console.log "THE CHART: "+ JSON.stringify @.getChartData()
+		console.log $("##{@id}")
 		$("##{@id}").highcharts @.getChartData()

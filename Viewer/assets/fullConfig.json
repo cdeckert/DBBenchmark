@@ -1,0 +1,378 @@
+{  
+    "ubuntu":{  
+        "disks":[  
+            "/dev/sdb"
+        ]
+    },
+    "centaurus":{
+    
+    	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
+    },
+    "auriga":{
+    
+    	"disks": ["/dev/sdb", "/dev/sdc"]
+    },
+    "mathe5r1":{
+        "disks": ["/dev/sdb"]
+    },
+    "layouts":
+    {
+    	        "ordered":
+        {
+            "mode":"ordered",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+        "unordered":
+        {
+            "mode":"unordered",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+        "ordered-16kb-Page":
+        {
+            "mode":"ordered",
+            "pageSizeInKB":16,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+        "unordered-16kb-Page":
+        {
+            "mode":"unordered",
+            "pageSizeInKB":16,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+        "unordered-16kb-4-PpE":
+        {
+            "mode":"unordered",
+            "pageSizeInKB":16,
+            "pagesPerExtent":4,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+        "ordered-16kb-4-PpE":
+        {
+            "mode":"ordered",
+            "pageSizeInKB":16,
+            "pagesPerExtent":4,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":0,
+                "rel5":0,
+                "rel6":0
+            }
+        },
+                "ordered-2x-rel":
+        {
+            "mode":"ordered-2x-rel",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        },
+        "unordered-2x-rel":
+        {
+            "mode":"unordered-2x-rel",
+            "pageSizeInKB":8,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        },
+        "ordered-2x-rel-16kb-Page":
+        {
+            "mode":"ordered-2x-rel",
+            "pageSizeInKB":16,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        },
+        "unordered-2x-rel-16kb-Page":
+        {
+            "mode":"unordered-2x-rel",
+            "pageSizeInKB":16,
+            "pagesPerExtent":8,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        },
+        "unordered-2x-rel-16kb-4-PpE":
+        {
+            "mode":"unordered-2x-rel",
+            "pageSizeInKB":16,
+            "pagesPerExtent":4,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        },
+        "ordered-2x-rel-16kb-4-PpE":
+        {
+            "mode":"ordered-2x-rel",
+            "pageSizeInKB":16,
+            "pagesPerExtent":4,
+            "relationshipAllocation":{
+                "rel1":6144,
+                "rel2":7680,
+                "rel3":2560,
+                "rel4":6144,
+                "rel5":7680,
+                "rel6":2560
+            }
+        }
+    },
+    "tests":
+    [
+    	{
+            "name": "RawIndexScan",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
+            "name": "RawIndexScanSleep1000000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 1000000,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
+            "name": "RawIndexScanSleep10000000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 10000000,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
+            "name": "FullTableScan",
+            "mainThread":
+            {
+                "name" : "FulltableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+    	{
+    		"name": "RawIndexWrite",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[]
+    	},
+    	{
+            "name": "IndexScanTransactionLogSleep1000000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000000
+                }
+            ]
+        },
+        {
+            "name": "IndexScanTransactionLogSleep10000000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 10000000
+                }
+            ]
+        },
+        {
+            "name": "IndexScanTransactionLogSleep100000000",
+            "mainThread":
+            {
+                "name" : "IndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 100000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep1000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep10000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 10000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep100000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 100000000
+                }
+            ]
+        },
+    	{
+    		"name": "IndexWriteTransactionLog",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "TransactionLog",
+    				"relationship": "rel2",
+    				"sleep": 1000000
+    			}
+    		]
+    	},
+    	{
+    		"name": "run2",
+    		"mainThread":
+    		{
+    			"name" : "IndexScan",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel2",
+    				"sleep": 0
+    			},
+    			{
+    				"name" : "IndexScan",
+    				"relationship": "rel3",
+    				"sleep":0
+    			}
+    		]
+    	}
+    ]
+}
