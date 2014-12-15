@@ -1,10 +1,3 @@
-/*
- * FullTableScan.cpp
- *
- *  Created on: Nov 9, 2014
- *      Author: root
- */
-
 #include "FullTableScan.h"
 
 namespace HDDTest
@@ -25,6 +18,7 @@ void FullTableScan::executeTestAlgorithm()
 	do
 	{
 		this->disk->readExtent(this->relationship->getNextExtent());
+
 		processedData += layout->getExtentSizeInKB();
 		this->sleep();
 		if (!this->runs) return;

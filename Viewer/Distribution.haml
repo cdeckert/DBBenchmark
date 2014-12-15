@@ -1,0 +1,31 @@
+%html
+	%head
+		%link{href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", rel:"stylesheet"}
+		%link{href: "assets/font-awesome-4.1.0/css/font-awesome.min.css", rel:"stylesheet"}
+
+		%script{src: "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"}
+		%script{src: "http://code.highcharts.com/highcharts.js"}
+		%script{src: "assets/js/script.js"}
+	%body
+		%div{class:"container"}
+			%h1{class:"page-header"} Layout
+			%div{class:"row"}
+				%div{class:"col-sm-3"}
+					%h2 Layout
+					%div{class:"list-group", id:"layout"}
+				%div{class:"col-sm-3"}
+					%h2 Computer
+					%div{class:"list-group", id:"computer"}
+						
+				%div{class:"col-sm-3"}
+					%h2 HDD
+					%div{class:"list-group", id:"hdd"}
+				%div{class:"col-sm-3"}
+					%h2 Test
+					%div{class:"list-group", id:"test"}
+
+			%button{class:"btn btn-default btn-primary", id: "addBtn"} Hinzufuegen
+
+			%div{id:"currentChart"}
+
+				

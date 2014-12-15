@@ -1,10 +1,9 @@
-//============================================================================
-// Name        : DBBenchmark.cpp
-// Author      : Chris
-// Version     :
-// Copyright   :
-// Description : Hello World in C++, Ansi-style
-//============================================================================
+/**
+ * @file DBBenchmark.cpp
+ * @Author Christian Deckert (christian.deckert@zentrale2.com)
+ * @date October, 2014
+ * @brief reads configuration from config.json, generates test scenarios and executes them
+ */
 
 #include <iostream>
 #include <unistd.h>
@@ -14,13 +13,14 @@ int main()
 {
 	// read configuration file
 	HDDTest::Configurator *config = new HDDTest::Configurator();
+
+	// generate test Scenarios
 	std::vector<HDDTest::TestScenario *> *testScenarios = config->getTestScenarios();
 
+	// execute testScenararios
 	for (HDDTest::TestScenario *t : *testScenarios)
 	{
 		t->run();
 	}
-	//while (true) {}
-	system("./update.sh");
 	return 0;
 }
