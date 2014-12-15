@@ -1,60 +1,36 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script src="http://code.highcharts.com/highcharts.js"></script>
-	<script src="http://code.highcharts.com/modules/exporting.js"></script>
-	<script type="text/javascript" src="assets/script.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-
-</head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">Index Scan</div>
-
-					
-					  <div class="panel-body"><div id="RawIndexScan" style="min-width: 100px; height: 400px; margin: 0 auto"></div></div>
-						
-					
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">Index Write</div>
-					<div class="panel-body">
-						<div id="RawIndexWrite" style="min-width: 100px; height: 400px; margin: 0 auto"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-xs-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">Index Scan (Background Jobs)</div>
-
-					
-					  <div class="panel-body"><div id="IndexScanTransactionLog" style="min-width: 310px; height: 400px; margin: 0 auto"></div></div>
-						
-					
-				</div>
-			</div>
-			<div class="col-xs-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">Index Write (Background Jobs)</div>
-					<div class="panel-body">
-						<div id="IndexWriteTransactionLog" style="min-width: 100px; height: 400px; margin: 0 auto"></div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		
-		<div id="run2" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-	</div>
-</body>
+  <head>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='assets/font-awesome-4.1.0/css/font-awesome.min.css' rel='stylesheet'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js'></script>
+    <script src='http://code.highcharts.com/highcharts.js'></script>
+    <script src='assets/js/script.js'></script>
+  </head>
+  <body>
+    <div class='container'>
+      <h1 class='page-header'>Layout</h1>
+      <div class='row'>
+        <div class='col-sm-3'>
+          <h2>Layout</h2>
+          <div class='list-group' id='layout'></div>
+        </div>
+        <div class='col-sm-3'>
+          <h2>Computer</h2>
+          <div class='list-group' id='computer'></div>
+        </div>
+        <div class='col-sm-3'>
+          <h2>HDD</h2>
+          <div class='list-group' id='hdd'></div>
+        </div>
+        <div class='col-sm-3'>
+          <h2>Test</h2>
+          <div class='list-group' id='test'></div>
+        </div>
+      </div>
+      <button class='btn btn-default btn-primary' id='addBtn'>Hinzufuegen</button>
+      <input id='chartName'>
+      <button class='btn btn-default btn-primary' id='saveBtn'>speichern</button>
+      <div id='currentChart'></div>
+    </div>
+  </body>
 </html>
