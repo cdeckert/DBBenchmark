@@ -123,11 +123,16 @@ void Disk::readExtent(uint64_t start)
 
 void Disk::readPage(uint64_t start)
 {
-
+	std::cout << "SEEK PAGE START" << std::endl;
+	std::cout.flush();
 	lseek64(this->fd, start * 1024, SEEK_SET);
+	std::cout << "READ PAGE START" << std::endl;
 	int rd = read(this->fd, this->pageBuffer, calcBufferSize(this->pageSize * 1024));
+	perror("ERROR READ");
 	if (rd == -1)
+	{
 		perror("ERROR READ");
+	}
 }
 
 void Disk::writeExtent(uint64_t start)
@@ -135,7 +140,9 @@ void Disk::writeExtent(uint64_t start)
 	lseek64(this->fd, start * 1024, SEEK_SET);
 	int wr = write(this->fd, this->extentBuffer, calcBufferSize(this->extentSize * 1024));
 	if (wr == -1)
+	{
 		perror("ERROR WRITE");
+	}
 }
 
 void Disk::writePage(uint64_t start)
@@ -143,7 +150,9 @@ void Disk::writePage(uint64_t start)
 	lseek64(this->fd, start * 1024, SEEK_SET);
 	int wr = write(this->fd, this->pageBuffer, calcBufferSize(this->pageSize * 1024));
 	if (wr == -1)
+	{
 		perror("ERROR WRITE");
+	}
 }
 
 

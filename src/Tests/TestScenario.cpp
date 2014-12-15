@@ -36,10 +36,10 @@ void TestScenario::run()
 	Progressbar *scenarioProgress = new Progressbar("Szenario", this->getNumberOfTests());
 	for (std::vector<std::string>::iterator diskItr = diskPaths->begin(); diskItr != diskPaths->end(); ++diskItr)
 	{
-		std::cout << "Start Test\n";
+		std::cout << "Start Test" << std::endl;
 		Disk *disk = Disk::get(*diskItr);
 
-		std::cout << "DISK::::" << disk->getName() << std::endl;
+		std::cout << "DISK:::" << disk->getName() << std::endl;
 		std::cout << "LAYOUT::" << layoutName << std::endl;
 
 
@@ -64,19 +64,19 @@ void TestScenario::run()
 
 			backgroundThread->isMain = false;
 			backgroundThread->startBackground();
-			std::cout << "\n";
+			std::cout << std::endl;
 		}
 
 
 
 
-		std::cout << "start main\n";
+		std::cout << "start main" << std::endl;
 		ATest *mainThread;
 
 
 
 
-		mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
+		//mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 
 
 		if (mainThreadSettings.name == "IndexScan")
@@ -98,8 +98,10 @@ void TestScenario::run()
 		}
 
 		mainThread->isMain = true;
+		std::cout << "main thread config done"<<std::endl;
 
 		scenarioProgress->add(1);
+
 		mainThread->start();
 
 
