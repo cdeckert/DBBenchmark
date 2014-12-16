@@ -142,12 +142,23 @@ Chart = (function() {
     this.title = title;
     this.chartData = {
       chart: {
-        zoomType: "xy",
-        title: {
-          text: this.title
-        }
+        zoomType: "xy"
       },
-      series: []
+      title: {
+        text: ""
+      },
+      series: [],
+      yAxis: {
+        title: {
+          text: "Time in s"
+        },
+        min: 0
+      },
+      xAxis: {
+        title: {
+          text: "Size in MB"
+        }
+      }
     };
     console.log(JSON.stringify(this.chartData));
   }
@@ -174,13 +185,14 @@ Chart = (function() {
 ChartManager = (function() {
   function ChartManager() {
     this.currentChart = new Chart("currentChart", "Noch kein Name vergeben");
+    this.currentChart.draw();
   }
 
   ChartManager.prototype.addSerie = function(serieConfig) {
     var aSerie;
     this.serieConfig = serieConfig;
     aSerie = new Serie(this.serieConfig.computer, this.serieConfig.hdd, this.serieConfig.test, this.serieConfig.layout);
-    console.log(aSerie);
+    aSerie.color = Highcharts.getOptions().colors[this.currentChart.chartData.series.length];
     this.currentChart.addSerie(aSerie);
     return this.currentChart.draw();
   };

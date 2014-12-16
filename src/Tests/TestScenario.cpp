@@ -82,6 +82,9 @@ void TestScenario::run()
 		if (mainThreadSettings.name == "IndexScan")
 		{
 			mainThread = new IndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
+		} else if (mainThreadSettings.name == "OrderedIndexScan")
+		{
+			mainThread = new OrderedIndexScan(mainThreadSettings.name, layoutName, layout, disk, layout->getRelationship(mainThreadSettings.relationship), mainThreadSettings.sleep);
 		}
 		else if(mainThreadSettings.name == "IndexWrite")
 		{

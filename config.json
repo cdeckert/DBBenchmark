@@ -192,6 +192,15 @@
     "tests":
     [
     	{
+            "name": "OrderedRawIndexScan",
+            "mainThread":
+            {
+                "name" : "OrderedIndexScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },{
             "name": "RawIndexScan",
             "mainThread":
             {
