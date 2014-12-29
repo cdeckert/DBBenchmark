@@ -1,0 +1,17 @@
+Auriga:
+
+/dev/sdb Seagate Barracuda			ST31000528AS	SATA 3 Gb/s 3.5"	 7,200 RPM	  1 TB	 32 MB
+
+/dev/sdc Samsung SSD 850 PRO 256GB	MZ-7KE256BW		SATA 6 Gb/s	2.5"		   SSD	256 GB	512 MB
+
+
+
+Centaurus:
+
+/dev/sde WD	Xe						WD3001BKHG		SAS  6 Gb/s	2.5"	10,000 RPM	300 GB	 32 MB
+
+/dev/sdf Seagate Savvio				ST300MM0006		SAS  6 Gb/s	2.5"	10,000 RPM	300 GB	 64 MB
+
+/dev/sdg WD Velociraptor			WD2500HHTZ		SATA 6 Gb/s 3.5"	10,000 RPM	250 GB	 64 MB
+
+/dev/sdh Seagate Constellation ES.3	ST1000NM0023	SAS  6 Gb/s 3.5"	 7,200 RPM	  1 TB	128 MB
