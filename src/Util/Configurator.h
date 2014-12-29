@@ -16,7 +16,7 @@
 #include "Disk.h"
 #include "../Layout/Layout.h"
 
-using namespace rapidjson;
+
 namespace HDDTest
 {
 
