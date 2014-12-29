@@ -40,6 +40,7 @@ void TestScenario::run()
 		Disk *disk = Disk::get(*diskItr);
 
 		std::cout << "DISK:::" << disk->getName() << std::endl;
+		std::cout << "SCENARIO::" << this->name << std::endl;
 		std::cout << "LAYOUT::" << layoutName << std::endl;
 
 
