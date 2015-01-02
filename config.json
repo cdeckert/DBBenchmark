@@ -6,34 +6,17 @@
     },
     "centaurus":{
     
-    	"disks": ["/dev/sdf", "/dev/sdh", "/dev/sdg", "/dev/sde"]
+    	"disks": ["/dev/sdh"]
     },
     "auriga":{
     
-    	"disks": ["/dev/sdb", "/dev/sdc"]
+    	"disks": ["/dev/sdb"]
     },
     "mathe5r1":{
         "disks": ["/dev/sdb"]
     },
     "layouts":
     {
-    	        "ordered":
-        {
-            "mode":"ordered",
-            "pageSizeInKB":8,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0
-            }
-        },
         "unordered":
         {
             "mode":"unordered",
@@ -47,133 +30,7 @@
                 "rel5":0,
                 "rel6":0
             }
-        },
-        "ordered-16kb-Page":
-        {
-            "mode":"ordered",
-            "pageSizeInKB":16,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0
-            }
-        },
-        "unordered-16kb-Page":
-        {
-            "mode":"unordered",
-            "pageSizeInKB":16,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0
-            }
-        },
-        "unordered-16kb-4-PpE":
-        {
-            "mode":"unordered",
-            "pageSizeInKB":16,
-            "pagesPerExtent":4,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0
-            }
-        },
-        "ordered-16kb-4-PpE":
-        {
-            "mode":"ordered",
-            "pageSizeInKB":16,
-            "pagesPerExtent":4,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":0,
-                "rel5":0,
-                "rel6":0
-            }
-        },
-                "ordered-2x-rel":
-        {
-            "mode":"ordered-2x-rel",
-            "pageSizeInKB":8,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":6144,
-                "rel5":7680,
-                "rel6":2560
-            }
-        },
-        "unordered-2x-rel":
-        {
-            "mode":"unordered-2x-rel",
-            "pageSizeInKB":8,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":6144,
-                "rel5":7680,
-                "rel6":2560
-            }
-        },
-        "ordered-2x-rel-16kb-Page":
-        {
-            "mode":"ordered-2x-rel",
-            "pageSizeInKB":16,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":6144,
-                "rel5":7680,
-                "rel6":2560
-            }
-        },
-        "unordered-2x-rel-16kb-Page":
-        {
-            "mode":"unordered-2x-rel",
-            "pageSizeInKB":16,
-            "pagesPerExtent":8,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":6144,
-                "rel5":7680,
-                "rel6":2560
-            }
-        },
-        "unordered-2x-rel-16kb-4-PpE":
-        {
-            "mode":"unordered-2x-rel",
-            "pageSizeInKB":16,
-            "pagesPerExtent":4,
-            "relationshipAllocation":{
-                "rel1":6144,
-                "rel2":7680,
-                "rel3":2560,
-                "rel4":6144,
-                "rel5":7680,
-                "rel6":2560
-            }
-        },
+        }
         "ordered-2x-rel-16kb-4-PpE":
         {
             "mode":"ordered-2x-rel",
