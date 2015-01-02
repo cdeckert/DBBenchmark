@@ -43,6 +43,7 @@ uint64_t Relationship::getNextExtent()
 {
 	if (isNextExtent())
 	{
+		std::cout << "\nRelationship.cpp: getNextExtent() - nextExtent: " << this->nextExtent<< "\n";
 		uint64_t extentStart = this->extents.at(this->nextExtent).startKb;
 		this->nextExtent++;
 		return extentStart;
@@ -79,7 +80,15 @@ uint64_t Relationship::getPrevExtent()
 	if (isNextExtent())
 		{
 			this->nextExtent--;
-			uint64_t extentStart = this->extents.at(this->nextExtent).startKb;
+			uint64_t extentStart = 0;
+			if(isNextExtent()) { // in case we get below 0 we just take the current extent
+				std::cout << "\nRelationship.cpp: getPrivExtent()-1 - privExtent: " << this->nextExtent<< "\n";
+				extentStart = this->extents.at(this->nextExtent).startKb;
+			} else {
+				this->nextExtent++;
+				std::cout << "\nRelationship.cpp: getPrivExtent()-2 - privExtent: " << this->nextExtent<< "\n";
+				extentStart = this->extents.at(this->nextExtent).startKb;
+			}
 			return extentStart;
 		}
 		else
@@ -111,7 +120,10 @@ uint64_t Relationship::getRandomExtent()
 
 uint64_t Relationship::getRandomPage()
 {
-	return this->extents[rand() % this->extents.size()].startKb + (rand() % this->pagesPerExtent) * this->pageSizeInKB;
+	uint64_t randExtent = rand() % this->extents.size();
+	uint64_t randPage = (rand() % this->pagesPerExtent) * this->pageSizeInKB;
+	std::cout << "\nRelationship.cpp: getRandomPage() - extent " << randExtent << " | page: " << randPage << "\n";
+	return this->extents[randExtent].startKb + randPage;
 }
 
 } /* namespace HDDTest */
