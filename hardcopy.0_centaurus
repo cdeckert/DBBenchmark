@@ -1,0 +1,24 @@
+DISK:::sdh
+SCENARIO::IndexScanTransactionLogSleep1000000
+LAYOUT::ordered-2x-rel-16kb-4-PpE
+start background thread: TransactionLog, /dev/sdh
+TransactionLog
+thread id: 139889109247744
+
+start main
+IndexScan
+main thread config done
+Szenario: [====================================================>
+MAINTHREADBACKGROUNDIndex Scan - Speed: [>
+Index Scan - Speed: [>
+Index Scan - Speed: [=>
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  vector::_M_range_check: __n (which is 18446744073709551615) >= this->
+size() (which is 6144)
+Aborted (core dumped)
+czech@centaurus:~/DBBenchmark$
+czech@centaurus:~/DBBenchmark$ ./Debug/DBBenchmark
+Start Test Scenario
+Start Test
+^C^C
+czech@centaurus:~/DBBenchmark$
