@@ -17,7 +17,7 @@ IndexWrite::IndexWrite(std::string name, std::string layoutName, Layout * layout
 void IndexWrite::executeTestAlgorithm()
 {
 	int iterations = 20;
-	uint64_t stepSize = (this->relationship->extents.size() * 8) / iterations;
+	uint64_t stepSize = (this->relationship->getNoOfExtents() * 8) / iterations;
 
 	if (stepSize == 0)
 	{

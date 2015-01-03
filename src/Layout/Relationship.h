@@ -40,9 +40,13 @@ public:
 	uint64_t getNextExtent();
 	uint64_t getPrevExtent();
 	uint64_t getNextPage();
+
+	uint64_t getNoOfExtents();
+
+	struct Extent getExtent(uint64_t);
+
 	bool isNextExtent();
 	bool isUnAllocatedExtent();
-	std::vector<struct Extent> extents;
 	std::string name;
 
 	unsigned int pagesPerExtent;
@@ -55,6 +59,7 @@ private:
 	uint64_t nextExtent = 0;
 	uint64_t currentExtent = 0;
 	int pageNumber = 0;
+	std::vector<struct Extent> extents;
 
 };
 

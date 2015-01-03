@@ -20,7 +20,7 @@ OrderedIndexScan::OrderedIndexScan(std::string name, std::string layoutName, Lay
 void OrderedIndexScan::executeTestAlgorithm()
 {
 	int iterations = 20;
-	uint64_t stepSize = (this->relationship->extents.size() * layout->getPageSizeInKB()) / iterations;
+	uint64_t stepSize = (this->relationship->getNoOfExtents() * layout->getPageSizeInKB()) / iterations;
 
 	if (stepSize == 0)
 	{
