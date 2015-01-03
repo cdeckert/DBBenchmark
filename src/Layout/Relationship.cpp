@@ -17,7 +17,6 @@ Relationship::Relationship(std::string name, uint64_t size, unsigned int pagesPe
 	this->unallocatedExtents = size;
 	this->pagesPerExtent = pagesPerExtent;
 	this->pageSizeInKB = pageSizeInKB;
-
 }
 
 Relationship::~Relationship()
