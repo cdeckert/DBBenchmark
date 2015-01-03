@@ -43,7 +43,7 @@ uint64_t Relationship::getNextExtent()
 {
 	if (isNextExtent())
 	{
-		std::cout << "\nRelationship.cpp: getNextExtent() - nextExtent: " << this->nextExtent<< "\n";
+		std::cout << "Relationship.cpp: getNextExtent() - nextExtent: " << this->nextExtent<< "\n";
 		uint64_t extentStart = this->extents.at(this->nextExtent).startKb;
 		this->nextExtent++;
 		return extentStart;
@@ -66,10 +66,11 @@ uint64_t Relationship::getNextPage()
 
 	nextPage = currentExtent + this->pageNumber * this->pageSizeInKB;
 	pageNumber++;
-	if(pageNumber == this->pagesPerExtent)
+	if(pageNumber >= this->pagesPerExtent)
 	{
 		pageNumber = 0;
 	}
+	std::cout << "Relationship.cpp: getNextPage() - nextPage: " << nextPage<<"\n";
 
 	return nextPage;
 }
@@ -77,24 +78,22 @@ uint64_t Relationship::getNextPage()
 
 uint64_t Relationship::getPrevExtent()
 {
-	if (isNextExtent())
-		{
-			this->nextExtent--;
-			uint64_t extentStart = 0;
-			if(isNextExtent()) { // in case we get below 0 we just take the current extent
-				std::cout << "\nRelationship.cpp: getPrivExtent()-1 - privExtent: " << this->nextExtent<< "\n";
-				extentStart = this->extents.at(this->nextExtent).startKb;
-			} else {
-				this->nextExtent++;
-				std::cout << "\nRelationship.cpp: getPrivExtent()-2 - privExtent: " << this->nextExtent<< "\n";
-				extentStart = this->extents.at(this->nextExtent).startKb;
-			}
-			return extentStart;
+	if (isNextExtent() && this->extents.size() > 0)
+	{
+		this->nextExtent--;
+		uint64_t extentStart = 0;
+		if(isNextExtent()) { // in case we get below 0 we just take the current extent
+			std::cout << "Relationship.cpp: getPrivExtent()-1 - privExtent: " << this->nextExtent<< "\n";
+			extentStart = this->extents.at(this->nextExtent).startKb;
+		} else {
+			this->nextExtent = 0;
+			std::cout << "Relationship.cpp: getPrivExtent()-2 - privExtent: " << this->nextExtent<< "\n";
+			extentStart = this->extents.at(this->nextExtent).startKb;
 		}
-		else
-		{
-			return 0;
-		}
+		return extentStart;
+	} else {
+		return 0;
+	}
 }
 
 bool Relationship::isNextExtent()
@@ -115,7 +114,9 @@ int Relationship::getProbability(uint64_t totalUnallocatedExtents)
 
 uint64_t Relationship::getRandomExtent()
 {
-	return this->extents[rand() % this->extents.size()].startKb;
+	uint64_t randExtent = rand() % this->extents.size();
+	std::cout << "Relationship.cpp: getRandomExtent() - random extent: " << randExtent << "\n";
+	return this->extents[randExtent].startKb;
 }
 
 uint64_t Relationship::getRandomPage()
