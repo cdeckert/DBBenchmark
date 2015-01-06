@@ -58,7 +58,7 @@ private:
 	uint64_t unallocatedExtents;
 	uint64_t nextExtent = 0;
 	uint64_t currentExtent = 0;
-	int pageNumber = 0;
+	unsigned int pageNumber = 0;
 	std::vector<struct Extent> extents;
 
 };

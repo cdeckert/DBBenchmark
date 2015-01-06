@@ -11,11 +11,12 @@ FullTableScan::FullTableScan(std::string name, std::string layoutName, Layout * 
 void FullTableScan::executeTestAlgorithm()
 {
 	uint64_t processedData = 0;
+	this->relationship->setNextExtent(0);
 	if (isMain)
 	{
 		this->log->start();
 	}
-	do
+	/**do
 	{
 		this->disk->readExtent(this->relationship->getNextExtent());
 
@@ -23,7 +24,17 @@ void FullTableScan::executeTestAlgorithm()
 		this->sleep();
 		if (!this->runs) return;
 	}
-	while (this->relationship->isNextExtent());
+	while (this->relationship->isNextExtent());*/
+	for(uint64_t i = 0; i < this->relationship->getNoOfExtents(); i++) {
+		this->disk->readExtent(this->relationship->getExtent(i).startKb);
+
+		processedData += layout->getExtentSizeInKB();
+
+		this->sleep();
+
+		if (!this->runs)
+			return;
+	}
 
 	if (isMain)
 	{
