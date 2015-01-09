@@ -191,54 +191,6 @@
     },
     "tests":
     [
-    	{
-            "name": "IndexScanTransactionLogSleep1000000",
-            "mainThread":
-            {
-                "name" : "IndexScan",
-                "sleep": 0,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[
-                {
-                    "name" : "TransactionLog",
-                    "relationship": "rel2",
-                    "sleep": 1000000
-                }
-            ]
-        },
-        {
-            "name": "IndexScanTransactionLogSleep10000000",
-            "mainThread":
-            {
-                "name" : "IndexScan",
-                "sleep": 0,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[
-                {
-                    "name" : "TransactionLog",
-                    "relationship": "rel2",
-                    "sleep": 10000000
-                }
-            ]
-        },
-        {
-            "name": "IndexScanTransactionLogSleep100000000",
-            "mainThread":
-            {
-                "name" : "IndexScan",
-                "sleep": 0,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[
-                {
-                    "name" : "TransactionLog",
-                    "relationship": "rel2",
-                    "sleep": 100000000
-                }
-            ]
-        },
         {
             "name": "FullTableScanTransactionLogSleep1000000",
             "mainThread":
