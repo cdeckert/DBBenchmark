@@ -35,13 +35,13 @@ void Relationship::addExtent(uint64_t start)
 
 struct Extent Relationship::getExtent(uint64_t id) {
 	if(id < this->extents.size()) {
-		std::cout << "Relationship.cpp: getExtent()-1 - extent: " << id << "\n";
+		//std::cout << "Relationship.cpp: getExtent()-1 - extent: " << id << "\n";
 		return this->extents.at(id);
 	} else if(this->extents.size() > 0) {
-		std::cout << "Relationship.cpp: getExtent()-2 - extent: " << id << "\n";
+		//std::cout << "Relationship.cpp: getExtent()-2 - extent: " << id << "\n";
 		return this->extents.at(0);
 	} else {
-		std::cout << "Relationship.cpp: getExtent() - ERROR! Accessing relationship w/o extents.";
+		//std::cout << "Relationship.cpp: getExtent() - ERROR! Accessing relationship w/o extents.";
 		struct Extent tmp;
 		return tmp;
 	}

@@ -17,7 +17,7 @@ IndexWrite::IndexWrite(std::string name, std::string layoutName, Layout * layout
 void IndexWrite::executeTestAlgorithm()
 {
 	int iterations = 20;
-	uint64_t stepSize = (this->relationship->getNoOfExtents() * 8) / iterations;
+	uint64_t stepSize = (this->relationship->getNoOfExtents() * layout->getPageSizeInKB()) / iterations;
 
 	if (stepSize == 0)
 	{
@@ -37,7 +37,7 @@ void IndexWrite::executeTestAlgorithm()
 		}
 		processedData = 0;
 
-		for (uint64_t j = 0; j < i * stepSize; j++)
+		for (uint64_t j = 0; j < stepSize; j++)
 		{
 			this->disk->writePage(this->relationship->getRandomPage());
 			processedData += layout->getPageSizeInKB();
