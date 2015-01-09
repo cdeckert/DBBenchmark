@@ -20,7 +20,7 @@ IndexScan::IndexScan(std::string name, std::string layoutName, Layout * layout, 
 void IndexScan::executeTestAlgorithm()
 {
 	int iterations = 20;
-	uint64_t stepSize = (this->relationship->getNoOfExtents() * layout->getPageSizeInKB()) / iterations;
+	uint64_t stepSize = (this->relationship->getNoOfExtents() * layout->getExtentSizeInPages()) / iterations;
 
 	if (stepSize == 0)
 	{
