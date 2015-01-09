@@ -192,6 +192,26 @@
     "tests":
     [
         {
+            "name": "FullTableScan",
+            "mainThread":
+            {
+                "name" : "FulltableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
+    		"name": "RawIndexWrite",
+    		"mainThread":
+    		{
+    			"name" : "IndexWrite",
+    			"sleep": 0,
+    			"relationship": "rel1"
+    		},
+    		"backgroundThreads":[]
+    	},
+        {
             "name": "FullTableScanTransactionLogSleep1000000",
             "mainThread":
             {
