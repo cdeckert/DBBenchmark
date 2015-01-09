@@ -40,7 +40,7 @@ void IndexWrite::executeTestAlgorithm()
 		processedData += layout->getPageSizeInKB();
 		if (!this->runs) return;
 
-		if (isMain) {
+		if (isMain && j % iterations == 0) {
 			this->log->stop(processedData);
 		}
 		progress->add(1);
