@@ -11,6 +11,9 @@ FullTableScan::FullTableScan(std::string name, std::string layoutName, Layout * 
 void FullTableScan::executeTestAlgorithm()
 {
 	uint64_t processedData = 0;
+
+	uint64_t stepSize = (this->relationship->getNoOfExtents()) / 50;
+
 	this->relationship->setNextExtent(0);
 	if (isMain)
 	{
@@ -29,6 +32,10 @@ void FullTableScan::executeTestAlgorithm()
 		this->disk->readExtent(this->relationship->getExtent(i).startKb);
 
 		processedData += layout->getExtentSizeInKB();
+
+		if(i % stepSize == 0) {
+			this->log->stop(processedData);
+		}
 
 		this->sleep();
 
