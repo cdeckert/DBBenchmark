@@ -14,7 +14,7 @@ Configurator = (function() {
 
   Configurator.get = function() {
     if (config == null) {
-      config = $.getJSON("../assets/fullConfig.json").responseJSON;
+      config = $.getJSON("./assets/fullConfig.json").responseJSON;
     }
     return config;
   };
