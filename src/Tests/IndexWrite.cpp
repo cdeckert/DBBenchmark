@@ -27,31 +27,27 @@ void IndexWrite::executeTestAlgorithm()
 	uint64_t processedData = 0;
 
 
-	Progressbar *progress = new Progressbar("Index Write", (iterations + 1)*iterations / 2 * stepSize);
+	Progressbar *progress = new Progressbar("Index Write", iterations * stepSize);
 
-	for (int i = 0; i < iterations; i++)
+	if (isMain) {
+		this->log->start();
+	}
+
+	processedData = 0;
+	for (uint64_t j = 0; j < iterations * stepSize; j++)
 	{
-		if (isMain)
-		{
-			this->log->start();
-		}
-		processedData = 0;
+		this->disk->writePage(this->relationship->getRandomPage());
+		processedData += layout->getPageSizeInKB();
+		if (!this->runs) return;
 
-		for (uint64_t j = 0; j < stepSize; j++)
-		{
-			this->disk->writePage(this->relationship->getRandomPage());
-			processedData += layout->getPageSizeInKB();
-			if (!this->runs) return;
-			progress->add(1);
-			this->sleep();
-		}
-		if (isMain)
-		{
+		if (isMain) {
 			this->log->stop(processedData);
 		}
-
-
+		progress->add(1);
 		this->sleep();
+	}
+	if (isMain) {
+		this->log->stop(processedData);
 	}
 
 }
