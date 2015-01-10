@@ -192,49 +192,20 @@
     "tests":
     [
         {
-            "name": "OrderedRawIndexScan",
+            "name": "FullTableScan",
             "mainThread":
             {
-                "name" : "OrderedIndexScan",
-                "sleep": 0,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[]
-        },{
-            "name": "RawIndexScan",
-            "mainThread":
-            {
-                "name" : "IndexScan",
+                "name" : "FullTableScan",
                 "sleep": 0,
                 "relationship": "rel1"
             },
             "backgroundThreads":[]
         },
         {
-            "name": "RawIndexScanSleep1000000",
+            "name": "FullTableScanTransactionLogSleep1000000",
             "mainThread":
             {
-                "name" : "IndexScan",
-                "sleep": 1000000,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[]
-        },
-        {
-            "name": "RawIndexScanSleep10000000",
-            "mainThread":
-            {
-                "name" : "IndexScan",
-                "sleep": 10000000,
-                "relationship": "rel1"
-            },
-            "backgroundThreads":[]
-        },
-        {
-            "name": "IndexScanTransactionLogSleep1000000",
-            "mainThread":
-            {
-                "name" : "IndexScan",
+                "name" : "FullTableScan",
                 "sleep": 0,
                 "relationship": "rel1"
             },
@@ -247,10 +218,10 @@
             ]
         },
         {
-            "name": "IndexScanTransactionLogSleep10000000",
+            "name": "FullTableScanTransactionLogSleep10000000",
             "mainThread":
             {
-                "name" : "IndexScan",
+                "name" : "FullTableScan",
                 "sleep": 0,
                 "relationship": "rel1"
             },
@@ -263,10 +234,10 @@
             ]
         },
         {
-            "name": "IndexScanTransactionLogSleep100000000",
+            "name": "FullTableScanTransactionLogSleep100000000",
             "mainThread":
             {
-                "name" : "IndexScan",
+                "name" : "FullTableScan",
                 "sleep": 0,
                 "relationship": "rel1"
             },
