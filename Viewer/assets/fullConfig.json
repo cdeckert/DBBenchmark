@@ -1,19 +1,11 @@
 {  
-    "ubuntu":{  
-        "disks":[  
-            "/dev/sdb"
-        ]
-    },
     "centaurus":{
     
-        "disks": ["/dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
+        "disks": ["/dev/sdd", /dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
     },
     "auriga":{
     
         "disks": ["/dev/sdb", "/dev/sdc"]
-    },
-    "mathe5r1":{
-        "disks": ["/dev/sdb"]
     },
     "layouts":
     {

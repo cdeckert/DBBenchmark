@@ -6,7 +6,7 @@
     },
     "centaurus":{
     
-        "disks": ["/dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
+        "disks": ["/dev/sdd", "/dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
     },
     "auriga":{
     
