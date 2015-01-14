@@ -1,19 +1,11 @@
 {  
-    "ubuntu":{  
-        "disks":[  
-            "/dev/sdb"
-        ]
-    },
     "centaurus":{
     
-        "disks": ["/dev/sdd", "/dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
+        "disks": ["/dev/sdd", /dev/sde", "/dev/sdf", "/dev/sdg", "/dev/sdh"]
     },
     "auriga":{
     
         "disks": ["/dev/sdb", "/dev/sdc"]
-    },
-    "mathe5r1":{
-        "disks": ["/dev/sdb"]
     },
     "layouts":
     {
@@ -231,6 +223,26 @@
             "backgroundThreads":[]
         },
         {
+            "name": "FullTableScan",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
+            "name": "RawIndexWrite",
+            "mainThread":
+            {
+                "name" : "IndexWrite",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[]
+        },
+        {
             "name": "IndexScanTransactionLogSleep1000000",
             "mainThread":
             {
@@ -275,6 +287,70 @@
                     "name" : "TransactionLog",
                     "relationship": "rel2",
                     "sleep": 100000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep1000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep10000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 10000000
+                }
+            ]
+        },
+        {
+            "name": "FullTableScanTransactionLogSleep100000000",
+            "mainThread":
+            {
+                "name" : "FullTableScan",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 100000000
+                }
+            ]
+        },
+        {
+            "name": "IndexWriteTransactionLog",
+            "mainThread":
+            {
+                "name" : "IndexWrite",
+                "sleep": 0,
+                "relationship": "rel1"
+            },
+            "backgroundThreads":[
+                {
+                    "name" : "TransactionLog",
+                    "relationship": "rel2",
+                    "sleep": 1000000
                 }
             ]
         }
